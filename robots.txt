@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /pages/admin/Disallow: /pages/apps/Disallow: /pages/download/Disallow: /pages/include/Disallow: /css/
+Disallow: /res/Disallow: /JSON/Disallow: /js/Disallow: /logs/
+Disallow: /php/Disallow: /txt/

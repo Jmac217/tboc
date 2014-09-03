@@ -1,0 +1,20 @@
+<notice>
+	<warning>
+		<rows id='5'>
+			<title decoration='bold-underline' size='3' centered='false' break_space='0'>Attention Debit Card Customers:</title>
+			<date decoration='' size='1'>11-15-13</date>
+			<body decoration='bold'  size='2' centered='false' break_space='1'>MasterCard SecureCode maintenance has been scheduled on Saturday, November 16, 2013 from approximately 6:00 pm to 10:00 pm.</body>
+			<body decoration='bold'  size='2' centered='false' break_space='0'>Here's another row</body>
+			<extra decoration='italic' size='3' centered='false' break_space='1'>During this maintenance period, online authentication, enrollment and activation during shopping may be affected.</extra>
+		</rows>
+	</warning>
+	<alert>
+		<rows id='4'>
+			<title decoration='underline' size='3'>Just a Test</title>
+			<!--<date decoration='italic' size='1'>11-15-13</date>-->
+			<body decoration='bold' size='2'>Alert row number one</body>
+			<body decoration='bold' size='2'>There's another alert row</body>
+			<extra decoration='italic' size='2'>This is the extra in the alert area</extra>
+		</rows>
+	</alert>
+</notice>

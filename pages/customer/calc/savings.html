@@ -1,0 +1,124 @@
+
+		<script language="JavaScript"><!--
+<!-- Web Site:  http://www.cinet.net/~mhundt/mystuff.htm -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+var i = 0; // interest
+var m = 0; // months
+var f = 0; // factor
+var den = 0; 
+var s = "0"; // string
+var d = 0; // decimal place
+function CalcA() {
+if(document.calform.interest.value=="" || document.calform.months.value=="" || document.calform.payment.value=="") {
+alert("Please fill in all of the required fields.");
+}
+else { 
+if(document.calform.period.options[1].selected == true) {
+m = document.calform.months.value * 12;
+}
+else {
+m = document.calform.months.value;
+} 
+i = Math.pow(((document.calform.interest.value/100)+1),.0833333)-1;
+den = i / (i+1);
+f = Math.pow((i+1),m)-1;
+f /= den;
+f *= document.calform.payment.value;
+d = String(f).indexOf(".");
+s = String(f).substring(0,(d+3));
+document.calform.total.value = "$" + s;  
+   }
+}
+
+// -->
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<h4>Monthly Savings Accumulation</h4>
+<p>This calculator shows you a total accumulation from monthly savings installments.</p>
+						<ul>
+							<li>Don't use commas.
+							<li>Use the tab key or your mouse to move around in the worksheet.
+						</ul>
+					
+			<form method="post" name="calform">
+			
+    <table width="450" cellpadding="4">
+      <tr>
+					<td align="right" width="305"><b>Total you can afford to save each month:</b></td>
+
+					<td width="121"><input type="text" name="payment" size="13" maxlength="13"></td>
+	  </tr>
+				<tr>
+					<td align="right" width="305"><b>Number of months/years to aquire sum:</b></td>
+					<td><input type="text" name="months" size="3" maxlength="3"> <select name="period" size="1">
+							<option value="m">Months
+							<option value="y">Years
+						</select></td>
+				</tr>
+
+				<tr>
+					<td align="right" width="305"><b>Interest rate on savings:</b></td>
+					<td><input type="text" name="interest" size="5" maxlength="5"><b>%</b></td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center"><br>
+						<input type="button" name="button1" value="How much will I have?" onClick="javascript:CalcA()"></td>
+				</tr>
+
+				<tr>
+					<td align="right" width="305"><b>Total : </b></td>
+					<td><input type="text" name="total" value="0.00" size="15" maxlength="15"></td>
+				</tr>
+			</table>
+			</form>

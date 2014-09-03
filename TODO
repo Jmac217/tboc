@@ -1,0 +1,33 @@
+What to do next
+
+bug in notice() - top animation is set for old links location
+
+prepare all pages to load correctly, whether it be in the #pages div or in another tab
+- this means the load() function will need to be finished, probably first.
+- for now all pages except for external links will load into the front page
+
+Testing email sendings will require the existing mail() functions to be commented and replaced by one with either mine or Tom's email address, mine for now.
+
+The css structure of the Security Center is not coordinated well with the rest of the index
+
+============================================================================================================
+
+Some global variables need to be set up including: paths/JSON, credintials/prefs, navigational array w/ logic
+
+A simple JSON template has been created, this needs to replace XML and be expanded upon. Add links.json and navigation.json
+
+linked pages need rewritten to load links into the pages div. Outside.php could use a jQueryUI window to check user permission.
+- will any pages need reloaded? That is one concern I have when doing things in this manner.
+- in this case will there be the need for the dynamic nav links?
+
+Pages div should probably be animated into existence with the first link that is selected. This will be necessary for quick viewing of the footer. Some people need to see the footer I guess.
+
+Those png headers are going to need removed.. That's just unnecessary; Add a @font-face to the CSS and call on a fancy font instead. 
+- working example of png header is in "privacy policy".
+
+selection_handler is currently being implemented, it takes a series of parameters to determine how to handle links.
+- It should query a JSON database of link locations > #ID => JSON -> #ID -> {type:'link',path:'/pages/',load:'this',name:'class'}
+
+Expand the warning: There needs to be a div placed above the links to allow dynamic seasonal or situational content. This will be loaded in as a php module. 
+- There could be an offline control panel located on our intranet for this.
+-- If that's the case things could get much more interesting. This is something I'd really like to see.

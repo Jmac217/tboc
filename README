@@ -1,0 +1,54 @@
+Documentation
+
+The file system is actually manageable.
+I went through the in-line styles, stupidly named classes, and unbearable CSS and renamed everything.
+Also started going through unnecessary includes and pulled the code into the index.
+- This will be a recurring thing for future pages.
+
+folder structure has been jumbled slightly to remove abstracted folders, but only to clutter things in the /pages/old file.
+- /pages/old will be the place to pull out files and place them accordingly, but's only available in mock1 now
+- Since there are so many "i_*" files I'll probably set up an /pages/include file for the time being, but eventually all "i_*" files' contents will be added to the respective main (index.php) file and discarded.
+- This change has already been implemented into the index. Files that get loaded inside of the pages div will have these inclusions removed all together.  
+
+:: filesystem changes ::
+/pages/old has been copied from AND cut from, but moved from /rework to ../mockups/mock1, so it is not complete while also housing files that have been copied into /pages/[respective folder] -- things are messy only in that folder.
+aside from the include folder there will be only a few other folders created in /pages :
+- download => for PDFs
+- admin    => for respective administrators (ie Margaret, Elizabeth, Rhonda, etc...)
+- apps     => other things that don't fit or provide standalone functionality
+
+Starting on the pages.. I'm trying to decide whether or not ALL pages will fit underneath the login/banner or if at some point they too will be replaced by a loaded page.
+For now I'm going to divide index.js into sections for each page to be loaded.
+Each page with a form will need to be recreated in jQuery using either .post or .ajax functions, probably the latter, calling on and parsing arrays of JSON.
+- To get at this change there is a 'type' associated with the hyperlink determining whether it should be loaded into the index or a new tab or window.
+|
+The way the dropdown's hyperlinks will work is by calling a generic function.
+- This function only needs a path, but optionally accepts location and window type. (see /JSON/links.json)
+- Path will be used to open the page, obviously, but also to populate the navigation array in the form of a cookie. (see /JSON/navigation.json)
+-- `Location` can be 'internal' or 'external' and `window` will either be set to 'current', 'new', or 'tab'.
+- External paths will load the page in outside.php and internal will look for the `window` parameter to determine this factor.
+- If no `window` parameter is provided it will be loaded into *current* (index.php=>#pages) by default.
+- Anchors will recieve this function via a '.load_link' class with parameterized attributes.
+
+The generated notice area is working in a hard-coded state.
+There is a function in index.js called notice() that takes a bool and a path.
+What ever file is loaded into the path gets translated into HTML and displayed into the #warning div.
+- a checkbox conditional is in the works to be set by a form. The form is only partially created and needs work. (see /JSON/notice.php and /pages/admin/)
++ the form will have a type(alert, warning, [etc]),head,body,date,{rows}
+|
+This form, with a work space attatched to it, is located at /admin/index.php
+- This is where things are being hooked together for testing.
+
+I think the best way to deal with the administration aspect is by validating a hidden cookie.
+- This cookie will be created by someone with 'administration' rights to the site.
+- Only an admin can create an admin
+- Only someone with the cookie will be allowed to be verified
+- There will be an internal link provided to officers of the bank to link to this secret path.
+- On this page there will be a secure login system.
+- Once you're logged in it will set your cookie to die in 1 hour. This cookie is checked by the index if a session variable is set by the login.
+- It will be important to separate the files accessable on the web from the files they include
+- admin_cookie.php
+-- needs much more thought
+! If it's the case that the admin panel will only be accessable from the intranet, as it should be, then the cookie setting won't be necessary for login keys; just a database query and a password should suffice for admin logins.
+
+jQuery wasn't handling the dropdowns all that well, so I moved to pure CSS3 transitions and only needed to set the height from javascript, this made things much nicer all in all, but there's still a sticky bit to figure out with the initial dropdown hover.

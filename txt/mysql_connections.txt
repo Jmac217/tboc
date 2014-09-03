@@ -1,0 +1,5 @@
+MYSQL CONNECTIONS:
+
+html/atm.php
+html/personal_cod.php
+html/rates.php

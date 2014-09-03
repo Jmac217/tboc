@@ -1,0 +1,43 @@
+These all need to be normalized and seperated into their own folders
+
+Folders structure is as follows
+./customer
+./personal
+./business
+./about
+
+online mortgage center : #
+consumer loan application : #
+ebanking demo : #
+ebanking bill pay demo : #
+enroll in ebanking : #
+activate estatements : pages/ebanking/estatements_activate.php
+financial calculators : calc.php
+
+* security center : security/all_header.php
+
+checking : pages/personal/checking.php
+money market : pages/personal/moneymarket.php
+savings : pages/personal/savings.php
+certificates of deposit : pages/personal/cod.php
+card services : pages/personal/card-services.php
+ebanking : pages/ebanking/ebanking.php
+loans : pages/personal/loans.php
+mortgage : #
+go club : pages/main/goclub.php
+other services : pages/personal/services.php
+
+checking : pages/business/checking.php
+ebanking : pages/business/ebanking.php
+remote deposit : pages/main/remote-deposit.php
+business debit card : pages/business/debit-card.php
+loans : pages/business/loans.php
+other services : pages/business/services.php
+
+history : pages/main/history.php
+mission : pages/main/mission.php
+news : ? applications/news/*
+employment : pages/main/employment.php
+hours & locations : pages/main/locations.php
+atm locations : pages/main/atm.php
+contact us : pages/main/contact.php

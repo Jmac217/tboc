@@ -1,0 +1,151 @@
+This calculator not only allows you to figure out your monthly payments, but also allows you to see your total interest payments as well.
+<ul>
+	<li>Don't use commas.
+	<li>Use the tab key or your mouse to move around in the worksheet.
+</ul>
+	  
+<script type="text/javaScript">
+
+/*
+
+	 Function Documentation
+
+	 test_it(entry) : does not allow null or length(0) values
+	 computeForm(form) : does the calculations for the form
+	 reset_it(form) : sets values to defaults
+	 alrt_msg(entry,low,high,prompt) : sends an alert when criteria is(isn't?) met
+
+	 todo: rename those obscure variables... I swear this dude is an idiot.
+
+*/
+
+	function test_it(entry) {
+ 		if (entry.value!=null && entry.value.length!=0) {
+		  entry.value=""+ eval(entry.value);
+	  }
+ 		computeForm(entry.form);
+ 	}
+
+	function computeForm(form) {
+ 		if ((form.months.value==null || form.months.value.length==0) ||	(form.rate.value==null || form.rate.value.length==0) ||	(form.financed.value == null || form.financed.value.length==0)) {
+	 	  return;
+   	}
+		if (!alrt_msg(form.months,1,480,"Your Number of Payments") || !alrt_msg(form.rate,.001,99,"Your Interest Rate") || !alrt_msg(form.financed,100,10000000,"Your Principal Amount")) {
+			form.payment.value="A value out of range - Click Reset";
+			return;
+    }
+		var i=form.rate.value;
+		ffv=0;
+		ffv+=form.financed.value;
+		fmv=0;
+		fmv+=form.months.value;
+		if (i > 1.0) {
+			// Hack to mostly correct floating point/binary conversion error
+			i=(i/100.0)+.00001;
+			var fmt="";
+			fmt+=i;
+		  fmt=fmt.substring(0,6)
+		  form.rate.value=fmt;
+  	}
+		i/=12;
+		var isn=1;
+		for (var j=0;j<form.months.value;j++){
+			isn=isn*(1+i);
+			form.payment.value=(form.financed.value*isn*i)/(isn-1);
+			fpv=0;
+			fpv+=form.payment.value;
+			var fmt="";
+			var add=9;
+			fmt+=form.payment.value;
+			for (var i=0;i<fmt.length;i++) {
+				if (fmt.charAt(i)==".") {
+					add=i+3;
+					i=fmt.length;
+				}
+			}
+			fmt=fmt.substring(0,add);
+			fcalc=((fmv*fpv)-ffv);
+			var fmtb="";
+			var add=9;
+			fmtb+=fcalc;
+			for (var i=0;i<fmtb.length;i++) {
+				if (fmtb.charAt(i)==".") {
+				add=i+3;
+				i=fmtb.length;
+				}
+			}
+			fmtb=fmtb.substring(0,add);
+			form.payment.value=" $"+fmt+"                     $"+fmtb; // this could be done much better. Add some tables, or something, at very least.
+		}
+	}
+
+	function reset_it(form) {
+		form.months.value="";
+		form.rate.value="";
+		form.financed.value="";
+		form.payment.value="";
+	}
+
+	function alrt_msg(entry,low,high,prompt) {
+		prompt="You couldn't know. "+prompt+" entry has unacceptable stuff: "+entry.value;
+		var scratch=entry.value;
+		for (var i=0;i<scratch.length;i++) {
+			var letter=scratch.substring(i,i+1);
+			if ((letter<"0" || "9"<letter) && letter!='.') {
+				alert(prompt);
+				return false;
+			}
+		}
+		var errtst=parseFloat(scratch)
+		if (errtst<low || high<errtst) {
+			alert("I'm sorry. "+prompt+ " is not in the range"+" from "+low+" to "+high+"!");
+			return false;
+		}
+		entry.value=scratch;
+		return true;
+	}
+</script>
+
+<!-- this form is a stupid mess -->
+<!--
+
+		first of all remove EVERY in-line style from the site. 
+		
+		In all honesty, it's going to be easier to just redesign the tables in these pages.
+
+-->
+
+<form method="POST">
+	<table border="0" cellpadding="4" align="center" style="width: 400px;">
+		<tr>
+			<td colspan="4" valign="top" align="center"><b>Simply Complete These Three Columns:</b></td>
+		</tr>
+		<tr>
+			<td width="114" align="center">Number of<br>Monthly<br>Payments</td>
+			<td colspan="2" align="center">Simple<br>Interest<br>Rate</td>
+			<td width="192" align="center">Principal<br>Amount<br>of Loan</td>
+		</tr>
+		<tr>
+			<td align="center"><input type="text" name="months" size="5" onChange="test_it(this)"></td>
+			<td colspan="2" align="center"><input type="text" name="rate" size="6" onChange="test_it(this)"></td>
+			<td align="center">$<input type="text" name="financed" size="9" onChange="test_it(this)"></td>
+		</tr>
+		<tr height="45">
+			<td colspan="4" align="center" height="45"><input type="reset" value="Click Here to Reset" onClick="reset_it(this.form)"></td>
+		</tr>
+		<tr height="45">
+			<td height="45" colspan="2" align="center"><b>See Your Payment<br>Here:</b></td>
+			<td height="45" colspan="2" align="center"><b>See Your Interest<br>Cost Here:</b></td>
+		</tr>
+		<tr height="45">
+			<td height="45" colspan="2" align="center">Your<br>Monthly<br>Payment<br>Will Be</td>
+			<td height="45" colspan="2" align="center">Your<br>Total<br>Interest Cost<br>Will Be</td>
+		</tr>
+		<tr height="45">
+			<td height="45" colspan="4" align="center"><input type="text" name="payment" size="35" onChange="test_it(this)"></td>
+		</tr>
+		<tr height="45">
+			<td height="45" colspan="4" align="center"><input type="button" value="Click Here to Compute Payment" onClick="computeForm(this.form)"></td>
+		</tr>
+	</table>
+</form>

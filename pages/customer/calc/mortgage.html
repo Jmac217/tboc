@@ -1,0 +1,601 @@
+
+<script>
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<h4>Mortgage Loan Calculator</h4>
+<p>This calculator figures your monthly mortage payment amounts, total interest, and will even show you an amoritization table.</p>
+						<ul>
+							<li>Don't use commas.</li>
+							<li>Use the tab key or your mouse to move around in the worksheet.</li>
+						</ul>
+					
+			<br>
+			<script language="JavaScript"><!--
+/* hide this code from non scriptable browsers
+
+
+
+If you run into any problems while trying to configure this script, help 
+
+is available.  A completely commented version and documentation are 
+
+avaiable upon request.
+
+
+
+       1) E-mail the author at: Qube@ix.netcom.com
+
+
+
+                            MORTGAGE
+
+
+
+COPYRIGHT NOTICE                                                         
+
+Copyright 1997 Steven D. Witkop  All Rights Reserved.
+
+
+
+Mortgage Script  may be used and modified free of charge by anyone so long as this 
+
+copyright notice and the comments above remain intact.  By using this code you agree 
+
+to indemnify Steven D. Witkop from any liability that  might arise from it's use.   
+
+
+
+Selling the code for this program without prior written consent is  expressly forbidden.  In other 
+
+words, please ask first before you try and  make money off of my program.  
+
+
+
+Obtain permission before redistributing this software over the Internet or in any other medium. 
+
+In all cases copyright and header must remain intact
+
+
+
+ LANGUAGE: JavaScript 1.1 compliant
+
+  PATTERN: MVC
+
+ 
+
+*/
+
+window.onerror=null
+
+bState = true
+
+oReq = new Collection("AMOUNT","RATE","","","","")
+
+oVal = new Collection("AMOUNT","RATE","","","","")
+
+oTst = new Collection("N","N","","","","")
+
+
+
+function controller(oForm, oBtn) {
+
+   while (bState) {
+
+      if (!Required(oForm))
+
+         break
+
+      if (!Validate(oForm))
+
+         break
+
+      if (!SetValue(oForm))
+
+         break
+
+     if (!NewPage(oForm, oBtn))
+
+         break
+
+      if (bState) {
+
+          bState = false
+
+      }
+
+   }
+
+   bState = true
+
+}
+
+function Required(oView) {
+
+   for (i in oView) {
+
+      for (j in oReq) {
+
+        if (i==oReq[j]) {      
+
+           if (isMissing(oView[i])) {
+
+               return(false)
+
+           }
+
+        }
+
+     }
+
+  }
+
+  return(true)
+
+}
+
+function Validate(oView) {
+
+   for (i in oView) {
+
+      for (j in oVal) {
+
+        if (i==oVal[j] && oTst[j]=="N") {      
+
+           if (isTest(oView[i], oTst[j])) {
+
+               return(false)
+
+           }
+
+        }
+
+     }
+
+  }
+
+  return(true)
+
+}
+
+function SetValue(oView) {
+
+   Mortgage = new Loan(oView.AMOUNT.value, oView.RATE.value, get_selection(oView.YEARS), 0, 0, get_selection(oView.FREQUENCY), 0 )
+
+   Mortgage.calcPeriods()
+
+   Mortgage.calcPayment()
+
+   Mortgage.calcInterest()
+
+   oView.PAYMENT.value = calcRound(Mortgage.Payment)
+
+   oView.INTEREST.value = calcRound(Mortgage.Interest)
+
+   setCookie("_Prin", Mortgage.Amount)
+
+   setCookie("_Int", Mortgage.Rate)
+
+   setCookie("_Year", Mortgage.Term)
+
+   setCookie("_Tot", Mortgage.Interest)
+
+   return(true)
+
+}
+
+
+
+function isMissing(oCtrl) {
+
+   if (oCtrl.value == "") {  
+
+      alert("You have left a required value blank. Please type a number") 
+
+      oCtrl.focus()
+
+      oCtrl.select()
+
+      return(true)
+
+      }
+
+   else
+
+      { 
+
+      return(false)
+
+   }
+
+}
+
+function isTest(oCtrl, oTest) {
+
+   if (oTest=="N" && !isNumber(oCtrl.value) ) {
+
+      alert(oCtrl.value+" contains an invalid character. Please type a number") 
+
+      oCtrl.focus()
+
+      oCtrl.select()
+
+      return(true)
+
+      }
+
+      else
+
+      { 
+
+      return(false)
+
+   }
+
+}
+
+function isNumber(input) {
+
+   for (var i=0;i<input.length;i++) {
+
+       var oneChar = input.substring(i, i+1)
+
+       if (oneChar < "0" || oneChar > "9") {
+
+          if (oneChar != "." ) { 
+
+             return(false)
+
+          }
+
+       }
+
+   }
+
+   return(true)
+
+}
+
+
+
+function Collection(item1, item2, item3, item4, item5, item6) {
+
+   this.item1 = item1
+
+   this.item2 = item2
+
+   this.item3 = item3
+
+   this.item4 = item4
+
+   this.item5 = item5
+
+   this.item6 = item6
+
+}
+
+function Loan(Amount, Rate, Term, Payment, Interest, Frequency, Periods ) {
+
+   this.Amount = Amount
+
+   this.Rate = Rate
+
+   this.Term = Term
+
+   this.Payment = Payment
+
+   this.Interest = Interest
+
+   this.Frequency = Frequency
+
+   this.Periods = Periods
+
+   this.calcPeriods = calcPeriods
+
+   this.calcPayment = calcPayment
+
+   this.calcInterest = calcInterest
+
+}
+
+function calcPayment() {
+
+   this.Payment = (this.Amount*((this.Rate/(this.Periods*100))/(1-(Math.pow(1+(this.Rate/(this.Periods*100)),((this.Term*this.Periods)*-1))))))
+
+}
+
+function calcInterest() {
+
+   this.Interest = ((this.Payment*(this.Term*this.Periods))-this.Amount)
+
+}
+
+function calcPeriods() {
+
+   if (this.Frequency=="Monthly") { this.Periods=12 } else { this.Periods=26 }
+
+}
+
+function calcRound(num) {
+
+   result="$"+Math.floor(num)+"." 
+
+   n = result.length
+
+   if (num>1000 && num<999999) {  
+
+     result="$"+result.substring(1,n-4)+","+result.substring(n-4,n)
+
+   }
+
+   if (num>1000000) {  
+
+     result = "$"+result.substring(1,n-7)+","+result.substring(n-7,n-4)+","+result.substring(n-4,n)
+
+   }
+
+   var cents=100*(num-Math.floor(num))+0.5
+
+   result += Math.floor(cents/10)
+
+   result += Math.floor(cents%10)
+
+   return(result)
+
+}
+
+
+
+function select_item(name, value) {  
+
+   this.name = name  
+
+   this.value = value
+
+}
+
+function get_selection(select_object) {   
+
+   contents = new select_item()
+
+   for(var i=0;i<select_object.options.length;i++)
+
+      if(select_object.options[i].selected == true) {
+
+        contents.name = select_object.options[i].text
+
+        contents.value = select_object.options[i].value
+
+      }      
+
+   return(contents.name)
+
+}
+
+function setCookie (name, value ) {
+
+  document.cookie = name + "=" + escape (value) + "; path=/"; 
+
+}   
+
+function NewPage(oForm, oBtn) {
+
+   if (oBtn.name == "cmdCalc") {
+
+      return(false)
+
+    }
+
+   if (confirm("An Amortization Table calculates the periodic payment breakdown for each specific category listed.")) {
+
+      text = ("<HEAD><TITLE>Amortization Table</TITLE></HEAD>");
+
+      text = (text +"<BODY BGCOLOR =  '#FFFFFF'><BR><BR>");
+
+      text = (text +"<H2 ALIGN=CENTER><FONT COLOR=PURPLE>Amortization Table</FONT></H2>");
+
+      text = (text +"<UL><FONT SIZE=-1>The following table is based on the information entered in the calculator form.</FONT></UL>");
+
+      text = (text +"<UL><FONT SIZE=+1 COLOR=PURPLE>Mortgage Amount: </FONT>" +calcRound(Mortgage.Amount));
+
+      text = (text +"<BR><FONT SIZE=+1 COLOR=PURPLE>  Interest Rate: </FONT>" + Mortgage.Rate + " %");
+
+      text = (text +"<BR><FONT SIZE=+1 COLOR=PURPLE>Mortgage Length: </FONT>" +get_selection(oForm.YEARS) + " Years </UL>");
+
+      text = (text +"<BR><CENTER><table border='1' width='100%'>");
+
+      text = (text +"<TR><TD ALIGN=CENTER BGCOLOR=PURPLE><FONT COLOR=WHITE><B>Year</B></FONT></TD><TD ALIGN=RIGHT BGCOLOR=PURPLE><FONT COLOR=WHITE><B>Interest&nbsp;</B></FONT></TD><TD ALIGN=RIGHT BGCOLOR=PURPLE><FONT COLOR=WHITE><B>Principal&nbsp;</B></FONT></TD><TD ALIGN=RIGHT BGCOLOR=PURPLE><FONT COLOR=WHITE><B>Balance&nbsp;</B></FONT></TD></TR>\n");
+
+      makeTable(oForm)
+
+      text = (text +"</TABLE></CENTER>");
+
+      msgWindow=window.open("","displayWindow","toolbar=no,width=500,height=300,directories=no,status=no,scrollbars=yes,resize=no,menubar=no")
+
+      msgWindow.document.write(text)
+
+      msgWindow.document.close()
+
+      return(true)
+
+    }
+
+  return(false)
+
+}
+
+
+
+function makeTable(oView) {
+
+   var currInt = 0
+
+   var currPrin = 0
+
+   prevBalance = Mortgage.Amount
+
+   InterestRate = ( Mortgage.Rate /100) / Mortgage.Periods
+
+   MonthlyPayment = Mortgage.Payment
+
+   currStart = get_selection(oView.START)
+
+   for(i=1;i<=30;i++) {
+
+      for(j=1;j<=Mortgage.Periods;j++) {
+
+         periodInt = prevBalance * InterestRate
+
+         periodPrin = MonthlyPayment - periodInt
+
+         currBal = prevBalance - periodPrin
+
+         currInt += periodInt
+
+         currPrin += periodPrin
+
+         prevBalance = currBal
+
+      }
+
+      if( currBal <= 0 ){ 
+
+         currBal = 0
+
+      }
+
+      text = (text +"<TR><TD ALIGN=CENTER>"+ currStart +"</TD><TD ALIGN=RIGHT>"+ calcRound(currInt) +"&nbsp;</TD><TD ALIGN=RIGHT>"+ calcRound(currPrin) +"&nbsp;</TD><TD ALIGN=RIGHT>"+ calcRound(currBal)+"&nbsp;</TD></TR>");
+
+      currInt = 0
+
+      currPrin = 0
+
+      currStart = parseInt(currStart)
+
+      currStart += 1
+
+      if(currBal<=0) {
+
+         return(true)
+
+      }       
+
+   }
+
+   return (true)
+
+}
+
+
+
+function setfocus() {   
+
+   document.MORTGAGE.AMOUNT.focus()
+
+   document.MORTGAGE.AMOUNT.select()
+
+}
+
+// unhide
+// -->
+			</script>
+			<form name="MORTGAGE" align="right">
+			
+    <table border="0" cellpadding="4" align="center">
+
+      <tr>
+					<td width="50%" align="right"><b><strong>First Payment Year</strong></b></td>
+					<td width="50%" valign="top"><select name="START" size="1">
+					  <option value="">2011
+							<option value="">2012
+		                    <option>2013
+		                    <option>2014
+		                    <option>2015
+        </select></td>
+
+	  </tr>
+				<tr>
+					<td width="50%" align="right"><b><strong>Mortgage Amount</strong></b></td>
+					<td width="50%" valign="top" ><input type="text" size="10" name="AMOUNT" value="0"></td>
+				</tr>
+				<tr>
+					<td width="50%" align="right" ><b><strong>Interest Rate</strong></b></td>
+				  <td width="50%" valign="top" ><input type="text" size="4" name="RATE" value="0"> <strong>%</strong></td>
+
+				</tr>
+				<tr>
+					<td width="50%" align="right" ><b><strong>Mortgage Length</strong></b></td>
+				  <td width="50%" valign="top" ><select name="YEARS" size="1">
+							<option selected value="">30
+							<option value="">15
+						</select> <strong>Years</strong></td>
+				</tr>
+
+				<tr>
+					<td width="50%" align="right" ><b><strong>Payment Frequency</strong></b></td>
+					<td width="50%" valign="top" ><select name="FREQUENCY" size="1">
+							<option selected value="">Monthly
+				  </select></td>
+				</tr>
+				<tr>
+					<td width="50%" bordercolor="#008080">&nbsp;</td>
+					<td width="50%"><input type="button" name="cmdCalc" value=" Calculate " onclick="controller(this.form, this)"><input type="reset" name="cmdReset" value="Reset"><input type="button" name="cmdAmoritize" value="Amoritize" onclick="controller(this.form, this)"></td>
+
+				</tr>
+				<tr>
+					<td width="50%" align="right" ><b><strong>Payment Amount</strong></b></td>
+					<td width="50%" valign="top" ><input type="text" size="10" name="PAYMENT"></td>
+				</tr>
+				<tr>
+					<td width="50%" align="right" ><b><strong>Total Interest</strong></b></td>
+					<td width="50%"><input type="text" size="10" name="INTEREST"></td>
+
+				</tr>
+			</table>
+			</form>

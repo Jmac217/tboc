@@ -1,0 +1,12 @@
+<center>
+<br />
+This application is only a skeleton right now, but aims to provide a front-end to the notice-board. Giving access to key HTML features in a simple, easy-to-use format.<br /><hr /><br />
+</center>
+
+<b>TODO</b><br />
+<ul>
+<li>Plug the form, without checkboxes, into JS.</li>
+<li>Set up full JSON structure.</li>
+<li>Include a js file and link to it in this index.</li>
+<li> - use that index to add and remove JSON values on blur.</li>
+</ul>
