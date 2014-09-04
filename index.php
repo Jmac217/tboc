@@ -5,10 +5,12 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <html>
 <head>
-	<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection">
-	<link rel="stylesheet" href="css/print.css" type="text/css" media="print">    
-	<link href="css/index.css" rel="stylesheet" type="text/css">
-	<link href="css/navigation.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection" />
+	<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
+	<link href="css/navigation.css" rel="stylesheet" type="text/css" />
+	<link href="lib/jquery-ui-1.11.1.tboc/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+	<link href="lib/jquery-ui-1.11.1.tboc/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" />
 	<link rel='shortcut icon' href='res/icon.bmp' />
 	<title>The Bank of Carbondale</title>
 </head>
@@ -140,7 +142,7 @@
 								<li class='load_link' path='pages/personal/personal_ira.php' location='internal' window='current'>Individual Retirement (IRA)</li>
 								<li class='load_link' path='pages/personal/card-services.php' location='internal' window='current'>Card Services</li>
 								<li class='load_link' path='pages/personal/ebanking.php' location='internal' window='current'>eBanking</li>
-								<li class='load_link' path='pages/personal/loans.php' location='internal' window='current'>Loans</li>
+								<li class='load_link' path='pages/customer/personal_loans.php' location='internal' window='current'>Loans</li>
 								<li class='load_link' path='pages/personal/personal_loans.php' location='internal' window='current'>Mortgage</li>
 								<li class='load_link' path='pages/personal/goclub.php' location='internal' window='current'>GO Club</li>
 								<li class='load_link' path='pages/personal/services.php' location='internal' window='current'>Other Services</li>
@@ -160,7 +162,7 @@
 								<li class='load_link' path='pages/business/ebanking.php' location='internal' window='current'>eBanking</li>
 								<li class='load_link' path='pages/business/remote-deposit.php' location='internal' window='current'>Remote Deposit</li>
 								<li class='load_link' path='pages/business/debit-card.php' location='internal' window='current'>Business Debit Card</li>
-								<li class='load_link' path='pages/customer/personal_loans.php' location='internal' window='current'>Loans</li>
+								<li class='load_link' path='pages/business/loans.php' location='internal' window='current'>Loans</li>
 								<li class='load_link' path='pages/business/services.php' location='internal' window='current'>Other Services</li>
 							</ul>
 						</li>
@@ -269,8 +271,12 @@
 			</div>
 		</div>
 	</div>
+	<div id='outgoing'>
+		<span><center>You are about to enter :PAGE:</center></span>
+	</div>
 <script type='text/javascript' src='js/jquery1.js'></script>
 <script type='text/javascript' src='js/index.js'></script>
 <script type='text/javascript' src='js/jquery.slides.min.js'></script>
+<script type='text/javascript' src='lib/jquery-ui-1.11.1.tboc/jquery-ui.min.js'></script>
 </body>
 </html>

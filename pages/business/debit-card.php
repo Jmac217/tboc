@@ -4,8 +4,11 @@
 	$PageTitle = 'Business Debit Card';
 */
 ?>
-<p><img src="res/Business_Debit_Cards.png" alt="Business Debit Card" width="681" height="62"></p>
-<h2><img src="res/DebitCard1.jpg" width="350" height="350" align="left" class="Photo">MasterCard&reg; Business Debit Card</h2>
+<!--<p><img src="res/Business_Debit_Cards.png" alt="Business Debit Card" width="681" height="62"></p>-->
+<div class='page_header'>Business Debit Card</div>
+<img src="res/debit_card.jpg" class="photo text_shadow" style='top:100px;'>
+<div class='textblock text_shadow' style='top:100px;height:620px;'>
+<h2>MasterCard & Business Debit Card</h2>
 <ul>
 	<li>Simplify your money management</li>
 	 <li>Funds are automatically deducted from your business checking account</li>
@@ -25,3 +28,4 @@
 <h3>Debit Card Fraud</h3>
 <p>Call The Bank of Carbondale during regular business hours: 618-549-2181</p>
 <p>After hours call: 800-262-2024</p>
+</div>

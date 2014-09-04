@@ -1,5 +1,36 @@
 $(document).ready(function(){
 
+// currently debugging
+// This will be a click event for links
+// a page will be passed in to the continue button
+// Not sure if I like the #outgoing id
+/*
+$('#outgoing').dialog({
+	title: 'Confirm',
+	width: 380,
+	height: 140,
+	modal: true,
+	resizable: false,
+	draggable: false,
+	dragStart: function(event, ui){},
+	dialogClass: 'no-close',
+	buttons: [{
+		text: 'Cancel',
+		click: function()
+		{
+			// exit
+			$(this).dialog('close');
+		}
+	},{
+		text: 'Continue',
+		click: function()
+		{
+			// go to location	
+		}
+	}]
+});
+*/
+
 // Main section //
 
 function notice(visible, path, type){ // this function deals with everything relating to the notice_board
@@ -370,7 +401,7 @@ function load_link(path,location,window){
 		async:true,
 		success:function(data){
 			$(window).html(data);
-			$(window).css({'height':'690px'});
+//			$(window).css({'height':'1500px'}); // height needs to be set by an innerHeight function
 			var height = $(window)[0].scrollHeight;
 			$(window).css({'height':height});
 			set_footer(height);

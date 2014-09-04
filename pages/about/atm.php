@@ -12,13 +12,13 @@
 	$query = "SELECT city, location, status FROM atm ORDER BY city";
 	$result = mysql_query($query) or die(mysql_error());
 ?>
-<h1 class="page_header" style='position:relative;'>Hours &amp; Locations - ATM Locations</h1>
+<div class='page_header'>ATM Locations</div><br/>
 <?php 
 	//Display ATM Locations
 	$row = mysql_fetch_assoc($result);
 	$City1 = $row['city'];
 	echo "
-		<table width='500' class='atm textblock text_shadow' align='center' style='width:95%;'>
+		<table class='textblock text_shadow' style='left:2%;width:95%;'>
 			<tr>
 				<td colspan=2>
 					<h2>".$row['city']."</h2>

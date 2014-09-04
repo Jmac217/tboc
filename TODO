@@ -1,5 +1,7 @@
 What to do next
 
+for the outgoing links js load_link functionality will have to be broken out and split, right now it's attached to li elements. Security Center is where that was being tested, old links are only commented out.
+
 bug in notice() - top animation is set for old links location
 
 prepare all pages to load correctly, whether it be in the #pages div or in another tab

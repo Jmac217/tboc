@@ -156,11 +156,16 @@ Get a copy of  Taking charge: What to do if your identity is stolen  from the Fe
 <br />
 <a name='6'></a>
 <b class='bold'>Helpful Links </b><br /><br />
-Federal Trade Commission<br/>&nbsp<a href='../outside.php?u=http://www.ftc.gov'>www.ftc.gov</a><br /><br />
+<!--Federal Trade Commission<br/>&nbsp<a href='../outside.php?u=http://www.ftc.gov'>www.ftc.gov</a><br /><br />
 The federal government's website to help you be safe, secure and responsible online<br/>&nbsp<a href='../outside.php?u=http://www.OnGuardOnline.gov'>www.OnGuardOnline.gov</a><br /><br />
 Federal Deposit Insurance Corporation<br/>&nbsp<a href='../outside.php?u=http://www.fdic.gov'>www.fdic.gov</a><br /><br />
 Anti-Phishing Working Group<br/>&nbsp<a href='../outside.php?u=http://www.antiphishing.org'>www.antiphishing.org</a><br /><br />
-The official site to help consumers to obtain their free annual credit report<br/>&nbsp<a href='../outside.php?u=http://www.annualcreditreport.com'>www.annualcreditreport.com</a><br /><br />
+The official site to help consumers to obtain their free annual credit report<br/>&nbsp<a href='../outside.php?u=http://www.annualcreditreport.com'>www.annualcreditreport.com</a><br /><br />-->
+Federal Trade Commission<br/>&nbsp<a class='load_link' path='http://www.ftc.gov' location='external' window='new'>www.ftc.gov</a><br /><br />
+The federal government's website to help you be safe, secure and responsible online<br/>&nbsp<a class='load_link' path='http://www.OnGuardOnline.gov' window='current'>www.OnGuardOnline.gov</a><br /><br />
+Federal Deposit Insurance Corporation<br/>&nbsp<a class='load_link' path='http://www.fdic.gov' window='new'>www.fdic.gov</a><br /><br />
+Anti-Phishing Working Group<br/>&nbsp<a class='load_link' path='http://www.antiphishing.org' window='tab'>www.antiphishing.org</a><br /><br />
+The official site to help consumers to obtain their free annual credit report<br/>&nbsp<a class='load_link' path='http://www.annualcreditreport.com' window='new'>www.annualcreditreport.com</a><br /><br />
 <br />
 <i>Nationwide consumer credit reporting agencies:</i><br /><br />
 Equifax<br/>&nbsp<a href='../outside.php?u=http://www.equifax.com'>www.equifax.com</a><br /><br />
