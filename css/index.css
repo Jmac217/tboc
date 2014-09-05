@@ -30,7 +30,7 @@ li:hover{color:#FC0;}
 
 
 
-#outgoing{visibility:hidden;}
+#outgoing{visibility:visible;}
 
 #links{position:absolute;top:10px;left:10px;z-index:1000;}
 .link{position:absolute;cursor:pointer;height:40px;width:220px;top:100px;background-image:url('../res/TBOC_Blank_Button.png');background-repeat:no-repeat;text-align:center;z-index:1000;}
