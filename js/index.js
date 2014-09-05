@@ -4,7 +4,7 @@ $(document).ready(function(){
 // This will be a click event for links
 // a page will be passed in to the continue button
 // Not sure if I like the #outgoing id
-/*
+
 $('#outgoing').dialog({
 	title: 'Confirm',
 	width: 380,
@@ -29,7 +29,7 @@ $('#outgoing').dialog({
 		}
 	}]
 });
-*/
+
 
 // Main section //
 
