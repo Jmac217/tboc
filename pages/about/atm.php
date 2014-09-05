@@ -18,7 +18,7 @@
 	$row = mysql_fetch_assoc($result);
 	$City1 = $row['city'];
 	echo "
-		<table class='textblock text_shadow' style='left:2%;width:95%;'>
+		<table class='page_body textblock text_shadow'>
 			<tr>
 				<td colspan=2>
 					<h2>".$row['city']."</h2>

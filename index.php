@@ -16,6 +16,9 @@
 </head>
 
 <body>
+	<div id='debug'>
+		<u>Notices: </u> <span id='noticesOn'>On</span> / <span id='noticesOff'>Off</span>
+	</div>
 	<div id="doc">
 		<div id="header">
 			<div id='logo'></div>

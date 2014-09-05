@@ -4,8 +4,8 @@
 	$PageTitle = 'Employment';
 */
 ?>
-<div class='page_header' style='left:40px;top:20px;'>Employment</div>
-<div class='textblock text_shadow' style='height:47%;width:90%;'>
+<div class='page_header'>Employment</div>
+<div class='page_body textblock text_shadow'>
 	<p>The Bank of Carbondale continually seeks people that are highly motivated, concerned with customer satisfaction, and those who strive to offer the best in banking services to the community.  We are an Equal Opportunity Employer.  The Bank of Carbondale offers competitive salaries, benefits, and a great working atmosphere. </p>
 	<div class='job_opening'>
 		<h3>Job Title: Customer Service Specialist</h3>

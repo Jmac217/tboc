@@ -6,8 +6,8 @@
 ?>
 <!--<p><img src="res/Business_Debit_Cards.png" alt="Business Debit Card" width="681" height="62"></p>-->
 <div class='page_header'>Business Debit Card</div>
-<img src="res/debit_card.jpg" class="photo text_shadow" style='top:100px;'>
-<div class='textblock text_shadow' style='top:100px;height:620px;'>
+<img src="res/debit_card.jpg" class="page_photo text_shadow">
+<div class='page_body textblock text_shadow calculated_width'>
 <h2>MasterCard & Business Debit Card</h2>
 <ul>
 	<li>Simplify your money management</li>

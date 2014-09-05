@@ -1,16 +1,31 @@
+::For monday's demonstration::
+
+1.) Fix page orientations, whether this has to be done in-line, or the classes get structured, it has to get done.
+		-- locations.php is still inline
+
+2.) Make .load_link work for loading in new tabs or the same page, because they will need to see that it can be modified if necessary.
+
+3.) Get #outgoing box set up with external links though means of .load_link, this will mean adding onto .load_link and breaking down its CSS into modular chunks. Also Javascript will have to be injected, so a functions.js will need to be added and it's a real possibility that there will need to be an outgoing.php page included to be loaded by .load_link.
+
+~~~~~~~~~~~~~~~~~~~~~
+
 What to do next
 
-for the outgoing links js load_link functionality will have to be broken out and split, right now it's attached to li elements. Security Center is where that was being tested, old links are only commented out.
+#pages probably shouldn't overflow
 
-bug in notice() - top animation is set for old links location
+for the outgoing links js load_link functionality will have to be broken out and split, right now it's coupled to li elements. Security Center is where that was being tested, old links are only commented out.
 
-prepare all pages to load correctly, whether it be in the #pages div or in another tab
+bug in notice() - top animation is set for old links location (below banner)
+
+pages are hacked together with in-line styling, which is fine for the demonstration, but will will need to be broken down into classes: .page_header, .page_photo, .page_panel (for multiple sections), .page_body (for single sections), .page_paragraph (to replace .job_opening)
+
+revisit the load_link function and prepare all pages to load correctly, whether it be in the #pages div or in another tab. The new window thing doesn't exactly matter
 - this means the load() function will need to be finished, probably first.
 - for now all pages except for external links will load into the front page
 
 Testing email sendings will require the existing mail() functions to be commented and replaced by one with either mine or Tom's email address, mine for now.
 
-The css structure of the Security Center is not coordinated well with the rest of the index
+The css structure of the Security Center is not coordinated well with the rest of the index, which is not important for the demonstration but will need to be reassessed.
 
 ============================================================================================================
 

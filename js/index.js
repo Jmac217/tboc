@@ -62,15 +62,15 @@ function notice(visible, path, type){ // this function deals with everything rel
 
 				var notices = get_top(100);
 
-				var body = get_top(40);
-				var links = get_top(300);
-				var pages = get_top(385);
-				var footer = get_top(1140);
+				var body = get_top(10);
+				var links = get_top(20);
+				var pages = get_top(300);
+//				var footer = get_top(640);
 				$('#notices').css({'visibility':'visible'}).animate({'height':notice_height});
 				$('#body_container').animate({'top':body}); 
 				$('#links').animate({'top':links}); 
 				$('#pages').animate({'top':pages}); 
-				$('#footer').animate({'top':footer}); 
+//				$('#footer').animate({'top':footer}); 
 
 				// if notices is on => set height to (rows*row_height)
 				// and set relative divisions to (notice_height+div_top)
@@ -156,10 +156,42 @@ function notice(visible, path, type){ // this function deals with everything rel
 				}
 			}
 		});
+	}else if(visible=='false'){
+	
+				$('#notices').animate({'height':'0px'});
+				$('#body_container').animate({'top':'0px'}); 
+				$('#links').animate({'top':'10px'}); 
+				$('#pages').animate({'top':'300px'}); 
+//				$('#footer').animate({'top':'717px'}); 
+//				$('#footer').css({'bottom':'0px'}); 
+				setTimeout(function(){
+					$('#notices').css({'visibility':'hidden'})
+						$('#notices_area').css({'visibility':'hidden'})
+						$('#warning').css({'visibility':'hidden',});
+						$('#alert').css({'visibility':'hidden'});
+				},350);
+
+	
+	
+	
+	
+	
+	
+	/***********************************************/
+	
+		// set visibility false and animate closed
+		$('#notices').animate({'height':'0px'});		
 	}
 }
-notice('false', 'JSON/notice.xml', 'warning');
+//notice('false', 'JSON/notice.xml', 'warning');
 
+$('#noticesOn').click(function(){
+	notice('true', 'JSON/notice.xml', 'warning');
+});
+
+$('#noticesOff').click(function(){
+	notice('false', 'JSON/notice.xml', 'warning');
+});
 
 //var pages_height = $('#pages')[0].scrollHeight;
 //$('#pages').css({'height':pages_height});
@@ -343,7 +375,9 @@ function selection_handler(type,path,load,name,element){
 	});
 
 function set_footer(page_height){
-	var footer_top = page_height+470+'px';
+	var notice_height = parseInt($('#notices').css('height'));
+	var footer_height = 470;
+	var footer_top = page_height+notice_height+footer_height+'px';
 	$('#footer').css({'top':footer_top});
 }
 
@@ -402,7 +436,9 @@ function load_link(path,location,window){
 		success:function(data){
 			$(window).html(data);
 //			$(window).css({'height':'1500px'}); // height needs to be set by an innerHeight function
-			var height = $(window)[0].scrollHeight;
+			$('#pages').css({'height':'0px'});
+			height = $(window)[0].scrollHeight;
+			height+=50; // #pages height is weird
 			$(window).css({'height':height});
 			set_footer(height);
 		}

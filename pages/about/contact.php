@@ -25,8 +25,8 @@ if (isset($_POST['submit'])) {
 
 ?>
 <!--<p><img src="res/ContactUs.png" alt="Contact Us" width="681" height="62"></p>-->
-<div class='page_header' style='position:relative;left:30px;'>Contact Us</div>
-<div class='textblock text_shadow' style='position:relative;top:0px;left:3%;width:90%;height:78%;'>
+<div class='page_header'>Contact Us</div>
+<div class='textblock text_shadow'>
 <p>Call <span style="font-weight: bold">618-549-2181</span> or e-mail us below.</p>
 <p>Please do not include any sensitive customer information in your email (e.g. social security number, account number, etc.)<br/>E-mail is NOT secure.</p>
 <form id="email" name="email" method="post" action="contact.php">

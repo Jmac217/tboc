@@ -10,10 +10,25 @@ li:hover{color:#FC0;}
 .e{color:#07a603;}
 
 .page_header{position:relative;top:0px;left:10px;font-size:60px;color:#05588d;font-family:optimus;}
-.textblock{position:absolute;top:15%;right:20px;width:55%;height:70%;background-color:#EEE;font-size:14px;border:solid 1px #DDD;padding:20px;z-index:20;}
-.photo{position:absolute;top:15%;left:10px;width:350;height:350px;border-radius:2px;}
+.textblock{background-color:#EEE;font-size:14px;border:solid 1px #DDD;padding:20px;z-index:20;}
+/*.photo{position:absolute;top:15%;left:10px;width:350;height:350px;border-radius:2px;}*/
 .text_shadow{box-shadow:5px 5px 10px #777;}
 .job_opening{position:relative;background-color:#DDD;font-size:14px;border:solid 1px #EEE;padding:20px;z-index:20;}
+
+
+#debug{position:absolute;top:0px;left:0px;padding:10px;background-color:#ddd;border:solid 1px #aaa;}
+#noticesOn{cursor:pointer;}
+#noticesOff{cursor:pointer;}
+
+
+.page_header{position:relative;top:0px;left:10px;}
+.page_photo{position:absolute;top:100px;width:350;height:350px;border-radius:2px;}
+.page_body{position:absolute;top:100px;right:15px;}
+.page_panel{position:relative;top:100px;}
+.page_paragraph{position:relative;background-color:#DDD;font-size:14px;border:solid 1px #EEE;padding:20px;z-index:20;}
+.calculated_width{width:-moz-calc(100% - 430px);width:-webkit-calc(100% - 430px);width:calc(100% - 430px);}
+
+
 
 #outgoing{visibility:hidden;}
 
@@ -33,7 +48,7 @@ li:hover{color:#FC0;}
 .slidesjs-navigation{position:absolute;visibility:hidden;}
 .slidesjs-pagination-item{position:absolute;visibility:hidden;}
 
-#doc{position:relative;top:0px;left:15%;height:859px;width:970px;}
+#doc{position:relative;top:0px;left:15%;/*height:859px;*/width:970px;}
 	#header{position:absolute;top:0px;left:0px;height:400px;width:100%;}
 		#logo{position:absolute;top:0px;left:0px;height:75px;width:177px;background-image:url('../res/logo.jpg');background-repeat:no-repeat;cursor:pointer;}
 		#nav_links{position:absolute;top:0px;right:0px;height:25px;width:475px;}
@@ -103,7 +118,7 @@ li:hover{color:#FC0;}
 				.security_nav_center{position:absolute;left:46%;}	
 				.image{position:absolute;top:100px;left:45%;background-image:url('lock_transparent_small.png');height:319px;width:563px;/*border:solid 1px #444;*/}
 
-	#footer{position:absolute;/*top:1165px;*/top:700px;left:0px;width:100%;height:50px;/*border:solid 1px #777;*/}
+	#footer{position:absolute;/*top:1165px;*/top:717px;left:0px;width:100%;height:50px;/*border:solid 1px #777;*/}
 		#footer_copy{position:absolute;bottom:0px;left:0px;height:15px;}
 		#footer_FDIC{position:absolute;bottom:0px;right:0px;}
 			#footer_FDIC_logo{position:absolute;bottom:0px;right:0px;background-image:url("../res/equal-housing-lender-transparent.png");height:37px;width:70px;}
