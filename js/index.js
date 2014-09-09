@@ -5,6 +5,8 @@ $(document).ready(function(){
 // a page will be passed in to the continue button
 // Not sure if I like the #outgoing id
 
+/*** Dialog Testing ***/
+/*
 $('#outgoing').dialog({
 	title: 'Confirm',
 	width: 380,
@@ -29,10 +31,12 @@ $('#outgoing').dialog({
 		}
 	}]
 });
-
+*/
 
 // Main section //
 
+/*** Moving to functions.js ***/
+/*
 function notice(visible, path, type){ // this function deals with everything relating to the notice_board
 	if (visible == 'true'){
 		$.ajax({
@@ -170,20 +174,15 @@ function notice(visible, path, type){ // this function deals with everything rel
 						$('#warning').css({'visibility':'hidden',});
 						$('#alert').css({'visibility':'hidden'});
 				},350);
-
-	
-	
-	
-	
-	
-	
-	/***********************************************/
 	
 		// set visibility false and animate closed
 		$('#notices').animate({'height':'0px'});		
 	}
 }
-//notice('false', 'JSON/notice.xml', 'warning');
+*/
+
+// manual notice switch
+// notice('false', 'JSON/notice.xml', 'warning');
 
 $('#noticesOn').click(function(){
 	notice('true', 'JSON/notice.xml', 'warning');
@@ -198,6 +197,7 @@ $('#noticesOff').click(function(){
 
 //alert($('#pages').innerHeight());
 
+// pretty sure this is being depricated for load_link
 function selection_handler(type,path,load,name,element){
 	/* --Parameters--
 	 *
@@ -247,6 +247,7 @@ function selection_handler(type,path,load,name,element){
 			}
 		}
 	}
+	alert(name);
 	get_name_type(name);
 
 	// there are only links right now, but soon there may be more choices: (to rattle off possibilities) picture, panel, button, div
@@ -337,11 +338,7 @@ function selection_handler(type,path,load,name,element){
 */
 
 	// Main Login Box
-	$('#user_id, #password').focus(function(){
-		$(this).css({'background-color':'#EFEFEF'});	
-	}).blur(function(){
-		$(this).css({'background-color':'#FEFEFE'});	
-	}).click(function(){
+	$('#user_id, #password').click(function(){
 		$(this).select();	
 	});
 
@@ -374,13 +371,18 @@ function selection_handler(type,path,load,name,element){
 		$('#slide-3-area').css({'visibility':'visible'});
 	});
 
+/*** Moving to functions.js ***/
+/*
 function set_footer(page_height){
 	var notice_height = parseInt($('#notices').css('height'));
 	var footer_height = 470;
 	var footer_top = page_height+notice_height+footer_height+'px';
 	$('#footer').css({'top':footer_top});
 }
+*/
 
+/*** Moving to functions.js ***/
+/*
 function load_link(path,location,window){
 
 	// set visibility
@@ -399,7 +401,30 @@ function load_link(path,location,window){
 		break;
 		case "external":
 			// load path through outside.php?u=path
-			outside=1;
+			$('#outgoing').css({'visibility':'visible'}).dialog({
+				title: 'Confirm',
+				width: 380,
+				height: 140,
+				modal: true,
+				resizable: false,
+				draggable: false,
+				dragStart: function(event, ui){},
+				dialogClass: 'no-close',
+				buttons: [{
+					text: 'Cancel',
+					click: function()
+					{
+						// exit
+						$(this).dialog('close');
+					}
+				},{
+					text: 'Continue',
+					click: function()
+					{
+						// go to location	
+					}
+				}]
+			});
 		break;
 		default:
 			location=null;	
@@ -444,6 +469,9 @@ function load_link(path,location,window){
 		}
 	});
 }
+*/
+/*** Wondering if this should be moved to functions as well ***/
+/*
 $('.load_link').click(function(){
 
 	// how about coordinating the 'name' or 'id' with a JSON array
@@ -460,7 +488,10 @@ $('.load_link').click(function(){
 	// run the function
 	load_link(path,location,window);
 });
+*/
 
+/*** Moved to functions.js ***/
+/*
 function get_nav(nav_array){
 	if (nav_array==null){
 		var nav_string = '';
@@ -480,6 +511,7 @@ function get_nav(nav_array){
 	}
 	$('#user_nav').html(nav_string);
 }
+*/
 get_nav();
 
 // End of Main Section //

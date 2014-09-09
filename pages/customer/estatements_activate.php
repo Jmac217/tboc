@@ -1,13 +1,12 @@
 <?php
 if(!isset($_GET['confirm'])){ // No code specified: show form
 	echo "
-		<div class='header'>
-			<h2>Activate eStatements</h2>
-		</div>
-		<p>To activate eStatements, enter your confirmation code from your activation email.</p>
+		<div class='page_header'>Activate <span style='color:#07a603'>e</span>Statements</div>
+		<div class='textblock text_shadow'>
+		<p>To activate eStatements, please enter your confirmation code from the activation email you received.</p>
 		<form id='form1' name='form1' method='get' action='pages/ebanking/estatements_activate.php'>
-			Confirmation Code:<input name='confirm' type='text' id='confirm' maxlength='20' />
-			<input type='submit' name='Submit' id='Submit' value='Activate' />
+			<input placeholder='Confirmation Code...' class='input' name='confirm' type='text' id='confirm' maxlength='20' />
+			<input class='button' type='submit' name='Submit' id='Submit' value='Activate' />
 		</form>            
 	";
 }else if($_GET['confirm'] == '297828722'){ // eStatements have already been confirmed
@@ -33,6 +32,7 @@ if(!isset($_GET['confirm'])){ // No code specified: show form
 				<h2>Activation Complete</h2>
 			</div>
 			<p>Thank you! Your eStatements activation is now complete. You should receive your next regular monthly statement by eStatements.</p>
+		</div>
 		";
 	}
 }

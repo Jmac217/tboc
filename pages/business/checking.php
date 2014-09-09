@@ -20,7 +20,7 @@
     <th width="50%" align="center" scope="col"><div align="center">Business Checking</div></th>
   </tr>
   <tr>
-    <th scope="row"><div align="right">Monthly Service Fee*</div></th>
+    <th scope="row"><div align="right">Monthly Service Fee<sup>*</sup></div></th>
     <td><div align="center">Varies</div></td>
   </tr>
   <tr>
@@ -37,7 +37,7 @@
       $0.060 (foreign)</div></td>
   </tr>
   <tr>
-    <th scope="row"><div align="right"><a href="/personal/debitcard">Debit Card Available**</a></div></th>
+    <th scope="row"><div align="right"><a href="/personal/debitcard">Debit Card Available<sup>**</sup></a></div></th>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td>
   </tr>
   <tr>
@@ -66,8 +66,8 @@
   </tr>
 </table>
 <small>
-	<p><img src="res/Checkmark.png" width="25" height="28"> Available on this account type. Service fee may apply.</p><br>
-	<p>*Monthly fee varies based on an analysis of your account balance and account activity.  Please contact our New Accounts Department for more information.�</p>
-	**MasterCard Business Debit Card subject to credit approval and daily purchase limits.  Please contact a bank representative for more information.
+	<p><img src="res/Checkmark.png" width="25" height="28"> : Available on this account type. Service fee may apply.</p>
+	<p><sup>*</sup> : Monthly fee varies based on an analysis of your account balance and account activity. Please contact our New Accounts Department for more information.</p>
+	<p><sup>**</sup> : MasterCard Business Debit Card subject to credit approval and daily purchase limits. Please contact a bank representative for more information.</p>
 </small>
 </div>

@@ -4,10 +4,15 @@
 	$PageTitle = 'Money Market Accounts';
 */
 ?>
-<p><img src='res/Money_Market.png' width='681' height='62'></p>
-<p><img src='res/Financial1.jpg' width='350' height='350' align='left' class='Photo'>After you're accustomed to saving money and have accumulated a larger  balance, you may want to step up to this account and earn a higher  interest rate. This account offers limited check writing ability along  with tiered interest rates.</p>
+<div class='page_header'>Money Market</div>
+<img src='res/Financial1.jpg' class='page_photo text_shadow'/>
+<div class='page_body textblock text_shadow calculated_width'>
+<p>After you're accustomed to saving money and have accumulated a larger  balance, you may want to step up to this account and earn a higher  interest rate. This account offers limited check writing ability along  with tiered interest rates.</p>
 <p>Every Bank of Carbondale Money Market account is eligible for eBanking with online, mobile, and text access on your schedule, 24 hours a day.</p>
 <p>All accounts are also eligible for free eStatements, with online delivery for your convenience and security.</p>
+</div>
+<br />
+<div class='textblock text_shadow' style='position:absolute;top:480px;width:93%;'>
 <table width='99%' border='2' cellspacing='3' cellpadding='0' class='Comparison'>
 	<tr>
 		<td scope='col' style='min-height:0; border: none;'>&nbsp;</td>
@@ -65,3 +70,4 @@
 		<td><div align='center'>$5.00 per item</div></td>
 	</tr>
 </table>
+</div>

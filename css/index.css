@@ -4,10 +4,24 @@
 
 body{background-image:url(../res/plain-gray-white-bg.png);background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;}
 
-ul{list-style-type:none;}
-li:hover{color:#FC0;}
+a{color:rgb(128,0,0);cursor:pointer;outline:0;}a:hover{color:rgb(200,0,0);outline:0;}
+li>a:visited{color:white;outline:0;}li>a:active{color:white;outline:0;}
+a:link{color:rgb(128,0,0);}a:visited{color:rgb(128,0,0),}a:active{color:rgb(128,0,0);}
 
-.e{color:#07a603;}
+ul{list-style-type:none;}
+
+input{background-color:#FEFEFE}input:focus{background-color:#EFEFEF;}
+
+sup{font-size:14px;font-weight:bold;}
+
+.e{color:#07a603;} /* literally, the "e" in eStatements... this should just be an inline style */
+
+.button{position:relative;border-style:none;border:solid 1px #777;cursor:pointer;background-color:#CCC;color:#000;}
+.button:hover{border:solid 1px #777;background-color:#BBB;color:#040;}
+
+.apply{position:relative;left:70%;border-style:none;border-radius:5px;border:solid 1px #911;background-color:#600;color:white;text-decoration:none;padding:8px 40px 8px 40px;background:-moz-linear-gradient(#B00,#900);font-weight:bold;font-face:arial;box-shadow:5px 5px 5px #999;}
+.apply:hover{color:white;background:-moz-linear-gradient(#C00,#A00);}
+.apply:visited{color:white;}
 
 .page_header{position:relative;top:0px;left:10px;font-size:60px;color:#05588d;font-family:optimus;}
 .textblock{background-color:#EEE;font-size:14px;border:solid 1px #DDD;padding:20px;z-index:20;}
@@ -29,8 +43,13 @@ li:hover{color:#FC0;}
 .calculated_width{width:-moz-calc(100% - 430px);width:-webkit-calc(100% - 430px);width:calc(100% - 430px);}
 
 
+th{background-color:#BBB;border-bottom:solid 1px #AAA;border-right:solid 1px #AAA;}
+td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 
-#outgoing{visibility:visible;}
+
+#outgoing{visibility:hidden;text-align:center;}
+.outgoing_message{font-size:18px;}
+.outgoing_link{font-size:10px;text-decoration:underline;font-weight:bold;}
 
 #links{position:absolute;top:10px;left:10px;z-index:1000;}
 .link{position:absolute;cursor:pointer;height:40px;width:220px;top:100px;background-image:url('../res/TBOC_Blank_Button.png');background-repeat:no-repeat;text-align:center;z-index:1000;}
@@ -43,7 +62,8 @@ li:hover{color:#FC0;}
 .text_pad{position:relative;font-size:16px;color:white;top:10px;}
 
 .link_drop{position:absolute;top:0px;left:0px;height:0px;width:218px;background-color:#311;border-bottom-left-radius:5px;border-bottom-right-radius:5px;border-style:none;border:solid 1px #9c0000;visibility:visible;color:white;overflow:hidden;text-align:left;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;z-index:1000;} /*extended height 80*/ /*width - 2 for border*/
-.load_link{width:100%;display:block;text-decoration:none;padding:5px 0;color:white;text-align:center;}.load_link:hover{color:#FC0;background-color:#522;}
+.load_link_li{width:100%;display:block;text-decoration:none;padding:5px 0;color:white;text-align:center;}.load_link_li:hover{color:#FC0;background-color:#522;}
+.load_link{cursor:pointer;}
 
 .slidesjs-navigation{position:absolute;visibility:hidden;}
 .slidesjs-pagination-item{position:absolute;visibility:hidden;}
@@ -82,8 +102,9 @@ li:hover{color:#FC0;}
 						#login{position:absolute;top:25px;left:1px;height:162px;width:184px;}
 							#login_form{position:absolute;top:0px;left:0px;height:85%;width:100%;background-color:white;}
 /*								#login_title{position:absolute;top:0px;left:35px;font-size:15px;text-decoration:underline;}*/
-								#user_id{position:absolute;top:5px;left:1%;width:94%;height:30px;font-size:15px;background-color:#FEFEFE;}
-								#password{position:absolute;top:40px;left:1%;width:94%;background-color:#FEFEFE;}
+								#user_id{position:absolute;top:5px;left:1%;width:94%;height:30px;font-size:15px;}
+								#password{position:absolute;top:40px;left:1%;width:94%;}
+								/* submit buttons can be made into button classes now */
 								#submit_button{position:absolute;top:130px;right:5%;height:25px;width:55px;border-style:none;border:solid 1px #999;background-color:#CCC;}
 								#submit_button:hover{position:absolute;border-style:none;border:solid 1px #777;cursor:pointer;background-color:#BBB;color:#040;}
 								#forgot{position:absolute;bottom:55px;left:2%;width:98%;text-align:center;font-size:11px;}
@@ -131,7 +152,7 @@ li:hover{color:#FC0;}
 
 /* personal_loans */
 .loan_box{position:relative;top:0px;right:0px;height:450px;width:750px;}
-.apply{position:absolute;/*top:48%;right:12%;*/top:250px;right:0px;}
+/*.apply{position:absolute;*//*top:48%;right:12%;*//*top:250px;right:0px;}*/
 
 /*body{background-image:url('../res/bg.jpg');background-repeat:repeat-x;}*/
 

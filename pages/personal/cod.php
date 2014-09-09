@@ -21,7 +21,8 @@ $result2 = mysql_query($query2);
 $ThruDate = mysql_fetch_assoc($result2);
 	
 ?>
-<p><img src="res/Current_Rates.png" alt="Current Rates" width="681" height="62"></p>
+<div class='page_header'>Current Rates</div>
+<div class='textblock text_shadow'>
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
@@ -35,7 +36,7 @@ $ThruDate = mysql_fetch_assoc($result2);
 			<table width='500' class='rates' align='center' cellpadding='2' cellspacing='0' border='0'>
 				<tr>
 					<th width='35%'>Account Type</th>
-					<th width='15%'>Min. Balance<br />
+					<th width='15%' style='text-align:right'>Min. Balance<br />
 						to Open
 					</th>
 					<th width='15%' style='text-align:right;'>Minimum<br/>
@@ -101,11 +102,13 @@ $ThruDate = mysql_fetch_assoc($result2);
 					</td>
 				</tr>
 			</table>
-			<p>*The rates may change after the account is opened.</p>
-			<p>A penalty may be imposed for early withdrawal on CDs.</p>
-			<p>Fees could reduce earnings on the account.</p>
-			<p>Additional disclosure information is available in our Truth in Savings brochure.</p>
-			<p>&nbsp;</p>
+			<div class='job_opening'>
+				<p>*The rates may change after the account is opened.</p>
+				<p>A penalty may be imposed for early withdrawal on CDs.</p>
+				<p>Fees could reduce earnings on the account.</p>
+				<p>Additional disclosure information is available in our Truth in Savings brochure.</p>
+			</div>
 		</td>
 	</tr>
 </table>
+</div>

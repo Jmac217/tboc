@@ -4,8 +4,11 @@
 	$PageTitle = 'Card Services';
 */
 ?>
-<p><img src="res/Card_Services.png" width="681" height="62"></p>
-<h2><img src="res/ATM.jpg" width="350" height="350" align="left" class="Photo" style="padding-right: 10px;">MasterCard&reg; Debit Card</h2>
+<div class='page_header'>Card Services</div>
+<img src="res/ATM.jpg" class='page_photo text_shadow' />
+<div class='page_body textblock text_shadow calculated_width'>
+<h2>MasterCard&reg; Debit Card</h2>
+<div class='job_opening'>
 <ul>
 	<li>No Monthly Service Fee</li>
 	<li>Unlimited Transactions</li>
@@ -26,11 +29,19 @@
 <h3>Debit Card Fraud</h3>
 <p>Call The Bank of Carbondale during regular business hours: 618-549-2181</p>
 <p>After hours call: 800-262-2024</p>
+</div>
+<br/>
 <h2>MasterCard&reg; Gift Cards</h2>
+<div class='job_opening'>
 <p><small></small> Looking for the perfect gift? Our MasterCard&reg; Prepaid Gift Cards are a great choice for birthdays, weddings, graduations, or any special occasion in your life. Gift cards are available in any amount from $10 to $1,000.</p>
 <p><small>$2.00 purchase fee for customers, $4.00 for non-customers. $2.95 inactivity fee after 12 months. $5.00 lost/stolen replacement card fee. For complete terms and conditions, please see a bank representative.</small></p>
+</div>
+<br/>
 <h2>Visa Platinum Credit Card</h2>
+<div class='job_opening'>
 <p>There are lots of reasons to do business with your local community bank. People you know and trust, local decision making, and personal service to name a few. </p>
 <p>Here's one more: a Visa Platinum Credit Card that rewards you with cruises, air travel, brand-name merchandise, and much more. Wherever you want to go, this is the card to carry.</p>
 <p><a href="outside.php?u=https://commonsenselenders.com/WebApp/WebPages/itdevpages/index.aspx?id=e9iimAY6AS0=">Visa Platinum Credit Card Application</a></p>
 <p><small>Visa Platinum credit card subject to credit approval. See application for complete information including rates, fees, and rewards program.</small></p>
+</div>
+</div>

@@ -5,10 +5,15 @@
 */
 ?>
 
-<p><img src='res/Personal_Savings.png' width='681' height='62'></p>
-<p><img src='res/PersonalSavings.jpg' width='350' height='350' align='left' class='Photo'>We understand the importance of saving for the future  and unexpected emergencies.  Whether you are just starting out or saving  for something special, we have a savings account to help you reach  your financial goals.</p>
+<div class='page_header'>Personal Savings</div>
+<img src='res/PersonalSavings.jpg' class='page_photo text_shadow'>
+<div class='page_body textblock text_shadow calculated_width'>
+<p>We understand the importance of saving for the future  and unexpected emergencies.  Whether you are just starting out or saving  for something special, we have a savings account to help you reach  your financial goals.</p>
 <p>Every Bank of Carbondale Passbook savings account is eligible for eBanking with online and mobile access on your schedule, 24 hours a day.</p>
 <p>Passbook savings accounts are also eligible for free eStatements, with online delivery for your convenience and security.</p>
+</div>
+<br />
+<div class='textblock text_shadow' style='position:absolute;top:470px;width:93%;'>
 <table width='99%' border='2' cellspacing='3' cellpadding='0' class='Comparison'>
 	<tr>
 		<td scope='col' style='min-height:0; border: none;'>&nbsp;</td>
@@ -89,3 +94,4 @@
 		<td><div align='center'>N/A</div></td>
 	</tr>
 </table>
+</div>

@@ -11,10 +11,8 @@
 */ 
 ?>
 
-<h1 class='header'>
-	Calculators
-</h1>
-
+<div class='page_header'>Calculators</div>
+<div class='textblock text_shadow'>
 <h4>Select A Calculator </h4>
 
 <span style='position:relative;left:45px;'>
@@ -25,8 +23,8 @@
 <br />
 <div id='calc_selection'>
 	<ul>
-		<li><a js_href='pages/customer/calc/autoloan.htm'>Auto Loan</a></li>
-		<li><a js_href='pages/customer/calc/retirement.htm'>Retirement Goal</a></li>
+		<li><a js_href='pages/customer/calc/autoloan.html'>Auto Loan</a></li>
+		<li><a js_href='pages/customer/calc/retirement.html'>Retirement Goal</a></li>
 		<li><a js_href='pages/customer/calc/savings.html'>Monthly Savings Accumulation</a></li>
 		<li><a js_href='pages/customer/calc/college.html'>College Fund</a></li>
 		<li><a js_href='pages/customer/calc/creditcard.html'>Credit Card</a></li>
@@ -34,12 +32,15 @@
 	</ul>
 </div>
 <!-- this script, and all other standalones, should probably go into their own js pages to be called on by the index -->
+
+<script type='text/javascript' src='js/jquery1.js'></script>
 <script type='text/javascript'>
 	$('a').click(function(){
 		var href = $(this).attr('js_href');
-		$('#calc_area').load(href);
+		$('#calc_area').load(href); // those pages will eventually be exchanged via a visability function instead of being loaded in as seperate files
 	});
 </script>
-<div id='calc_area'>
+<div id='calc_area' style='height:1300px'>
 	<!-- Javascript loads pages into this div -->
+</div>
 </div>

@@ -4,11 +4,15 @@
 	$PageTitle = 'Personal Checking';
 */
 ?>
-<p><img src="res/Personal_Checking.png" width="681" height="62"></p>
-<p><img src="res/PersonalBanker1.jpg" alt="Personal Checking" width="350" height="350" align="left" class="Photo">The Bank of Carbondale has  checking accounts to suit your individual style and make  managing your money easy.  Each account offers a slightly different set of features,  interest earnings, service charges, and minimum balance.</p>
+<div class='page_header'>Personal Checking</div>
+<img src="res/PersonalBanker1.jpg" alt="Personal Checking" class="page_photo text_shadow">
+<div class='page_body textblock text_shadow calculated_width'>
+<p>The Bank of Carbondale has  checking accounts to suit your individual style and make  managing your money easy.  Each account offers a slightly different set of features,  interest earnings, service charges, and minimum balance.</p>
 <p>Every Bank of Carbondale checking account is eligible for eBanking with online, mobile, and text access on your schedule, 24 hours a day.</p>
 <p>All accounts are also eligible for free eStatements, with online delivery for your convenience and security.</p>
-<table width="99%" cellspacing="3" cellpadding="0" class="Comparison">
+</div>
+<table class='textblock text_shadow' style='position:absolute;top:480px;width:97%;'>
+<!--<table width="99%" cellspacing="3" cellpadding="0" class="Comparison">-->
   <tr>
     <td scope="col" style="min-height:0; border: none;">&nbsp;</td>
     <th width="15%" align="center" scope="col"><div align="center">Prime</div></th>
@@ -114,7 +118,7 @@
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td>
   </tr>
   <tr>
-    <th scope="row"><div align="right">No Service Fee Notary Service*</div></th>
+    <th scope="row" style='width:38%;'><div align="right">No Service Fee Notary Service<sup>*</sup></div></th>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td>
@@ -122,7 +126,7 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <th scope="row"><div align="right">No Service Fee  Vehicle License Stickers</div></th>
+    <th scope="row"><div align="right">No Service Fee Vehicle License Stickers</div></th>
     <td><div align="center"></div></td>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td>
@@ -130,7 +134,7 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <th scope="row"><div align="right">No Service Fee Travelers Cheques*</div></th>
+    <th scope="row"><div align="right">No Service Fee Travelers Cheques<sup>*</sup></div></th>
     <td><div align="center"></div></td>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td><br>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td><br>
@@ -138,7 +142,7 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <th scope="row"><div align="right">No Service Fee Cashiers Checks*</div></th>
+    <th scope="row"><div align="right">No Service Fee Cashiers Checks<sup>*</sup></div></th>
     <td><div align="center"></div></td>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td><br>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td><br>
@@ -146,7 +150,7 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <th scope="row"><div align="right">No Service Fee Money Orders*</div></th>
+    <th scope="row"><div align="right">No Service Fee Money Orders<sup>*</sup></div></th>
     <td>&nbsp;</td>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td><br>
     <td><div align="center"><img src="res/Checkmark.png" width="25" height="28"></div></td><br>
@@ -154,12 +158,17 @@
     <td>&nbsp;</td>
   </tr>
 </table>
-<small>
-	<p>
-		<img src="res/Checkmark.png" width="25" height="28"> Available on this account type.<br>
-		<img src="res/Required.png" width="25" height="28"> Required for this account type.
-	</p>
-	<p><sup>&dagger;</sup>&nbsp;eBanking access subject to approval and limits.</p>
-	<p><sup>&Dagger;</sup>&nbsp;Mobile Banking requires enrollment in eBanking. Text messaging and data rates from your mobile service provider may apply.</p>
-	<p>* Not to exceed five (5) per month. In the case of travelers cheques, not to exceed five (5) orders per month.</p>
+<div class='textblock text_shadow' style='position:absolute;top:1390px;width:93%;'>
+<div class='job_opening'>
+<small style='text-align:right'>
+		<p>
+			Available on this account type: <img src="res/Checkmark.png" width="25" height="28"><br/>
+			Required for this account type: <img src="res/Required.png" width="25" height="28">
+		</p>
+		<p>eBanking access subject to approval and limits: &nbsp; <sup>&dagger;</sup> &nbsp; </p>
+		<p>Mobile Banking requires enrollment in eBanking. Text messaging and data rates from your mobile service provider may apply: &nbsp; <sup>&Dagger;</sup> &nbsp; </p>
+		<p>Not to exceed five (5) per month. In the case of travelers cheques, not to exceed five (5) orders per month: &nbsp; <sup>*</sup> &nbsp; </p>
 </small>
+</div>
+</div>
+</table>

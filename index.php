@@ -5,12 +5,13 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <html>
 <head>
-	<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen, projection" />
-	<link rel="stylesheet" href="css/print.css" type="text/css" media="print" />
-	<link href="css/index.css" rel="stylesheet" type="text/css" />
-	<link href="css/navigation.css" rel="stylesheet" type="text/css" />
-	<link href="lib/jquery-ui-1.11.1.tboc/jquery-ui.min.css" rel="stylesheet" type="text/css" />
-	<link href="lib/jquery-ui-1.11.1.tboc/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/navigation.css" />
+	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc/jquery-ui.theme.min.css"/>
 	<link rel='shortcut icon' href='res/icon.bmp' />
 	<title>The Bank of Carbondale</title>
 </head>
@@ -118,14 +119,14 @@
 								<a>Customer</a>
 							</div>
 							<ul class='link_drop'>
-								<li><a class='load_link' href='https://tboc.mortgagewebcenter.com/'>Online Mortgage Center</a></li>
-								<li class='load_link' path='pages/customer/personal_loans.php' location='internal' window='current' name='personal_loans'>Consumer Loan Application</li>
-								<li><a class='load_link' href='https://secure9.onlineaccess1.com/CarbondaleAutoEnrollment/auto_enrollment.html'>eBanking Demo</a></li>
-								<li><a class='load_link' href='https://secure9.onlineaccess1.com/CarbondaleOnline_30/demo/demo.htm'>eBanking Bill Pay Demo</a></li>
-								<li class='load_link' path='pages/personal/ebanking.php' location='internal' window='current' name='ebanking'>Enroll In eBanking</li>
-								<li class='load_link' path='pages/customer/estatements_activate.php' location='internal' window='current' name='ebanking'>Activate eStatements</li>
-								<li class='load_link' path='pages/customer/calc.php' location='internal' window='current' name='calculators'>Financial Calculators</li>
-								<li class='load_link' path='pages/customer/security/index.php' location='internal' window='current' name='security'>Security Center</li>
+								<li><a class='load_link load_link_li' href='https://tboc.mortgagewebcenter.com/'>Online Mortgage Center</a></li>
+								<li class='load_link load_link_li' path='pages/customer/personal_loans.php' location='internal' win='current' name='personal_loans'>Consumer Loan Application</li>
+								<li><a class='load_link load_link_li' href='https://secure9.onlineaccess1.com/CarbondaleAutoEnrollment/auto_enrollment.html'>eBanking Demo</a></li>
+								<li><a class='load_link load_link_li' href='https://secure9.onlineaccess1.com/CarbondaleOnline_30/demo/demo.htm'>eBanking Bill Pay Demo</a></li>
+								<li class='load_link load_link_li' path='pages/personal/ebanking.php' location='internal' win='current' name='ebanking'>Enroll In eBanking</li>
+								<li class='load_link load_link_li' path='pages/customer/estatements_activate.php' location='internal' win='current' name='ebanking'>Activate eStatements</li>
+								<li class='load_link load_link_li' path='pages/customer/calc.php' location='internal' win='current' name='calculators'>Financial Calculators</li>
+								<li class='load_link load_link_li' path='pages/customer/security.php' location='internal' win='current' name='security'>Security Center</li>
 							</ul>
 						</li>
 					</ul>
@@ -138,17 +139,17 @@
 								<a>Personal</a>
 							</div>
 							<ul class='link_drop'>
-								<li class='load_link' path='pages/personal/checking.php' location='internal' window='current'>Checking</li>
-								<li class='load_link' path='pages/personal/moneymarket.php' location='internal' window='current'>Money Market</li>
-								<li class='load_link' path='pages/personal/savings.php' location='internal' window='current'>Savings</li>
-								<li class='load_link' path='pages/personal/cod.php' location='internal' window='current'>Certificates of Deposit</li>
-								<li class='load_link' path='pages/personal/personal_ira.php' location='internal' window='current'>Individual Retirement (IRA)</li>
-								<li class='load_link' path='pages/personal/card-services.php' location='internal' window='current'>Card Services</li>
-								<li class='load_link' path='pages/personal/ebanking.php' location='internal' window='current'>eBanking</li>
-								<li class='load_link' path='pages/customer/personal_loans.php' location='internal' window='current'>Loans</li>
-								<li class='load_link' path='pages/personal/personal_loans.php' location='internal' window='current'>Mortgage</li>
-								<li class='load_link' path='pages/personal/goclub.php' location='internal' window='current'>GO Club</li>
-								<li class='load_link' path='pages/personal/services.php' location='internal' window='current'>Other Services</li>
+								<li class='load_link load_link_li' path='pages/personal/checking.php' location='internal' win='current'>Checking</li>
+								<li class='load_link load_link_li' path='pages/personal/moneymarket.php' location='internal' win='current'>Money Market</li>
+								<li class='load_link load_link_li' path='pages/personal/savings.php' location='internal' win='current'>Savings</li>
+								<li class='load_link load_link_li' path='pages/personal/cod.php' location='internal' win='current'>Certificates of Deposit</li>
+								<li class='load_link load_link_li' path='pages/personal/personal_ira.php' location='internal' win='current'>Individual Retirement (IRA)</li>
+								<li class='load_link load_link_li' path='pages/personal/card-services.php' location='internal' win='current'>Card Services</li>
+								<li class='load_link load_link_li' path='pages/personal/ebanking.php' location='internal' win='current'>eBanking</li>
+								<li class='load_link load_link_li' path='pages/customer/personal_loans.php' location='internal' win='current'>Loans</li>
+								<li><a class='load_link load_link_li' href='http://tboc.mortgagewebcenter.com/Default.asp?bhcp=1'>Mortgage</a></li>
+								<li class='load_link load_link_li' path='pages/personal/goclub.php' location='internal' win='current'>GO Club</li>
+								<li class='load_link load_link_li' path='pages/personal/services.php' location='internal' win='current'>Other Services</li>
 							</ul>
 						</li>
 					</ul>
@@ -161,12 +162,12 @@
 								<a>Business</a>
 							</div>
 							<ul class='link_drop'>
-								<li class='load_link' path='pages/business/checking.php' location='internal' window='current'>Checking</li>
-								<li class='load_link' path='pages/business/ebanking.php' location='internal' window='current'>eBanking</li>
-								<li class='load_link' path='pages/business/remote-deposit.php' location='internal' window='current'>Remote Deposit</li>
-								<li class='load_link' path='pages/business/debit-card.php' location='internal' window='current'>Business Debit Card</li>
-								<li class='load_link' path='pages/business/loans.php' location='internal' window='current'>Loans</li>
-								<li class='load_link' path='pages/business/services.php' location='internal' window='current'>Other Services</li>
+								<li class='load_link load_link_li' path='pages/business/checking.php' location='internal' win='current'>Checking</li>
+								<li class='load_link load_link_li' path='pages/business/ebanking.php' location='internal' win='current'>eBanking</li>
+								<li class='load_link load_link_li' path='pages/business/remote-deposit.php' location='internal' win='current'>Remote Deposit</li>
+								<li class='load_link load_link_li' path='pages/business/debit-card.php' location='internal' win='current'>Business Debit Card</li>
+								<li class='load_link load_link_li' path='pages/business/loans.php' location='internal' win='current'>Loans</li>
+								<li class='load_link load_link_li' path='pages/business/services.php' location='internal' win='current'>Other Services</li>
 							</ul>
 						</li>
 					</ul>
@@ -179,13 +180,13 @@
 								<a>About</a>
 							</div>
 							<ul class='link_drop'>
-								<li class='load_link' path='pages/about/history.php' location='internal' window='current'>History</li>
-								<li class='load_link' path='pages/about/mission.php' location='internal' window='current'>Mission</li>
-								<li class='load_link' path='pages/about/news.php' location='internal' window='current'>News</li>
-								<li class='load_link' path='pages/about/employment.php' location='internal' window='current'>Employment</li>
-								<li class='load_link' path='pages/about/locations.php' location='internal' window='current'>Hours & Locations</li>
-								<li class='load_link' path='pages/about/atm.php' location='internal' window='current'>ATM Locations</li>
-								<li class='load_link' path='pages/about/contact.php' location='internal' window='current'>Contact Us</li>
+								<li class='load_link load_link_li' path='pages/about/history.php' location='internal' win='current'>History</li>
+								<li class='load_link load_link_li' path='pages/about/mission.php' location='internal' win='current'>Mission</li>
+								<li class='load_link load_link_li' path='pages/about/news.php' location='internal' win='current'>News</li>
+								<li class='load_link load_link_li' path='pages/about/employment.php' location='internal' win='current'>Employment</li>
+								<li class='load_link load_link_li' path='pages/about/locations.php' location='internal' win='current'>Hours & Locations</li>
+								<li class='load_link load_link_li' path='pages/about/atm.php' location='internal' win='current'>ATM Locations</li>
+								<li class='load_link load_link_li' path='pages/about/contact.php' location='internal' win='current'>Contact Us</li>
 							</ul>
 						</li>
 					</ul>
@@ -278,6 +279,7 @@
 		<span><center>You are about to enter :PAGE:</center></span>
 	</div>
 <script type='text/javascript' src='js/jquery1.js'></script>
+<script type='text/javascript' src='js/functions.js'></script>
 <script type='text/javascript' src='js/index.js'></script>
 <script type='text/javascript' src='js/jquery.slides.min.js'></script>
 <script type='text/javascript' src='lib/jquery-ui-1.11.1.tboc/jquery-ui.min.js'></script>
