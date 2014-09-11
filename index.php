@@ -202,9 +202,7 @@
 			<div id='body_container'>
 				<div id="banner">
 					<a href='#'><img src='res/NewBanner.png'/></a>
-					<a href='#'><img src='res/RealizeYourDream.jpg'/></a>
-					<a href='#'><img src='res/siu-football-ticket-giveawa.jpg'/></a>
-					<a href='#'><img src='res/2008-scholarship.jpg'/></a>
+					<a href='#'><img src='res/NewBanner.png'/></a>
 				</div>
 				<div id='sliders'>
 					<div id='slide-1'>

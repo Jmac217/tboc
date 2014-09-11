@@ -139,7 +139,7 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 				.security_nav_center{position:absolute;left:46%;}	
 				.image{position:absolute;top:100px;left:45%;background-image:url('lock_transparent_small.png');height:319px;width:563px;/*border:solid 1px #444;*/}
 
-	#footer{position:absolute;/*top:1165px;*/top:717px;left:0px;width:100%;height:50px;/*border:solid 1px #777;*/}
+	#footer{position:absolute;/*top:1165px;*/top:817px;/*top:717px;*/left:0px;width:100%;height:50px;/*border:solid 1px #777;*/}
 		#footer_copy{position:absolute;bottom:0px;left:0px;height:15px;}
 		#footer_FDIC{position:absolute;bottom:0px;right:0px;}
 			#footer_FDIC_logo{position:absolute;bottom:0px;right:0px;background-image:url("../res/equal-housing-lender-transparent.png");height:37px;width:70px;}

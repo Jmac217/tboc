@@ -187,31 +187,36 @@ function load_link(path,location,win){
 		break;
 		case "external":
 			// load path through outside.php?u=path
-			$('#outgoing').html("<span class='outgoing_message'>You are about to leave TBOC.com and enter: </span><br/><span class='outgoing_link'>"+path).css({'visibility':'visible'}).children('.outgoing_link').css({'font-size':'.7vw'}).parent().dialog({
-				title: 'Confirm',
-				width: 460,
-				height: 165,
-				modal: true,
-				resizable: false,
-				draggable: false,
-				dragStart: function(event, ui){},
-				dialogClass: 'no-close',
-				buttons: [{
-					text: 'Cancel',
-					click: function()
-					{
-						// exit
-						$(this).dialog('close');
-					}
-				},{
-					text: 'Continue',
-					click: function()
-					{
-						// go to location	
-						window.location.href=path;
-					}
-				}]
-			});
+			$('#outgoing').html("<span class='outgoing_message'>You are about to leave TBOC.com and enter: </span><br/><span class='outgoing_link'>"+path)
+				.css({'visibility':'visible'})
+				.children('.outgoing_link')
+				.css({'font-size':'.7vw'})
+				.parent()
+				.dialog({
+					title: 'Confirm',
+					width: 460,
+					height: 165,
+					modal: true,
+					resizable: false,
+					draggable: false,
+					dragStart: function(event, ui){},
+					dialogClass: 'no-close',
+					buttons: [{
+						text: 'Cancel',
+						click: function()
+						{
+							// exit
+							$(this).dialog('close');
+						}
+					},{
+						text: 'Continue',
+						click: function()
+						{
+							// go to location	
+							window.location.href=path;
+						}
+					}]
+				});
 		break;
 		default:
 			location=null;	

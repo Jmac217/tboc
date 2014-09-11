@@ -44,6 +44,6 @@
 		&Dagger; Mobile Banking requires enrollment in eBanking. The Bank of Carbondale does not charge a monthly service fee for Mobile Banking. A fee for external transfers may apply. Text messaging and data rates from your mobile service provider may apply.<br />iPhone is a registered trademark of Apple, Inc. App Store is a trademark of Apple, Inc.<br />Android and Google Play are trademarks of Google Inc.</p>
 </small>
 </div>
-<script type='text/javascsript' src='js/jquery1.js'><script>
-<script type='text/javascript' src='js/jquery.slides.min.js'></script>
-<script type='text/javascsript' src='js/functions.js'><script>
+<script type='text/javascript' src='js/jquery1.js'></script>
+<script type='text/javascript' src='lib/jquery-ui-1.11.1.tboc/jquery-ui.min.js'></script>
+<script type='text/javascript' src='js/functions.js'></script>
