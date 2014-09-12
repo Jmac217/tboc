@@ -30,7 +30,7 @@
 				<p><a href='http://10.0.0.140/landing/php/tracker/'>REPORT AN ISSUE OR REQUEST</a> &nbsp;&nbsp;&nbsp;&nbsp; Phone: 618&#149;549&#149;2181 &nbsp;&nbsp;&nbsp;&nbsp; <a href="/rates">Current Rates</a> &nbsp;&nbsp;&nbsp;&nbsp;  <a href="/locations">Hours & Locations</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/atm">ATM Locations</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/contact">Contact Us</a>
 			</div>
 			</div>
-			<span id='user_nav'></span>
+			<span id='user_nav'><span id='user_nav_home'><u>Home</u> &nbsp; | &nbsp; </span><span id='user_nav_array'></span></span>
 			<div id='notices'>
 				<div id='notices_area'>
 					<div id='alert'></div>
@@ -112,12 +112,12 @@
 			-->
 			<!-- end: links -->
 			<div id='links'>
-				<div class='link shadow links_customer' alt='customer'>
+				<div class='link shadow links_customer link_button link_left' alt='customer'>
+					<div class='link_title'>
+						<a>Customer</a>
+					</div>
 					<ul>
 						<li>
-							<div>
-								<a>Customer</a>
-							</div>
 							<ul class='link_drop'>
 								<li><a class='load_link load_link_li' href='https://tboc.mortgagewebcenter.com/'>Online Mortgage Center</a></li>
 								<li class='load_link load_link_li' path='pages/customer/personal_loans.php' location='internal' win='current' name='personal_loans'>Consumer Loan Application</li>
@@ -132,12 +132,12 @@
 					</ul>
 				</div>
 
-				<div class='link shadow links_personal' alt='personal'>
+				<div class='link shadow links_personal link_button' alt='personal'>
+					<div class='link_title'>
+						<a>Personal</a>
+					</div>
 					<ul>
 						<li>
-							<div>
-								<a>Personal</a>
-							</div>
 							<ul class='link_drop'>
 								<li class='load_link load_link_li' path='pages/personal/checking.php' location='internal' win='current'>Checking</li>
 								<li class='load_link load_link_li' path='pages/personal/moneymarket.php' location='internal' win='current'>Money Market</li>
@@ -155,12 +155,12 @@
 					</ul>
 				</div>
 
-				<div class='link shadow links_business' alt='business'>
+				<div class='link shadow links_business link_button' alt='business'>
+					<div class='link_title'>
+						<a>Business</a>
+					</div>
 					<ul>
 						<li>
-							<div>
-								<a>Business</a>
-							</div>
 							<ul class='link_drop'>
 								<li class='load_link load_link_li' path='pages/business/checking.php' location='internal' win='current'>Checking</li>
 								<li class='load_link load_link_li' path='pages/business/ebanking.php' location='internal' win='current'>eBanking</li>
@@ -173,12 +173,12 @@
 					</ul>
 				</div>
 
-				<div class='link shadow links_about' alt='about'>
+				<div class='link shadow links_about link_button link_right' alt='about'>
+					<div class='link_title'>
+						<a>About</a>
+					</div>
 					<ul>
 						<li>
-							<div>
-								<a>About</a>
-							</div>
 							<ul class='link_drop'>
 								<li class='load_link load_link_li' path='pages/about/history.php' location='internal' win='current'>History</li>
 								<li class='load_link load_link_li' path='pages/about/mission.php' location='internal' win='current'>Mission</li>
@@ -257,6 +257,23 @@
 						</div>
 					</div>
 				</div><!-- /sliders -->
+				<div id='tiles'>
+					<span class='tile plain_tile'>
+						<img class='tile_image text_shadow' src='res/photo_BusinessEbanking.jpg'/>
+						<span class='tile_text'>eBanking</span>
+						<span class='apply tile_button'>Apply Now</span>
+					</span>
+					<span class='tile plain_tile' style='left:33%;'>
+						<img class='tile_image text_shadow' src='res/photo_BusinessEbanking.jpg'/>
+						<span class='tile_text'>eBanking</span>
+						<span class='apply tile_button'>Apply Now</span>
+					</span>
+					<span class='tile plain_tile' style='left:66%;border-right:none;'>
+						<img class='tile_image text_shadow' src='res/photo_BusinessEbanking.jpg'/>
+						<span class='tile_text'>eBanking</span>
+						<span class='apply tile_button'>Apply Now</span>
+					</span>
+				</div>
 			</div>
 			<div id='pages'>
 				<!-- pages -->
@@ -277,6 +294,7 @@
 		<span><center>You are about to enter :PAGE:</center></span>
 	</div>
 <script type='text/javascript' src='js/jquery1.js'></script>
+<script type='text/javascript' src='js/globals.js'></script>
 <script type='text/javascript' src='js/functions.js'></script>
 <script type='text/javascript' src='js/index.js'></script>
 <script type='text/javascript' src='js/jquery.slides.min.js'></script>

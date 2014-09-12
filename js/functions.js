@@ -1,3 +1,9 @@
+//var nav_array = new Array('home');
+//alert(nav_array[0]);
+function push_to_nav(link){
+	
+}
+
 function notice(visible, path, type){ // this function deals with everything relating to the notice_board
 	if (visible == 'true'){
 		$.ajax({
@@ -257,6 +263,7 @@ function load_link(path,location,win){
 			url:path,
 			async:true,
 			success:function(data){
+				$('#body_container').css({'visibility':'hidden'});
 				$(win).html(data);
 				//	$(win).css({'height':'1500px'}); // height needs to be set by an innerHeight function
 				$('#pages').css({'height':'0px'});
@@ -283,31 +290,25 @@ $('.load_link').click(function(){
 	var location = $(this).attr('location');
 	var win = $(this).attr('win');
 
+	/** IMPORTANT: `nav` values should replace the current paths to abstract the true paths from the browser. These paths will all be matched up according to a JSON file. **/
 
-	// run the function
+	var nav = path.substring(path.lastIndexOf("/") + 1, path.lastIndexOf("."));	
+	nav_array.splice(0,1);
+	nav_array.push(nav);
+	get_nav(nav_array);
 	load_link(path,location,win);
 });
 
 function get_nav(nav_array){
-	if (nav_array==null){
+	if (nav_array!==null){
 		var nav_string = '';
-		// Setting `nav_array` for proof-of-concept
-		nav_array = new Array('home','about','privacy','personal');	
-		for (var i=0; i<nav_array.length; i++){
-			if(i==nav_array.length-1){
-			nav_string += nav_array[i];
-			}else{
-			nav_string += nav_array[i]+' > ';
+		/** Setting `nav_array` for proof-of-concept **/
+		for (var i=0; i<=2; i++){
+			nav_string += '<u class="nav_element">'+nav_array[i]+'</u>';
+			if(i<2){
+				nav_string+=' > ';	
 			}
 		}
-		// alert(nav_string);
-	}else{
-		// perform history generation
-		// check length, cut at 5, and get associations	(links)
 	}
-	$('#user_nav').html(nav_string);
+	$('#user_nav_array').html(nav_string);
 }
-get_nav();
-
-
-

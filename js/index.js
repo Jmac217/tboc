@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+	$('#logo').click(function(){
+		$('#body_container').css({'visibility':'visible'});	
+		$('#pages').css({'visibility':'hidden'});	
+	});
+
 // currently debugging
 // This will be a click event for links
 // a page will be passed in to the continue button
@@ -293,7 +298,7 @@ function selection_handler(type,path,load,name,element){
 	});
 
 	var link_speed = 200;
-	$('.link').hover(function(){
+	$('.link').click(function(){
 		// get variables for dropdown
 		var dropdown = $(this).attr('alt');	
 		var fields = null;
@@ -319,9 +324,11 @@ function selection_handler(type,path,load,name,element){
 		// 1 field = 16 px
 		drop_height = (fields*29)+'px';
 
-		$(this).on('click mouseover',function(){
+		/*$(this).on('click mouseover',function(){*/
+		/*$(this).on('click',function(){*/
 			$(this).children('ul').children('li').children('ul').css({'height':drop_height});
-		}).mouseleave(function(){
+		/*})*/
+		$(this).mouseleave(function(){
 			$(this).children('ul').children('li').children('ul').css({'height':'0px'});
 		});
 	});
@@ -512,7 +519,8 @@ function get_nav(nav_array){
 	$('#user_nav').html(nav_string);
 }
 */
-get_nav();
+//var nav_array = new Array('about', 'privacy', 'personal');
+get_nav(nav_array);
 
 // End of Main Section //
 

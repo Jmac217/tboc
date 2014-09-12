@@ -1,9 +1,12 @@
 /* classes */
 .link{position:absolute;}
-.links_customer{left:10px;}
-.links_personal{left:245px;}
-.links_business{left:480px;}
-.links_about{left:715px;}
+.links_customer{left:32px;}
+.links_personal{left:252px;}
+.links_business{left:472px;}
+.links_about{left:692px;}
+
+.link_left{border-top-left-radius:5px;border-bottom-left-radius:5px;}
+.link_right{border-top-right-radius:5px;border-bottom-right-radius:5px;}
 
 /* dropdown container */
 .link ul{
@@ -14,6 +17,7 @@
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	font-weight: normal;
 	font-size: 15px;
+	float:left;
 }
 
 
@@ -23,7 +27,7 @@
 	position:absolute;
 	top:0px;
 	left:0px;
-	background-image:url('../res/TBOC_Blank_Button.png');
+	/*background-image:url('../res/TBOC_Blank_Button.png');*/
 	background-repeat:no-repeat;
 	height:40px;
 	width:220px;
@@ -37,7 +41,7 @@
 	cursor:pointer;
 	text-align:center;
 	text-decoration:none;
-	color:#DDD;
+	color:#EEE;
 	height:40px;
 	width:220px;
 }
@@ -47,7 +51,7 @@
 	position:absolute;
 	top:40px;
 	left:0px;
-	width:220px;
+	width:100%;
 	z-index:100;
 	height: 0px;
 	overflow: hidden;
@@ -56,6 +60,10 @@
 	-o-transition: height 0.3s ease-in;
 	-ms-transition: height 0.3s ease-in;
 	transition: height 0.3s ease-in;
+	list-style:none;
+	float:left;
+	margin:0;
+	padding:0;
 }
 
 /* hover dropdown animation */
@@ -72,7 +80,8 @@
 /* dropdown lines */
 .link ul ul li{
 	/*background-color:#EAEAEA;*/
-	width:220px;
+	/*width:220px;*/
+	width:100%;
 	-webkit-transition: background-color 0.3s ease;
 	-moz-transition: background-color 0.3s ease;
 	-o-transition: background-color 0.3s ease;
