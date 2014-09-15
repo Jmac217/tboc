@@ -65,8 +65,8 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 
 #links{position:absolute;top:115px;left:0px;z-index:1000;}
 .link{position:absolute;cursor:pointer;/*height:40px;width:220px;*/top:100px;/*background-image:url('../res/TBOC_Blank_Button.png');background-repeat:no-repeat;*/text-align:center;z-index:1000;}
-.link_button{display:block;height:40px;width:243px;background-color:#9A0000;background:-moz-linear-gradient(#9A0000,#710000);border:solid 1px #710000;text-align:center;}
-.link_button:hover{background-color:#9A0000;background:-moz-linear-gradient(#BC0000,#950000);}
+.link_button{display:block;height:40px;width:243px;background-color:#9A0000;background:-moz-linear-gradient(#832e30,#75292b);border:solid 1px #75292b;text-align:center;}
+.link_button:hover{background-color:#A00;background:-moz-linear-gradient(#A32e30,#95292b);}
 .link_title>a{display:block;color:#EEE;font-size:14px;padding-top:12px;text-decoration:none;}
 /*
 .links_customers{left:10px;}
@@ -78,7 +78,7 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 .shadow{box-shadow:3px 3px 3px #9c5555;}
 .text_pad{position:relative;font-size:16px;color:white;top:10px;}
 
-.link_drop{position:absolute;top:0px;left:0px;height:0px;width:218px;background-color:#311;border-bottom-left-radius:5px;border-bottom-right-radius:5px;border-style:none;border:solid 1px #9c0000;visibility:visible;color:white;overflow:hidden;text-align:left;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;z-index:1000;} /*extended height 80*/ /*width - 2 for border*/
+.link_drop{position:absolute;top:0px;left:0px;height:0px;width:218px;background-color:#DDD;border-bottom-left-radius:5px;border-bottom-right-radius:5px;border-style:none;border:solid 1px #75292b;visibility:visible;color:white;overflow:hidden;text-align:left;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;z-index:1000;} /*extended height 80*/ /*width - 2 for border*/
 .load_link_li{width:100%;display:block;text-decoration:none;padding:5px 0;color:white;text-align:center;}.load_link_li:hover{color:#FC0;background-color:#522;}
 .load_link{cursor:pointer;}
 
@@ -89,7 +89,7 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 #doc{position:relative;top:0px;left:15%;/*height:859px;*/width:970px;}
 	#header{position:absolute;top:0px;left:0px;height:400px;width:100%;}
 		#nav_links{position:absolute;top:25px;left:0px;height:25px;width:100%;text-align:right;color:#457d84}
-		#logo{position:absolute;top:25px;left:0px;height:125px;width:240px;background-image:url('../res/logo3.png');background-repeat:no-repeat;background-size:240px 125px;cursor:pointer;}
+		#logo{position:absolute;top:25px;left:0px;height:125px;width:240px;background-image:url('../res/logo4.png');background-repeat:no-repeat;background-size:240px 125px;cursor:pointer;}
 		#photo{position:absolute;top:45px;left:265px;height:180px;width:705px;background-image:url('../res/photo2.jpg');background-repeat:no-repeat;background-size:705px 155px;}
 		#motto{position:absolute;top:155px;left:0px;height:20px;width:250px;color:#333;visibility:visible;z-index:100;/*background-image:url('../res/slogan.png');background-repeat:no-repeat;background-size:245px 20px;*/font-family:daniel;font-size:18px;text-align:center;color:#550003;}
 		#user_nav{position:absolute;top:185px;left:0px;height:20px;width:100%;color:#333;visibility:visible;cursor:pointer;z-index:1;text-shadow:1px 1px #CCC;}

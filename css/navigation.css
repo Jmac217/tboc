@@ -1,9 +1,10 @@
 /* classes */
 .link{position:absolute;}
-.links_customer{left:32px;}
-.links_personal{left:252px;}
-.links_business{left:472px;}
-.links_about{left:692px;}
+.links_customer{left:0px;}
+.links_personal{left:245px;}
+.links_business{left:490px;}
+.links_about{left:734px;}
+/*.links_about{left:692px;}*/
 
 .link_left{border-top-left-radius:5px;border-bottom-left-radius:5px;}
 .link_right{border-top-right-radius:5px;border-bottom-right-radius:5px;}

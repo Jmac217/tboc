@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=9" />
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.maroon.css" />
 	<link rel="stylesheet" type="text/css" href="css/navigation.css" />
 	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc/jquery-ui.min.css" />
 	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc/jquery-ui.theme.min.css"/>
@@ -23,13 +23,15 @@
 	<div id="doc">
 		<div id="header">
 			<div id='logo'></div>
+			<div id='photo'></div>
 			<div id="nav_links">
 			<?php /* include('pages/include/i_uppernav.php'); */ ?>
 			<!-- inserted uppernav.php into structure -->
-			<div class="span-19 last UpperNav">
-				<p><a href='http://10.0.0.140/landing/php/tracker/'>REPORT AN ISSUE OR REQUEST</a> &nbsp;&nbsp;&nbsp;&nbsp; Phone: 618&#149;549&#149;2181 &nbsp;&nbsp;&nbsp;&nbsp; <a href="/rates">Current Rates</a> &nbsp;&nbsp;&nbsp;&nbsp;  <a href="/locations">Hours & Locations</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/atm">ATM Locations</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/contact">Contact Us</a>
+			<!--<div class="span-19 last UpperNav">-->
+				<!--<a href='http://10.0.0.140/landing/php/tracker/'>REPORT AN ISSUE OR REQUEST</a> &nbsp;&nbsp;&nbsp;&nbsp; -->Phone:&nbsp; 618&#149;549&#149;2181 &nbsp;&nbsp;&nbsp;&nbsp; <a href="/rates">Current Rates</a> &nbsp;&nbsp;&nbsp;&nbsp;  <a href="/locations">Hours & Locations</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/atm">ATM Locations</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/contact">Contact Us</a>
+			<!--</div>-->
 			</div>
-			</div>
+			<span id='motto'>Your Hometown Friend!</span>
 			<span id='user_nav'><span id='user_nav_home'><u>Home</u> &nbsp; | &nbsp; </span><span id='user_nav_array'></span></span>
 			<div id='notices'>
 				<div id='notices_area'>
@@ -200,11 +202,11 @@
 		</div>
 		<div id="body">
 			<div id='body_container'>
-				<div id="banner">
+				<div id="banner" class='text_shadow'>
 					<a href='#'><img src='res/NewBanner.png'/></a>
 					<a href='#'><img src='res/NewBanner.png'/></a>
 				</div>
-				<div id='sliders'>
+				<div id='sliders' class='text_shadow'>
 					<div id='slide-1'>
 						<div id='slide-1-panel'>Online Banking Login</div>
 						<div id='slide-1-area'>
@@ -244,7 +246,7 @@
 							</div>
 						</div>
 					</div>
-					<div id='slide-2'>
+					<!--<div id='slide-2'>
 						<div id='slide-2-panel'>Consumer Loan Application</div>
 						<div id='slide-2-area'>
 							The Bank of Carbondale offers an array of installment loans to meet your needs. Whether you need an auto loan to purchase your dream car or a short-term loan for unexpected emergencies, we can provide the loan product that is right for you. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <u style='cursor:pointer'>APPLY NOW</u>
@@ -256,22 +258,30 @@
 							TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING TESTING  <br/> TESTING TESTING TESTING  <br/><br/> TESTING TESTING 
 						</div>
 					</div>
-				</div><!-- /sliders -->
-				<div id='tiles'>
+				</div>
+				-->
+				<!-- /sliders -->
+				<div id='tiles' class='text_shadow'>
 					<span class='tile plain_tile'>
-						<img class='tile_image text_shadow' src='res/photo_BusinessEbanking.jpg'/>
-						<span class='tile_text'>eBanking</span>
-						<span class='apply tile_button'>Apply Now</span>
+						<div class='tile_container'>
+							<img class='tile_image text_shadow' src='res/debit_card.jpg'/>
+							<span class='tile_text'>Card Services</span>
+							<span class='apply tile_button'>Get Information</span>
+						</div>
 					</span>
 					<span class='tile plain_tile' style='left:33%;'>
-						<img class='tile_image text_shadow' src='res/photo_BusinessEbanking.jpg'/>
-						<span class='tile_text'>eBanking</span>
-						<span class='apply tile_button'>Apply Now</span>
+						<div class='tile_container'>
+							<img class='tile_image text_shadow' src='res/Banking1.jpg'/>
+							<span class='tile_text'>Mortgage Center</span>
+							<span class='apply tile_button'>Apply Now</span>
+						</div>
 					</span>
 					<span class='tile plain_tile' style='left:66%;border-right:none;'>
-						<img class='tile_image text_shadow' src='res/photo_BusinessEbanking.jpg'/>
-						<span class='tile_text'>eBanking</span>
-						<span class='apply tile_button'>Apply Now</span>
+						<div class='tile_container'>
+							<img class='tile_image ' src='res/business_ebanking.png'/>
+							<span class='tile_text'>Mobile App</span>
+							<span class='apply tile_button'>Download</span>
+						</div>
 					</span>
 				</div>
 			</div>
@@ -281,7 +291,7 @@
 		</div>
 		<div id="footer">
 			<div id='footer_copy'>
-				<p>&copy; 2013 The Bank of Carbondale. All Rights Reserved. &nbsp;&nbsp;
+				<p>&copy; 2014 The Bank of Carbondale. All Rights Reserved. &nbsp;&nbsp;
 				<a href="pages/main/privacy.php">Privacy Policy</a>
 			</div>
 			<div id='footer_FDIC'>
