@@ -96,7 +96,7 @@ badd +1 index.php
 badd +1 css\index.css
 badd +1 TODO
 badd +1 README
-badd +21 js\index.js
+badd +156 js\index.js
 badd +73 pages\admin\index.php
 badd +12 pages\admin\README_wysiwyg
 badd +1 pages\include\i_header.php
@@ -138,6 +138,7 @@ badd +1 php\connect.php
 badd +1 php\include.php
 badd +1 pages\business\services.php
 badd +1 pages\customer\security.php
+badd +0 js\functions.js
 silent! argdel *
 edit css\index.css
 set splitbelow splitright
@@ -159,12 +160,15 @@ wincmd _ | wincmd |
 vsplit
 wincmd _ | wincmd |
 vsplit
-9wincmd h
+wincmd _ | wincmd |
+vsplit
+10wincmd h
 wincmd _ | wincmd |
 split
 wincmd _ | wincmd |
 split
 2wincmd k
+wincmd w
 wincmd w
 wincmd w
 wincmd w
@@ -287,28 +291,27 @@ set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 exe '1resize ' . ((&lines * 47 + 30) / 60)
-exe 'vert 1resize ' . ((&columns * 43 + 118) / 236)
+exe 'vert 1resize ' . ((&columns * 61 + 118) / 236)
 exe '2resize ' . ((&lines * 8 + 30) / 60)
-exe 'vert 2resize ' . ((&columns * 43 + 118) / 236)
+exe 'vert 2resize ' . ((&columns * 61 + 118) / 236)
 exe '3resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 3resize ' . ((&columns * 43 + 118) / 236)
-exe 'vert 4resize ' . ((&columns * 65 + 118) / 236)
-exe 'vert 5resize ' . ((&columns * 47 + 118) / 236)
-exe '6resize ' . ((&lines * 14 + 30) / 60)
-exe 'vert 6resize ' . ((&columns * 1 + 118) / 236)
+exe 'vert 3resize ' . ((&columns * 61 + 118) / 236)
+exe 'vert 4resize ' . ((&columns * 61 + 118) / 236)
+exe 'vert 5resize ' . ((&columns * 1 + 118) / 236)
+exe 'vert 6resize ' . ((&columns * 96 + 118) / 236)
 exe '7resize ' . ((&lines * 14 + 30) / 60)
 exe 'vert 7resize ' . ((&columns * 1 + 118) / 236)
 exe '8resize ' . ((&lines * 14 + 30) / 60)
 exe 'vert 8resize ' . ((&columns * 1 + 118) / 236)
-exe '9resize ' . ((&lines * 13 + 30) / 60)
+exe '9resize ' . ((&lines * 14 + 30) / 60)
 exe 'vert 9resize ' . ((&columns * 1 + 118) / 236)
-exe '10resize ' . ((&lines * 19 + 30) / 60)
+exe '10resize ' . ((&lines * 13 + 30) / 60)
 exe 'vert 10resize ' . ((&columns * 1 + 118) / 236)
-exe '11resize ' . ((&lines * 18 + 30) / 60)
+exe '11resize ' . ((&lines * 19 + 30) / 60)
 exe 'vert 11resize ' . ((&columns * 1 + 118) / 236)
-exe '12resize ' . ((&lines * 19 + 30) / 60)
+exe '12resize ' . ((&lines * 18 + 30) / 60)
 exe 'vert 12resize ' . ((&columns * 1 + 118) / 236)
-exe '13resize ' . ((&lines * 9 + 30) / 60)
+exe '13resize ' . ((&lines * 19 + 30) / 60)
 exe 'vert 13resize ' . ((&columns * 1 + 118) / 236)
 exe '14resize ' . ((&lines * 9 + 30) / 60)
 exe 'vert 14resize ' . ((&columns * 1 + 118) / 236)
@@ -318,17 +321,17 @@ exe '16resize ' . ((&lines * 9 + 30) / 60)
 exe 'vert 16resize ' . ((&columns * 1 + 118) / 236)
 exe '17resize ' . ((&lines * 9 + 30) / 60)
 exe 'vert 17resize ' . ((&columns * 1 + 118) / 236)
-exe '18resize ' . ((&lines * 8 + 30) / 60)
+exe '18resize ' . ((&lines * 9 + 30) / 60)
 exe 'vert 18resize ' . ((&columns * 1 + 118) / 236)
-exe '19resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 19resize ' . ((&columns * 47 + 118) / 236)
+exe '19resize ' . ((&lines * 8 + 30) / 60)
+exe 'vert 19resize ' . ((&columns * 1 + 118) / 236)
 exe '20resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 20resize ' . ((&columns * 47 + 118) / 236)
+exe 'vert 20resize ' . ((&columns * 1 + 118) / 236)
 exe '21resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 21resize ' . ((&columns * 47 + 118) / 236)
-exe '22resize ' . ((&lines * 52 + 30) / 60)
-exe 'vert 22resize ' . ((&columns * 47 + 118) / 236)
-exe '23resize ' . ((&lines * 5 + 30) / 60)
+exe 'vert 21resize ' . ((&columns * 1 + 118) / 236)
+exe '22resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 22resize ' . ((&columns * 1 + 118) / 236)
+exe '23resize ' . ((&lines * 52 + 30) / 60)
 exe 'vert 23resize ' . ((&columns * 1 + 118) / 236)
 exe '24resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 24resize ' . ((&columns * 1 + 118) / 236)
@@ -342,38 +345,40 @@ exe '28resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 28resize ' . ((&columns * 1 + 118) / 236)
 exe '29resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 29resize ' . ((&columns * 1 + 118) / 236)
-exe '30resize ' . ((&lines * 4 + 30) / 60)
+exe '30resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 30resize ' . ((&columns * 1 + 118) / 236)
-exe '31resize ' . ((&lines * 5 + 30) / 60)
+exe '31resize ' . ((&lines * 4 + 30) / 60)
 exe 'vert 31resize ' . ((&columns * 1 + 118) / 236)
 exe '32resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 32resize ' . ((&columns * 1 + 118) / 236)
-exe '33resize ' . ((&lines * 1 + 30) / 60)
+exe '33resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 33resize ' . ((&columns * 1 + 118) / 236)
 exe '34resize ' . ((&lines * 1 + 30) / 60)
 exe 'vert 34resize ' . ((&columns * 1 + 118) / 236)
 exe '35resize ' . ((&lines * 1 + 30) / 60)
 exe 'vert 35resize ' . ((&columns * 1 + 118) / 236)
-exe '36resize ' . ((&lines * 19 + 30) / 60)
+exe '36resize ' . ((&lines * 1 + 30) / 60)
 exe 'vert 36resize ' . ((&columns * 1 + 118) / 236)
-exe '37resize ' . ((&lines * 14 + 30) / 60)
+exe '37resize ' . ((&lines * 19 + 30) / 60)
 exe 'vert 37resize ' . ((&columns * 1 + 118) / 236)
-exe '38resize ' . ((&lines * 17 + 30) / 60)
+exe '38resize ' . ((&lines * 14 + 30) / 60)
 exe 'vert 38resize ' . ((&columns * 1 + 118) / 236)
-exe '39resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 39resize ' . ((&columns * 20 + 118) / 236)
+exe '39resize ' . ((&lines * 17 + 30) / 60)
+exe 'vert 39resize ' . ((&columns * 1 + 118) / 236)
 exe '40resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 40resize ' . ((&columns * 20 + 118) / 236)
+exe 'vert 40resize ' . ((&columns * 1 + 118) / 236)
 exe '41resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 41resize ' . ((&columns * 20 + 118) / 236)
+exe 'vert 41resize ' . ((&columns * 1 + 118) / 236)
 exe '42resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 42resize ' . ((&columns * 20 + 118) / 236)
+exe 'vert 42resize ' . ((&columns * 1 + 118) / 236)
 exe '43resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 43resize ' . ((&columns * 20 + 118) / 236)
+exe 'vert 43resize ' . ((&columns * 1 + 118) / 236)
 exe '44resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 44resize ' . ((&columns * 20 + 118) / 236)
-exe '45resize ' . ((&lines * 46 + 30) / 60)
-exe 'vert 45resize ' . ((&columns * 20 + 118) / 236)
+exe 'vert 44resize ' . ((&columns * 1 + 118) / 236)
+exe '45resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 45resize ' . ((&columns * 1 + 118) / 236)
+exe '46resize ' . ((&lines * 46 + 30) / 60)
+exe 'vert 46resize ' . ((&columns * 1 + 118) / 236)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -477,12 +482,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 47 - ((1 * winheight(0) + 23) / 47)
+let s:l = 62 - ((16 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-47
-normal! 0
+62
+normal! 043|
 lcd C:\xampp\htdocs\TBOC\website\rework
 wincmd w
 argglobal
@@ -929,12 +934,129 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 158 - ((31 * winheight(0) + 29) / 58)
+let s:l = 156 - ((29 * winheight(0) + 29) / 58)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-158
-normal! 07|
+156
+let s:c = 33 - ((10 * winwidth(0) + 0) / 1)
+if s:c > 0
+  exe 'normal! ' . s:c . '|zs' . 33 . '|'
+else
+  normal! 033|
+endif
+lcd C:\xampp\htdocs\TBOC\website\rework
+wincmd w
+argglobal
+edit C:\xampp\htdocs\TBOC\website\rework\js\functions.js
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=j1,J1
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=sO:*\ -,mO:*\ \ ,exO:*/,s1:/*,mb:*,ex:*/,://
+setlocal commentstring=//%s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal copyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'javascript'
+setlocal filetype=javascript
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=javascriptcomplete#CompleteJS
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'javascript'
+setlocal syntax=javascript
+endif
+setlocal tabstop=2
+setlocal tags=C:/xampp/htdocs/TBOC/website/rework/.git/javascript.tags,C:/xampp/htdocs/TBOC/website/rework/.git/tags,./tags,tags
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+set nowrap
+setlocal nowrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 29) / 58)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
 lcd C:\xampp\htdocs\TBOC\website\rework
 wincmd w
 argglobal
@@ -2567,12 +2689,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 9
-let s:c = 18 - ((0 * winwidth(0) + 23) / 47)
-if s:c > 0
-  exe 'normal! ' . s:c . '|zs' . 18 . '|'
-else
-  normal! 018|
-endif
+normal! 0
 lcd C:\xampp\htdocs\TBOC\website\rework
 wincmd w
 argglobal
@@ -2920,7 +3037,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 24
-normal! 015|
+normal! 0
 lcd C:\xampp\htdocs\TBOC\website\rework
 wincmd w
 argglobal
@@ -4927,7 +5044,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 10
-let s:c = 8 - ((0 * winwidth(0) + 10) / 20)
+let s:c = 8 - ((0 * winwidth(0) + 0) / 1)
 if s:c > 0
   exe 'normal! ' . s:c . '|zs' . 8 . '|'
 else
@@ -5047,7 +5164,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 8
-let s:c = 22 - ((0 * winwidth(0) + 10) / 20)
+let s:c = 22 - ((0 * winwidth(0) + 0) / 1)
 if s:c > 0
   exe 'normal! ' . s:c . '|zs' . 22 . '|'
 else
@@ -5282,7 +5399,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 8
-let s:c = 22 - ((0 * winwidth(0) + 10) / 20)
+let s:c = 22 - ((0 * winwidth(0) + 0) / 1)
 if s:c > 0
   exe 'normal! ' . s:c . '|zs' . 22 . '|'
 else
@@ -5402,7 +5519,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 27
-let s:c = 26 - ((0 * winwidth(0) + 10) / 20)
+let s:c = 26 - ((0 * winwidth(0) + 0) / 1)
 if s:c > 0
   exe 'normal! ' . s:c . '|zs' . 26 . '|'
 else
@@ -5522,7 +5639,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 65
-let s:c = 2 - ((0 * winwidth(0) + 10) / 20)
+let s:c = 2 - ((0 * winwidth(0) + 0) / 1)
 if s:c > 0
   exe 'normal! ' . s:c . '|zs' . 2 . '|'
 else
@@ -5642,7 +5759,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 29
-let s:c = 13 - ((0 * winwidth(0) + 10) / 20)
+let s:c = 13 - ((0 * winwidth(0) + 0) / 1)
 if s:c > 0
   exe 'normal! ' . s:c . '|zs' . 13 . '|'
 else
@@ -5651,28 +5768,27 @@ endif
 wincmd w
 4wincmd w
 exe '1resize ' . ((&lines * 47 + 30) / 60)
-exe 'vert 1resize ' . ((&columns * 43 + 118) / 236)
+exe 'vert 1resize ' . ((&columns * 61 + 118) / 236)
 exe '2resize ' . ((&lines * 8 + 30) / 60)
-exe 'vert 2resize ' . ((&columns * 43 + 118) / 236)
+exe 'vert 2resize ' . ((&columns * 61 + 118) / 236)
 exe '3resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 3resize ' . ((&columns * 43 + 118) / 236)
-exe 'vert 4resize ' . ((&columns * 65 + 118) / 236)
-exe 'vert 5resize ' . ((&columns * 47 + 118) / 236)
-exe '6resize ' . ((&lines * 14 + 30) / 60)
-exe 'vert 6resize ' . ((&columns * 1 + 118) / 236)
+exe 'vert 3resize ' . ((&columns * 61 + 118) / 236)
+exe 'vert 4resize ' . ((&columns * 61 + 118) / 236)
+exe 'vert 5resize ' . ((&columns * 1 + 118) / 236)
+exe 'vert 6resize ' . ((&columns * 96 + 118) / 236)
 exe '7resize ' . ((&lines * 14 + 30) / 60)
 exe 'vert 7resize ' . ((&columns * 1 + 118) / 236)
 exe '8resize ' . ((&lines * 14 + 30) / 60)
 exe 'vert 8resize ' . ((&columns * 1 + 118) / 236)
-exe '9resize ' . ((&lines * 13 + 30) / 60)
+exe '9resize ' . ((&lines * 14 + 30) / 60)
 exe 'vert 9resize ' . ((&columns * 1 + 118) / 236)
-exe '10resize ' . ((&lines * 19 + 30) / 60)
+exe '10resize ' . ((&lines * 13 + 30) / 60)
 exe 'vert 10resize ' . ((&columns * 1 + 118) / 236)
-exe '11resize ' . ((&lines * 18 + 30) / 60)
+exe '11resize ' . ((&lines * 19 + 30) / 60)
 exe 'vert 11resize ' . ((&columns * 1 + 118) / 236)
-exe '12resize ' . ((&lines * 19 + 30) / 60)
+exe '12resize ' . ((&lines * 18 + 30) / 60)
 exe 'vert 12resize ' . ((&columns * 1 + 118) / 236)
-exe '13resize ' . ((&lines * 9 + 30) / 60)
+exe '13resize ' . ((&lines * 19 + 30) / 60)
 exe 'vert 13resize ' . ((&columns * 1 + 118) / 236)
 exe '14resize ' . ((&lines * 9 + 30) / 60)
 exe 'vert 14resize ' . ((&columns * 1 + 118) / 236)
@@ -5682,17 +5798,17 @@ exe '16resize ' . ((&lines * 9 + 30) / 60)
 exe 'vert 16resize ' . ((&columns * 1 + 118) / 236)
 exe '17resize ' . ((&lines * 9 + 30) / 60)
 exe 'vert 17resize ' . ((&columns * 1 + 118) / 236)
-exe '18resize ' . ((&lines * 8 + 30) / 60)
+exe '18resize ' . ((&lines * 9 + 30) / 60)
 exe 'vert 18resize ' . ((&columns * 1 + 118) / 236)
-exe '19resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 19resize ' . ((&columns * 47 + 118) / 236)
+exe '19resize ' . ((&lines * 8 + 30) / 60)
+exe 'vert 19resize ' . ((&columns * 1 + 118) / 236)
 exe '20resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 20resize ' . ((&columns * 47 + 118) / 236)
+exe 'vert 20resize ' . ((&columns * 1 + 118) / 236)
 exe '21resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 21resize ' . ((&columns * 47 + 118) / 236)
-exe '22resize ' . ((&lines * 52 + 30) / 60)
-exe 'vert 22resize ' . ((&columns * 47 + 118) / 236)
-exe '23resize ' . ((&lines * 5 + 30) / 60)
+exe 'vert 21resize ' . ((&columns * 1 + 118) / 236)
+exe '22resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 22resize ' . ((&columns * 1 + 118) / 236)
+exe '23resize ' . ((&lines * 52 + 30) / 60)
 exe 'vert 23resize ' . ((&columns * 1 + 118) / 236)
 exe '24resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 24resize ' . ((&columns * 1 + 118) / 236)
@@ -5706,38 +5822,40 @@ exe '28resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 28resize ' . ((&columns * 1 + 118) / 236)
 exe '29resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 29resize ' . ((&columns * 1 + 118) / 236)
-exe '30resize ' . ((&lines * 4 + 30) / 60)
+exe '30resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 30resize ' . ((&columns * 1 + 118) / 236)
-exe '31resize ' . ((&lines * 5 + 30) / 60)
+exe '31resize ' . ((&lines * 4 + 30) / 60)
 exe 'vert 31resize ' . ((&columns * 1 + 118) / 236)
 exe '32resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 32resize ' . ((&columns * 1 + 118) / 236)
-exe '33resize ' . ((&lines * 1 + 30) / 60)
+exe '33resize ' . ((&lines * 5 + 30) / 60)
 exe 'vert 33resize ' . ((&columns * 1 + 118) / 236)
 exe '34resize ' . ((&lines * 1 + 30) / 60)
 exe 'vert 34resize ' . ((&columns * 1 + 118) / 236)
 exe '35resize ' . ((&lines * 1 + 30) / 60)
 exe 'vert 35resize ' . ((&columns * 1 + 118) / 236)
-exe '36resize ' . ((&lines * 19 + 30) / 60)
+exe '36resize ' . ((&lines * 1 + 30) / 60)
 exe 'vert 36resize ' . ((&columns * 1 + 118) / 236)
-exe '37resize ' . ((&lines * 14 + 30) / 60)
+exe '37resize ' . ((&lines * 19 + 30) / 60)
 exe 'vert 37resize ' . ((&columns * 1 + 118) / 236)
-exe '38resize ' . ((&lines * 17 + 30) / 60)
+exe '38resize ' . ((&lines * 14 + 30) / 60)
 exe 'vert 38resize ' . ((&columns * 1 + 118) / 236)
-exe '39resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 39resize ' . ((&columns * 20 + 118) / 236)
+exe '39resize ' . ((&lines * 17 + 30) / 60)
+exe 'vert 39resize ' . ((&columns * 1 + 118) / 236)
 exe '40resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 40resize ' . ((&columns * 20 + 118) / 236)
+exe 'vert 40resize ' . ((&columns * 1 + 118) / 236)
 exe '41resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 41resize ' . ((&columns * 20 + 118) / 236)
+exe 'vert 41resize ' . ((&columns * 1 + 118) / 236)
 exe '42resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 42resize ' . ((&columns * 20 + 118) / 236)
+exe 'vert 42resize ' . ((&columns * 1 + 118) / 236)
 exe '43resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 43resize ' . ((&columns * 20 + 118) / 236)
+exe 'vert 43resize ' . ((&columns * 1 + 118) / 236)
 exe '44resize ' . ((&lines * 1 + 30) / 60)
-exe 'vert 44resize ' . ((&columns * 20 + 118) / 236)
-exe '45resize ' . ((&lines * 46 + 30) / 60)
-exe 'vert 45resize ' . ((&columns * 20 + 118) / 236)
+exe 'vert 44resize ' . ((&columns * 1 + 118) / 236)
+exe '45resize ' . ((&lines * 1 + 30) / 60)
+exe 'vert 45resize ' . ((&columns * 1 + 118) / 236)
+exe '46resize ' . ((&lines * 46 + 30) / 60)
+exe 'vert 46resize ' . ((&columns * 1 + 118) / 236)
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

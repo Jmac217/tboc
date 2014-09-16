@@ -8,7 +8,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=9" />
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.maroon.css" />
+	<!--<link rel="stylesheet" type="text/css" href="css/index.dark.css" />-->
+	<!--<link rel="stylesheet" type="text/css" href="css/index.blue.css" />-->
+	<!--<link rel="stylesheet" type="text/css" href="css/index.green.css" />-->
 	<link rel="stylesheet" type="text/css" href="css/navigation.css" />
 	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc/jquery-ui.min.css" />
 	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc/jquery-ui.theme.min.css"/>
@@ -202,11 +206,12 @@
 		</div>
 		<div id="body">
 			<div id='body_container'>
-				<div id="banner" class='text_shadow'>
+				<div id="banner" class=''>
 					<a href='#'><img src='res/NewBanner.png'/></a>
-					<a href='#'><img src='res/NewBanner.png'/></a>
+					<a href='#'><img src='res/online.png'/></a>
 				</div>
-				<div id='sliders' class='text_shadow'>
+				<div id='banner_pagination'></div>
+				<div id='sliders' class=''>
 					<div id='slide-1'>
 						<div id='slide-1-panel'>Online Banking Login</div>
 						<div id='slide-1-area'>
@@ -261,17 +266,17 @@
 				</div>
 				-->
 				<!-- /sliders -->
-				<div id='tiles' class='text_shadow'>
+				<div id='tiles' class=''>
 					<span class='tile plain_tile'>
 						<div class='tile_container'>
-							<img class='tile_image text_shadow' src='res/debit_card.jpg'/>
+							<img class='tile_image ' src='res/debit_card.jpg'/>
 							<span class='tile_text'>Card Services</span>
 							<span class='apply tile_button'>Get Information</span>
 						</div>
 					</span>
 					<span class='tile plain_tile' style='left:33%;'>
 						<div class='tile_container'>
-							<img class='tile_image text_shadow' src='res/Banking1.jpg'/>
+							<img class='tile_image ' src='res/Banking1.jpg'/>
 							<span class='tile_text'>Mortgage Center</span>
 							<span class='apply tile_button'>Apply Now</span>
 						</div>
@@ -307,7 +312,8 @@
 <script type='text/javascript' src='js/globals.js'></script>
 <script type='text/javascript' src='js/functions.js'></script>
 <script type='text/javascript' src='js/index.js'></script>
-<script type='text/javascript' src='js/jquery.slides.min.js'></script>
+<!--<script type='text/javascript' src='js/jquery.slides.min.js'></script>-->
+<script type='text/javascript' src='js/jquery.slides.js'></script>
 <script type='text/javascript' src='lib/jquery-ui-1.11.1.tboc/jquery-ui.min.js'></script>
 </body>
 </html>

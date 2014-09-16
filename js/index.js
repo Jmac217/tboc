@@ -289,12 +289,18 @@ function selection_handler(type,path,load,name,element){
 		play:{
 			active: true,
 			effect: 'slide',
-			interval: 5000,
+			interval: 7000,
 			auto: true,
 			swap: true,
 			pauseOnHover: true,
 			restartDelay: 2500
 		}
+		/*
+		pagination:{
+			active: true,
+			effect: 'slide'
+		}
+		*/
 	});
 
 	var link_speed = 200;
