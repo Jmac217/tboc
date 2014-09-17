@@ -1,0 +1,34 @@
+@font-face{font-family:optimus;src:url('../res/fonts/OptimusPrinceps.ttf');}
+@font-face{font-family:daniel;src:url('../res/fonts/daniel.ttf');}
+
+a{color:#4b1c22}
+#nav_links>a{color:#4b1c22}
+
+.apply{border-style:none;border-radius:5px;background-color:#900;color:white;background:-moz-linear-gradient(#a2a2a2,#595959);border:solid 1px #a2a2a2;font-weight:bold;font-face:arial;box-shadow:5px 5px 5px #a2a2a2;}
+.apply:hover{color:white;background-color:#C00;background:-moz-linear-gradient(#c2c2c2,#797979);}
+/*.apply:hover{color:#FFF;background:-moz-linear-gradient(rgba(174,0,0,1),rgba(133,0,0,1));}*/
+.apply:visited{color:white;}			
+
+.link_button{display:block;height:40px;width:243px;background-color:#ad212c;background:-moz-linear-gradient(#a2a2a2,#595959);border:solid 1px #a2a2a2;text-align:center;}
+.link_button:hover{background-color:#9A0000;background:-moz-linear-gradient(#c2c2c2,#797979);}
+
+.shadow{box-shadow:3px 3px 3px #a2a2a2;}
+
+.link_drop{position:absolute;top:0px;left:0px;height:0px;width:218px;background-color:#DDD;border-bottom-left-radius:5px;border-bottom-right-radius:5px;border-style:none;border:solid 1px #595959;visibility:visible;overflow:hidden;text-align:left;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;z-index:1000;} /*extended height 80*/ /*width - 2 for border*/
+.load_link_li{width:100%;display:block;text-decoration:none;padding:5px 0;color:#222;text-align:center;}
+.load_link_li:hover{color:#832037;background-color:#777;}
+
+#logo{background-image:url('../res/logo15.png');background-repeat:no-repeat;background-size:240px 125px;}
+#photo{background-image:url('../res/photo2.jpg');background-repeat:no-repeat;background-size:705px 155px;}
+#motto{color:#333;font-family:daniel;font-size:18px;color:#550003;}
+#user_nav{color:#333;}
+#notices{border:solid 1px #777;}
+
+#sliders{border:solid 1px #999;}
+#slide-1{}
+#slide-1-area{}
+#password{position:absolute;top:40px;left:1%;width:94%;}
+#submit_button{border-style:none;border:solid 1px #999;background-color:#CCC;}
+#submit_button:hover{border-style:none;border:solid 1px #777;background-color:#BBB;color:#040;}
+.blended{text-decoration:none;color:black;}
+.blended:hover{text-decoration:underline;color:#004A4A;}

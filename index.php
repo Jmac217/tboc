@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<link rel="stylesheet" type="text/css" href="css/index.maroon.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.soft-gray.css" />
 	<!--<link rel="stylesheet" type="text/css" href="css/index.dark.css" />-->
 	<!--<link rel="stylesheet" type="text/css" href="css/index.blue.css" />-->
 	<!--<link rel="stylesheet" type="text/css" href="css/index.green.css" />-->
@@ -207,8 +207,8 @@
 		<div id="body">
 			<div id='body_container'>
 				<div id="banner" class=''>
-					<a href='#'><img src='res/NewBanner.png'/></a>
 					<a href='#'><img src='res/online.png'/></a>
+					<a href='#'><img src='res/cropped-banner.png'/></a>
 				</div>
 				<div id='banner_pagination'></div>
 				<div id='sliders' class=''>

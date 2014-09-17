@@ -4,12 +4,12 @@
 a{color:#4b1c22}
 #nav_links>a{color:#4b1c22}
 
-.apply{border-style:none;border-radius:5px;background-color:#900;color:white;background:-moz-linear-gradient(#564041,#2e2223);border:solid 1px #423132;font-weight:bold;font-face:arial;box-shadow:5px 5px 5px #2e2223;}
+.apply{border-style:none;border-radius:5px;background-color:#900;color:white;background:-moz-linear-gradient(#564041,#2e2223);border:solid 1px #564041;font-weight:bold;font-face:arial;box-shadow:5px 5px 5px #2e2223;}
 .apply:hover{color:white;background-color:#C00;background:-moz-linear-gradient(#72242a,#421518);}
 /*.apply:hover{color:#FFF;background:-moz-linear-gradient(rgba(174,0,0,1),rgba(133,0,0,1));}*/
 .apply:visited{color:white;}			
 
-.link_button{display:block;height:40px;width:243px;background-color:#ad212c;background:-moz-linear-gradient(#564041,#2e2223);border:solid 1px #2e2223;text-align:center;}
+.link_button{display:block;height:40px;width:243px;background-color:#ad212c;background:-moz-linear-gradient(#564041,#2e2223);border:solid 1px #564041;text-align:center;}
 .link_button:hover{background-color:#9A0000;background:-moz-linear-gradient(#72242a,#421518);}
 
 .shadow{box-shadow:3px 3px 3px #726162;}

@@ -288,7 +288,7 @@ function selection_handler(type,path,load,name,element){
 		height: 279,
 		play:{
 			active: true,
-			effect: 'slide',
+			effect: 'fade',
 			interval: 7000,
 			auto: true,
 			swap: true,
