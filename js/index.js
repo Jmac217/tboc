@@ -351,12 +351,14 @@ function selection_handler(type,path,load,name,element){
 */
 
 	// Main Login Box
+	/*
 	$('#user_id, #password').click(function(){
 		$(this).select();	
 	});
+	*/
 
 	// login sliders
-
+/*
 	$('#slide-1-panel').click(function(){
 		$('#slide-3').animate({'top':'243px','height':'25px'});	
 		$('#slide-3-area').css({'visibility':'hidden'});
@@ -383,7 +385,7 @@ function selection_handler(type,path,load,name,element){
 		$('#slide-3').animate({'top':'79px','height':'190px'});
 		$('#slide-3-area').css({'visibility':'visible'});
 	});
-
+*/
 /*** Moving to functions.js ***/
 /*
 function set_footer(page_height){

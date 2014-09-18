@@ -9,7 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<link rel="stylesheet" type="text/css" href="css/index.soft-gray.css" />
+	<!--<link rel="stylesheet" type="text/css" href="css/index.soft-gray.css" />-->
+	<link rel="stylesheet" type="text/css" href="css/index.purple.css" />
 	<!--<link rel="stylesheet" type="text/css" href="css/index.dark.css" />-->
 	<!--<link rel="stylesheet" type="text/css" href="css/index.blue.css" />-->
 	<!--<link rel="stylesheet" type="text/css" href="css/index.green.css" />-->
@@ -26,7 +27,7 @@
 	</div>
 	<div id="doc">
 		<div id="header">
-			<div id='logo'></div>
+			<div id='logo'><img src='res/logo17.png' height='125' width='240'/></div>
 			<div id='photo'></div>
 			<div id="nav_links">
 			<?php /* include('pages/include/i_uppernav.php'); */ ?>
@@ -36,7 +37,7 @@
 			<!--</div>-->
 			</div>
 			<span id='motto'>Your Hometown Friend!</span>
-			<span id='user_nav'><span id='user_nav_home'><u>Home</u> &nbsp; | &nbsp; </span><span id='user_nav_array'></span></span>
+			<span id='user_nav'><span id='user_nav_bg'><span id='user_nav_home'><u>Home</u> &nbsp; | &nbsp; </span><span id='user_nav_array'></span></span></span>
 			<div id='notices'>
 				<div id='notices_area'>
 					<div id='alert'></div>
@@ -120,7 +121,7 @@
 			<div id='links'>
 				<div class='link shadow links_customer link_button link_left' alt='customer'>
 					<div class='link_title'>
-						<a>Customer</a>
+						<a>Customer Service</a>
 					</div>
 					<ul>
 						<li>
@@ -140,7 +141,7 @@
 
 				<div class='link shadow links_personal link_button' alt='personal'>
 					<div class='link_title'>
-						<a>Personal</a>
+						<a>Personal Banking</a>
 					</div>
 					<ul>
 						<li>
@@ -163,7 +164,7 @@
 
 				<div class='link shadow links_business link_button' alt='business'>
 					<div class='link_title'>
-						<a>Business</a>
+						<a>Business Banking</a>
 					</div>
 					<ul>
 						<li>
@@ -181,7 +182,7 @@
 
 				<div class='link shadow links_about link_button link_right' alt='about'>
 					<div class='link_title'>
-						<a>About</a>
+						<a>About Us</a>
 					</div>
 					<ul>
 						<li>
@@ -221,8 +222,8 @@
 									<div class="small buttons">
 										<!-- the values in this form must remain constant -->
 										<form id="Q2OnlineLogin" name="Q2OnlineLogin" action="https://secure9.onlineaccess1.com/CarbondaleOnline_30/Authentication/Login.aspx" method="post">
-											<input id="user_id" type="text" name="user_id" value="User ID"/>
-											<input id="password" type="password" name="password" value="Password"/>
+											<input id="user_id" type="text" name="user_id" placeholder="User ID"/>
+											<input id="password" type="password" name="password" placeholder="Password"/>
 											<input id="submit_button" type="submit" name="submit" value="Login"/>
 											<!--<input class="checkbox_login" type="checkbox" value="1" name="forgot_password" onClick="CheckBoxCheck(0);" id="forgot_password"/> I am a First Time User-->
 											<!--<input class="checkbox_login" type="checkbox" value="1" name="forgot_password" onClick="CheckBoxCheck(1);" id="forgot_password"/> I have Forgotten my Password-->

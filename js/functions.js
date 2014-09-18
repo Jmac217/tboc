@@ -31,11 +31,11 @@ function notice(visible, path, type){ // this function deals with everything rel
 
 				var rows = []; // html strings will be pushed into this array
 
-				var notices = get_top(100);
+				var notices = get_top(0);
 
-				var body = get_top(10);
-				var links = get_top(20);
-				var pages = get_top(300);
+				var body = get_top(0);
+				var links = get_top(0);
+				var pages = get_top(0);
 //				var footer = get_top(640);
 				$('#notices').css({'visibility':'visible'}).animate({'height':notice_height});
 				$('#body_container').animate({'top':body}); 

@@ -20,7 +20,7 @@ a{color:#4b1c22}
 
 #logo{background-image:url('../res/logo13.png');background-repeat:no-repeat;background-size:240px 125px;}
 #photo{background-image:url('../res/photo2.jpg');background-repeat:no-repeat;background-size:705px 155px;}
-#motto{color:#333;font-family:daniel;font-size:18px;color:#550003;}
+#motto{color:#333;/*font-family:daniel;*/font-size:18px;color:#550003;}
 #user_nav{color:#333;}
 #notices{border:solid 1px #777;}
 

@@ -5,7 +5,9 @@
 @font-face{font-family:dou;src:url('../res/fonts/DoulosSILR.ttf');}
 @font-face{font-family:honey;src:url('../res/fonts/HoneyScript-Light.ttf');}
 @font-face{font-family:fen;src:url('../res/fonts/FeENit2.ttf');}
-
+@font-face{font-family:fed;src:url('../res/fonts/FeDPit2.ttf');}
+@font-face{font-family:danielbk;src:url('../res/fonts/danielbk.ttf');}
+@font-face{font-family:des;src:url('../res/fonts/DESYREL.ttf');}
 
 
 body{background-image:url(../res/background.png);background-size:100% 100%;background-attachment:fixed;}
@@ -72,7 +74,7 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 .link{position:absolute;cursor:pointer;/*height:40px;width:220px;*/top:100px;/*background-image:url('../res/TBOC_Blank_Button.png');background-repeat:no-repeat;*/text-align:center;z-index:1000;}
 .link_button{display:block;height:40px;width:243px;background-color:#9A0000;background:-moz-linear-gradient(#9A0000,#710000);border:solid 1px #710000;text-align:center;}
 .link_button:hover{background-color:#9A0000;background:-moz-linear-gradient(#BC0000,#950000);}
-.link_title>a{display:block;color:#EEE;font-size:14px;padding-top:12px;text-decoration:none;}
+.link_title>a{display:block;color:#EEE;font-size:17px;padding-top:12px;text-decoration:none;}
 /*
 .links_customers{left:10px;}
 .links_personal{left:245px;}
@@ -102,10 +104,10 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 #doc{position:relative;top:0px;left:15%;/*height:859px;*/width:970px;}
 	#header{position:absolute;top:0px;left:0px;height:400px;width:100%;}
 		#nav_links{position:absolute;top:25px;left:0px;height:25px;width:100%;text-align:right;color:#457d84}
-		#logo{position:absolute;top:25px;left:0px;height:125px;width:240px;background-image:url('../res/logo3.png');background-repeat:no-repeat;background-size:240px 125px;cursor:pointer;}
+		#logo{position:absolute;top:25px;left:0px;height:125px;width:240px;/*background-image:url('../res/logo3.png');background-repeat:no-repeat;background-size:240px 125px;*/cursor:pointer;}
 		#photo{position:absolute;top:45px;left:265px;height:180px;width:705px;background-image:url('../res/photo2.jpg');background-repeat:no-repeat;background-size:705px 155px;}
-		#motto{position:absolute;top:155px;left:0px;height:20px;width:250px;color:#333;visibility:visible;z-index:100;/*background-image:url('../res/slogan.png');background-repeat:no-repeat;background-size:245px 20px;*/font-family:honey;font-size:18px;text-align:center;color:#550003;}
-		#user_nav{position:absolute;top:185px;left:0px;height:20px;width:100%;color:#333;visibility:visible;cursor:pointer;z-index:1;text-shadow:1px 1px #CCC;}
+		#motto{position:absolute;top:155px;left:0px;height:20px;width:250px;color:#333;visibility:visible;z-index:100;/*background-image:url('../res/slogan.png');background-repeat:no-repeat;background-size:245px 20px;*/font-family:des;font-size:17px;text-align:center;color:#000;/*color:#550003;*/}
+		#user_nav{position:absolute;top:185px;left:0px;height:20px;width:100%;color:#333;visibility:visible;cursor:pointer;z-index:1;/*text-shadow:1px 1px #CCC;*/}
 		#notices{position:relative;top:175px;height:0px;width:970px;visibility:hidden;border:solid 1px #777;}
 		#notices_area{position:absolute;top:5px;left:10px;width:98%;height:95%;}
 			#alert{position:absolute;top:0px;left:0px;height:100%;width:100%;}/*background-color:#B66*/
@@ -132,16 +134,16 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 			#banner_pagination_item{background-color:yellow;}
 			*/
 			/*.slidesjs-container{position:absolute;left:220px;width:700px;}*/
-			#sliders{position:absolute;top:0px;height:455px;width:210px;border:solid 1px #999;}
+			#sliders{position:absolute;top:0px;height:455px;width:210px;border:solid 1px #501a2a;}
 				#slide-1{position:absolute;top:10px;left:5%;height:470px;width:90%;/*border:solid 1px #666;*/overflow:hidden;}
-					#slide-1-panel{position:absolute;top:0px;left:0px;height:30px;width:186px;font-size:15px;text-decoration:underline;text-align:center;cursor:pointer;}
+					#slide-1-panel{position:absolute;top:0px;left:0px;height:30px;width:100%;font-size:15px;text-align:center;display:block;color:#EEE;border:solid 1px #501a2a;background-color:#75263d;padding:5px;font-style:italic;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 					#slide-1-area{position:absolute;top:0px;left:0px;height:100%;}
-						#login{position:absolute;top:25px;left:1px;height:162px;width:184px;}
-							#login_form{position:absolute;top:0px;left:0px;height:85%;width:100%;}
-/*								#login_title{position:absolute;top:0px;left:35px;font-size:15px;text-decoration:underline;}*/
-								#user_id{position:absolute;top:5px;left:1%;width:94%;height:30px;font-size:15px;}
-								#password{position:absolute;top:40px;left:1%;width:94%;}
-								/* submit buttons can be made into button classes now */
+						#login{position:absolute;top:35px;left:0px;height:235px;width:184px;}
+							#login_form{position:absolute;top:0px;left:0px;height:100%;width:100%;}
+								/* #login_title{position:absolute;top:0px;left:35px;font-size:15px;text-decoration:underline;}*/
+								#user_id{position:absolute;top:0px;left:0px;width:97%;height:30px;font-size:15px;}
+								#password{position:absolute;top:35px;left:0px;width:97%;}
+								/** submit buttons can be made into button classes now **/
 								#submit_button{position:absolute;top:130px;right:5%;height:25px;width:55px;border-style:none;border:solid 1px #999;background-color:#CCC;}
 								#submit_button:hover{position:absolute;border-style:none;border:solid 1px #777;cursor:pointer;background-color:#BBB;color:#040;}
 								#forgot{position:absolute;bottom:55px;left:2%;width:98%;text-align:center;font-size:11px;}
@@ -150,7 +152,7 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 								.blended:hover{text-decoration:underline;color:#004A4A;cursor:pointer;}
 								#login_form_mortgage{position:absolute;bottom:2px;left:2px;height:10%;width:98%;}
 								#login_form_mortgage_image{position:absolute;top:0px;left:45px;width:115px;height:22px;background-image:url('../res/emortgage.png');background-repeat:no-repeat;cursor:pointer;visibility:hidden;}
-							/** NEEDS MORE FORMATTING **/
+							/** Removed **/
 				#slide-2{position:absolute;top:209px;left:5%;height:25px;width:90%;border:solid 1px #666;overflow:hidden;}
 					#slide-2-panel{position:absolute;top:0px;left:0px;height:30px;width:190px;text-decoration:underline;text-align:center;cursor:pointer;font-size:12px;padding-top:5px;}
 					#slide-2-area{position:absolute;top:30px;left:0px;height:100%;padding:10px;}
@@ -176,7 +178,7 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 				.security_nav_center{position:absolute;left:46%;}	
 				.image{position:absolute;top:100px;left:45%;background-image:url('lock_transparent_small.png');height:319px;width:563px;/*border:solid 1px #444;*/}
 
-	#footer{position:absolute;/*top:1165px;*/top:815px;/*top:717px;*/left:0px;width:100%;height:50px;/*border:solid 1px #777;*/}
+	#footer{position:absolute;/*top:1165px;*/top:465px;/*top:717px;*/left:0px;width:100%;height:50px;/*border:solid 1px #777;*/}
 		#footer_copy{position:absolute;bottom:0px;left:0px;height:15px;}
 		#footer_FDIC{position:absolute;bottom:0px;right:0px;}
 			#footer_FDIC_logo{position:absolute;bottom:0px;right:0px;background-image:url("../res/equal-housing-lender-transparent.png");height:37px;width:70px;}
