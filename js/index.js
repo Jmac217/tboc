@@ -4,6 +4,24 @@ $(document).ready(function(){
 		$('#body_container').css({'visibility':'visible'});	
 		$('#pages').css({'visibility':'hidden'});	
 	});
+	$('input').click(function(){
+		$(this).select();
+	});
+	
+	
+$("'[placeholder]'").focus(function() {
+  var input = $(this);
+  if (input.val() == input.attr("'placeholder'")) {
+    input.val("''");
+    input.removeClass("'placeholder'");
+  }
+}).blur(function() {
+  var input = $(this);
+  if (input.val() == "''" || input.val() == input.attr("'placeholder'")) {
+    input.addClass("'placeholder'");
+    input.val(input.attr("'placeholder'"));
+  }
+}).blur();
 
 // currently debugging
 // This will be a click event for links

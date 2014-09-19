@@ -33,7 +33,12 @@
 			<?php /* include('pages/include/i_uppernav.php'); */ ?>
 			<!-- inserted uppernav.php into structure -->
 			<!--<div class="span-19 last UpperNav">-->
-				<!--<a href='http://10.0.0.140/landing/php/tracker/'>REPORT AN ISSUE OR REQUEST</a> &nbsp;&nbsp;&nbsp;&nbsp; -->Phone:&nbsp; 618&#149;549&#149;2181 &nbsp;&nbsp;&nbsp;&nbsp; <a href="/rates">Current Rates</a> &nbsp;&nbsp;&nbsp;&nbsp;  <a href="/locations">Hours & Locations</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/atm">ATM Locations</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="/contact">Contact Us</a>
+				<!--<a href='http://10.0.0.140/landing/php/tracker/'>REPORT AN ISSUE OR REQUEST</a> &nbsp;&nbsp;&nbsp;&nbsp; -->
+				<a class='load_link' path='pages/personal/cod.php' location='internal' win='current'>Current Rates</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class='load_link' path='pages/about/locations.php' location='internal' win='current'>Hours & Locations</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class='load_link' path='pages/about/atm.php' location='internal' win='current'>ATM Locations</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a class='load_link' path='pages/about/contact.php' location='internal' win='current'>Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				618&#149;549&#149;2181
 			<!--</div>-->
 			</div>
 			<span id='motto'>Your Hometown Friend!</span>
@@ -120,7 +125,7 @@
 			<!-- end: links -->
 			<div id='links'>
 				<div class='link shadow links_customer link_button link_left' alt='customer'>
-					<div class='link_title'>
+					<div class='link_title noselect'>
 						<a>Customer Service</a>
 					</div>
 					<ul>
@@ -140,7 +145,7 @@
 				</div>
 
 				<div class='link shadow links_personal link_button' alt='personal'>
-					<div class='link_title'>
+					<div class='link_title noselect'>
 						<a>Personal Banking</a>
 					</div>
 					<ul>
@@ -163,7 +168,7 @@
 				</div>
 
 				<div class='link shadow links_business link_button' alt='business'>
-					<div class='link_title'>
+					<div class='link_title noselect'>
 						<a>Business Banking</a>
 					</div>
 					<ul>
@@ -181,7 +186,7 @@
 				</div>
 
 				<div class='link shadow links_about link_button link_right' alt='about'>
-					<div class='link_title'>
+					<div class='link_title noselect'>
 						<a>About Us</a>
 					</div>
 					<ul>
@@ -229,8 +234,8 @@
 											<!--<input class="checkbox_login" type="checkbox" value="1" name="forgot_password" onClick="CheckBoxCheck(1);" id="forgot_password"/> I have Forgotten my Password-->
 										</form>
 									</div>
-								<span id='forgot'><a class='blended'>I forgot my Username or Password</a></span>
-								<span id='first'><a class='blended'>I'm a first time user.</a></span>
+								<span id='forgot'><a>Forget something?</a></span>
+								<span id='first'><a>I'm a first time user.</a></span>
 								</div>
 								<!-- <div class="LoginBlock Lower">
 									<h2><img src="images/eStatements_hdr.png" width="129" height="20"></h2>
@@ -249,6 +254,29 @@
 									</p>
 									-->
 								</div>
+							</div>
+						</div>
+						<div id='login_tiles'>
+							<div class='login_tile login_tile_border'>
+								<span class='login_tile_text'>
+									<span class='login_tile_header'>Testing</span><br/>
+									<span class='login_tile_body'>text text text text text</span>
+								</span>
+								<span class='login_tile_image'><img src='res/icons/card/original.png' height='30' width='50'/></span>
+							</div>
+							<div class='login_tile login_tile_border'>
+								<span class='login_tile_text'>
+									<span class='login_tile_header'>Testing</span><br/>
+									<span class='login_tile_body'>text text text text text text text text text text text text</span>
+								</span>
+								<span class='login_tile_image'></span>
+							</div>
+							<div class='login_tile'>
+								<span class='login_tile_text'>
+									<span class='login_tile_header'>Testing</span><br/>
+									<span class='login_tile_body'>text text text text text text text text text text text text</span>
+								</span>
+								<span class='login_tile_image'></span>
 							</div>
 						</div>
 					</div>
@@ -270,23 +298,32 @@
 				<div id='tiles' class=''>
 					<span class='tile plain_tile'>
 						<div class='tile_container'>
-							<img class='tile_image ' src='res/debit_card.jpg'/>
-							<span class='tile_text'>Card Services</span>
-							<span class='apply tile_button'>Get Information</span>
+							<div class='tile_border'>
+								<img class='tile_image ' src='res/icons/card/white-simple.png'/>
+								<br/><br/>
+								<span class='tile_text'>Card Services</span>
+								<!--<span class='apply tile_button'>Get Information</span>-->
+							</div>
 						</div>
 					</span>
 					<span class='tile plain_tile' style='left:33%;'>
 						<div class='tile_container'>
-							<img class='tile_image ' src='res/Banking1.jpg'/>
-							<span class='tile_text'>Mortgage Center</span>
-							<span class='apply tile_button'>Apply Now</span>
+							<div class='tile_border'>
+								<img class='tile_image ' src='res/icons/home/person.png'/>
+								<br/><br/>
+								<span class='tile_text'>Mortgage Center</span>
+								<!--<span class='apply tile_button'>Apply Now</span>-->
+							</div>
 						</div>
 					</span>
 					<span class='tile plain_tile' style='left:66%;border-right:none;'>
 						<div class='tile_container'>
-							<img class='tile_image ' src='res/business_ebanking.png'/>
-							<span class='tile_text'>Mobile App</span>
-							<span class='apply tile_button'>Download</span>
+							<div class='tile_border'>
+								<img class='tile_image ' src='res/icons/tech/mobile.png'/>
+								<br/><br/>
+								<span class='tile_text'>Mobile App</span>
+								<!--<span class='apply tile_button'>Download</span>-->
+							</div>
 						</div>
 					</span>
 				</div>

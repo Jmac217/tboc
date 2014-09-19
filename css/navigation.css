@@ -3,11 +3,11 @@
 .links_customer{left:0px;}
 .links_personal{left:244px;}
 .links_business{left:488px;}
-.links_about{left:734px;}
+.links_about{left:733px;}
 /*.links_about{left:692px;}*/
 
-.link_left{border-top-left-radius:5px;border-bottom-left-radius:5px;}
-.link_right{border-top-right-radius:5px;border-bottom-right-radius:5px;}
+.link_left{border-top-left-radius:5px;border-bottom-left-radius:2px;}
+.link_right{border-top-right-radius:5px;border-bottom-right-radius:2px;}
 
 /* dropdown container */
 .link ul{

@@ -12,8 +12,13 @@
 
 body{background-image:url(../res/background.png);background-size:100% 100%;background-attachment:fixed;}
 
-a{color:#457d84;cursor:pointer;outline:0;text-decoration:none;}a:hover{color:#568e95;outline:0;text-decoration:underline;}
-li>a{text-decoration:none;}li>a:visited{color:white;outline:0;}li>a:active{color:white;outline:0;}
+a{color:#1e59cf;cursor:pointer;outline:0;text-decoration:none;}
+a:hover{color:#3e79ef;outline:0;text-decoration:underline;}
+li>a{text-decoration:none;}
+li>a:visited{color:white;outline:0;}
+li>a:active{color:white;outline:0;}
+.link_drop>li>a{color:black;}
+.link_drop>li>a:hover{text-decoration:none;color:#1e59cf}
 /*a:link{color:rgb(128,0,0);}a:visited{color:rgb(128,0,0),}a:active{color:rgb(128,0,0);}*/
 
 ul{list-style-type:none;}
@@ -23,6 +28,7 @@ input{background-color:#FEFEFE}input:focus{background-color:#EFEFEF;}
 sup{font-size:14px;font-weight:bold;}
 
 .e{color:#07a603;} /* literally, the "e" in eStatements... this should just be an inline style */
+.noselect{select:none;-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 
 .button{position:relative;border-style:none;border:solid 1px #777;cursor:pointer;background-color:#CCC;color:#000;}
 .button:hover{border:solid 1px #777;background-color:#BBB;color:#040;}
@@ -43,11 +49,13 @@ sup{font-size:14px;font-weight:bold;}
 	.plain_tile{border-right:solid 1px #CCC;}
 	.pop_tile{border:solid 1px #888;border-radius:10px;box-shadow:5px 5px 5px #888;}
 		.tile_container{position:absolute;top:15px;left:20px;text-align:center;width:75%;height:100%;}
-			.tile_image{height:75px;width:75px;}
-			.tile_text{display:block;top:0px;left:0px;}
+			.tile_image{position:relative;top:20px;/*height:75px;width:75px;*/}
+			.tile_text{position:relative;display:block;top:10px;left:0px;}
 			.tile_button{display:block;left:0px;cursor:pointer;}
 			/*.title_button{display:block;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;border-style:none;padding:5px 15px 5px 15px;background-color:#9A0000;background:-moz-linear-gradient(rgba(154,0,0,1),rgba(113,0,0,1));color:#EEE;border-radius:5px 5px 5px 5px;border:solid 1px #710000;}*/
-			.tile_button:hover{color:#FFF;background:-moz-linear-gradient(rgba(174,0,0,1),rgba(133,0,0,1));}
+			/*.tile_button:hover{color:#FFF;background:-moz-linear-gradient(rgba(174,0,0,1),rgba(133,0,0,1));}*/
+			.tile_border{margin:auto;display:box;height:80%;width:70%;border:solid 1px transparent;border-radius:7px;background-color:transparent;cursor:pointer;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+			.tile_border:hover{border:solid 1px #CCC;background-color:#EEE;}
 
 #debug{position:absolute;top:0px;left:0px;padding:10px;background-color:#ddd;border:solid 1px #aaa;}
 #noticesOn{cursor:pointer;}
@@ -85,7 +93,7 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 .shadow{box-shadow:3px 3px 3px #9c5555;}
 .text_pad{position:relative;font-size:16px;color:white;top:10px;}
 
-.link_drop{position:absolute;top:0px;left:0px;height:0px;width:218px;background-color:#311;border-bottom-left-radius:5px;border-bottom-right-radius:5px;border-style:none;border:solid 1px #9c0000;visibility:visible;color:white;overflow:hidden;text-align:left;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;z-index:1000;} /*extended height 80*/ /*width - 2 for border*/
+.link_drop{position:absolute;top:0px;left:0px;height:0px;width:218px;background-color:#311;border-bottom-left-radius:5px;border-bottom-right-radius:5px;border-style:none;border:solid 1px #9c0000;visibility:visible;color:black;overflow:hidden;text-align:left;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;z-index:1000;} /*extended height 80*/ /*width - 2 for border*/
 .load_link_li{width:100%;display:block;text-decoration:none;padding:5px 0;color:white;text-align:center;}.load_link_li:hover{color:#FC0;background-color:#522;}
 .load_link{cursor:pointer;}
 
@@ -103,7 +111,7 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 
 #doc{position:relative;top:0px;left:15%;/*height:859px;*/width:970px;}
 	#header{position:absolute;top:0px;left:0px;height:400px;width:100%;}
-		#nav_links{position:absolute;top:25px;left:0px;height:25px;width:100%;text-align:right;color:#457d84}
+		#nav_links{position:absolute;top:25px;left:0px;height:25px;width:100%;text-align:right;color:#333;}
 		#logo{position:absolute;top:25px;left:0px;height:125px;width:240px;/*background-image:url('../res/logo3.png');background-repeat:no-repeat;background-size:240px 125px;*/cursor:pointer;}
 		#photo{position:absolute;top:45px;left:265px;height:180px;width:705px;background-image:url('../res/photo2.jpg');background-repeat:no-repeat;background-size:705px 155px;}
 		#motto{position:absolute;top:155px;left:0px;height:20px;width:250px;color:#333;visibility:visible;z-index:100;/*background-image:url('../res/slogan.png');background-repeat:no-repeat;background-size:245px 20px;*/font-family:des;font-size:17px;text-align:center;color:#000;/*color:#550003;*/}
@@ -126,32 +134,41 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 				.tabs_about{position:absolute;top:0px;left:150px;height:0px;width:100px;visibility:hidden;}
 			/**/
 		/**/
-		#body_container{position:absolute;top:0px;left:0px;height:239px;width:100%;} /* top: + 100 for alerts => in Javascript*/
+		#body_container{position:absolute;top:0px;left:0px;height:539px;width:100%;} /* top: + 100 for alerts => in Javascript*/
 			/*#banner{position:absolute;left:220px;height:279px;width:750px;background-image:url('../res/NewBanner.png');background-repeat:no-repeat;cursor:default;}*//*border:solid 1px black;*/
-			#banner{position:relative;top:0px;left:220px;height:279px;width:750px;border:solid 1px #999;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;z-index:900;}
+			#banner{position:relative;top:0px;left:220px;height:279px;width:750px;/*border:solid 1px #999;*/-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;z-index:900;border-radius:2px 2px 2px 2px;}
 			/*
 			#banner_pagination{position:absolute;top:254px;left:220px;height:25px;width:750px;border:solid 1px #999;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;z-index:901;background-color:transparent;}
 			#banner_pagination_item{background-color:yellow;}
 			*/
 			/*.slidesjs-container{position:absolute;left:220px;width:700px;}*/
-			#sliders{position:absolute;top:0px;height:455px;width:210px;border:solid 1px #501a2a;}
-				#slide-1{position:absolute;top:10px;left:5%;height:470px;width:90%;/*border:solid 1px #666;*/overflow:hidden;}
-					#slide-1-panel{position:absolute;top:0px;left:0px;height:30px;width:100%;font-size:15px;text-align:center;display:block;color:#EEE;border:solid 1px #501a2a;background-color:#75263d;padding:5px;font-style:italic;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
-					#slide-1-area{position:absolute;top:0px;left:0px;height:100%;}
-						#login{position:absolute;top:35px;left:0px;height:235px;width:184px;}
+			#sliders{position:absolute;top:0px;height:455px;width:210px;border:solid 1px #999;border-radius:5px;}
+				#slide-1{position:absolute;height:100%;width:100%;/*top:10px;left:5%;height:470px;width:90%;*//*border:solid 1px #666;*/-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;}
+					#slide-1-panel{position:absolute;top:0px;left:0px;height:30px;width:100%;font-size:15px;text-align:center;display:block;color:#EEE;text-shadow:1px 1px 4px #000;border:solid 1px #501a2a;background-color:#75263d;padding:5px;font-style:italic;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;border-radius:5px 5px 0px 0px;border-bottom:solid 1px black;}
+					#slide-1-area{position:absolute;top:0px;left:0px;height:100%;width:100%;}
+						#login{position:absolute;top:35px;left:0px;height:235px;width:184px;padding:10px;}
 							#login_form{position:absolute;top:0px;left:0px;height:100%;width:100%;}
 								/* #login_title{position:absolute;top:0px;left:35px;font-size:15px;text-decoration:underline;}*/
-								#user_id{position:absolute;top:0px;left:0px;width:97%;height:30px;font-size:15px;}
-								#password{position:absolute;top:35px;left:0px;width:97%;}
+								#user_id{position:absolute;top:0px;left:0px;width:97%;height:30px;font-size:15px;border:solid 1px #666;border-radius:2px 2px 0px 0px;}
+								#password{position:absolute;top:35px;left:0px;width:97%;height:30px;font-size:15px;border:solid 1px #666;border-radius:0px 0px 2px 2px;}
 								/** submit buttons can be made into button classes now **/
-								#submit_button{position:absolute;top:130px;right:5%;height:25px;width:55px;border-style:none;border:solid 1px #999;background-color:#CCC;}
-								#submit_button:hover{position:absolute;border-style:none;border:solid 1px #777;cursor:pointer;background-color:#BBB;color:#040;}
-								#forgot{position:absolute;bottom:55px;left:2%;width:98%;text-align:center;font-size:11px;}
-								#first{position:absolute;bottom:35px;left:2%;width:98%;text-align:center;font-size:12px;}
+								#submit_button{position:absolute;top:90px;right:5%;border-style:none;border:solid 1px #501a2a;border-radius:3px;background-color:#75263d;color:#EEE;padding:5px 15px 5px 15px;}
+								#submit_button:hover{position:absolute;cursor:pointer;background-color:#501a2a;color:#FFF;text-decoration:underline;}
+								#forgot{position:absolute;top:90px;left:8%;font-size:11px;}
+								#first{position:absolute;top:105px;left:8%;font-size:11px;}
+								#forgot>a{color:#333}
+								#first>a{color:#333;}
 								.blended{text-decoration:none;color:black;}
 								.blended:hover{text-decoration:underline;color:#004A4A;cursor:pointer;}
 								#login_form_mortgage{position:absolute;bottom:2px;left:2px;height:10%;width:98%;}
 								#login_form_mortgage_image{position:absolute;top:0px;left:45px;width:115px;height:22px;background-image:url('../res/emortgage.png');background-repeat:no-repeat;cursor:pointer;visibility:hidden;}
+				#login_tiles{position:absolute;bottom:0px;left:0px;height:260px;width:100%;padding:10px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+					.login_tile{position:relative;height:80px;width:100%;color:#444;padding:10px 5px 10px 5px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+						.login_tile_text{position:absolute;top:15px;right:10px;height:50px;width:55%;}
+							.login_tile_header{font-size:16px;color:#75263d;}
+							.login_tile_body{font-size:10px;text-align:left;}
+						.login_tile_image{position:absolute;display:block;top:15px;left:10px;height:50px;width:50px;border:solid 1px #666;border-radius:7px;background-color:#1e59cf;}
+						.login_tile_border{border-bottom:solid 1px #CCC;}
 							/** Removed **/
 				#slide-2{position:absolute;top:209px;left:5%;height:25px;width:90%;border:solid 1px #666;overflow:hidden;}
 					#slide-2-panel{position:absolute;top:0px;left:0px;height:30px;width:190px;text-decoration:underline;text-align:center;cursor:pointer;font-size:12px;padding-top:5px;}
@@ -164,7 +181,7 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 
 			/* security */
 				.home{font-size:10px;}
-				.bold{color:rgb(128,0,0);font-size:14px;}
+				.bold{color:#75263d;font-size:14px;}
 				.bold_black{font-size:14px;}
 				.span{position:relative;left:0px;font-size:13px;}
 				.strong{position:relative;left:-25px;font-size:13px;}
@@ -172,11 +189,11 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 				.small{position:relative;left:2%;font-size:12px;}
 				.indented{position:relative;left:2%;}
 				ul{list-style-type:disc;}
-				h2{position:relative;color:rgb(128,0,0);}
-				.links{position:relative;color:rgb(128,0,0);font-size:14px;}
-				.security_nav{position:relative;color:rgb(128,0,0);height:20px;width:100%;font-size:15px;border-bottom:solid 1px black;}
+				h2{position:relative;color:#75263d;}
+				.links{position:relative;color:#75263d;font-size:14px;}
+				.security_nav{position:relative;color:#75263d;height:20px;width:100%;font-size:15px;border-bottom:solid 1px black;}
 				.security_nav_center{position:absolute;left:46%;}	
-				.image{position:absolute;top:100px;left:45%;background-image:url('lock_transparent_small.png');height:319px;width:563px;/*border:solid 1px #444;*/}
+				.image{position:absolute;top:100px;left:45%;background-image:url('res/lock_transparent_small.png');height:319px;width:563px;/*border:solid 1px #444;*/}
 
 	#footer{position:absolute;/*top:1165px;*/top:465px;/*top:717px;*/left:0px;width:100%;height:50px;/*border:solid 1px #777;*/}
 		#footer_copy{position:absolute;bottom:0px;left:0px;height:15px;}
