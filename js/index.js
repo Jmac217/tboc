@@ -8,7 +8,7 @@ $(document).ready(function(){
 		$(this).select();
 	});
 	
-	
+/*	
 $("'[placeholder]'").focus(function() {
   var input = $(this);
   if (input.val() == input.attr("'placeholder'")) {
@@ -22,7 +22,7 @@ $("'[placeholder]'").focus(function() {
     input.val(input.attr("'placeholder'"));
   }
 }).blur();
-
+*/
 // currently debugging
 // This will be a click event for links
 // a page will be passed in to the continue button

@@ -259,24 +259,25 @@
 						<div id='login_tiles'>
 							<div class='login_tile login_tile_border'>
 								<span class='login_tile_text'>
-									<span class='login_tile_header'>Testing</span><br/>
-									<span class='login_tile_body'>text text text text text</span>
+									<span class='login_tile_header'>Demos</span><br/>
+									<span class='login_tile_body'>Online Banking Demo</span>
+									<span class='login_tile_body'>Online Billpay Demo</span>
 								</span>
-								<span class='login_tile_image'><img src='res/icons/card/original.png' height='30' width='50'/></span>
+								<span class='login_tile_image'><img src='res/icons/tech/computer.png'/></span>
 							</div>
 							<div class='login_tile login_tile_border'>
-								<span class='login_tile_text'>
-									<span class='login_tile_header'>Testing</span><br/>
-									<span class='login_tile_body'>text text text text text text text text text text text text</span>
+								<span class='login_tile_text' style=''>
+									<br/><span class='login_tile_header' style=''>Consumer</span><br/>
+									<span class='login_tile_body'>Loan Application</span>
 								</span>
-								<span class='login_tile_image'></span>
+								<span class='login_tile_image'><img src='res/icons/home/pen-paper.png'/></span>
 							</div>
 							<div class='login_tile'>
 								<span class='login_tile_text'>
-									<span class='login_tile_header'>Testing</span><br/>
-									<span class='login_tile_body'>text text text text text text text text text text text text</span>
+									<br/><span class='login_tile_header'>Activate</span><br/>
+									<span class='login_tile_body'>eStatements</span>
 								</span>
-								<span class='login_tile_image'></span>
+								<span class='login_tile_image'><img src='res/icons/home/folder.png'/></span>
 							</div>
 						</div>
 					</div>
