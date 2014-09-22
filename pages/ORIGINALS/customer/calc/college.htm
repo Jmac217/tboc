@@ -1,0 +1,358 @@
+<script language="Javascript"><!--
+// base figures for school cost
+var baseCost = new Array();
+baseCost[0] = 10000.00;
+baseCost[1] = 33000.00; 
+baseCost[2] = 21500.00;
+var costPerYear = new Array();
+costPerYear[0] = 0;
+costPerYear[1] = 0;
+costPerYear[2] = 0;
+costPerYear[3] = 0;
+
+function getPercent(obj)
+{       
+	/* 
+		 performs data validation and returns float value
+     parameter must be a form element with a 'value' attribute
+     containing a parseFloat()-able piece of data, followed by a percent sign
+  */
+  var val = obj.value+"";
+  var psign = val.indexOf("%", 0);
+  if(psign > -1){
+		var val = val.substring(0, psign);
+  }else{
+		alert("This value has been incorrectly entered:\n\n-->"+val+"\n\nInput should be a percentage.");
+    return 0.0;
+  }if(parseFloat(val)){
+		return parseFloat(val)/100;
+  }else{
+		alert("This value has been incorrectly entered:\n\n-->"+val+"\n\nInput should be a percentage.");
+    return 0.00;
+  }
+}  
+
+function getNumber(obj) {
+	/* 
+		 performs data validation and returns float value
+		 parameter must be a form element with a 'value' attribute
+	 	 containing a parseFloat()-able piece of data, eg: 1.5, or empty
+	*/
+  var numString1 = obj.value+"";
+  var num = 0;
+  var comma = numString1.indexOf(",", 0);
+  if (!parseFloat(numString1) || comma > -1){
+	  if(numString1 == "" || numString1 == " "){/*Nothing happens, in a poorly written fashion.*/}
+    else if (comma > -1){
+			alert("This value has been incorrectly entered:\n\n-->"+numString1);
+    }else{
+			alert("This value has been incorrectly entered:\n\n-->"+numString1);
+    }
+  }else{
+		num = parseFloat(numString1);
+  }
+  return num; 
+}
+
+function makeDollars(number){
+	//formats number to two decimal places
+  var rounded = Math.round(number);
+  var dollars = rounded+".00";
+  return dollars;
+}
+
+function getFV(rate, nper, pmt, pv, type){
+	var rPowN = Math.pow((1.0 + rate), nper);
+  var fv = pv * rPowN + (pmt*(1+rate*type)*((rPowN - 1)/rate)); 
+  return fv;
+}
+
+// compares the available funds during each year of college
+// to the payment that must be made -- returns false if any 
+// payment exceeds the available funds.
+function compareFundsToCost(rate, nper, pmt, pv, type, percent){       
+	if (costPerYear[0] <= 0){
+		alert("You need to repeat the first step, \"Estimating the Projected\nCost of College\" before proceeding to this step.\nOtherwise, the monthly contribution value will be too low.");
+		return true;
+  }       
+  var funds = getFV(rate/12, (nper)*12, pmt, pv, type);
+  for(loop=0;loop < costPerYear.length;loop++){       
+	  funds -= costPerYear[loop]*percent;
+    if (funds < 0){
+			return false;
+    }else{
+			var tempFunds = getFV(rate/12, 12, pmt, funds, type); 
+      funds = tempFunds;
+    }
+  }
+  return true;
+}
+
+function getPMT(pv, fv, rate, nper){
+	var rPowN = Math.pow((1.0 + rate), nper);
+  var numerator = fv - (pv*rPowN); 
+  var denominator = (1.0 + rate)*((rPowN - 1.0)/rate);
+  return numerator/denominator;
+}
+
+function getTotalPC(){
+	var bcindex, yrindex, inflate, future;
+  with (document.theform){
+		bcindex = s1.selectedIndex;
+    yrindex = s2.selectedIndex + 1;
+    inflate = getPercent(t6);
+    future = 0.0;
+    if (inflate < 1.0){
+			for(loop=0;loop<4;loop++){
+				costPerYear[loop] = getFV(inflate, yrindex+loop, 0, baseCost[bcindex], 0);
+        future += costPerYear[loop];
+      }
+		}else{
+			alert("College-cost inflation must be a percentage less than 100%\n\neg., 7% inflation");
+      t1.value = makeDollars(future);
+    }
+  }
+  return true;
+}
+
+function getTargetAmt(){
+	with (document.theform){
+		var amt = getNumber(t1);
+    var pct = parseFloat(s3.options[s3.selectedIndex].value);
+    t3.value = makeDollars(amt*pct);
+   }
+   return true;    
+}
+
+function getEstReturn(){
+	with(document.theform){
+		var rate = parseFloat(s4.options[s4.selectedIndex].value);
+    t4.value = (Math.round(rate*100))+"%";
+  }
+  return true;
+}
+
+// estimate monthly contributions if period of investment is until 4th year of college
+// then, use compareFundsToCost() to test monthly contrib. values until just high 
+// enough so that all tuition can be paid 
+
+function getMonthly(){
+	var pv, fv, rate, nper, pmt, percent;
+  with(document.theform){
+		pv = getNumber(t2);
+    fv = getNumber(t3);
+    rate = getPercent(t4);
+    if (rate < 1.0){
+			nper = s2.selectedIndex;
+      pmt = getPMT(pv, fv, rate/12, (nper+5)*12);
+      percent = parseFloat(s3.options[s3.selectedIndex].value);
+      var tooLow = true;
+      while(tooLow){       
+				if (compareFundsToCost(rate, nper+1, pmt, pv, 1, percent)){
+        	tooLow = false;
+				}else{
+          pmt++;
+				}
+      }
+			if (pmt > 0){
+	      t5.value = makeDollars(pmt);
+			}else{ 
+        t5.value = "0.00";
+			}
+		}else{alert("Rate of return must be a percentage less than 100%\n\neg., 12% return");} 
+  }
+  return true;
+}
+
+// HERE 
+
+function goTo(aSelect)
+{       if(aSelect.selectedIndex != 0)
+  {     top.document.location.href=aSelect.options[aSelect.selectedIndex].value;
+  }
+        return true;
+}               
+
+function popPage(some_url)
+{ var details="width=300,height=250,top=0,left=0,titlebar=yes,menubar=yes,st atusbar=yes,toolbar=yes,scrollbars=yes";
+        window.open(some_url, "pop_win", details); return false;
+}
+// -->
+		</script>
+<script>
+<!--		
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<h4>College Fund Calculator</h4>
+<p>This worksheet helps to show you how much you'll need to save each month to meet your college savings goals. It assumes that the student will be attending a four-year college and that he or she will finish the degree in four consecutive years.</p>
+					<ul>
+						<li>Use the tab key or your mouse to move around in the worksheet.
+					</ul>
+				
+		<br>
+		<form name="theform">
+		
+  <table align="center" cellpadding="4" cellspacing="0">
+    <tr>
+				<td colspan="2" class="shaded"><b>Estimate the Projected Cost of College&nbsp;&nbsp;</b>&nbsp;&nbsp;</td>
+
+	</tr>
+			<tr>
+				<td>Type of school the student will attend:</td>
+				<td align="right"><select name="s1" size="1">
+						<option value="">public college
+						<option value="">expensive private college
+						<option value="">average private college
+					</select></td>
+			</tr>
+			<tr>
+
+				<td>Years until student enters college:</td>
+				<td align="right"><select name="s2" size="1">
+						<option value="1">1
+						<option value="2">2
+						<option value="3">3
+						<option value="4">4
+						<option value="5">5
+						<option value="6">6
+						<option value="7">7
+						<option value="8">8
+						<option value="9">9
+						<option value="10">10
+						<option value="11">11
+						<option value="12">12
+						<option value="13">13
+						<option value="14">14
+						<option value="15">15
+						<option value="16">16
+						<option value="17">17
+						<option value="18">18
+					</select></td>
+
+			</tr>
+			<tr>
+				<td>College-cost inflation rate:</td>
+				<td align="right"><input type="text" name="t6" size="5" value="5%"></td>
+			</tr>
+			<tr>
+				<td align="center"><input type="button" name="b1" value="Total projected cost" onClick="getTotalPC();"></td>
+				<td align="right"><input type="text" name="t1" size="10"></td>
+
+			</tr>
+			<tr>
+				<td>Current college savings:</td>
+				<td align="right"><input type="text" name="t2" size="10"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td align="right"></td>
+
+			</tr>
+			<tr>
+				<td></td>
+				<td align="right"></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="shaded"><b>Choose Your Savings Goal&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+			</tr>
+
+			<tr>
+				<td>Percentage of the projected cost that you will try to save in advance:</td>
+				<td align="right"><select name="s3" size="1">
+						<option value="0.25">25%
+						<option value="0.50">50%
+						<option value="0.75">75%
+						<option value="1">100%
+					</select></td>
+			</tr>
+			<tr>
+
+				<td align="center"><input type="button" name="b2" value="Target Amount" onClick="getTargetAmt();"></td>
+				<td align="right"><input type="text" name="t3" size="10"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td align="right"></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="shaded"><b>Estimate the Return on Your Investments&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+
+			</tr>
+			<tr>
+				<td>Choose an investment style:</td>
+				<td align="right"><select name="s4" size="1">
+						<option value="0.11">aggressive
+						<option value="0.08">conservative
+					</select></td>
+			</tr>
+			<tr>
+
+				<td align="center"><input type="button" name="b3" value="Estimated return" onClick="getEstReturn();"></td>
+				<td align="right"><input type="text" name="t4" size="5"></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="shaded"><b>Your Monthly Contribution</b></td>
+			</tr>
+			<tr>
+				<td colspan="2">This is the approximate amount you'll have to contribute each month to reach your savings goal. The saving period includes the 4 years that the student is in school.</td>
+
+			</tr>
+			<tr>
+				<td align="center"><input type="button" name="b4" value="Calculate" onClick="getMonthly();"></td>
+				<td align="right"><input type="text" name="t5" size="10"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><div align="center"><br>
+				  <input type="reset" value="Clear">
+			  </div></td>
+			</tr>
+
+		</table>
+
+</form>

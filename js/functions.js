@@ -174,6 +174,224 @@ function set_footer(page_height){
 	$('#footer').css({'top':footer_top});
 }
 
+
+
+
+
+
+
+
+
+
+
+/******** New Load Link via JSON ********************************************/
+
+
+
+
+
+
+function load_link(title, id){
+	$.getJSON('json/paths.json', function(json){
+		var name = json.paths[title][id].name;
+		var path = json.paths[title][id].path;
+		var location = json.paths[title][id].location;
+		var win = json.paths[title][id].win;
+		//alert(name+', '+path+', '+location+', '+win);
+		$('#pages').ajax({
+			type:"post",
+			url:path,
+			async:true,
+			success:function(data){
+				$('#body_container').css({'visibility':'hidden'});
+				$('#pages').html(data);
+				//	$(win).css({'height':'1500px'}); // height needs to be set by an innerHeight function
+				$('#pages').css({'height':'0px'});
+				height = $('#pages')[0].scrollHeight;
+				height+=50; // #pages height is weird
+				$('#pages').css({'height':height});
+				set_footer(height);
+			}
+		});
+		nav_array.push(name);
+		get_nav(nav_array);
+	});
+}
+
+/*
+	// set visibility
+	
+
+	// for security's sake, check path against an whitelist of paths
+	
+	// global defaults
+	var outside=1;
+	//var page='window';
+
+	switch (location){// check for path,null,window
+		case "internal":	
+				// load path into #pages
+			outside=0;
+			$('#pages').css({'visibility':'visible'});
+		break;
+		case "external":
+			// load path through outside.php?u=path
+			$('#outgoing').html("<span class='outgoing_message'>You are about to leave TBOC.com and enter: </span><br/><span class='outgoing_link'>"+path)
+				.css({'visibility':'visible'})
+				.children('.outgoing_link')
+				.css({'font-size':'.7vw'})
+				.parent()
+				.dialog({
+					title: 'Confirm',
+					width: 460,
+					height: 165,
+					modal: true,
+					resizable: false,
+					draggable: false,
+					dragStart: function(event, ui){},
+					dialogClass: 'no-close',
+					buttons: [{
+						text: 'Cancel',
+						click: function()
+						{
+							// exit
+							$(this).dialog('close');
+						}
+					},{
+						text: 'Continue',
+						click: function()
+						{
+							// go to location	
+							window.location.href=path;
+						}
+					}]
+				});
+		break;
+		default:
+			location=null;	
+		break;
+	}
+
+	switch (win){// check for path,location
+		case "current":
+			// load new page into view 	
+			win='#pages';
+		break;
+		case "window":
+			// load page into new window	
+			win='(new window)';
+		break;
+		case "tab":
+			// load page into new tab
+			win='_blank';
+		break;
+		case "calc":
+			win='#calc_area';
+		default:
+			win=null;	
+		break;
+	}
+
+	// all parameters loaded	
+	// add path to navigational array
+		
+	// $(win).load(path);
+	
+	//alert(path+' '+location+' '+win);
+	
+	// This can only work for internal links
+	
+	if (win == '#pages'){
+		$.ajax({
+			type:"post",
+			url:path,
+			async:true,
+			success:function(data){
+				$('#body_container').css({'visibility':'hidden'});
+				$(win).html(data);
+				//	$(win).css({'height':'1500px'}); // height needs to be set by an innerHeight function
+				$('#pages').css({'height':'0px'});
+				height = $(win)[0].scrollHeight;
+				height+=50; // #pages height is weird
+				$(win).css({'height':height});
+				set_footer(height);
+			}
+		});
+	}
+	
+}
+*/
+
+	// Generate li dropdowns via JSON, booyah.
+	$.ajax({
+		dataType:"json",
+		url:'json/paths.json',
+		data:'json',
+		async:false,
+		success:function(json){
+			$.each(json.paths.customer,function(key, val){
+				$('div.links_customer>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+			});
+			$.each(json.paths.personal,function(key, val){
+				$('div.links_personal>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+			});
+			$.each(json.paths.business,function(key, val){
+				$('div.links_business>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+			});
+			$.each(json.paths.about,function(key, val){
+				$('div.links_about>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+			});
+		}
+	});
+
+	$('.load_link').click(function(){
+
+		// how about coordinating the 'name' or 'id' with a JSON array
+		// -- get name
+		// -- find name in json
+		// -- pull json attributes
+		// ---- this prevents html from seeing paths
+
+		// extrapolate attributes
+
+		var title = $(this).parent().parent().parent().parent().attr('id'); // up up and away
+		var id = $(this).attr('id');
+		
+		//alert('title: '+title+', id: '+id);
+
+
+		/** IMPORTANT: `nav` values should replace the current paths to abstract the true paths from the browser. These paths will all be matched up according to a JSON file. **/
+
+		//alert(nav_array);
+		//nav_array.push(title);
+		//get_nav(nav_array);
+		load_link(title,id);
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*** old load link, exposes path ***/
+/*
 function load_link(path,location,win){
 
 	// set visibility
@@ -257,6 +475,7 @@ function load_link(path,location,win){
 	//alert(path+' '+location+' '+win);
 	
 	/*** This can only work for internal links ***/
+	/*
 	if (win == '#pages'){
 		$.ajax({
 			type:"post",
@@ -275,8 +494,11 @@ function load_link(path,location,win){
 		});
 	}
 }
+*/
 
 //** Example Usage **//
+/*** old load_link click ***/
+/*
 $('.load_link').click(function(){
 
 	// how about coordinating the 'name' or 'id' with a JSON array
@@ -289,23 +511,24 @@ $('.load_link').click(function(){
 	var path = $(this).attr('path');
 	var location = $(this).attr('location');
 	var win = $(this).attr('win');
-
+	*/
 	/** IMPORTANT: `nav` values should replace the current paths to abstract the true paths from the browser. These paths will all be matched up according to a JSON file. **/
-
+	/*
 	var nav = path.substring(path.lastIndexOf("/") + 1, path.lastIndexOf("."));	
 	nav_array.splice(0,1);
 	nav_array.push(nav);
 	get_nav(nav_array);
 	load_link(path,location,win);
 });
-
+*/
 function get_nav(nav_array){
 	if (nav_array!==null){
 		var nav_string = '';
-		/** Setting `nav_array` for proof-of-concept **/
-		for (var i=0; i<=2; i++){
+		var nav_cap = 3;
+		nav_cap-=1; // starts at 0, this is possibly more intuitive for others to set?
+		for (var i=0; i<=nav_cap; i++){
 			nav_string += '<u class="nav_element">'+nav_array[i]+'</u>';
-			if(i<2){
+			if(i<nav_cap){
 				nav_string+=' > ';	
 			}
 		}

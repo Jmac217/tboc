@@ -1,0 +1,193 @@
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+<title>The Bank of Carbondale Credit Card Calc</title>
+		<script language="JavaScript"><!--
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+function checkNumber(input, min, max, msg) {
+msg = msg + " field has invalid data: " + input.value;
+var str = input.value;
+for (var i = 0; i < str.length; i++) {
+var ch = str.substring(i, i + 1)
+if ((ch < "0" || "9" < ch) && ch != '.') {
+alert(msg);
+return false;
+      }
+   }
+var num = parseFloat(str)
+if (num < min || max < num) {
+alert(msg + " not in range [" + min + ".." + max + "]");
+return false;
+   }
+input.value = str;
+return true;
+}
+function computeField(input) {
+if (input.value != null && input.value.length != 0)
+input.value = "" + eval(input.value);
+computeForm(input.form);
+}
+function computeForm(form) {
+if ((form.payments.value == null || form.payments.value.length == 0) ||
+(form.interest.value == null || form.interest.value.length == 0) ||
+(form.principal.value == null || form.principal.value.length == 0)) {
+return;
+}
+if (!checkNumber(form.payments, 1, 480, "# of payments") ||
+!checkNumber(form.interest, .001, 99, "Interest") ||
+!checkNumber(form.principal, 100, 10000000, "Principal")) {
+form.payment.value = "Invalid";
+return;
+}
+var i = form.interest.value;
+if (i > 1.0) {
+i = i / 100.0;
+form.interest.value = i;
+}
+i /= 12;
+var pow = 1;
+for (var j = 0; j < form.payments.value; j++)
+pow = pow * (1 + i);
+money = "" + .01* Math.round(100*(form.principal.value * pow * i) / (pow - 1));
+dec = money.indexOf(".");
+dollars = money.substring(0,dec); 
+cents = money.substring(dec+1,dec+3);
+cents = (cents.length < 2) ? cents + "0" : cents;
+money = dollars + "." + cents;
+form.payment.value = money;
+}
+function clearForm(form) {
+form.payments.value = "";
+form.interest.value = "";
+form.principal.value = "";
+}
+// -->
+		
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+<h4>Credit Card Calculator</h4>
+<p>This calculator allows you to input up to three different sets of numbers for your different credit cards.</p>
+					<ul>
+						<li>Don't use commas.</li>
+						<li>Use the tab key or your mouse to move around in the worksheet.</li>
+					</ul></p>
+				
+		<form method="POST">
+		<br>
+		
+<table border="0" cellpadding="2" align="center">
+  <tr>
+				<td >
+
+					<center>
+						<b>Number of<br>
+Payments</b>
+					</center>
+				</td>
+				<td width="68">
+					<center>
+						<b>Interest<br>
+Rate</b>
+					</center>
+				</td>
+				<td bgcolor="#ccccff">
+					<center>
+						<b>Principal</b>
+					</center>
+				</td>
+				<td></td>
+				<td bgcolor="#ccccff">
+
+					<center>
+						<b>Monthly<br>
+Payment</b>
+					</center>
+				</td>
+				<td></td>
+				<td></td>
+		  </tr>
+			<tr>
+
+				<td width="72" align="center"><input type="text" name="payments" size="5" onChange="computeField(this)"></td>
+				<td width="68" align="center"><input type="text" name="interest" size="6" onChange="computeField(this)"></td>
+				<td><input type="text" name="principal" size="9" onChange="computeField(this)"></td>
+				<td></td>
+				<td><input type="text" name="payment" size="9" onChange="computeField(this)"></td>
+				<td><input type="button" value="Compute" onClick="computeForm(this.form)"></td>
+				<td><input type="reset" value="Reset" onClick="clearForm(this.form)"></td>
+			</tr>
+</form>
+
+			<form method="POST">
+			<tr>
+				<td width="72" align="center"><input type="text" name="payments" size="5" onChange="computeField(this)"></td>
+				<td width="68" align="center"><input type="text" name="interest" size="6" onChange="computeField(this)"></td>
+				<td><input type="text" name="principal" size="9" onChange="computeField(this)"></td>
+				<td></td>
+				<td><input type="text" name="payment" size="9" onChange="computeField(this)"></td>
+				<td><input type="button" value="Compute" onClick="computeForm(this.form)"></td>
+				<td><input type="reset" value="Reset" onClick="clearForm(this.form)"></td>
+
+			</tr>
+			</form>
+			<form method="POST">
+			<tr>
+				<td width="72" align="center"><input type="text" name="payments" size="5" onChange="computeField(this)"></td>
+				<td width="68" align="center"><input type="text" name="interest" size="6" onChange="computeField(this)"></td>
+				<td><input type="text" name="principal" size="9" onChange="computeField(this)"></td>
+				<td></td>
+				<td><input type="text" name="payment" size="9" onChange="computeField(this)"></td>
+
+				<td><input type="button" value="Compute" onClick="computeForm(this.form)"></td>
+				<td><input type="reset" value="Reset" onClick="clearForm(this.form)"></td>
+			</tr></form>
+		</table>

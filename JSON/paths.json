@@ -1,0 +1,204 @@
+{
+	"paths":{
+		"customer":{
+			"mortgage":{
+				"name":"Online Mortgage Center",
+				"path":"https://tboc.mortgagewebcenter.com/",
+				"location":"external",
+				"win":"current"
+			},
+			"loan_app":{
+				"name":"Consumer Loan Application",
+				"path":"pages/customer/personal_loans.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"ebanking_demo":{
+				"name":"eBanking Demo",
+				"path":"https://secure9.onlineaccess1.com/CarbondaleAutoEnrollment/auto_enrollment.html",
+				"location":"external",
+				"win":"current"
+			},
+			"billpay_demo":{
+				"name":"eBanking Bill Pay Demo",
+				"path":"https://secure9.onlineaccess1.com/CarbondaleOnline_30/demo/demo.htm",
+				"location":"internal",
+				"win":"current"
+			},
+			"ebanking_enroll":{
+				"name":"Enroll in eBanking",
+				"path":"pages/customer/ebanking.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"activate_estatements":{
+				"name":"Activate eStatements",
+				"path":"pages/personal/activate_estatements.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"calc":{
+				"name":"Financial Calculators",
+				"path":"pages/personal/calc.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"security":{
+				"name":"Security Center",
+				"path":"pages/customer/security.php",
+				"location":"internal",
+				"win":"current"
+			}
+		},
+		"personal":{
+			"checking":{
+				"name":"Checking",
+				"path":"pages/personal/checking.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"money_market":{
+				"name":"Money Market",
+				"path":"pages/personal/moneymarket.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"savings":{
+				"name":"Savings",
+				"path":"pages/personal/savings.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"cod":{
+				"name":"Certificates of Deposit",
+				"path":"pages/personal/cod.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"ira":{
+				"name":"Individual Retirement (IRA)",
+				"path":"pages/personal/personal_ira.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"card_services":{
+				"name":"Card Services",
+				"path":"pages/personal/card-services.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"ebanking":{
+				"name":"eBanking",
+				"path":"pages/personal/ebanking.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"loans":{
+				"name":"Loans",
+				"path":"pages/customer/personal_loans.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"mortgage":{
+				"name":"Mortgage",
+				"path":"http://tboc.mortgagewebcenter.com/Default.asp?bhcp=1",
+				"location":"external",
+				"win":"current"
+			},
+			"go_club":{
+				"name":"GO Club",
+				"path":"pages/personal/goclub.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"services":{
+				"name":"Other Services",
+				"path":"pages/personal/services.php",
+				"location":"internal",
+				"win":"current"
+			}
+		},
+		"business":{
+			"checking":{
+				"name":"Checking",
+				"path":"pages/business/Business_Checking.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"ebanking":{
+				"name":"eBanking",
+				"path":"pages/business/Business_eBanking.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"remote_deposit":{
+				"name":"Remote Deposit",
+				"path":"pages/business/Remote-Deposit.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"business_debit_card":{
+				"name":"Business Debit Card",
+				"path":"pages/business/Business_Debit_Card.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"loans":{
+				"name":"Loans",
+				"path":"pages/business/Business_Loans.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"banking_services":{
+				"name":"Banking Services",
+				"path":"pages/business/Banking_Services.php",
+				"location":"internal",
+				"win":"current"
+			}
+		},
+		"about":{
+			"history":{
+				"name":"History",
+				"path":"pages/about/history.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"mission":{
+				"name":"Mission",
+				"path":"pages/about/mission.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"news":{
+				"name":"News",
+				"path":"pages/about/news.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"employment":{
+				"name":"Employment",
+				"path":"pages/about/employment.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"hours_locations":{
+				"name":"Hours and Locations",
+				"path":"pages/about/locations.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"atm":{
+				"name":"ATM Locations",
+				"path":"pages/about/atm.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"contact":{
+				"name":"Contact Us",
+				"path":"pages/about/contact.php",
+				"location":"internal",
+				"win":"current"
+			}
+		}
+	}
+}

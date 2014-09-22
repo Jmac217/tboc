@@ -1,0 +1,4 @@
+<?php
+// THIS PAGE IS A STUB
+// NEWS IS A WORDPRESS PAGE!
+?>

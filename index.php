@@ -15,9 +15,9 @@
 	<!--<link rel="stylesheet" type="text/css" href="css/index.blue.css" />-->
 	<!--<link rel="stylesheet" type="text/css" href="css/index.green.css" />-->
 	<link rel="stylesheet" type="text/css" href="css/navigation.css" />
-	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc/jquery-ui.min.css" />
-	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc/jquery-ui.theme.min.css"/>
-	<link rel='shortcut icon' href='res/icon.bmp' />
+	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.theme.min.css"/>
+	<link rel='shortcut icon' href='res/icon.png' />
 	<title>The Bank of Carbondale</title>
 </head>
 
@@ -124,33 +124,36 @@
 			-->
 			<!-- end: links -->
 			<div id='links'>
-				<div class='link shadow links_customer link_button link_left' alt='customer'>
+				<div class='link shadow links_customer link_button link_left' alt='customer' id='customer'>
 					<div class='link_title noselect'>
 						<a>Customer Service</a>
 					</div>
 					<ul>
 						<li>
 							<ul class='link_drop'>
+							<!--
 								<li><a class='load_link load_link_li' href='https://tboc.mortgagewebcenter.com/'>Online Mortgage Center</a></li>
 								<li class='load_link load_link_li' path='pages/customer/personal_loans.php' location='internal' win='current' name='personal_loans'>Consumer Loan Application</li>
 								<li><a class='load_link load_link_li' href='https://secure9.onlineaccess1.com/CarbondaleAutoEnrollment/auto_enrollment.html'>eBanking Demo</a></li>
 								<li><a class='load_link load_link_li' href='https://secure9.onlineaccess1.com/CarbondaleOnline_30/demo/demo.htm'>eBanking Bill Pay Demo</a></li>
 								<li class='load_link load_link_li' path='pages/personal/ebanking.php' location='internal' win='current' name='ebanking'>Enroll In eBanking</li>
-								<li class='load_link load_link_li' path='pages/customer/estatements_activate.php' location='internal' win='current' name='ebanking'>Activate eStatements</li>
+								<li class='load_link load_link_li' path='pages/customer/activate_estatments.php' location='internal' win='current' name='ebanking'>Activate eStatements</li>
 								<li class='load_link load_link_li' path='pages/customer/calc.php' location='internal' win='current' name='calculators'>Financial Calculators</li>
 								<li class='load_link load_link_li' path='pages/customer/security.php' location='internal' win='current' name='security'>Security Center</li>
+							-->
 							</ul>
 						</li>
 					</ul>
 				</div>
 
-				<div class='link shadow links_personal link_button' alt='personal'>
+				<div class='link shadow links_personal link_button' alt='personal' id='personal'>
 					<div class='link_title noselect'>
 						<a>Personal Banking</a>
 					</div>
 					<ul>
 						<li>
 							<ul class='link_drop'>
+							<!--
 								<li class='load_link load_link_li' path='pages/personal/checking.php' location='internal' win='current'>Checking</li>
 								<li class='load_link load_link_li' path='pages/personal/moneymarket.php' location='internal' win='current'>Money Market</li>
 								<li class='load_link load_link_li' path='pages/personal/savings.php' location='internal' win='current'>Savings</li>
@@ -162,36 +165,40 @@
 								<li><a class='load_link load_link_li' href='http://tboc.mortgagewebcenter.com/Default.asp?bhcp=1'>Mortgage</a></li>
 								<li class='load_link load_link_li' path='pages/personal/goclub.php' location='internal' win='current'>GO Club</li>
 								<li class='load_link load_link_li' path='pages/personal/services.php' location='internal' win='current'>Other Services</li>
+							-->
 							</ul>
 						</li>
 					</ul>
 				</div>
 
-				<div class='link shadow links_business link_button' alt='business'>
+				<div class='link shadow links_business link_button' alt='business' id='business'>
 					<div class='link_title noselect'>
 						<a>Business Banking</a>
 					</div>
 					<ul>
 						<li>
 							<ul class='link_drop'>
-								<li class='load_link load_link_li' path='pages/business/checking.php' location='internal' win='current'>Checking</li>
-								<li class='load_link load_link_li' path='pages/business/ebanking.php' location='internal' win='current'>eBanking</li>
-								<li class='load_link load_link_li' path='pages/business/remote-deposit.php' location='internal' win='current'>Remote Deposit</li>
-								<li class='load_link load_link_li' path='pages/business/debit-card.php' location='internal' win='current'>Business Debit Card</li>
-								<li class='load_link load_link_li' path='pages/business/loans.php' location='internal' win='current'>Loans</li>
-								<li class='load_link load_link_li' path='pages/business/services.php' location='internal' win='current'>Other Services</li>
+							<!--
+								<li class='load_link load_link_li' path='pages/business/Business_Checking.php' location='internal' win='current'>Checking</li>
+								<li class='load_link load_link_li' path='pages/business/Business_Ebanking.php' location='internal' win='current'>eBanking</li>
+								<li class='load_link load_link_li' path='pages/business/Remote-Deposit.php' location='internal' win='current'>Remote Deposit</li>
+								<li class='load_link load_link_li' path='pages/business/Business_Debit_Card.php' location='internal' win='current'>Business Debit Card</li>
+								<li class='load_link load_link_li' path='pages/business/Business_Loans.php' location='internal' win='current'>Loans</li>
+								<li class='load_link load_link_li' path='pages/business/Banking_Services.php' location='internal' win='current'>Other Services</li>
+							-->
 							</ul>
 						</li>
 					</ul>
 				</div>
 
-				<div class='link shadow links_about link_button link_right' alt='about'>
+				<div class='link shadow links_about link_button link_right' alt='about' id='about'>
 					<div class='link_title noselect'>
 						<a>About Us</a>
 					</div>
 					<ul>
 						<li>
 							<ul class='link_drop'>
+							<!--
 								<li class='load_link load_link_li' path='pages/about/history.php' location='internal' win='current'>History</li>
 								<li class='load_link load_link_li' path='pages/about/mission.php' location='internal' win='current'>Mission</li>
 								<li class='load_link load_link_li' path='pages/about/news.php' location='internal' win='current'>News</li>
@@ -199,6 +206,7 @@
 								<li class='load_link load_link_li' path='pages/about/locations.php' location='internal' win='current'>Hours & Locations</li>
 								<li class='load_link load_link_li' path='pages/about/atm.php' location='internal' win='current'>ATM Locations</li>
 								<li class='load_link load_link_li' path='pages/about/contact.php' location='internal' win='current'>Contact Us</li>
+							-->
 							</ul>
 						</li>
 					</ul>
@@ -260,22 +268,28 @@
 							<div class='login_tile login_tile_border'>
 								<span class='login_tile_text'>
 									<span class='login_tile_header'>Demos</span><br/>
-									<span class='login_tile_body'>Online Banking Demo</span>
-									<span class='login_tile_body'>Online Billpay Demo</span>
+									<a><span class='login_tile_body'>Online Banking Demo</span></a>
+									<a><span class='login_tile_body'>Online Billpay Demo</span></a>
 								</span>
 								<span class='login_tile_image'><img src='res/icons/tech/computer.png'/></span>
 							</div>
 							<div class='login_tile login_tile_border'>
 								<span class='login_tile_text' style=''>
-									<br/><span class='login_tile_header' style=''>Consumer</span><br/>
+									<br/>
+									<a>
+									<span class='login_tile_header' style=''>Consumer</span><br/>
 									<span class='login_tile_body'>Loan Application</span>
+									</a>
 								</span>
 								<span class='login_tile_image'><img src='res/icons/home/pen-paper.png'/></span>
 							</div>
-							<div class='login_tile'>
+							<div class='login_tile login_tile_border login_tile_border_none'>
 								<span class='login_tile_text'>
-									<br/><span class='login_tile_header'>Activate</span><br/>
+									<br/>
+									<a>
+									<span class='login_tile_header'>Activate</span><br/>
 									<span class='login_tile_body'>eStatements</span>
+									</a>
 								</span>
 								<span class='login_tile_image'><img src='res/icons/home/folder.png'/></span>
 							</div>
@@ -353,6 +367,6 @@
 <script type='text/javascript' src='js/index.js'></script>
 <!--<script type='text/javascript' src='js/jquery.slides.min.js'></script>-->
 <script type='text/javascript' src='js/jquery.slides.js'></script>
-<script type='text/javascript' src='lib/jquery-ui-1.11.1.tboc/jquery-ui.min.js'></script>
+<script type='text/javascript' src='lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.min.js'></script>
 </body>
 </html>

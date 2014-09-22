@@ -1,0 +1,458 @@
+
+		<script language="JavaScript"><!--
+function computeField(input)
+{
+        if (input.value !=null && input.value.length!=0)
+                input.value=" " + eval(input.value);
+                computeRest(input.form) 
+}
+
+function computeRest(form)
+{
+var answer=parseInt(form.CS.value*.7);
+form.seventy.value=answer;
+var s=form.ss.value*1
+var p=form.pension.value*1
+var pt=form.parttime.value*1
+var o=form.other.value*1
+var sum=s+p+pt+o
+var mu=answer-sum
+form.makeup.value=mu
+var sav=form.savings.value*1
+var press=form.soc.value*1
+var a=form.age.value*1
+form.totneed.value=a+press-sav
+return;
+}
+function computeFf(input)
+{
+        input.value=55
+        computeFiftyfive(input.form)    
+}
+function computeFiftyfive(form)
+{
+var mu=parseInt(form.makeup.value*1);
+var ff=parseInt(mu*21.0);
+form.age.value=ff;
+computeRest(form)
+}
+
+function computeSixty(input)
+{
+        input.value=60
+        computeSxty(input.form) 
+}
+function computeSxty(form)
+{
+var mu=parseInt(form.makeup.value*1);
+var ff=parseInt(mu*18.9);
+form.age.value=ff;
+computeRest(form)
+}
+
+function computeSf(input)
+{
+        input.value=65
+        computeSixtyfive(input.form)    
+}
+function computeSixtyfive(form)
+{
+var mu=parseInt(form.makeup.value*1);
+var ff=parseInt(mu*16.4);
+form.age.value=ff;
+computeRest(form)
+}
+
+function computeSvty(input)
+{
+        input.value=70
+        computeSeventy(input.form)      
+}
+function computeSeventy(form)
+{
+var mu=parseInt(form.makeup.value*1);
+var ff=parseInt(mu*13.6);
+form.age.value=ff;
+computeRest(form)
+}
+function computeTen(input)
+{
+        input.value="10"+" years"
+        computeTenn(input.form) 
+}
+function computeTenn(form)
+{
+var tn=parseInt(form.totneed.value*1);
+var tt=parseInt(tn*.085);
+form.annual.value=tt;
+computeRest(form)
+}
+function computeFifteen(input)
+{
+        input.value="15"+" years"
+        computeFifteenn(input.form)     
+}
+function computeFifteenn(form)
+{
+var tn=parseInt(form.totneed.value*1);
+var tt=parseInt(tn*.052);
+form.annual.value=tt;
+computeRest(form)
+}
+function computeTwenty(input)
+{
+        input.value="20"+" years"
+        computeTwentyy(input.form)      
+}
+function computeTwentyy(form)
+{
+var tn=parseInt(form.totneed.value*1);
+var tt=parseInt(tn*.036);
+form.annual.value=tt;
+computeRest(form)
+}
+function computeTwentyfive(input)
+{
+        input.value="25"+" years"
+        computeTwentyfivee(input.form)  
+}
+function computeTwentyfivee(form)
+{
+var tn=parseInt(form.totneed.value*1);
+var tt=parseInt(tn*.027);
+form.annual.value=tt;
+computeRest(form)
+}
+function computeThirty(input)
+{
+        input.value="30"+" years"
+        computeThirtyy(input.form)      
+}
+function computeThirtyy(form)
+{
+var tn=parseInt(form.totneed.value*1);
+var tt=parseInt(tn*.020);
+form.annual.value=tt;
+computeRest(form)
+}
+function computeThirtyfive(input)
+{
+        input.value="35"+" years"
+        computeThirtyfivee(input.form)  
+}
+function computeThirtyfivee(form)
+{
+var tn=parseInt(form.totneed.value*1);
+var tt=parseInt(tn*.016);
+form.annual.value=tt;
+computeRest(form)
+}
+function computeForty(input)
+{
+        input.value="40"+" years"
+        computeFortyy(input.form)       
+}
+function computeFortyy(form)
+{
+var tn=parseInt(form.totneed.value*1);
+var tt=parseInt(tn*.013);
+form.annual.value=tt;
+computeRest(form)
+}
+function computeFfb(input)
+{
+        input.value=55
+        computeFiftyfiveb(input.form)   
+}
+function computeFiftyfiveb(form)
+{
+var s=parseInt(form.ss.value*1);
+var ffb=parseInt(s*8.8);
+form.soc.value=ffb;
+computeRest(form)
+}
+function computeSixtyb(input)
+{
+        input.value=60
+        computeSxtyb(input.form)        
+}
+function computeSxtyb(form)
+{
+var s=parseInt(form.ss.value*1);
+var ffb=parseInt(s*4.7);
+form.soc.value=ffb;
+computeRest(form)
+}
+function computeTenb(input)
+{
+        input.value="10"+" years"
+        computeTennb(input.form)        
+}
+function computeTennb(form)
+{
+var std=parseInt(form.current.value*1);
+var comp=parseInt(std*1.3);
+form.savings.value=comp;
+computeRest(form)
+}
+function computeFifteenb(input)
+{
+        input.value="15"+" years"
+        computeFifteennb(input.form)    
+}
+function computeFifteennb(form)
+{
+var std=parseInt(form.current.value*1);
+var comp=parseInt(std*1.6);
+form.savings.value=comp;
+computeRest(form)
+}
+function computeTwentyb(input)
+{
+        input.value="20"+" years"
+        computeTwentyyb(input.form)     
+}
+function computeTwentyyb(form)
+{
+var std=parseInt(form.current.value*1);
+var comp=parseInt(std*1.8);
+form.savings.value=comp;
+computeRest(form)
+}
+function computeTwentyfiveb(input)
+{
+        input.value="25"+" years"
+        computeTwentyfiveeb(input.form) 
+}
+function computeTwentyfiveeb(form)
+{
+var std=parseInt(form.current.value*1);
+var comp=parseInt(std*2.1);
+form.savings.value=comp;
+computeRest(form)
+}
+function computeThirtyb(input)
+{
+        input.value="30"+" years"
+        computeThirtyyb(input.form)     
+}
+function computeThirtyyb(form)
+{
+var std=parseInt(form.current.value*1);
+var comp=parseInt(std*2.4);
+form.savings.value=comp;
+computeRest(form)
+}
+function computeThirtyfiveb(input)
+{
+        input.value="35"+" years"
+        computeThirtyfiveeb(input.form) 
+}
+function computeThirtyfiveeb(form)
+{
+var std=parseInt(form.current.value*1);
+var comp=parseInt(std*2.8);
+form.savings.value=comp;
+computeRest(form)
+}
+function computeFortyb(input)
+{
+        input.value="40"+" years"
+        computeFortyyb(input.form)      
+}
+function computeFortyyb(form)
+{
+var std=parseInt(form.current.value*1);
+var comp=parseInt(std*3.3);
+form.savings.value=comp;
+computeRest(form)
+
+
+
+}
+
+function clearForm(form)
+{
+form.CS.value=0;
+form.ss.value=0;
+form.parttime.value=0;
+form.pension.value=0;
+form.age.value=0;
+form.soc.value=0;
+form.totneed.value=0;
+form.makeup.value=0;
+form.seventy.value=0;
+form.savings.value=0;
+form.annual.value=0;
+form.current.value=0;
+form.other.value=0;}
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_nbGroup(event, grpName) { //v3.0
+  var i,img,nbArr,args=MM_nbGroup.arguments;
+  if (event == "init" && args.length > 2) {
+    if ((img = MM_findObj(args[2])) != null && !img.MM_init) {
+      img.MM_init = true; img.MM_up = args[3]; img.MM_dn = img.src;
+      if ((nbArr = document[grpName]) == null) nbArr = document[grpName] = new Array();
+      nbArr[nbArr.length] = img;
+      for (i=4; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+        if (!img.MM_up) img.MM_up = img.src;
+        img.src = img.MM_dn = args[i+1];
+        nbArr[nbArr.length] = img;
+    } }
+  } else if (event == "over") {
+    document.MM_nbOver = nbArr = new Array();
+    for (i=1; i < args.length-1; i+=3) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = (img.MM_dn && args[i+2]) ? args[i+2] : args[i+1];
+      nbArr[nbArr.length] = img;
+    }
+  } else if (event == "out" ) {
+    for (i=0; i < document.MM_nbOver.length; i++) {
+      img = document.MM_nbOver[i]; img.src = (img.MM_dn) ? img.MM_dn : img.MM_up; }
+  } else if (event == "down") {
+    if ((nbArr = document[grpName]) != null)
+      for (i=0; i < nbArr.length; i++) { img=nbArr[i]; img.src = img.MM_up; img.MM_dn = 0; }
+    document[grpName] = nbArr = new Array();
+    for (i=2; i < args.length-1; i+=2) if ((img = MM_findObj(args[i])) != null) {
+      if (!img.MM_up) img.MM_up = img.src;
+      img.src = img.MM_dn = args[i+1];
+      nbArr[nbArr.length] = img;
+  } }
+}
+//-->
+</script>
+	    
+			
+			
+<h4>Retirement Goal Calculator</h4>			
+This worksheet simplifies several retirement planning issues such as projected Social Security benefits and earnings assumptions on savings. It also reflect's today's dollars; therefore you will need to re-calculate your retirement needs annually and as your salary and circumstances change.
+
+						<ul>
+							<li>Type in numbers only; don't use commas or decimals.
+							<li>Use the tab key or your mouse to move around in the worksheet.
+						</ul>
+					
+<form method="post">
+			
+<table border="0" cellpadding="4">
+      <tr>
+					<td valign="top" colspan="2"><b>1. </b>How much annual income will you want in retirement? (Figure 70% of your current annual gross income just to maintain your current standard of living.)</td>
+
+	  </tr>
+				<tr>
+					<td align="right"><b>Enter your current gross annual income<br>
+70% of your current gross annual income<br>
+                    </b></td>
+					<td><input type="text" name="CS" size="15" value="0" onchange="computeField(this)"><br>
+						<input type="text" name="seventy" size="15" value="0"></td>
+				</tr>
+
+				<tr>
+					<td valign="top"><b>2. </b>Enter the income you expect to receive annually from:<b><br>
+Social Security</b><br>
+If you make under $25,000, enter $8,000; between $25,000 - $40,000, enter $12,000; over $40,000, enter $14,500.<br>
+If you have received your personalized Social Security statement from the U.S. Social Security Administration (1-800-772-1213), enter the appropriate benefit figure from your statement.</td>
+					<td valign="middle" align="right"><input type="text" name="ss" size="15" value="0" onchange="computeField(this)"></td>
+
+				</tr>
+				<tr>
+					<td align="right"><b>Traditional Employer Pension</b></td>
+					<td align="right"><input type="text" name="pension" size="15" value="0" onchange="computeField(this)"></td>
+				</tr>
+				<tr>
+					<td align="right"><b>Part-time income</b></td>
+					<td align="right"><input type="text" name="parttime" size="15" value="0" onchange="computeField(this)"></td>
+
+				</tr>
+				<tr>
+					<td valign="middle" align="right"><b>Other</b></td>
+					<td valign="bottom" align="right"><input type="text" name="other" size="15" value="0" onchange="computeField(this)"></td>
+				</tr>
+				<tr class="shaded">
+					<td align="right" valign="bottom"><b>This is how much you need to make up for each retirement year:</b></td>
+					<td align="right"><input type="text" name="makeup" size="15" value="0"></td>
+
+				</tr>
+  </table>
+			<p><br>
+			
+<table border="0" cellpadding="4">
+      <tr>
+					<td colspan="3"><b>3.</b>&nbsp; To determine the amount you'll need to save, <b>click on the age at which you expect to retire.</b><b><br>
+Important Note</b> - If you make any changes to this or other sections of this worksheet, you will need to re-select your answers to questions 3, 4, 5, and 6 so the form will recalculate using the new information.</td>
+					<td valign="top"><input type="button" value="65" onclick="computeSf(this)"><br>
+						<input type="button" value="70" onclick="computeSvty(this)"></td>
+					<td valign="top" align="right"><input type="text" name="age" size="15" value="0" onchange="computeRest(this)"></td>
+	  </tr>
+				<tr>
+					<td colspan="3"><b>4.</b> <b>If you expect to retire before age 65</b>, click on the age at which you expect to retire.<br>
+(Note: This field relates to Social Security and will remain 0 if you entered 0 as your Social Security benefit on line 2.)</td>
+					<td valign="top"><input type="button" value="55" name="ffb" onclick="computeFfb(this)"><br>
+						<input type="button" value="60" onclick="computeSixtyb(this)"><br>
+					</td>
+					<td valign="top" align="right"><input type="text" name="soc" size="15" value="0" onchange="computeRest(this)"></td>
+				</tr>
+				<tr>
+					<td colspan="3"><b>5.</b> <b>Enter your savings to date</b> (include money accumulated in a 401(K), IRA, etc., as well as money accumulated in savings accounts, bonds, etc.):</td>
+
+					<td></td>
+					<td><input type="text" name="current" size="15" value="0"></td>
+				</tr>
+				<tr>
+					<td colspan="3" valign="top" align="right"><b>Click on the number of years you have until retirement.</b></td>
+					<td valign="top"><input type="button" value="10 years" onclick="computeTenb(this)"><br>
+						<input type="button" value="15 years" onclick="computeFifteenb(this)"><br>
+						<input type="button" value="20 years" onclick="computeTwentyb(this)"><br>
+
+						<input type="button" value="25 years" onclick="computeTwentyfiveb(this)"><br>
+						<input type="button" value="30 years" onclick="computeThirtyb(this)"><br>
+						<input type="button" value="35 years" onclick="computeThirtyfiveb(this)"><br>
+						<input type="button" value="40 years" onclick="computeFortyb(this)"></td>
+					<td valign="top"><input type="text" name="savings" size="15" value="0"></td>
+				</tr>
+				<tr class="shaded">
+					<td align="right" colspan="4"><b>Total additional savings needed at retirement:</b></td>
+
+					<td valign="bottom" align="right"><input type="text" name="totneed" size="15" value="0"></td>
+				</tr>
+  </table>
+			<br>
+			
+<table border="0" cellpadding="4">
+      <tr>
+					<td valign="top"><b>6.</b> <b>To determine the ANNUAL amount you'll need to save</b>, click on the button that shows how many years you have until retirement.</td>
+
+					<td valign="top"><input type="button" value="10 years" onclick="computeTen(this)"><br>
+						<input type="button" value="15 years" onclick="computeFifteen(this)"><br>
+						<input type="button" value="20 years" onclick="computeTwenty(this)"><br>
+						<input type="button" value="25 years" onclick="computeTwentyfive(this)"><br>
+						<input type="button" value="30 years" onclick="computeThirty(this)"><br>
+						<input type="button" value="35 years" onclick="computeThirtyfive(this)"><br>
+						<input type="button" value="40 years" onclick="computeForty(this)"></td>
+					<td valign="top"><input type="text" name="annual" size="15" value="0"></td>
+	  </tr>
+
+      <tr>
+        <td colspan="4" align="center"><br>
+        <input name="button" type="button" onclick="clearForm(this.form)" value="Clear Form"></td>
+      </tr>
+  </table>
+			</form>
+			<tr><td>&nbsp;</td>
+</tr>
+				

@@ -8,6 +8,7 @@
 @font-face{font-family:fed;src:url('../res/fonts/FeDPit2.ttf');}
 @font-face{font-family:danielbk;src:url('../res/fonts/danielbk.ttf');}
 @font-face{font-family:des;src:url('../res/fonts/DESYREL.ttf');}
+@font-face{font-family:aubrey;src:url('../res/fonts/Aubrey.ttf');}
 
 
 body{background-image:url(../res/background.png);background-size:100% 100%;background-attachment:fixed;}
@@ -108,13 +109,15 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 .slidesjs-pagination-item>a:hover{background-color:#733;background:-moz-linear-gradient(#AAA,#888);border-color:#555;}
 */
 
+.link_drop>li{z-index:10000;}
+
 
 #doc{position:relative;top:0px;left:15%;/*height:859px;*/width:970px;}
 	#header{position:absolute;top:0px;left:0px;height:400px;width:100%;}
 		#nav_links{position:absolute;top:25px;left:0px;height:25px;width:100%;text-align:right;color:#333;}
 		#logo{position:absolute;top:25px;left:0px;height:125px;width:240px;/*background-image:url('../res/logo3.png');background-repeat:no-repeat;background-size:240px 125px;*/cursor:pointer;}
 		#photo{position:absolute;top:45px;left:265px;height:180px;width:705px;background-image:url('../res/photo2.jpg');background-repeat:no-repeat;background-size:705px 155px;}
-		#motto{position:absolute;top:155px;left:0px;height:20px;width:250px;color:#333;visibility:visible;z-index:100;/*background-image:url('../res/slogan.png');background-repeat:no-repeat;background-size:245px 20px;*/font-family:des;font-size:17px;text-align:center;color:#000;/*color:#550003;*/}
+		#motto{position:absolute;top:160px;left:0px;height:20px;width:250px;color:#333;visibility:visible;z-index:100;/*background-image:url('../res/slogan.png');background-repeat:no-repeat;background-size:245px 20px;*/font-family:aubrey;font-size:17px;text-align:center;color:#000;/*color:#550003;*/opacity:.7;}
 		#user_nav{position:absolute;top:185px;left:0px;height:20px;width:100%;color:#333;visibility:visible;cursor:pointer;z-index:1;/*text-shadow:1px 1px #CCC;*/}
 		#notices{position:relative;top:175px;height:0px;width:970px;visibility:hidden;border:solid 1px #777;}
 		#notices_area{position:absolute;top:5px;left:10px;width:98%;height:95%;}
@@ -166,9 +169,12 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 					.login_tile{position:relative;height:80px;width:100%;color:#444;padding:10px 5px 10px 5px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 						.login_tile_text{position:absolute;top:15px;right:10px;height:50px;width:55%;}
 							.login_tile_header{font-size:16px;color:#75263d;}
-							.login_tile_body{font-size:11px;text-align:left;}
+							.login_tile_body{font-size:11px;text-align:left;color:#222;}
+							.login_tile_text>a:hover{color:#222;}
 						.login_tile_image{position:absolute;display:block;top:15px;left:10px;height:50px;width:50px;/*border:solid 1px #666;border-radius:7px;*//*background-color:#1e59cf;*/}
-						.login_tile_border{border-bottom:solid 1px #CCC;}
+						.login_tile_border{border:solid 1px transparent;border-bottom:solid 1px #CCC;}
+						.login_tile_border:hover{display:block;border:solid 1px #CCC;border-radius:5px;cursor:pointer;background-color:#EEE;}
+						.login_tile_border_none{border-bottom:none;}
 							/** Removed **/
 				#slide-2{position:absolute;top:209px;left:5%;height:25px;width:90%;border:solid 1px #666;overflow:hidden;}
 					#slide-2-panel{position:absolute;top:0px;left:0px;height:30px;width:190px;text-decoration:underline;text-align:center;cursor:pointer;font-size:12px;padding-top:5px;}
