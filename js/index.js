@@ -359,6 +359,41 @@ function selection_handler(type,path,load,name,element){
 			$(this).children('ul').children('li').children('ul').css({'height':'0px'});
 		});
 	});
+	
+	
+	get_nav();
+	
+	$('.load_link').click(function(){
+		// how about coordinating the 'name' or 'id' with a JSON array
+		// -- get name
+		// -- find name in json
+		// -- pull json attributes
+		// ---- this prevents html from seeing paths
+
+		// extrapolate attributes
+		
+		var id = $(this).attr('id');
+		if($(this).hasClass('load_link_li')){
+			var title = $(this).parent().parent().parent().parent().attr('id'); // up up and away
+		}else{
+			var title = $(this).attr('title');
+		}
+		
+		//alert(title+', '+id)
+		//alert('title: '+title+', id: '+id);
+
+
+		/** IMPORTANT: `nav` values should replace the current paths to abstract the true paths from the browser. These paths will all be matched up according to a JSON file. **/
+
+		//alert(nav_array);
+		
+		//nav_obj.push(title);
+		//get_nav(nav_obj);
+		load_link(id, title);
+	});
+	
+	
+	
 
 /*
 	$('li').click(function(){
@@ -549,7 +584,8 @@ function get_nav(nav_array){
 }
 */
 //var nav_array = new Array('about', 'privacy', 'personal');
-get_nav(nav_array);
+
+//get_nav("nav", "nav", "nav");
 
 // End of Main Section //
 

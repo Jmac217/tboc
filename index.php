@@ -34,15 +34,25 @@
 			<!-- inserted uppernav.php into structure -->
 			<!--<div class="span-19 last UpperNav">-->
 				<!--<a href='http://10.0.0.140/landing/php/tracker/'>REPORT AN ISSUE OR REQUEST</a> &nbsp;&nbsp;&nbsp;&nbsp; -->
+				<!-- TESTING SOMETHING-->
+				<!--
 				<a class='load_link' path='pages/personal/cod.php' location='internal' win='current'>Current Rates</a>&nbsp;&nbsp;&nbsp;&nbsp;
 				<a class='load_link' path='pages/about/locations.php' location='internal' win='current'>Hours & Locations</a>&nbsp;&nbsp;&nbsp;&nbsp;
 				<a class='load_link' path='pages/about/atm.php' location='internal' win='current'>ATM Locations</a>&nbsp;&nbsp;&nbsp;&nbsp;
 				<a class='load_link' path='pages/about/contact.php' location='internal' win='current'>Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				-->
 				618&#149;549&#149;2181
+				<span id='user_nav'>
+					<span id='user_nav_bg'>
+						<span id='user_nav_home'>Home</span> &nbsp; &#187; &nbsp;  
+						<span id='user_nav_array'></span>
+					</span>
+				</span>
 			<!--</div>-->
 			</div>
 			<span id='motto'>Your Hometown Friend!</span>
-			<span id='user_nav'><span id='user_nav_bg'><span id='user_nav_home'><u>Home</u> &nbsp; | &nbsp; </span><span id='user_nav_array'></span></span></span>
+			<!-- TESTING SOMETHING -->
+			<!--<span id='user_nav'><span id='user_nav_bg'><span id='user_nav_home'><u>Home</u> &nbsp; | &nbsp; </span><span id='user_nav_array'></span></span></span>-->
 			<div id='notices'>
 				<div id='notices_area'>
 					<div id='alert'></div>

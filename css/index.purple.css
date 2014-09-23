@@ -9,7 +9,7 @@
 /*.apply:hover{color:#FFF;background:-moz-linear-gradient(rgba(174,0,0,1),rgba(133,0,0,1));}*/
 .apply:visited{color:white;}			
 
-.link_button{display:block;height:40px;width:243px;background-color:#75263d;background:-moz-linear-gradient(#75263d,#501a2a);border:solid 1px #75263d;text-align:center;}
+.link_button{display:block;height:40px;width:241px;background-color:#75263d;background:-moz-linear-gradient(#75263d,#501a2a);border:solid 1px #75263d;text-align:center;}
 .link_button:hover{background-color:#804a5a;background:-moz-linear-gradient(#75263d,#804a5a);}
 
 .shadow{box-shadow:3px 3px 3px #a2a2a2;}

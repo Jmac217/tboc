@@ -1,9 +1,9 @@
 /* classes */
 .link{position:absolute;}
 .links_customer{left:0px;}
-.links_personal{left:244px;}
-.links_business{left:488px;}
-.links_about{left:733px;}
+.links_personal{left:242px;}
+.links_business{left:484px;}
+.links_about{left:726px;}
 /*.links_about{left:692px;}*/
 
 .link_left{border-top-left-radius:5px;border-bottom-left-radius:2px;}

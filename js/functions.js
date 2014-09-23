@@ -1,8 +1,3 @@
-//var nav_array = new Array('home');
-//alert(nav_array[0]);
-function push_to_nav(link){
-	
-}
 
 function notice(visible, path, type){ // this function deals with everything relating to the notice_board
 	if (visible == 'true'){
@@ -188,35 +183,89 @@ function set_footer(page_height){
 
 
 
+function get_nav(){
+	var nav_string = '';
+	var nav_cap = 3;
+	for (var i=0; i<=nav_cap; i++){
+		nav_string += '<u class="nav_element load_link" title="'+nav_obj.nav[i].title+'" id="'+nav_obj.nav[i].id+'">'+nav_obj.nav[i].name+'</u>';
+		if(i<nav_cap){
+			nav_string+=' &nbsp; &#149; &nbsp; ';
+		}
+	}
+	$('#user_nav_array').html(nav_string);
+}
 
 
-
-function load_link(title, id){
-	$.getJSON('json/paths.json', function(json){
-		var name = json.paths[title][id].name;
-		var path = json.paths[title][id].path;
-		var location = json.paths[title][id].location;
-		var win = json.paths[title][id].win;
-		//alert(name+', '+path+', '+location+', '+win);
-		$('#pages').ajax({
-			type:"post",
-			url:path,
-			async:true,
-			success:function(data){
-				$('#body_container').css({'visibility':'hidden'});
-				$('#pages').html(data);
-				//	$(win).css({'height':'1500px'}); // height needs to be set by an innerHeight function
-				$('#pages').css({'height':'0px'});
-				height = $('#pages')[0].scrollHeight;
-				height+=50; // #pages height is weird
-				$('#pages').css({'height':height});
-				set_footer(height);
-			}
-		});
-		nav_array.push(name);
-		get_nav(nav_array);
+function load_link(id, title){
+	$.ajax({
+		url: 'json/paths.json',
+		dataType: 'json',
+		async: false,
+		success: function(json){
+			var name = String(json.paths[title][id].name);
+			var path = String(json.paths[title][id].path);
+			var location = json.paths[title][id].location;
+			var win = json.paths[title][id].win;
+			//alert(name+', '+path+', '+location+', '+win);
+			$.ajax({
+				type:"post",
+				url:path,
+				async:false,
+				success:function(data){
+					$('#body_container').css({'visibility':'hidden'});
+					$('#pages').html(data).css({'visibility':'visible'});
+					var height = $('#pages')[0].scrollHeight;
+					height+=50; // #pages height is weird
+					$('#pages').css({'height':height});
+					set_footer(height);
+					if(name !== (nav_obj.nav[nav_obj.nav.length-1].name)){
+						nav_obj.nav.splice(0,1);
+						nav_obj.nav.push({"name":name,"id":id,"title":title});
+						//alert(nav_obj.nav[2].name+', '+nav_obj.nav[2].id+', '+nav_obj.nav[2].title);
+						//get_nav();
+						var nav_string = '';
+						var nav_cap = 3;
+						for (var i=0; i<=nav_cap; i++){
+							nav_string += '<span class="nav_element load_link" title="'+nav_obj.nav[i].title+'" id="'+nav_obj.nav[i].id+'">'+nav_obj.nav[i].name+'</span>';
+							if(i<nav_cap){
+								nav_string+=' &nbsp; &#149; &nbsp; ';
+							}
+						}
+						$('#user_nav_array').html(nav_string);
+					}
+				}
+			});
+		}
 	});
 }
+
+
+
+
+
+
+	$.ajax({
+		dataType:"json",
+		url:'json/paths.json',
+		data:'json',
+		async:false,
+		success:function(json){
+			$.each(json.paths.customer,function(key, val){
+				$('div.links_customer>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+			});
+			$.each(json.paths.personal,function(key, val){
+				$('div.links_personal>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+			});
+			$.each(json.paths.business,function(key, val){
+				$('div.links_business>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+			});
+			$.each(json.paths.about,function(key, val){
+				$('div.links_about>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+			});
+		}
+	});
+
+
 
 /*
 	// set visibility
@@ -322,51 +371,18 @@ function load_link(title, id){
 }
 */
 
+
+
+
+
+
+
+
 	// Generate li dropdowns via JSON, booyah.
-	$.ajax({
-		dataType:"json",
-		url:'json/paths.json',
-		data:'json',
-		async:false,
-		success:function(json){
-			$.each(json.paths.customer,function(key, val){
-				$('div.links_customer>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
-			});
-			$.each(json.paths.personal,function(key, val){
-				$('div.links_personal>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
-			});
-			$.each(json.paths.business,function(key, val){
-				$('div.links_business>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
-			});
-			$.each(json.paths.about,function(key, val){
-				$('div.links_about>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
-			});
-		}
-	});
-
-	$('.load_link').click(function(){
-
-		// how about coordinating the 'name' or 'id' with a JSON array
-		// -- get name
-		// -- find name in json
-		// -- pull json attributes
-		// ---- this prevents html from seeing paths
-
-		// extrapolate attributes
-
-		var title = $(this).parent().parent().parent().parent().attr('id'); // up up and away
-		var id = $(this).attr('id');
-		
-		//alert('title: '+title+', id: '+id);
 
 
-		/** IMPORTANT: `nav` values should replace the current paths to abstract the true paths from the browser. These paths will all be matched up according to a JSON file. **/
 
-		//alert(nav_array);
-		//nav_array.push(title);
-		//get_nav(nav_array);
-		load_link(title,id);
-	});
+
 
 
 
@@ -521,17 +537,4 @@ $('.load_link').click(function(){
 	load_link(path,location,win);
 });
 */
-function get_nav(nav_array){
-	if (nav_array!==null){
-		var nav_string = '';
-		var nav_cap = 3;
-		nav_cap-=1; // starts at 0, this is possibly more intuitive for others to set?
-		for (var i=0; i<=nav_cap; i++){
-			nav_string += '<u class="nav_element">'+nav_array[i]+'</u>';
-			if(i<nav_cap){
-				nav_string+=' > ';	
-			}
-		}
-	}
-	$('#user_nav_array').html(nav_string);
-}
+
