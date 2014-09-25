@@ -14,14 +14,14 @@ $(document).on('click', '.nav_element', function(){
 	});
 
 	// manual notice switch for debugging/demonstration
-	// notice('false', 'JSON/notice.xml', 'warning');
+	// notice('false', 'json/notice.xml', 'warning');
 
 	$('#noticesOn').click(function(){
-		notice('true', 'JSON/notice.xml', 'warning');
+		notice('true', 'json/notice.xml', 'warning');
 	});
 
 	$('#noticesOff').click(function(){
-		notice('false', 'JSON/notice.xml', 'warning');
+		notice('false', 'json/notice.xml', 'warning');
 	});
 
 	$('#banner').click(function(){

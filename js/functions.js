@@ -140,7 +140,7 @@ function notice(visible, path, type){ // this function deals with everything rel
 		$('#notices').animate({'height':'0px'});		
 	}
 }
-//notice('false', 'JSON/notice.xml', 'warning');
+//notice('false', 'json/notice.xml', 'warning');
 
 function set_footer(page_height){
 	var notice_height = parseInt($('#notices').css('height'));
