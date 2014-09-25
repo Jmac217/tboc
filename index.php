@@ -371,7 +371,6 @@
 <script type='text/javascript' src='js/globals.js'></script>
 <script type='text/javascript' src='js/functions.js'></script>
 <script type='text/javascript' src='js/index.js'></script>
-<!--<script type='text/javascript' src='js/jquery.slides.min.js'></script>-->
 <script type='text/javascript' src='lib/jquery.slides.js'></script>
 <script type='text/javascript' src='lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.min.js'></script>
 </body>
