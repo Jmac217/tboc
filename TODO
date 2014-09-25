@@ -1,32 +1,9 @@
-~~~~~~~~~~~~~~~~
 
- Meeting Notes
+Go ahead and clean out the res folder again after this
 
-----------------
-
-	Edit and incorporate the header image and resize the logo and add motto "Your Hometown Friend" beneath the logo.
-
-	Add the three tiles beneath the banner
-
-	On internal page load, remove the login/slideshow panel
-
-	String together the navigational array now that pieces are solidified
-
-	---
-
-	Go ahead and clean out the res folder again after this
-
-	If lib/ is here to stay, set jQuery inside it as well; that's just annoying.
-
-~~~~~~~~~~~~~~~~
-
-What to do next
-
-----------------
+If lib/ is here to stay, set jQuery inside it as well; that's just annoying.
 
 #pages probably shouldn't overflow
-
-for the outgoing links js load_link functionality will have to be broken out and split, right now it's coupled to li elements. Security Center is where that was being tested, old links are only commented out.
 
 revisit the load_link function and prepare all pages to load correctly, whether it be in the #pages div or in another tab. The new window thing doesn't exactly matter
 - this means the load() function will need to be finished, probably first.
@@ -35,29 +12,10 @@ revisit the load_link function and prepare all pages to load correctly, whether 
 Testing email sendings will require the existing mail() functions to be commented and replaced by one with either mine or Tom's email address, mine for now.
 
 The css structure of the Security Center is not coordinated well with the rest of the index, which is not important for the demonstration but will need to be reassessed.
+Also pages' css names are stupid and calculated widths don't work in IE, plus table borders still need work.
 
-~~~~~~~~~~~~~~~~
+The navigation links are now populated by nav.json, but neither indexOf() nor $.inArray() correctly search the objects of nav[], so it's only possible for now to refrain multiple's appearing consecutively.
 
-			JSON
+notices still needs converted into JSON with a URL to a markdown folder, this markdown folder could probably be hosted on the client-side if we decide to create the control panel offline.
 
-----------------
-
-Some global variables need to be set up including: paths/JSON, credintials/prefs, navigational array w/ logic
-
-A simple JSON template has been created, this needs to replace XML and be expanded upon. Add links.json and navigation.json
-
-linked pages need rewritten to load links into the pages div. Outside.php could use a jQueryUI window to check user permission.
-- will any pages need reloaded? That is one concern I have when doing things in this manner.
-- in this case will there be the need for the dynamic nav links?
-
-Pages div should probably be animated into existence with the first link that is selected. This will be necessary for quick viewing of the footer. Some people need to see the footer I guess.
-
-Those png headers are going to need removed.. That's just unnecessary; Add a @font-face to the CSS and call on a fancy font instead. 
-- working example of png header is in "privacy policy".
-
-selection_handler is currently being implemented, it takes a series of parameters to determine how to handle links.
-- It should query a JSON database of link locations > #ID => JSON -> #ID -> {type:'link',path:'/pages/',load:'this',name:'class'}
-
-Expand the warning: There needs to be a div placed above the links to allow dynamic seasonal or situational content. This will be loaded in as a php module. 
-- There could be an offline control panel located on our intranet for this.
--- If that's the case things could get much more interesting. This is something I'd really like to see.
+something will have to be done about load_link being called twice from the nav links, since get_nav() loads plain-text and .on() is attached to $(document)

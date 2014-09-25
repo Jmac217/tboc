@@ -9,11 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
 	<link rel="stylesheet" type="text/css" href="css/index.css" />
-	<!--<link rel="stylesheet" type="text/css" href="css/index.soft-gray.css" />-->
 	<link rel="stylesheet" type="text/css" href="css/index.purple.css" />
-	<!--<link rel="stylesheet" type="text/css" href="css/index.dark.css" />-->
-	<!--<link rel="stylesheet" type="text/css" href="css/index.blue.css" />-->
-	<!--<link rel="stylesheet" type="text/css" href="css/index.green.css" />-->
 	<link rel="stylesheet" type="text/css" href="css/navigation.css" />
 	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.min.css" />
 	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.theme.min.css"/>
@@ -27,7 +23,7 @@
 	</div>
 	<div id="doc">
 		<div id="header">
-			<div id='logo'><img src='res/logo17.png' height='125' width='240'/></div>
+			<div id='logo'><img src='res/logo17.png' height='125' width='260'/></div>
 			<div id='photo'></div>
 			<div id="nav_links">
 			<?php /* include('pages/include/i_uppernav.php'); */ ?>
@@ -41,7 +37,7 @@
 				<a class='load_link' path='pages/about/atm.php' location='internal' win='current'>ATM Locations</a>&nbsp;&nbsp;&nbsp;&nbsp;
 				<a class='load_link' path='pages/about/contact.php' location='internal' win='current'>Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;
 				-->
-				618&#149;549&#149;2181
+				<!--618&#149;549&#149;2181-->
 				<span id='user_nav'>
 					<span id='user_nav_bg'>
 						<span id='user_nav_home'>Home</span> &nbsp; &#187; &nbsp;  
@@ -334,7 +330,7 @@
 					<span class='tile plain_tile' style='left:33%;'>
 						<div class='tile_container'>
 							<div class='tile_border'>
-								<img class='tile_image ' src='res/icons/home/person.png'/>
+								<img class='tile_image ' src='res/icons/home/business_person.png'/>
 								<br/><br/>
 								<span class='tile_text'>Mortgage Center</span>
 								<!--<span class='apply tile_button'>Apply Now</span>-->
@@ -371,12 +367,12 @@
 	<div id='outgoing'>
 		<span><center>You are about to enter :PAGE:</center></span>
 	</div>
-<script type='text/javascript' src='js/jquery1.js'></script>
+<script type='text/javascript' src='lib/jquery1.js'></script>
 <script type='text/javascript' src='js/globals.js'></script>
 <script type='text/javascript' src='js/functions.js'></script>
 <script type='text/javascript' src='js/index.js'></script>
 <!--<script type='text/javascript' src='js/jquery.slides.min.js'></script>-->
-<script type='text/javascript' src='js/jquery.slides.js'></script>
+<script type='text/javascript' src='lib/jquery.slides.js'></script>
 <script type='text/javascript' src='lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.min.js'></script>
 </body>
 </html>

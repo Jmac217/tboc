@@ -1,4 +1,3 @@
-
 function notice(visible, path, type){ // this function deals with everything relating to the notice_board
 	if (visible == 'true'){
 		$.ajax({
@@ -136,14 +135,6 @@ function notice(visible, path, type){ // this function deals with everything rel
 						$('#warning').css({'visibility':'hidden',});
 						$('#alert').css({'visibility':'hidden'});
 				},350);
-
-	
-	
-	
-	
-	
-	
-	/***********************************************/
 	
 		// set visibility false and animate closed
 		$('#notices').animate({'height':'0px'});		
@@ -151,37 +142,12 @@ function notice(visible, path, type){ // this function deals with everything rel
 }
 //notice('false', 'JSON/notice.xml', 'warning');
 
-
-
-
-
-
-
-
-
-
-
-
 function set_footer(page_height){
 	var notice_height = parseInt($('#notices').css('height'));
 	var footer_height = 470;
 	var footer_top = page_height+notice_height+footer_height+'px';
 	$('#footer').css({'top':footer_top});
 }
-
-
-
-
-
-
-
-
-
-
-
-/******** New Load Link via JSON ********************************************/
-
-
 
 function get_nav(){
 	var nav_string = '';
@@ -195,7 +161,6 @@ function get_nav(){
 	$('#user_nav_array').html(nav_string);
 }
 
-
 function load_link(id, title){
 	$.ajax({
 		url: 'json/paths.json',
@@ -204,9 +169,8 @@ function load_link(id, title){
 		success: function(json){
 			var name = String(json.paths[title][id].name);
 			var path = String(json.paths[title][id].path);
-			var location = json.paths[title][id].location;
-			var win = json.paths[title][id].win;
-			//alert(name+', '+path+', '+location+', '+win);
+			var location = String(json.paths[title][id].location);
+			var win = String(json.paths[title][id].win);
 			$.ajax({
 				type:"post",
 				url:path,
@@ -218,31 +182,27 @@ function load_link(id, title){
 					height+=50; // #pages height is weird
 					$('#pages').css({'height':height});
 					set_footer(height);
+					for (var i=0;i<nav_obj.nav.length;i++){
+						if(nav_obj.nav[i].name == name){
+							break;
+						}else{
+							nav_obj.nav.splice(0,1);
+							nav_obj.nav.push({"name":name,"id":id,"title":title});
+							get_nav();
+						}
+					}
+					/*
 					if(name !== (nav_obj.nav[nav_obj.nav.length-1].name)){
 						nav_obj.nav.splice(0,1);
 						nav_obj.nav.push({"name":name,"id":id,"title":title});
-						//alert(nav_obj.nav[2].name+', '+nav_obj.nav[2].id+', '+nav_obj.nav[2].title);
-						//get_nav();
-						var nav_string = '';
-						var nav_cap = 3;
-						for (var i=0; i<=nav_cap; i++){
-							nav_string += '<span class="nav_element load_link" title="'+nav_obj.nav[i].title+'" id="'+nav_obj.nav[i].id+'">'+nav_obj.nav[i].name+'</span>';
-							if(i<nav_cap){
-								nav_string+=' &nbsp; &#149; &nbsp; ';
-							}
-						}
-						$('#user_nav_array').html(nav_string);
+						get_nav();
 					}
+					*/
 				}
 			});
 		}
 	});
 }
-
-
-
-
-
 
 	$.ajax({
 		dataType:"json",
@@ -264,277 +224,3 @@ function load_link(id, title){
 			});
 		}
 	});
-
-
-
-/*
-	// set visibility
-	
-
-	// for security's sake, check path against an whitelist of paths
-	
-	// global defaults
-	var outside=1;
-	//var page='window';
-
-	switch (location){// check for path,null,window
-		case "internal":	
-				// load path into #pages
-			outside=0;
-			$('#pages').css({'visibility':'visible'});
-		break;
-		case "external":
-			// load path through outside.php?u=path
-			$('#outgoing').html("<span class='outgoing_message'>You are about to leave TBOC.com and enter: </span><br/><span class='outgoing_link'>"+path)
-				.css({'visibility':'visible'})
-				.children('.outgoing_link')
-				.css({'font-size':'.7vw'})
-				.parent()
-				.dialog({
-					title: 'Confirm',
-					width: 460,
-					height: 165,
-					modal: true,
-					resizable: false,
-					draggable: false,
-					dragStart: function(event, ui){},
-					dialogClass: 'no-close',
-					buttons: [{
-						text: 'Cancel',
-						click: function()
-						{
-							// exit
-							$(this).dialog('close');
-						}
-					},{
-						text: 'Continue',
-						click: function()
-						{
-							// go to location	
-							window.location.href=path;
-						}
-					}]
-				});
-		break;
-		default:
-			location=null;	
-		break;
-	}
-
-	switch (win){// check for path,location
-		case "current":
-			// load new page into view 	
-			win='#pages';
-		break;
-		case "window":
-			// load page into new window	
-			win='(new window)';
-		break;
-		case "tab":
-			// load page into new tab
-			win='_blank';
-		break;
-		case "calc":
-			win='#calc_area';
-		default:
-			win=null;	
-		break;
-	}
-
-	// all parameters loaded	
-	// add path to navigational array
-		
-	// $(win).load(path);
-	
-	//alert(path+' '+location+' '+win);
-	
-	// This can only work for internal links
-	
-	if (win == '#pages'){
-		$.ajax({
-			type:"post",
-			url:path,
-			async:true,
-			success:function(data){
-				$('#body_container').css({'visibility':'hidden'});
-				$(win).html(data);
-				//	$(win).css({'height':'1500px'}); // height needs to be set by an innerHeight function
-				$('#pages').css({'height':'0px'});
-				height = $(win)[0].scrollHeight;
-				height+=50; // #pages height is weird
-				$(win).css({'height':height});
-				set_footer(height);
-			}
-		});
-	}
-	
-}
-*/
-
-
-
-
-
-
-
-
-	// Generate li dropdowns via JSON, booyah.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*** old load link, exposes path ***/
-/*
-function load_link(path,location,win){
-
-	// set visibility
-	
-
-	// for security's sake, check path against an whitelist of paths
-	
-	// global defaults
-	var outside=1;
-	//var page='window';
-
-	switch (location){// check for path,null,window
-		case "internal":	
-				// load path into #pages
-			outside=0;
-			$('#pages').css({'visibility':'visible'});
-		break;
-		case "external":
-			// load path through outside.php?u=path
-			$('#outgoing').html("<span class='outgoing_message'>You are about to leave TBOC.com and enter: </span><br/><span class='outgoing_link'>"+path)
-				.css({'visibility':'visible'})
-				.children('.outgoing_link')
-				.css({'font-size':'.7vw'})
-				.parent()
-				.dialog({
-					title: 'Confirm',
-					width: 460,
-					height: 165,
-					modal: true,
-					resizable: false,
-					draggable: false,
-					dragStart: function(event, ui){},
-					dialogClass: 'no-close',
-					buttons: [{
-						text: 'Cancel',
-						click: function()
-						{
-							// exit
-							$(this).dialog('close');
-						}
-					},{
-						text: 'Continue',
-						click: function()
-						{
-							// go to location	
-							window.location.href=path;
-						}
-					}]
-				});
-		break;
-		default:
-			location=null;	
-		break;
-	}
-
-	switch (win){// check for path,location
-		case "current":
-			// load new page into view 	
-			win='#pages';
-		break;
-		case "window":
-			// load page into new window	
-			win='(new window)';
-		break;
-		case "tab":
-			// load page into new tab
-			win='_blank';
-		break;
-		case "calc":
-			win='#calc_area';
-		default:
-			win=null;	
-		break;
-	}
-
-	// all parameters loaded	
-	// add path to navigational array
-		
-	// $(win).load(path);
-	
-	//alert(path+' '+location+' '+win);
-	
-	/*** This can only work for internal links ***/
-	/*
-	if (win == '#pages'){
-		$.ajax({
-			type:"post",
-			url:path,
-			async:true,
-			success:function(data){
-				$('#body_container').css({'visibility':'hidden'});
-				$(win).html(data);
-				//	$(win).css({'height':'1500px'}); // height needs to be set by an innerHeight function
-				$('#pages').css({'height':'0px'});
-				height = $(win)[0].scrollHeight;
-				height+=50; // #pages height is weird
-				$(win).css({'height':height});
-				set_footer(height);
-			}
-		});
-	}
-}
-*/
-
-//** Example Usage **//
-/*** old load_link click ***/
-/*
-$('.load_link').click(function(){
-
-	// how about coordinating the 'name' or 'id' with a JSON array
-	// -- get name
-	// -- find name in json
-	// -- pull json attributes
-	// ---- this prevents html from seeing paths
-
-	// extrapolate attributes
-	var path = $(this).attr('path');
-	var location = $(this).attr('location');
-	var win = $(this).attr('win');
-	*/
-	/** IMPORTANT: `nav` values should replace the current paths to abstract the true paths from the browser. These paths will all be matched up according to a JSON file. **/
-	/*
-	var nav = path.substring(path.lastIndexOf("/") + 1, path.lastIndexOf("."));	
-	nav_array.splice(0,1);
-	nav_array.push(nav);
-	get_nav(nav_array);
-	load_link(path,location,win);
-});
-*/
-

@@ -116,11 +116,11 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 	#header{position:absolute;top:0px;left:0px;height:260px;width:100%;}
 		/*#nav_links{position:absolute;top:25px;left:0px;height:25px;width:100%;text-align:right;color:#333;}*/
 		#nav_links{position:absolute;top:25px;left:0px;height:25px;width:100%;text-align:right;}
-		#logo{position:absolute;top:25px;left:0px;height:125px;width:240px;/*background-image:url('../res/logo3.png');background-repeat:no-repeat;background-size:240px 125px;*/cursor:pointer;}
-		#photo{position:absolute;top:45px;left:265px;height:180px;width:705px;background-image:url('../res/photo2.jpg');background-repeat:no-repeat;background-size:705px 155px;}
-		#motto{position:absolute;top:160px;left:0px;height:20px;width:250px;color:#333;visibility:visible;z-index:100;/*background-image:url('../res/slogan.png');background-repeat:no-repeat;background-size:245px 20px;*/font-family:aubrey;font-size:17px;text-align:center;color:#000;/*color:#550003;*/opacity:.7;}
+		#logo{position:absolute;top:40px;left:0px;height:160px;width:260px;/*background-image:url('../res/logo3.png');background-repeat:no-repeat;background-size:240px 125px;*/cursor:pointer;}
+		#photo{position:absolute;top:45px;left:285px;height:180px;width:685px;background-image:url('../res/photo2.jpg');background-repeat:no-repeat;background-size:685px 155px;}
+		#motto{position:absolute;top:178px;left:0px;height:20px;width:270px;color:#333;visibility:visible;z-index:100;/*background-image:url('../res/slogan.png');background-repeat:no-repeat;background-size:245px 20px;*//*font-family:aubrey;*/font-size:17px;text-align:center;color:#000;/*color:#550003;*/opacity:.7;}
 		/*#user_nav{position:absolute;top:185px;left:0px;height:20px;width:100%;color:#333;visibility:visible;cursor:pointer;z-index:1;*//*text-shadow:1px 1px #CCC;*//*}*/
-		#user_nav{position:absolute;top:0px;left:265px;height:20px;width:705px;visibility:visible;z-index:1;padding-left:10px;text-align:left;}
+		#user_nav{position:absolute;top:0px;left:295px;height:20px;width:705px;visibility:visible;z-index:1;padding-left:10px;text-align:left;}
 			#user_nav_home{text-decoration:none;color:#1e59cf;}
 			#user_nav_home:hover{cursor:pointer;color:#3e79ef;outline:0;text-decoration:underline;}
 			.nav_element{text-decoration:none;color:#1e59cf;}
