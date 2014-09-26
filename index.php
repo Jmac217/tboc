@@ -287,7 +287,7 @@
 									<span class='login_tile_body'>Loan Application</span>
 									</a>
 								</span>
-								<span class='login_tile_image'><img src='res/icons/home/pen-paper.png'/></span>
+								<span class='login_tile_image'><img src='res/icons/vehicles/car1.png'/></span>
 							</div>
 							<div class='login_tile login_tile_border login_tile_border_none'>
 								<span class='login_tile_text'>
@@ -297,7 +297,7 @@
 									<span class='login_tile_body'>eStatements</span>
 									</a>
 								</span>
-								<span class='login_tile_image'><img src='res/icons/home/folder.png'/></span>
+								<span class='login_tile_image'><img src='res/icons/home/email.png'/></span>
 							</div>
 						</div>
 					</div>
@@ -320,9 +320,9 @@
 					<span class='tile plain_tile'>
 						<div class='tile_container'>
 							<div class='tile_border'>
+								<span class='tile_header'>Card Services</span><br/>
 								<img class='tile_image ' src='res/icons/card/white-simple.png'/>
-								<br/><br/>
-								<span class='tile_text'>Card Services</span>
+								<span class='tile_text'>Report a lost/stolen Debit Card or acivate/change the pin on a Debit Card.</span>
 								<!--<span class='apply tile_button'>Get Information</span>-->
 							</div>
 						</div>
@@ -330,9 +330,10 @@
 					<span class='tile plain_tile' style='left:33%;'>
 						<div class='tile_container'>
 							<div class='tile_border'>
-								<img class='tile_image ' src='res/icons/home/business_person.png'/>
-								<br/><br/>
-								<span class='tile_text'>Mortgage Center</span>
+								<span class='tile_header'>Mortgage Center</span><br/>
+								<img class='tile_image ' src='res/icons/home/house.png'/>
+								<span class='tile_text'>Visit our Online Mortage Center to check current rates and apply online.</span>
+								
 								<!--<span class='apply tile_button'>Apply Now</span>-->
 							</div>
 						</div>
@@ -340,9 +341,9 @@
 					<span class='tile plain_tile' style='left:66%;border-right:none;'>
 						<div class='tile_container'>
 							<div class='tile_border'>
+								<span class='tile_header'>Mobile App</span><br/>
 								<img class='tile_image ' src='res/icons/tech/mobile.png'/>
-								<br/><br/>
-								<span class='tile_text'>Mobile App</span>
+								<span class='tile_text'>Get on-the-go access to eBanking with our FREE Mobile Banking APP.</span>
 								<!--<span class='apply tile_button'>Download</span>-->
 							</div>
 						</div>

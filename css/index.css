@@ -49,13 +49,14 @@ sup{font-size:14px;font-weight:bold;}
 	.tile{position:absolute;top:0px;height:160px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;padding-left:100px;display:block;background-color:transparent;width:33%;background:-moz-linear-gradient(rgba(255,255,255,.0),rgba(255,255,255,.0));}
 	.plain_tile{border-right:solid 1px #CCC;}
 	.pop_tile{border:solid 1px #888;border-radius:10px;box-shadow:5px 5px 5px #888;}
-		.tile_container{position:absolute;top:15px;left:20px;text-align:center;width:75%;height:100%;}
-			.tile_image{position:relative;top:20px;/*height:75px;width:75px;*/}
-			.tile_text{position:relative;display:block;top:10px;left:0px;}
+		.tile_container{position:absolute;top:5%;left:5%;text-align:center;width:90%;height:90%;}
+			.tile_image{position:relative;top:10px;/*height:75px;width:75px;*/}
+			.tile_header{font-size:16px;color:#75263d;}
+			.tile_text{position:relative;display:block;top:10px;left:0px;font-size:10px;}
 			.tile_button{display:block;left:0px;cursor:pointer;}
 			/*.title_button{display:block;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;border-style:none;padding:5px 15px 5px 15px;background-color:#9A0000;background:-moz-linear-gradient(rgba(154,0,0,1),rgba(113,0,0,1));color:#EEE;border-radius:5px 5px 5px 5px;border:solid 1px #710000;}*/
 			/*.tile_button:hover{color:#FFF;background:-moz-linear-gradient(rgba(174,0,0,1),rgba(133,0,0,1));}*/
-			.tile_border{margin:auto;display:box;height:80%;width:70%;border:solid 1px transparent;border-radius:7px;background-color:transparent;cursor:pointer;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+			.tile_border{margin:auto;display:box;height:100%;width:100%;border:solid 1px transparent;border-radius:7px;background-color:transparent;cursor:pointer;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 			.tile_border:hover{border:solid 1px #CCC;background-color:#EEE;}
 
 #debug{position:absolute;top:0px;left:0px;padding:10px;background-color:#ddd;border:solid 1px #aaa;}
