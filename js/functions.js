@@ -16,14 +16,10 @@ function notice(visible, path, type){ // this needs to be refactored into JSON s
 					return (top + row_multiple) + 'px';
 				}
 				var rows = [];
-				var notices = get_top(0);
-				var body = get_top(0);
-				var links = get_top(0);
-				var pages = get_top(0);
 				$('#notices').css({'visibility':'visible'}).animate({'height':notice_height});
-				$('#body_container').animate({'top':body}); 
-				$('#links').animate({'top':links}); 
-				$('#pages').animate({'top':pages}); 
+				$('#body_container').animate({'top':'135px'}); 
+				$('#links').animate({'top':'240px'}); 
+				//$('#pages').animate({'top':'0px'}); 
 				// title
 				var title_meta = $xml.find(type).find("title");
 				var title = title_meta.text();
@@ -103,8 +99,8 @@ function notice(visible, path, type){ // this needs to be refactored into JSON s
 	}else if(visible=='false'){
 				$('#notices').animate({'height':'0px'});
 				$('#body_container').animate({'top':'0px'}); 
-				$('#links').animate({'top':'10px'}); 
-				$('#pages').animate({'top':'300px'}); 
+				$('#links').animate({'top':'105px'}); 
+				//$('#pages').animate({'top':'0px'}); 
 				setTimeout(function(){
 					$('#notices').css({'visibility':'hidden'});
 					$('#notices_area').css({'visibility':'hidden'});

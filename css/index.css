@@ -126,7 +126,7 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 			#user_nav_home:hover{cursor:pointer;color:#3e79ef;outline:0;text-decoration:underline;}
 			.nav_element{text-decoration:none;color:#1e59cf;}
 			.nav_element:hover{color:#3e79ef;text-decoration:underline;}
-		#notices{position:relative;top:175px;height:0px;width:970px;visibility:hidden;border:solid 1px #777;}
+		#notices{position:relative;top:205px;height:0px;width:970px;visibility:hidden;border:solid 1px #777;}
 		#notices_area{position:absolute;top:5px;left:10px;width:98%;height:95%;}
 			#alert{position:absolute;top:0px;left:0px;height:100%;width:100%;}/*background-color:#B66*/
 			#warning{position:absolute;top:0px;left:0px;height:100%;width:100%;}/*background-color:#FF8*/
