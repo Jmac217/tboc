@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.burgundy.css" />
+	<link rel="stylesheet" type="text/css" href="css/navigation.css" />
+	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.theme.min.css"/>
+	<link rel='shortcut icon' href='res/icon.png' />
+	<title>The Bank of Carbondale</title>
+</head>
+<body>
+	<div id='debug'>
+		<u>Notices: </u> <span id='noticesOn'>On</span> / <span id='noticesOff'>Off</span>
+	</div>
+	<div id="doc">
+		<div id="header">
+			<div id='logo'><img src='res/logo17.png' height='125' width='260'/></div>
+			<div id='photo'></div>
+			<div id="nav_links">
+				<span id='user_nav'>
+					<span id='user_nav_bg'>
+						<span id='user_nav_home'>Home</span> &nbsp; &#449; &nbsp;
+						<span id='user_nav_array'></span>
+					</span>
+				</span>
+			</div>
+			<span id='motto'>Your Hometown Friend!</span>
+			<div id='notices'>
+				<div id='notices_area'>
+					<div id='alert'></div>
+					<div id='warning'></div>
+				</div>
+			</div>
+			<div id='links'>
+				<div class='link shadow links_customer link_button link_left' alt='customer' id='customer'>
+					<div class='link_title noselect'>
+						<a>Customer Service</a>
+					</div>
+					<ul>
+						<li>
+							<ul class='link_drop'></ul>
+						</li>
+					</ul>
+				</div>
+				<div class='link shadow links_personal link_button' alt='personal' id='personal'>
+					<div class='link_title noselect'>
+						<a>Personal Banking</a>
+					</div>
+					<ul>
+						<li>
+							<ul class='link_drop'></ul>
+						</li>
+					</ul>
+				</div>
+				<div class='link shadow links_business link_button' alt='business' id='business'>
+					<div class='link_title noselect'>
+						<a>Business Banking</a>
+					</div>
+					<ul>
+						<li>
+							<ul class='link_drop'></ul>
+						</li>
+					</ul>
+				</div>
+				<div class='link shadow links_about link_button link_right' alt='about' id='about'>
+					<div class='link_title noselect'>
+						<a>About Us</a>
+					</div>
+					<ul>
+						<li>
+							<ul class='link_drop'></ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="body">
+			<div id='body_container'>
+				<div id="banner" class=''>
+					<a href='#'><img src='res/online.png'/></a>
+					<a href='#'><img src='res/cropped-banner.png'/></a>
+				</div>
+				<div id='banner_pagination'></div>
+				<div id='sliders' class=''>
+					<div id='slide-1'>
+						<div id='slide-1-panel'>Online Banking Login</div>
+						<div id='slide-1-area'>
+							<div id="login">
+								<div id="login_form">
+									<div class="small buttons">
+										<!-- the values in this form must remain constant -->
+										<form id="Q2OnlineLogin" name="Q2OnlineLogin" action="https://secure9.onlineaccess1.com/CarbondaleOnline_30/Authentication/Login.aspx" method="post">
+											<input id="user_id" type="text" name="user_id" placeholder="User ID"/>
+											<input id="password" type="password" name="password" placeholder="Password"/>
+											<input id="submit_button" type="submit" name="submit" value="Login"/>
+										</form>
+									</div>
+								<span id='forgot'><a>Forget something?</a></span>
+								<span id='first'><a>I'm a first time user.</a></span>
+								</div>
+								<div id="login_form_mortgage">
+									<div id='login_form_mortgage_image'></div>
+								</div>
+							</div>
+						</div>
+						<div id='login_tiles'>
+							<div class='login_tile login_tile_border'>
+								<span class='login_tile_text'>
+									<span class='login_tile_header'>Demos</span><br/>
+									<a><span class='login_tile_body'>Online Banking Demo</span></a>
+									<a><span class='login_tile_body'>Online Billpay Demo</span></a>
+								</span>
+								<span class='login_tile_image'><img src='res/icons/tech/computer.png'/></span>
+							</div>
+							<div class='login_tile login_tile_border'>
+								<span class='login_tile_text' style=''>
+									<br/>
+									<a>
+									<span class='login_tile_header' style=''>Consumer</span><br/>
+									<span class='login_tile_body'>Loan Application</span>
+									</a>
+								</span>
+								<span class='login_tile_image'><img src='res/icons/vehicles/car1.png'/></span>
+							</div>
+							<div class='login_tile login_tile_border login_tile_border_none'>
+								<span class='login_tile_text'>
+									<br/>
+									<a>
+									<span class='login_tile_header'>Activate</span><br/>
+									<span class='login_tile_body'>eStatements</span>
+									</a>
+								</span>
+								<span class='login_tile_image'><img src='res/icons/home/email.png'/></span>
+							</div>
+						</div>
+					</div>
+				<!-- tiles -->
+				<div id='tiles' class=''>
+					<span class='tile plain_tile'>
+						<div class='tile_container'>
+							<div class='tile_border'>
+								<span class='tile_header'>Card Services</span><br/>
+								<img class='tile_image ' src='res/icons/card/white-simple.png'/>
+								<span class='tile_text'>Report a lost/stolen Debit Card or acivate/change the pin on a Debit Card.</span>
+								<!--<span class='apply tile_button'>Get Information</span>-->
+							</div>
+						</div>
+					</span>
+					<span class='tile plain_tile' style='left:33%;'>
+						<div class='tile_container'>
+							<div class='tile_border'>
+								<span class='tile_header'>Mortgage Center</span><br/>
+								<img class='tile_image ' src='res/icons/home/house.png'/>
+								<span class='tile_text'>Visit our Online Mortage Center to check current rates and apply online.</span>
+								
+								<!--<span class='apply tile_button'>Apply Now</span>-->
+							</div>
+						</div>
+					</span>
+					<span class='tile plain_tile' style='left:66%;border-right:none;'>
+						<div class='tile_container'>
+							<div class='tile_border'>
+								<span class='tile_header'>Mobile App</span><br/>
+								<img class='tile_image ' src='res/icons/tech/mobile.png'/>
+								<span class='tile_text'>Get on-the-go access to eBanking with our FREE Mobile Banking APP.</span>
+								<!--<span class='apply tile_button'>Download</span>-->
+							</div>
+						</div>
+					</span>
+				</div>
+			</div>
+			<div id='pages'>
+				<!-- pages -->
+			</div>
+		</div>
+		<div id="footer">
+			<div id='footer_copy'>
+				<p>&copy; 2014 The Bank of Carbondale. All Rights Reserved. &nbsp;&nbsp;
+				<a href="pages/main/privacy.php">Privacy Policy</a>
+			</div>
+			<div id='footer_FDIC'>
+				<span id='footer_FDIC_logo'></span>
+				<span id='footer_FDIC_text'><strong>Member FDIC</strong></span>
+			</div>
+		</div>
+	</div>
+	<div id='outgoing'>
+		<span><center>You are about to enter :PAGE:</center></span>
+	</div>
+<script type='text/javascript' src='lib/jquery1.js'></script>
+<script type='text/javascript' src='js/globals.js'></script>
+<script type='text/javascript' src='js/functions.js'></script>
+<script type='text/javascript' src='js/index.js'></script>
+<script type='text/javascript' src='lib/jquery.slides.js'></script>
+<script type='text/javascript' src='lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.min.js'></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
 	"paths":{
-		"customer":[{
+		"customer":{
 			"mortgage":{
 				"name":"Online Mortgage Center",
 				"path":"https://tboc.mortgagewebcenter.com/",
@@ -49,7 +49,7 @@
 				"location":"internal",
 				"win":"current"
 			}
-		}],
+		},
 		"personal":{
 			"checking":{
 				"name":"Checking",
