@@ -6,8 +6,8 @@
 .links_about{left:726px;}
 /*.links_about{left:692px;}*/
 
-.link_left{border-top-left-radius:5px;border-bottom-left-radius:2px;}
-.link_right{border-top-right-radius:5px;border-bottom-right-radius:2px;}
+.link_left{border-radius:5px 0px 0px 2px;-webkit-border-radius:5px 0px 0px 2px;-moz-border-radius:5px 0px 0px 2px;behavior:url(lib/PIE.htc);}
+.link_right{border-radius:0px 5px 2px 0px;-webkit-border-radius:0px 5px 2px 0px;-moz-border-radius:0px 5px 2px 0px;behavior:url(lib/PIE.htc);}
 
 /* dropdown container */
 .link ul{
