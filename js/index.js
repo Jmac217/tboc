@@ -21,11 +21,11 @@ $(document).on('click', '.nav_element', function(){
 	});
 
 	$('#user_nav_home').click(function(){
-		$('#body_container').css({'visibility':'visible'});	
-		$('#pages').css({'visibility':'hidden'});	
+		$('#body_container').css({'visibility':'visible'});
+		$('#pages').css({'visibility':'hidden'});
 	});
 	$('#logo').click(function(){
-		location.reload(true);		
+		location.reload(true);
 	});
 	$('input').click(function(){
 		$(this).select();
@@ -92,5 +92,5 @@ $(document).on('click', '.nav_element', function(){
 			var title = $(this).attr('title');
 		}
 		load_link(id, title);
-	});
+	});	
 });

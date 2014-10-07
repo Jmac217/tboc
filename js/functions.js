@@ -40,9 +40,6 @@ if (!Object.keys) {
   }());
 }
 
-
-
-
 function notice(visible, path, type){ // this needs to be refactored into JSON so painfully bad
 	if (visible == 'true'){
 		$.ajax({

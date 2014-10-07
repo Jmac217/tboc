@@ -104,7 +104,6 @@ td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 
 .link_drop>li{z-index:10000;}
 
-
 #doc{position:relative;top:0px;left:15%;/*height:859px;*/width:970px;}
 	#header{position:absolute;top:0px;left:0px;height:260px;width:100%;}
 		/*#nav_links{position:absolute;top:25px;left:0px;height:25px;width:100%;text-align:right;color:#333;}*/
