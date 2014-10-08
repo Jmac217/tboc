@@ -183,6 +183,8 @@ function load_link(id, title){
 		dataType: 'json',
 		async: false,
 		success: function(json){
+			alert(title+' '+id);
+			alert(json.paths.customer.demos.name);
 			var name = String(json.paths[title][id].name);
 			var path = String(json.paths[title][id].path);
 			var location = String(json.paths[title][id].location);
