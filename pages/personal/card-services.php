@@ -6,7 +6,7 @@
 ?>
 <div class='page_header'>Card Services</div>
 <img src="res/ATM.jpg" class='page_photo text_shadow' />
-<div class='page_body textblock text_shadow calculated_width'>
+<div class='page_body textblock text_shadow calculated_width box'>
 <h2>MasterCard&reg; Debit Card</h2>
 <div class='job_opening'>
 <ul>

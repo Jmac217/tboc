@@ -9,7 +9,7 @@
 
 <div class='page_header'>Personal Loans</div>
 <img src="res/PersonalLoans.jpg" width="350" height="350" align="left" class="page_photo" />
-<div class='page_body textblock text_shadow calculated_width'>
+<div class='page_body textblock text_shadow calculated_width box'>
 	<p>The Bank of Carbondale offers an array of installment loans to meet your needs. Whether you need an auto loan to purchase your dream car or a short-term loan for unexpected emergencies, we can provide the loan product that is right for you.
 	<br />
 	<div class='job_opening'>

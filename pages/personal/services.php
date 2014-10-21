@@ -6,7 +6,7 @@
 ?>
 <div class='page_header'>Banking Services</div>
 <img src="res/Services.jpg" class="page_photo text_shadow">
-<div class='page_body textblock text_shadow calculated_width'>
+<div class='page_body textblock text_shadow calculated_width box'>
 <p>We offer a variety of additional services to make your banking relationship with us more convenient.</p>
 <h2>Wire Transfers</h2>
 <p>Both domestic and international wire services are available five days a week. Visit any of our locations to learn more.</p>

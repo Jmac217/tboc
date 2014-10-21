@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
-	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.backup.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.burgundy.css" />
 	<link rel="stylesheet" type="text/css" href="css/navigation.css" />
 	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.min.css" />
@@ -27,6 +27,7 @@
 			<div id="nav_links">
 				<span id='user_nav'>
 					<span id='user_nav_bg'>
+						<span id='user_nav_contact'>Phone: <span id='user_nav_contact_phone'>(618) 549-2181</span>&nbsp;&nbsp;&nbsp;</span>
 						<span id='user_nav_home'>Home</span> &nbsp; &#449; &nbsp;
 						<span id='user_nav_array'></span>
 					</span>
@@ -84,13 +85,13 @@
 		</div>
 		<div id="body">
 			<div id='body_container'>
-				<div id="banner" class=''>
+				<div id="banner" class=' shadow'>
 					<a href='#'><img src='res/online.png'/></a>
 					<a href='#'><img src='res/cropped-banner.png'/></a>
 				</div>
 				<div id='banner_pagination'></div>
 				<div id='sliders' class=''>
-					<div id='slide-1'>
+					<div id='slide-1' class=' '>
 						<div id='slide-1-panel'>Online Banking Login</div>
 						<div id='slide-1-area'>
 							<div id="login">
@@ -111,67 +112,76 @@
 								</div>
 							</div>
 						</div>
-						<div id='login_tiles'>
-							<div class='login_tile login_tile_border'>
-								<span class='login_tile_text'>
-									<span class='login_tile_header'>Demos</span><br/>
-									<span class='login_tile_body'>Online Banking Demo</span>
-									<span class='login_tile_body'>Online Billpay Demo</span>
-								</span>
-								<span class='login_tile_image'><img src='res/icons/tech/computer.png'/></span>
-							</div>
-							<div class='login_tile login_tile_border'>
-								<span class='login_tile_text' style=''>
-									<br/>
-									<a>
-									<span class='login_tile_header' style=''>Consumer</span><br/>
-									<span class='login_tile_body'>Loan Application</span>
-									</a>
-								</span>
-								<span class='login_tile_image'><img src='res/icons/vehicles/car1.png'/></span>
-							</div>
-							<div class='login_tile login_tile_border login_tile_border_none'>
-								<span class='login_tile_text'>
-									<br/>
-									<a>
-									<span class='login_tile_header'>Activate</span><br/>
-									<span class='login_tile_body'>eStatements</span>
-									</a>
-								</span>
-								<span class='login_tile_image'><img src='res/icons/home/email.png'/></span>
-							</div>
+
+					</div>
+					<div id='login_tiles'>
+						<div class='login_tile login_tile_border load_link linear_gradient shadow' id='OTHER' title='customer'>
+							<span class='login_tile_text'>
+								<span class='login_tile_header'>Demos</span><br/>
+								<span class='login_tile_body'>Online Banking Demo</span>
+								<span class='login_tile_body'>Online Billpay Demo</span>
+							</span>
+							<span class='login_tile_image'><img src='res/icons/tech/computer.png'/></span>
 						</div>
+						<div class='login_tile login_tile_border load_link linear_gradient shadow' id='demos' title='customer'>
+							<span class='login_tile_text'>
+								<span class='login_tile_header'>Demos</span><br/>
+								<span class='login_tile_body'>Online Banking Demo</span>
+								<span class='login_tile_body'>Online Billpay Demo</span>
+							</span>
+							<span class='login_tile_image'><img src='res/icons/tech/computer.png'/></span>
+						</div>
+						<div class='login_tile login_tile_border load_link linear_gradient shadow' id='loan_app' title='customer'>
+							<span class='login_tile_text' style=''>
+								<br/>
+								<span class='login_tile_header' style=''>Consumer</span><br/>
+								<span class='login_tile_body'>Loan Application</span>
+							</span>
+							<span class='login_tile_image'><img src='res/icons/vehicles/car1.png'/></span>
+						</div>
+						<!--
+						<div class='login_tile login_tile_border login_tile_border_none load_link' id='activate_estatements' title='customer'>
+							<span class='login_tile_text'>
+								<br/>
+								<a>
+								<span class='login_tile_header'>Activate</span><br/>
+								<span class='login_tile_body'>eStatements</span>
+								</a>
+							</span>
+							<span class='login_tile_image'><img src='res/icons/home/email.png'/></span>
+						</div>
+						-->
 					</div>
 				<!-- tiles -->
 				<div id='tiles' class=''>
-					<span class='tile plain_tile'>
+					<span class='tile plain_tile load_link' id='card_services' title='personal'>
 						<div class='tile_container'>
-							<div class='tile_border'>
+							<div class='tile_border linear_gradient shadow'>
 								<span class='tile_header'>Card Services</span><br/>
 								<img class='tile_image ' src='res/icons/card/white-simple-small.png'/>
 								<span class='tile_text'>Report a lost/stolen Debit Card or acivate/change the pin on a Debit Card.</span>
-								<!--<span class='apply tile_button'>Get Information</span>-->
+								<span class='apply tile_button'>More Information</span>
 							</div>
 						</div>
 					</span>
-					<span class='tile plain_tile' style='left:33%;'>
+					<span class='tile plain_tile load_link' id='mortgage' title='personal' style='left:34%;'>
 						<div class='tile_container'>
-							<div class='tile_border'>
+							<div class='tile_border linear_gradient shadow'>
 								<span class='tile_header'>Mortgage Center</span><br/>
 								<img class='tile_image ' src='res/icons/home/house-small.png'/>
 								<span class='tile_text'>Visit our Online Mortage Center to check current rates and apply online.</span>
 								
-								<!--<span class='apply tile_button'>Apply Now</span>-->
+								<span class='apply tile_button'>Learn More</span>
 							</div>
 						</div>
 					</span>
-					<span class='tile plain_tile' style='left:66%;border-right:none;'>
+					<span class='tile plain_tile load_link' id='ebanking' title='personal' style='left:68%;border-right:none;'>
 						<div class='tile_container'>
-							<div class='tile_border'>
-								<span class='tile_header'>Mobile App</span><br/>
+							<div class='tile_border linear_gradient shadow'>
+								<span class='tile_header'>Mobile Banking</span><br/>
 								<img class='tile_image ' src='res/icons/tech/mobile-small.png'/>
 								<span class='tile_text'>Get on-the-go access to eBanking with our FREE Mobile Banking APP.</span>
-								<!--<span class='apply tile_button'>Download</span>-->
+								<span class='apply tile_button'>Get the App!</span>
 							</div>
 						</div>
 					</span>

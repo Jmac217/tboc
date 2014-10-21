@@ -7,7 +7,7 @@
 <!--<p><img src="res/Business_Loans.png" alt="Business Checking" width="681" height="62"></p>-->
 <div class='page_header'>Business Checking</div>
 <img src="res/financial.jpg" class="page_photo text_shadow">
-<div class='page_body textblock text_shadow calculated_width'>
+<div class='page_body textblock text_shadow calculated_width box'>
 <p>The Bank of Carbondale offers a variety of commercial loans to meet most business needs.  From commercial real estate loans to lines of credit, we will work with you to find the best fit for your business.  SBA financing is also available.  </p>
 <p>Our commercial lending staff has extensive knowledge and expertise to assist you, and are committed to providing excellent customer service.  </p>
 <p>For more information, contact the Commercial Loan Department:</p>

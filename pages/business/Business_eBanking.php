@@ -8,8 +8,8 @@
 <!--<p><img src="res/eBanking_For_Business.png" width="681" height="62"></p>-->
 
 <div class='page_header'><span class='e'>e</span>Banking for Business</div>
-<img src="res/business_ebanking.png" alt="eBanking for Business" class="page_photo">
-<div class='page_body textblock text_shadow calculated_width'>
+<img src="res/ebanking.png" alt="eBanking for Business" class="page_photo">
+<div class='page_body textblock text_shadow calculated_width box'>
 <h1 align="center">WEB | MOBILE | TEXT</h1>
 <p>Welcome to eBanking from The Bank of Carbondale. eBanking for Business goes far beyond traditional Online Banking. With eBanking for Business you get access to your accounts anywhere, anytime, and information is always up-to-date.</p>
 <h2>Anytime Access</h2>

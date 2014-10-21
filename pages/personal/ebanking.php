@@ -5,8 +5,8 @@
 */
 ?>
 <div class='page_header'><span class='e'>e</span>Banking</div>
-<img src="res/eBanking1.jpg" alt="eBanking" class="page_photo text_shadow">
-<div class='page_body textblock text_shadow calculated_width'>
+<img src="res/ebanking.png" alt="eBanking" class="page_photo text_shadow">
+<div class='page_body textblock text_shadow calculated_width box'>
 <h1 align="center">WEB &#1795; MOBILE &#1795; TEXT</h1>
 <p>Welcome to eBanking from The Bank of Carbondale. eBanking goes far beyond traditional Online Banking. With eBanking you get access to your accounts anywhere, anytime, and information is always up-to-date.</p>
 <p><a href="https://secure9.onlineaccess1.com/CarbondaleOnline_30/demo/demo.htm">eBanking Demo</a><br>
@@ -44,6 +44,8 @@
 		&Dagger; Mobile Banking requires enrollment in eBanking. The Bank of Carbondale does not charge a monthly service fee for Mobile Banking. A fee for external transfers may apply. Text messaging and data rates from your mobile service provider may apply.<br />iPhone is a registered trademark of Apple, Inc. App Store is a trademark of Apple, Inc.<br />Android and Google Play are trademarks of Google Inc.</p>
 </small>
 </div>
+<!--
 <script type='text/javascript' src='js/jquery1.js'></script>
 <script type='text/javascript' src='lib/jquery-ui-1.11.1.tboc/jquery-ui.min.js'></script>
 <script type='text/javascript' src='js/functions.js'></script>
+-->

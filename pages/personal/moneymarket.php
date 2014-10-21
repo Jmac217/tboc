@@ -6,7 +6,7 @@
 ?>
 <div class='page_header'>Money Market</div>
 <img src='res/Financial1.jpg' class='page_photo text_shadow'/>
-<div class='page_body textblock text_shadow calculated_width'>
+<div class='page_body textblock text_shadow calculated_width box'>
 <p>After you're accustomed to saving money and have accumulated a larger  balance, you may want to step up to this account and earn a higher  interest rate. This account offers limited check writing ability along  with tiered interest rates.</p>
 <p>Every Bank of Carbondale Money Market account is eligible for eBanking with online, mobile, and text access on your schedule, 24 hours a day.</p>
 <p>All accounts are also eligible for free eStatements, with online delivery for your convenience and security.</p>

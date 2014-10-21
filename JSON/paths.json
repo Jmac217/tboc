@@ -33,7 +33,7 @@
 			},
 			"activate_estatements":{
 				"name":"Activate eStatements",
-				"path":"pages/personal/activate_estatements.php",
+				"path":"pages/customer/activate_estatements.php",
 				"location":"internal",
 				"win":"current"
 			},
@@ -46,6 +46,12 @@
 			"security":{
 				"name":"Security Center",
 				"path":"pages/customer/security.php",
+				"location":"internal",
+				"win":"current"
+			},
+			"demos":{
+				"name":"Online Demos",
+				"path":"pages/customer/demos.php",
 				"location":"internal",
 				"win":"current"
 			}
