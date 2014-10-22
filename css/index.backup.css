@@ -2,7 +2,7 @@
 
 @font-face{font-family:dou;src:url('../res/fonts/DoulosSILR.ttf');src:url('../res/fonts/DoulosSILR.eot');}
 
-body{background-image:url(../res/background.png);background-size:100% 100%;background-attachment:fixed;background-repeat:no-repeat;}
+body{background-image:url(../res/ripple2.png);}
 
 a{color:#004a4a;cursor:pointer;outline:0;text-decoration:none;}
 a:hover{color:#3e79ef;outline:0;text-decoration:underline;}
