@@ -84,25 +84,23 @@ ul{list-style-type:none;}
 			/**/
 		/**/
 		#body_container{position:absolute;top:0px;left:0px;height:100%;width:100%;}
-			#banner{position:relative;top:0px;left:220px;height:279px;width:750px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;z-index:900;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:2px 2px 2px 2px;behavior:url(lib/PIE.htc);}
-			#sliders{position:absolute;top:0px;height:210px;width:210px;border:solid 1px #777;background-color:#EEE;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:5px;behavior:url(lib/PIE.htc);}
-				#slide-1{position:absolute;height:100%;width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;}
-					#slide-1-panel{position:absolute;top:0px;left:0px;height:30px;width:100%;font-size:15px;text-align:center;display:block;color:#444;border-bottom:solid 1px #aaa;background-color:#ddd;padding:5px;font-style:italic;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:5px 5px 0px 0px;behavior:url(lib/PIE.htc);}
-					#slide-1-area{position:absolute;top:0px;left:0px;height:100%;width:100%;}
-						#login{position:absolute;top:35px;left:0px;height:235px;width:184px;padding:10px;}
-							#login_form{position:absolute;top:0px;left:0px;height:100%;width:100%;}
-								#user_id{position:absolute;top:0px;left:0px;width:97%;height:30px;font-size:15px;border:solid 1px #666;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:2px 2px 0px 0px;behavior:url(lib/PIE.htc);}
-								#password{position:absolute;top:35px;left:0px;width:97%;height:30px;font-size:15px;border:solid 1px #666;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:0px 0px 2px 2px;behavior:url(lib/PIE.htc);}
-								#submit_button{position:absolute;top:90px;left:10%;width:80%;border-style:none;border:solid 1px #501a2a;font-size:15px;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:10px;background-color:#75263d;color:#EEE;padding:5px 15px 5px 15px;behavior:url(lib/PIE.htc);}
-								#submit_button:hover{position:absolute;cursor:pointer;background-color:#501a2a;color:#FFF;}
-								#forgot{position:absolute;top:130px;left:8%;font-size:11px;}
-								#first{position:absolute;top:145px;left:8%;font-size:11px;}
-								#forgot>a{color:#333}
-								#first>a{color:#333;}
+			#banner{position:relative;top:0px;left:220px;height:279px;width:750px;/*-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;z-index:900;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:2px 2px 2px 2px;behavior:url(lib/PIE.htc);*/}
+			#tile_column{position:absolute;top:0px;height:210px;width:210px;border:solid 1px #777;background-color:#EEE;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:5px;behavior:url(lib/PIE.htc);}
+				#login{position:relative;width:100%;overflow:hidden;}
+					#login_header{position:relative;top:0px;left:0px;height:30px;width:100%;font-size:15px;text-align:center;display:block;color:#444;border-bottom:solid 1px #aaa;background-color:#ddd;padding:5px;font-style:italic;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:5px 5px 0px 0px;behavior:url(lib/PIE.htc);}
+					#login_body{position:relative;top:0px;left:0px;width:100%;}
+						#login_form{position:relative;padding:0px 10px;}
+							#Q2OnlineLogin{position:relative;display:block;}
+								#user_id{display:block;top:0px;left:0px;width:100%;height:30px;font-size:15px;border:solid 1px #666;border-radius:2px 2px 0px 0px;behavior:url(lib/PIE.htc);}
+								#password{display:block;top:0px;left:0px;width:100%;height:30px;font-size:15px;border:solid 1px #666;border-radius:0px 0px 2px 2px;behavior:url(lib/PIE.htc);}
+								#login_button{position:relative;width:100%;border-style:none;border:solid 1px #501a2a;font-size:15px;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:10px;background-color:#75263d;color:#EEE;padding:5px 15px 5px 15px;behavior:url(lib/PIE.htc);}
+								#login_button:hover{cursor:pointer;background-color:#501a2a;color:#FFF;}
+								#login_links{position:relative;width:100%;text-align:center;height:auto;}
+									.login_link{display:block;height:18px;color:#333;width:100%;}
+								/*
 								.blended{text-decoration:none;color:black;}
 								.blended:hover{text-decoration:underline;color:#004A4A;cursor:pointer;}
-								#login_form_mortgage{position:absolute;bottom:2px;left:2px;height:10%;width:98%;}
-								#login_form_mortgage_image{position:absolute;top:0px;left:45px;width:115px;height:22px;background-image:url('../res/emortgage.png');background-repeat:no-repeat;cursor:pointer;visibility:hidden;}
+									*/
 			#login_tiles{position:absolute;top:220px;left:0px;height:175px;width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;border-style:none;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:3px;}
 				.login_tile{position:relative;height:70px;width:100%;color:#444;padding:10px 5px 10px 5px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
 					.login_tile_text{position:absolute;right:10px;height:50px;width:55%;}

@@ -8,7 +8,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen, projection" />
 	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
-	<link rel="stylesheet" type="text/css" href="css/index.backup.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<link rel="stylesheet" type="text/css" href="css/index.burgundy.css" />
 	<link rel="stylesheet" type="text/css" href="css/navigation.css" />
 	<link rel="stylesheet" type="text/css" href="lib/jquery-ui-1.11.1.tboc.burgundy/jquery-ui.min.css" />
@@ -90,25 +90,20 @@
 					<a href='#'><img src='res/cropped-banner.png'/></a>
 				</div>
 				<div id='banner_pagination'></div>
-				<div id='sliders' class=''>
-					<div id='slide-1' class=' '>
-						<div id='slide-1-panel'>Online Banking Login</div>
-						<div id='slide-1-area'>
-							<div id="login">
-								<div id="login_form">
-									<div class="small buttons">
-										<form id="Q2OnlineLogin" name="Q2OnlineLogin" action="https://secure9.onlineaccess1.com/CarbondaleOnline_30/Authentication/Login.aspx" method="post">
-											<input id="user_id" type="text" name="user_id" placeholder="User ID"/>
-											<input id="password" type="password" name="password" placeholder="Password"/>
-											<input id="submit_button" type="submit" name="submit" value="Login"/>
-										</form>
+				<div id='tile_column'>
+					<div id='login'>
+						<div id='login_header'>Online Banking Login</div>
+						<div id='login_body'>
+							<div id="login_form">
+								<form id="Q2OnlineLogin" name="Q2OnlineLogin" action="https://secure9.onlineaccess1.com/CarbondaleOnline_30/Authentication/Login.aspx" method="post">
+									<input id="user_id" type="text" name="user_id" placeholder="User ID"/>
+									<input id="password" type="password" name="password" placeholder="Password"/>
+									<div id='login_links'>
+										<a class='login_link'>Forgot Password?</a>
+										<a class='login_link'>First Time Login</a>
 									</div>
-								<span id='forgot'><a>Forgot Password?</a></span>
-								<span id='first'><a>First Time Login</a></span>
-								</div>
-								<div id="login_form_mortgage">
-									<div id='login_form_mortgage_image'></div>
-								</div>
+									<input id="login_button" type="submit" name="submit" value="Login" class='apply tile_button'/>
+								</form>
 							</div>
 						</div>
 					</div>
