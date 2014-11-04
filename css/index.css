@@ -32,8 +32,8 @@ ul{list-style-type:none;}
 			.tile_border{margin:auto;display:box;height:100%;width:100%;border:solid 1px #CCC;background-color:#EEE;-webkit-border-radius: 7px;-moz-border-radius: 7px;border-radius:7px;/*background-color:transparent;*/cursor:pointer;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;behavior:url(lib/PIE.htc);}
 			.tile_border:hover{border:solid 1px #CCC;background-color:#EEE;}
 			.tile_button{display:block;left:0px;cursor:pointer;}
-			.apply{position:absolute;bottom:0px;right:0px;font-weight:bold;font-family:arial;border-style:none;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:solid 1px #75263d;background-color:#900;color:white;text-decoration:none;padding:4px 10px;background:-moz-linear-gradient(#75263d,#501a2a);background:-webikit-linear-gradient(#75263d,#501a2a);background:-o-linear-gradient(#75263d,#501a2a);background:-ms-linear-gradient(#75263d,#501a2a);-pie-background:-linear-gradient(#75263d,#501a2a);behavior:url(lib/PIE.htc);}
-			.apply:hover{color:white;background-color:#C00;background:-moz-linear-gradient(#75263d,#804a5a);background:-webikit-linear-gradient(#75263d,#804a5a);background:-o-linear-gradient(#75263d,#804a5a);background:-ms-linear-gradient(#75263d,#804a5a);-pie-background:-linear-gradient(#75263d,#804a5a);behavior:url(lib/PIE.htc);}
+			.apply{position:absolute;bottom:0px;right:0px;font-weight:bold;font-family:arial;border-style:none;-webkit-border-radius:5px;-moz-border-radius:5px;border-radius:5px;border:solid 1px #75263d;background-color:#501a2a;color:white;text-decoration:none;padding:4px 10px;background:-moz-linear-gradient(#75263d,#501a2a);background:-webikit-linear-gradient(#75263d,#501a2a);background:-o-linear-gradient(#75263d,#501a2a);background:-ms-linear-gradient(#75263d,#501a2a);-pie-background:-linear-gradient(#75263d,#501a2a);behavior:url(lib/PIE.htc);}
+			.apply:hover{color:white;background-color:#75263d;background:-moz-linear-gradient(#75263d,#804a5a);background:-webikit-linear-gradient(#75263d,#804a5a);background:-o-linear-gradient(#75263d,#804a5a);background:-ms-linear-gradient(#75263d,#804a5a);-pie-background:-linear-gradient(#75263d,#804a5a);behavior:url(lib/PIE.htc);}
 			.apply:visited{color:white;}
 
 #debug{position:absolute;top:0px;left:0px;padding:10px;background-color:#ddd;border:solid 1px #aaa;}
@@ -112,7 +112,7 @@ ul{list-style-type:none;}
 						.login_tile_body{font-size:11px;text-align:left;color:#222;}
 						.login_tile_text>a:hover{color:#222;}
 					.login_tile_image{position:absolute;display:block;left:10px;height:50px;width:50px;}
-					.login_tile_border{border:solid 1px #CCC;border:solid 1px #bbcdd9;background-color:#ccdeea;border-radius:5px;}
+					.login_tile_border{border:solid 1px #CCC;border:solid 1px #bbcdd9;background-color:#DDD;border-radius:5px;}
 					.login_tile_border:hover{display:block;border:solid 1px #CCC;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:5px;behavior:url(lib/PIE.htc);cursor:pointer;background-color:#EEE;}
 					.login_tile_border_none{border-bottom:none;}
 					.linear_gradient{background:-webkit-radial-gradient(#EEE, #EEE, #DDD);background:-o-radial-gradient(#EEE, #EEE, #DDD);background:-moz-radial-gradient(#EEE, #EEE, #DDD);background:radial-gradient(#EEE, #EEE, #DDD);border-style:none;border-radius:5px;border:solid 1px #CCC;} 
