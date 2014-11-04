@@ -35,11 +35,11 @@ $(document).on('click', '.nav_element', function(){
 	// notice('false', 'json/notice.xml', 'warning');
 
 	$('#noticesOn').click(function(){
-		notice('true', 'json/notice.xml', 'warning');
+		notice('true', 'json/test.xml', 'warning');
 	});
 
 	$('#noticesOff').click(function(){
-		notice('false', 'json/notice.xml', 'warning');
+		notice('false', 'json/test.xml', 'warning');
 	});
 
 	$('#banner').click(function(){

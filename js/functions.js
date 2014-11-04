@@ -59,8 +59,11 @@ function notice(visible, path, type){ // this needs to be refactored into JSON s
 				}
 				var rows = [];
 				$('#notices').css({'visibility':'visible'}).animate({'height':notice_height});
-				$('#body_container').animate({'top':'135px'}); 
-				$('#links').animate({'top':'240px'}); 
+				//$('#body_container').animate({'top':'135px'}); 
+				//$('#links').animate({'top':'240px'}); 
+				$('#body_container').animate({'top':'35px'}); 
+				$('#links').animate({'top':'140px'}); 
+				$('#footer').animate({'top':'465px'}); 
 				//$('#pages').animate({'top':'0px'}); 
 				// title
 				var title_meta = $xml.find(type).find("title");
@@ -128,11 +131,13 @@ function notice(visible, path, type){ // this needs to be refactored into JSON s
 				}
 				// determine the notice type
 				if (type == 'warning'){
-					$('#notices').css({'background-color':'#FF8'});
-					$('#warning').html(rows).css({'visibility':'visible',});
+					//$('#notices').css({'background-color':'#FF8'});
+					$('#warning').html(rows).css({'visibility':'visible'}).prepend("<img src='res/attention.svg' height='25' width='25'/>").click(function(){
+						notice('false', 'json/test.xml', 'warning');
+					});
 					$('#alert').css({'visibility':'hidden'});
 				}else if (type == 'alert'){
-					$('#notices').css({'background-color':'#B66'});
+					//$('#notices').css({'background-color':'#B66'});
 					$('#alert').html(rows).css({'visibility':'visible'});
 					$('#warning').css({'visibility':'hidden'});
 				}
@@ -142,6 +147,8 @@ function notice(visible, path, type){ // this needs to be refactored into JSON s
 				$('#notices').animate({'height':'0px'});
 				$('#body_container').animate({'top':'0px'}); 
 				$('#links').animate({'top':'105px'}); 
+				$('#footer').animate({'top':'440px'}); 
+				
 				//$('#pages').animate({'top':'0px'}); 
 				setTimeout(function(){
 					$('#notices').css({'visibility':'hidden'});

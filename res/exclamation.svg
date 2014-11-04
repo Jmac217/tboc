@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf8" standalone="no"?>
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<filter height="2.80723" id="filter5201" width="1.2008" x="-.1004" y="-.90361">
+<feGaussianBlur stdDeviation="1.7884"/>
+</filter>
+<linearGradient id="linearGradient5239">
+<stop offset="0" stop-color="#fff"/>
+<stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<linearGradient gradientUnits="userSpaceOnUse" id="linearGradient5221" x1="29.45584" x2="28.44365" y1="43.94804" y2="15.22183">
+<stop offset="0" stop-color="#f56e6e"/>
+<stop offset="1" stop-color="#ff2929"/>
+</linearGradient>
+<linearGradient gradientUnits="userSpaceOnUse" id="linearGradient5229" x1="24" x2="26.87832" xlink:href="#linearGradient5239" y1="10.61907" y2="70.74407"/>
+<radialGradient cx="17.12473" cy="23.83857" gradientTransform="matrix(-4.8005117e-7,-15.821789,7.340686,-5.8748188e-7,-150.99147,303.0063)" gradientUnits="userSpaceOnUse" id="radialGradient5245" r="2" xlink:href="#linearGradient5239"/>
+</defs>
+<path d="m4.875,37.75h37.75a2.5,2.375 0 0,1 2.5,2.375 2.5,2.375 0 0,1 -2.5,2.375h-37.75a2.5,2.375 0 0,1 -2.5-2.375 2.5,2.375 0 0,1 2.5-2.375" filter="url(#filter5201)" opacity=".50602"/>
+<path d="m41.5,38.5h-35l17.5-31 17.5,31z" fill="url(#linearGradient5221)" id="path4547" stroke="#a40000" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+<path d="m23.84375,6.5c-.30325.04846-.56785.23254-.71875.5l-17.5,31c-.17424.31141-.17082.69174.00898.99997s.50918.49841.86602.50003h35c.35684-.00162.68622-.1918.86602-.50003s.18322-.68856.00898-.99997l-17.5-31c-.20632-.36491-.61697-.56401-1.03125-.5z" fill="none" opacity=".59639" stroke="url(#linearGradient5229)" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="url(#radialGradient5245)">
+<path d="m25.72101,31.2946a3.0052,3.0052 0 1,1 -6.01041,0 3.0052,3.0052 0 1,1 6.01041,0z" fill="url(#radialGradient5245)" transform="matrix(.651956,0,0,.651956,9.149547,10.638023)"/>
+<path d="m23,28h2l1-9h-4l1,9z" fill="url(#radialGradient5245)"/>
+</g>
+</svg>
