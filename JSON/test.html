@@ -1,0 +1,24 @@
+<html>
+<script type='text/javascript' src='../lib/jquery1.js'></script>
+<script type='text/javascript'>
+$(document).ready(function(){
+	$.ajax({
+		dataType:"json",
+		url:'paths.json',
+		data:'json',
+		async:false,
+		success:function(json){
+			for(var i = 0; i < Object.keys(json.paths).length; i++){
+				var selection = Object.keys(json.paths)[i];
+				$.each(json.paths[selection],function(key, val){
+					//$('div.links_'+selection+'>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+					//$('body').append(selection+"=> "+key+": "+val+"<br/>&nbsp;&nbsp;&nbsp;&nbsp;"+val.name+"<br/>");
+				});
+			}
+		}
+	});
+});
+</script>
+<body>
+</body>
+</html>

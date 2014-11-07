@@ -1,11 +1,14 @@
 /* classes */
-.link{position:absolute;}
+.link{position:relative;display:inline-block;float:left;}
+/*
 .links_customer{left:0px;}
 .links_personal{left:242px;}
 .links_business{left:484px;}
 .links_about{left:726px;}
+*/
 /*.links_about{left:692px;}*/
 
+/* key 0 should be set to class of .link_left, while key.length-1 should be set to .link_right */
 .link_left{border-radius:5px 0px 0px 2px;-webkit-border-radius:5px 0px 0px 2px;-moz-border-radius:5px 0px 0px 2px;behavior:url(lib/PIE.htc);}
 .link_right{border-radius:0px 5px 2px 0px;-webkit-border-radius:0px 5px 2px 0px;-moz-border-radius:0px 5px 2px 0px;behavior:url(lib/PIE.htc);}
 

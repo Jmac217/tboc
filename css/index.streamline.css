@@ -27,8 +27,8 @@ ul{list-style-type:none;}
 
 #banner{}
 
-.tile{display:inline-block;position:relative;padding:5%;text-align:center;}
-	/* box, radius */ .tile_border{margin:auto;display:box;height:100%;width:100%;border:solid 1px #CCC;background-color:#EEE;cursor:pointer;}
+.tile{display:inline-block;position:relative;padding:0;text-align:center;}
+	/* box, radius */ .tile_border{margin:auto;height:100%;width:100%;border:solid 1px #CCC;background-color:#EEE;cursor:pointer;}
 	.tile_border:hover{}
 	.tile_header{position:relative;font-size:16px;top:35px;left:80px;color:#75263d;}
 	.tile_image{position:relative;top:15px;left:20px;}
@@ -46,7 +46,7 @@ ul{list-style-type:none;}
 	.form_header{width:100%;top:0px;left:0px;height:30px;width:100%;font-size:15px;text-align:center;display:block;color:#444;border-bottom:solid 1px #aaa;background-color:#ddd;padding:5px;font-style:italic;}
 	.form_submit{}
 	.form a{}
-	.form input[type='text'], .form input[type='password']{position:relative;display:block;height:30px;width:100%;font-size:15px;border:solid 1px #666;border-radius:2px;behavior:url(lib/PIE.htc);}
+	.form input[type='text'], .form input[type='password']{position:relative;display:block;height:30px;width:100%;font-size:15px;border:solid 1px #666;border-radius:2px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;behavior:url(lib/PIE.htc);}
 	.form form{}
 	.form_spanner{display:block;position:absolute;bottom:0px;height:20px;width:100%;font-size:12px;color:#EEE;background-color:#3d792a;text-align:center;padding-top:3px;}
 	.form_spanner:hover{background-color:#4d9a35;color:#EEE;text-decoration:none;}
@@ -82,7 +82,8 @@ ul{list-style-type:none;}
 
 #links{position:absolute;top:105px;left:0px;z-index:1000;}
 	.link{position:absolute;cursor:pointer;top:100px;text-align:center;z-index:1000;}
-	.link_button{display:block;height:40px;width:241px;background-color:#75263d;background:-webkit-gradient(linear, 0 0, 0 bottom, from(#75263d), to(#501a2a));background:-webkit-linear-gradient(#75263d, #501a2a);background:-moz-linear-gradient(#75263d, #501a2a);background:-ms-linear-gradient(#75263d, #501a2a);background:-o-linear-gradient(#75263d, #501a2a);background:linear-gradient(#75263d, #501a2a);-pie-background:linear-gradient(#75263d, #501a2a);behavior:url(lib/PIE.htc);border:solid 1px #75263d;text-align:center;}.link_button:hover{background-color:#804a5a;background:-webkit-gradient(linear, 0 0, 0 bottom, from(#75263d), to(#804a5a));background:-webkit-linear-gradient(#75263d, #804a5a);background:-moz-linear-gradient(#75263d, #804a5a);background:-ms-linear-gradient(#75263d, #501a2a);background:-o-linear-gradient(#75263d, #804a5a);background:linear-gradient(#75263d, #804a5a);-pie-background:linear-gradient(#75263d, #804a5a);}
+	.link_button{display:block;height:40px;width:240px;background-color:#75263d;background:-webkit-gradient(linear, 0 0, 0 bottom, from(#75263d), to(#501a2a));background:-webkit-linear-gradient(#75263d, #501a2a);background:-moz-linear-gradient(#75263d, #501a2a);background:-ms-linear-gradient(#75263d, #501a2a);background:-o-linear-gradient(#75263d, #501a2a);background:linear-gradient(#75263d, #501a2a);-pie-background:linear-gradient(#75263d, #501a2a);behavior:url(lib/PIE.htc);border:solid 1px #75263d;text-align:center;}.link_button:hover{background-color:#804a5a;background:-webkit-gradient(linear, 0 0, 0 bottom, from(#75263d), to(#804a5a));background:-webkit-linear-gradient(#75263d, #804a5a);background:-moz-linear-gradient(#75263d, #804a5a);background:-ms-linear-gradient(#75263d, #501a2a);background:-o-linear-gradient(#75263d, #804a5a);background:linear-gradient(#75263d, #804a5a);-pie-background:linear-gradient(#75263d, #804a5a);}
+		.link_title{select:none;-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 		.link_title>a{display:block;color:#EEE;font-size:17px;padding-top:12px;text-decoration:none;}
 		.link_drop{position:absolute;top:0px;left:0px;height:0px;width:218px;background-color:#EEE;-webkit-border-radius:0px 0px 5px 5px;-moz-border-radius:0px 0px 5px 5px;border-radius:0px 0px 5px 5px;border-style:none;border:solid 1px #501a2a;behavior:url(lib/PIE.htc);visibility:visible;overflow:hidden;text-align:left;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;z-index:1000;cursor:pointer;}
 			.load_link_li{width:100%;display:block;text-decoration:none;padding:5px 0;color:#222;text-align:center;}.load_link_li:hover{color:#1e59cf;background-color:#BBB;}
