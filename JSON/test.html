@@ -4,10 +4,11 @@
 $(document).ready(function(){
 	$.ajax({
 		dataType:"json",
-		url:'paths.json',
+		url:'tiles.json',
 		data:'json',
 		async:false,
 		success:function(json){
+		/*
 			for(var i = 0; i < Object.keys(json.paths).length; i++){
 				var selection = Object.keys(json.paths)[i];
 				$.each(json.paths[selection],function(key, val){
@@ -15,6 +16,8 @@ $(document).ready(function(){
 					//$('body').append(selection+"=> "+key+": "+val+"<br/>&nbsp;&nbsp;&nbsp;&nbsp;"+val.name+"<br/>");
 				});
 			}
+			*/
+			alert(json);
 		}
 	});
 });

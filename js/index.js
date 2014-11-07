@@ -6,7 +6,7 @@ $(document).on('click', '.nav_element', function(){
 
 	// populate dropdowns
 	$.ajax({
-		dataType:"json",
+		dataType:'json',
 		url:'json/paths.json',
 		data:'json',
 		async:false,

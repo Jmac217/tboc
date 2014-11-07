@@ -192,6 +192,7 @@ function load_link(id, title){
 		success: function(json){
 			//alert(title+' '+id);
 			//alert(json.paths.customer.demos.name);
+			alert(JSON.stringify(json.paths[title].links[id]));
 			var name = String(json.paths[title][id].name);
 			var path = String(json.paths[title][id].path);
 			var location = String(json.paths[title][id].location);

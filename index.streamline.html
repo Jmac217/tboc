@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div id='links'>
-				<div class='link link_button shadow link_left' alt='customer' id='customer'>
+				<div class='link link_button shadow link_left' alt='customer'>
 					<!-- add via javascript -->
 					<!--
 					<div class='link_title'></div>
@@ -54,44 +54,15 @@
 					</ul>
 					-->
 				</div>
-				<div class='link link_button shadow ' alt='personal' id='personal'>
-					<!-- add via javascript -->
-					<!--
-					<div class='link_title'></div>
-					<ul>
-						<li>
-							<ul class='link_drop'></ul>
-						</li>
-					</ul>
-					-->
-				</div>
-				<div class='link link_button shadow' alt='business' id='business'>
-					<!-- add via javascript -->
-					<!--
-					<div class='link_title'></div>
-					<ul>
-						<li>
-							<ul class='link_drop'></ul>
-						</li>
-					</ul>
-					-->
-				</div>
-				<div class='link link_button shadow link_right' alt='about' id='about'>
-					<!-- add via javascript -->
-					<!--
-					<div class='link_title'></div>
-					<ul>
-						<li>
-							<ul class='link_drop'></ul>
-						</li>
-					</ul>
-					-->
-				</div>
+				<div class='link link_button shadow ' alt='personal'></div>
+				<div class='link link_button shadow' alt='business'></div>
+				<div class='link link_button shadow link_right' alt='about'></div>
 			</div>
 		</div>
 		<div id='body'>
 			<div id='body_container'>
 				<div id='banner' class='shadow'>
+					<!-- to be generated from banner.json -->
 					<a href='#'><img src='res/online.png'/></a>
 					<a href='#'><img src='res/cropped-banner.png'/></a>
 				</div>
@@ -104,23 +75,24 @@
 								<input type='text' name='user_id' placeholder='User ID'/>
 								<input type='password' name='password' placeholder='Password'/>
 								<a>Forgot Password?</a>
-								<input id='login_button' type='submit' name='submit' value='Login'/>
+								<input class='form_submit' type='submit' name='submit' value='Login'/>
 							</form>
 						</div>
 						<a class='form_spanner'>First Time Login To Online Banking?</a>
 					</div>
-					<div class='tile tile_border load_link linear_gradient shadow' id='OTHER' title='customer'>
+					<div class='tile vertical_tile tile_border load_link linear_gradient shadow' id='OTHER' title='customer'>
+						<!-- `title` to be renamed, `id` and `*title*` to be placed by tiles.json -->
+						<span class='tile_image'><img src='res/icons/home/checkbox.png'/></span>
 						<span class='tile_header'>Online Banking</span>
 						<span class='tile_text'>Sign Up Now!</span>
-						<span class='tile_image'><img src='res/icons/home/checkbox.png'/></span>
 					</div>
-					<div class='tile tile_border load_link linear_gradient shadow' id='demos' title='customer'>
+					<div class='tile vertical_tile tile_border load_link linear_gradient shadow' id='demos' title='customer'>
 						<span class='tile_header'>Demos</span><br/>
 						<span class='tile_text'>Online Banking Demo</span>
 						<span class='tile_text'>Online Billpay Demo</span>
 						<span class='tile_image'><img src='res/icons/tech/computer.png'/></span>
 					</div>
-					<div class='tile tile_border load_link linear_gradient shadow' id='loan_app' title='customer'>
+					<div class='tile vertical_tile tile_border load_link linear_gradient shadow' id='loan_app' title='customer'>
 						<span class='tile_header' style='font-size:14px'>Online Consumer Loan Application</span>
 						<span class='tile_image'><img src='res/icons/vehicles/car1.png'/></span>
 					</div>
