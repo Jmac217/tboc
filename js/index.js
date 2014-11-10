@@ -10,8 +10,8 @@ $(document).on('click', '.nav_element', function(){
 		async:false,
 		success:function(json){
 
-			$.each(Object.keys(json.paths), function(json){
-				alert(json);
+			$.each(Object.keys(json.paths), function(i){
+				for (i in Object.keys(json.paths)){alert(Object.keys(json.paths)[i]);}
 			});
 
 //			for(var i = 0; i < Object.keys(json.paths).length; Object.keys(json.paths.i++)){
