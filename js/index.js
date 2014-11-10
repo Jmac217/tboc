@@ -1,25 +1,32 @@
 $(document).on('click', '.nav_element', function(){
 	load_link($(this).attr('id'), $(this).attr('title')); // ajax calls return as text, so this is a fix for the navigation links
 }).ready(function(){
-
-	get_nav();
-
+	//get_nav();
 	// populate dropdowns
 	$.ajax({
 		dataType:'json',
-		url:'json/paths.json',
+		url:'JSON/tiles.json',
 		data:'json',
 		async:false,
 		success:function(json){
-			for(var i = 0; i < Object.keys(json.paths).length; i++){
-				var selection = Object.keys(json.paths)[i];
-				$.each(json.paths[selection],function(key, val){
+			for(var i = 0; i < Object.keys(json.paths).length; Object.keys(json.paths.i++)){
+				alert(JSON.stringify(Object.keys(json.paths)[i].title));
+			/*
+				var links = Object.keys(json.paths)[i];
+				for(var t = 0; t < Object.keys(paths.links).length; t++){
+					var obj = Object.keys(paths.links)[i];	
+					alert(obj);
+				*/
+				}
+				/*
+				$.each(json.paths.links[selection],function(key, val){
+					alert(selection+key+val.name);
 					$('div.links_'+selection+'>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
 				});
 			}
+			*/
 		}
 	});
-
 	$('#user_nav_home').click(function(){
 		$('#body_container').css({'visibility':'visible'});
 		$('#pages').css({'visibility':'hidden'});
@@ -30,18 +37,14 @@ $(document).on('click', '.nav_element', function(){
 	$('input').click(function(){
 		$(this).select();
 	});
-
 	/** manual notice switch for debugging/demonstration **/
 	// notice('false', 'json/notice.xml', 'warning');
-
 	$('#noticesOn').click(function(){
 		notice('true', 'json/test.xml', 'warning');
 	});
-
 	$('#noticesOff').click(function(){
 		notice('false', 'json/test.xml', 'warning');
 	});
-
 	$('#banner').click(function(){
 		/** gets link attributes and runs the load_link function **/
 	}).slidesjs({
@@ -63,7 +66,6 @@ $(document).on('click', '.nav_element', function(){
 		}
 		*/
 	});
-
 	// dynamic list sizing when clicked
 	$('.link').click(function(){
 		var dropdown = $(this).attr('alt');	
@@ -83,7 +85,6 @@ $(document).on('click', '.nav_element', function(){
 	}).mouseleave(function(){
 		$(this).children('ul').children('li').children('ul').css({'height':'0px'});
 	});
-		
 	$('.load_link').click(function(){
 		var id = $(this).attr('id');
 		if($(this).hasClass('load_link_li')){

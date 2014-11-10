@@ -64,7 +64,7 @@
 	"paths":{
 		"customer":{
 			"title":"Customer Service",
-			"links":[{
+			"links":{
 				"mortgage":{
 					"name":"Online Mortgage Center",
 					"path":"https://tboc.mortgagewebcenter.com/",
@@ -119,11 +119,11 @@
 					"location":"internal",
 					"win":"current"
 				}
-			}]
+			}
 		},
 		"personal":{
 			"title":"Personal Banking",
-			"links":[{
+			"links":{
 				"checking":{
 					"name":"Checking",
 					"path":"pages/personal/checking.php",
@@ -190,11 +190,11 @@
 					"location":"internal",
 					"win":"current"
 				}
-			}]
+			}
 		},
 		"business":{
 			"title":"Business Banking",
-			"links":[{
+			"links":{
 				"checking":{
 					"name":"Checking",
 					"path":"pages/business/Business_Checking.php",
@@ -231,11 +231,11 @@
 					"location":"internal",
 					"win":"current"
 				}
-			}]
+			}
 		},
 		"about":{
 			"title":"About Us",
-			"links":[{
+			"links":{
 				"history":{
 					"name":"History",
 					"path":"pages/about/history.php",
@@ -278,7 +278,7 @@
 					"location":"internal",
 					"win":"current"
 				}
-			}]
+			}
 		}
 	}
 }
