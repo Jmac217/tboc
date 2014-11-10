@@ -9,15 +9,15 @@ $(document).on('click', '.nav_element', function(){
 		data:'json',
 		async:false,
 		success:function(json){
-			for(var i = 0; i < Object.keys(json.paths).length; Object.keys(json.paths.i++)){
-				alert(JSON.stringify(Object.keys(json.paths)[i].title));
+//			for(var i = 0; i < Object.keys(json.paths).length; Object.keys(json.paths.i++)){
+				//alert(JSON.stringify(Object.keys(json.paths)[i].title));
 			/*
 				var links = Object.keys(json.paths)[i];
 				for(var t = 0; t < Object.keys(paths.links).length; t++){
 					var obj = Object.keys(paths.links)[i];	
 					alert(obj);
 				*/
-				}
+//				}
 				/*
 				$.each(json.paths.links[selection],function(key, val){
 					alert(selection+key+val.name);

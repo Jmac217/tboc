@@ -43,6 +43,7 @@
 				</div>
 			</div>
 			<div id='links'>
+				<!-- links can actually be generated as well -->
 				<div class='link link_button shadow link_left' alt='customer'>
 					<!-- add via javascript -->
 					<!--
@@ -68,7 +69,7 @@
 				</div>
 				<div id='banner_pagination'></div>
 				<div id='column'>
-					<div class='tile form_tile shadow'>
+					<div class='tile form_tile tile_border shadow'>
 						<div class='form_header box'>Online Banking Login</div>
 						<div class='form'>
 							<form id='Q2OnlineLogin' name='Q2OnlineLogin' action='https://secure9.onlineaccess1.com/CarbondaleOnline_30/Authentication/Login.aspx' method='post'>
@@ -80,53 +81,41 @@
 						</div>
 						<a class='form_spanner'>First Time Login To Online Banking?</a>
 					</div>
-					<div class='tile vertical_tile tile_border load_link linear_gradient shadow' id='OTHER' title='customer'>
+					<div class='tile vertical_tile tile_border padded box load_link linear_gradient shadow' id='OTHER' title='customer'>
 						<!-- `title` to be renamed, `id` and `*title*` to be placed by tiles.json -->
 						<span class='tile_image'><img src='res/icons/home/checkbox.png'/></span>
 						<span class='tile_header'>Online Banking</span>
 						<span class='tile_text'>Sign Up Now!</span>
 					</div>
-					<div class='tile vertical_tile tile_border load_link linear_gradient shadow' id='demos' title='customer'>
-						<span class='tile_header'>Demos</span><br/>
+					<div class='tile vertical_tile tile_border padded box load_link linear_gradient shadow' id='demos' title='customer'>
+						<span class='tile_image'><img src='res/icons/tech/computer.png'/></span>
+						<span class='tile_header'>Demos</span>
 						<span class='tile_text'>Online Banking Demo</span>
 						<span class='tile_text'>Online Billpay Demo</span>
-						<span class='tile_image'><img src='res/icons/tech/computer.png'/></span>
 					</div>
-					<div class='tile vertical_tile tile_border load_link linear_gradient shadow' id='loan_app' title='customer'>
-						<span class='tile_header' style='font-size:14px'>Online Consumer Loan Application</span>
+					<div class='tile vertical_tile tile_border load_link padded box linear_gradient shadow' id='loan_app' title='customer'>
 						<span class='tile_image'><img src='res/icons/vehicles/car1.png'/></span>
+						<span class='tile_header'>Online Consumer Loan Application</span>
 					</div>
 				</div>
-				<div id='body_tiles' class=''>
-					<span class='body_tile load_link' id='card_services' title='personal'>
-						<div class='body_tile_container'>
-							<div class='body_tile_border linear_gradient shadow'>
-								<span class='body_tile_header'>Card Services</span><br/>
-								<img class='body_tile_image ' src='res/icons/card/white-simple-small.png'/>
-								<span class='body_tile_text'>Report a lost/stolen Debit Card or acivate/change the pin on a Debit Card.</span>
-								<span class='apply tile_button'>More Information</span>
-							</div>
-						</div>
+				<div id='bottom'>
+					<span class='tile horizontal_tile tile_border load_link box linear_gradient shadow' id='card_services' title='personal'>
+						<span class='tile_header'>Card Services</span><br/>
+						<img class='tile_image' src='res/icons/card/white-simple-small.png'/>
+						<span class='tile_text'>Report a lost/stolen Debit Card or acivate/change the pin on a Debit Card.</span>
+						<span class='tile_button'>More Information</span>
 					</span>
-					<span class='body_tile load_link' id='mortgage' title='personal' style='left:34%;'>
-						<div class='body_tile_container'>
-							<div class='body_tile_border linear_gradient shadow'>
-								<span class='body_tile_header'>Mortgage Center</span><br/>
-								<img class='body_tile_image ' src='res/icons/home/house-small.png'/>
-								<span class='body_tile_text'>Visit our Online Mortage Center to check current rates and apply online.</span>
-								<span class='apply tile_button'>Learn More</span>
-							</div>
-						</div>
+					<span class='tile horizontal_tile tile_border load_link box linear_gradient shadow' id='mortgage' title='personal'>
+						<span class='tile_header'>Mortgage Center</span><br/>
+						<img class='tile_image' src='res/icons/home/house-small.png'/>
+						<span class='tile_text'>Visit our Online Mortage Center to check current rates and apply online.</span>
+						<span class='tile_button'>Learn More</span>
 					</span>
-					<span class='body_tile plain_tile load_link' id='ebanking' title='personal' style='left:68%;border-right:none;'>
-						<div class='body_tile_container'>
-							<div class='body_tile_border linear_gradient shadow'>
-								<span class='body_tile_header'>Mobile Banking</span><br/>
-								<img class='body_tile_image ' src='res/icons/tech/mobile-small.png'/>
-								<span class='body_tile_text'>Get on-the-go access to eBanking with our FREE Mobile Banking APP.</span>
-								<span class='apply tile_button'>Get the App!</span>
-							</div>
-						</div>
+					<span class='tile horizontal_tile tile_border load_link box linear_gradient shadow' id='ebanking' title='personal'>
+						<span class='tile_header'>Mobile Banking</span><br/>
+						<img class='tile_image' src='res/icons/tech/mobile-small.png'/>
+						<span class='tile_text'>Get on-the-go access to eBanking with our FREE Mobile Banking APP.</span>
+						<span class='tile_button'>Get the App!</span>
 					</span>
 				</div>
 			</div>

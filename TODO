@@ -1,4 +1,8 @@
 
+Change Demos to "Holiday Hours | More Information" With the speech bubble icon
+
+========================
+
 Go ahead and clean out the res folder again after this
 
 If lib/ is here to stay, set jQuery inside it as well; that's just annoying.
