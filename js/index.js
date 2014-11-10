@@ -9,6 +9,11 @@ $(document).on('click', '.nav_element', function(){
 		data:'json',
 		async:false,
 		success:function(json){
+
+			$.each(Object.keys(json.paths), function(json){
+				alert(json);
+			});
+
 //			for(var i = 0; i < Object.keys(json.paths).length; Object.keys(json.paths.i++)){
 				//alert(JSON.stringify(Object.keys(json.paths)[i].title));
 			/*
