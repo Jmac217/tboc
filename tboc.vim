@@ -25,19 +25,20 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 TODO
-badd +0 README
-badd +0 css/index.streamline.css
-badd +0 index.streamline.html
-badd +0 js/globals.js
-badd +0 js/functions.js
-badd +0 js/index.js
-badd +0 JSON/paths.json
-badd +0 JSON/tiles.json
+badd +14 css/index.streamline.css
+badd +1 index.streamline.html
+badd +1 js/globals.js
+badd +1 js/functions.js
+badd +1 js/index.js
+badd +1 JSON/paths.json
+badd +1 JSON/tiles.json
+badd +0 /srv/http/tboc
+badd +0 TODO.md
+badd +0 README.md
 argglobal
 silent! argdel *
 argadd /srv/http/tboc
-edit TODO
+edit TODO.md
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -78,15 +79,15 @@ exe 'vert 2resize ' . ((&columns * 1 + 97) / 194)
 exe 'vert 3resize ' . ((&columns * 75 + 97) / 194)
 exe 'vert 4resize ' . ((&columns * 38 + 97) / 194)
 exe '5resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 5resize ' . ((&columns * 75 + 97) / 194)
+exe 'vert 5resize ' . ((&columns * 38 + 97) / 194)
 exe '6resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 6resize ' . ((&columns * 75 + 97) / 194)
+exe 'vert 6resize ' . ((&columns * 38 + 97) / 194)
 exe '7resize ' . ((&lines * 43 + 24) / 49)
-exe 'vert 7resize ' . ((&columns * 75 + 97) / 194)
+exe 'vert 7resize ' . ((&columns * 38 + 97) / 194)
 exe '8resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 8resize ' . ((&columns * 1 + 97) / 194)
+exe 'vert 8resize ' . ((&columns * 38 + 97) / 194)
 exe '9resize ' . ((&lines * 45 + 24) / 49)
-exe 'vert 9resize ' . ((&columns * 1 + 97) / 194)
+exe 'vert 9resize ' . ((&columns * 38 + 97) / 194)
 argglobal
 setlocal keymap=
 setlocal noarabic
@@ -120,8 +121,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
-if &filetype != ''
-setlocal filetype=
+if &filetype != 'modula2'
+setlocal filetype=modula2
 endif
 setlocal foldcolumn=0
 setlocal foldenable
@@ -179,8 +180,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != ''
-setlocal syntax=
+if &syntax != 'modula2'
+setlocal syntax=modula2
 endif
 setlocal tabstop=2
 setlocal tags=
@@ -199,11 +200,11 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
-normal! 0
+normal! 08|
 lcd /srv/http/tboc
 wincmd w
 argglobal
-edit /srv/http/tboc/README
+edit /srv/http/tboc/README.md
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -219,8 +220,8 @@ setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
 setlocal cinoptions=
 setlocal cinwords=if,else,while,do,for,switch
 setlocal colorcolumn=
-setlocal comments=fb:-,fb:*
-setlocal commentstring=
+setlocal comments=fb:*,fb:-,fb:+,n:>
+setlocal commentstring=>\ %s
 setlocal complete=.,w,b,u,t,i
 setlocal concealcursor=
 setlocal conceallevel=0
@@ -236,8 +237,8 @@ setlocal nodiff
 setlocal equalprg=
 setlocal errorformat=
 setlocal noexpandtab
-if &filetype != 'text'
-setlocal filetype=text
+if &filetype != 'markdown'
+setlocal filetype=markdown
 endif
 setlocal foldcolumn=0
 setlocal foldenable
@@ -250,8 +251,8 @@ setlocal foldminlines=1
 setlocal foldnestmax=20
 setlocal foldtext=foldtext()
 setlocal formatexpr=
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatoptions=tcqln
+setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\|^[-*+]\\s\\+
 setlocal grepprg=
 setlocal iminsert=0
 setlocal imsearch=0
@@ -267,13 +268,13 @@ setlocal nolisp
 setlocal lispwords=
 setlocal nolist
 setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
+setlocal matchpairs=(:),{:},[:],<:>
 setlocal nomodeline
 setlocal modifiable
 setlocal nrformats=octal,hex
 setlocal nonumber
 setlocal numberwidth=4
-setlocal omnifunc=
+setlocal omnifunc=htmlcomplete#CompleteTags
 setlocal path=
 setlocal nopreserveindent
 setlocal nopreviewwindow
@@ -295,8 +296,8 @@ setlocal statusline=
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
-if &syntax != 'text'
-setlocal syntax=text
+if &syntax != 'markdown'
+setlocal syntax=markdown
 endif
 setlocal tabstop=2
 setlocal tags=
@@ -426,11 +427,11 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 24 - ((23 * winheight(0) + 23) / 47)
+let s:l = 17 - ((16 * winheight(0) + 23) / 47)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-24
+17
 normal! 0
 lcd /srv/http/tboc
 wincmd w
@@ -895,7 +896,7 @@ if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 22
-normal! 013|
+normal! 0
 lcd /srv/http/tboc
 wincmd w
 argglobal
@@ -1130,7 +1131,7 @@ normal! zt
 normal! 0
 lcd /srv/http/tboc
 wincmd w
-7wincmd w
+3wincmd w
 exe '1resize ' . ((&lines * 23 + 24) / 49)
 exe 'vert 1resize ' . ((&columns * 1 + 97) / 194)
 exe '2resize ' . ((&lines * 23 + 24) / 49)
@@ -1138,15 +1139,15 @@ exe 'vert 2resize ' . ((&columns * 1 + 97) / 194)
 exe 'vert 3resize ' . ((&columns * 75 + 97) / 194)
 exe 'vert 4resize ' . ((&columns * 38 + 97) / 194)
 exe '5resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 5resize ' . ((&columns * 75 + 97) / 194)
+exe 'vert 5resize ' . ((&columns * 38 + 97) / 194)
 exe '6resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 6resize ' . ((&columns * 75 + 97) / 194)
+exe 'vert 6resize ' . ((&columns * 38 + 97) / 194)
 exe '7resize ' . ((&lines * 43 + 24) / 49)
-exe 'vert 7resize ' . ((&columns * 75 + 97) / 194)
+exe 'vert 7resize ' . ((&columns * 38 + 97) / 194)
 exe '8resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 8resize ' . ((&columns * 1 + 97) / 194)
+exe 'vert 8resize ' . ((&columns * 38 + 97) / 194)
 exe '9resize ' . ((&lines * 45 + 24) / 49)
-exe 'vert 9resize ' . ((&columns * 1 + 97) / 194)
+exe 'vert 9resize ' . ((&columns * 38 + 97) / 194)
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

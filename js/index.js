@@ -15,9 +15,22 @@ $(document).on('click', '.nav_element', function(){
 			});
 			*/
 
+			var list_items;
+
 			$.each(json.paths, function(key, val){
 				//alert(key+', '+val.title);
-				$('#links').append("<div class='link link_button shadow' alt='"+key+"'><div class='link_title'><a>"+val.title+"</a></div><ul><li><ul class='link_drop'>"+val.links+"</ul></li></ul></div>");
+				$.each(val.links, function(k, v){
+					console.log(key+'->'+'links->'+k+'->name:'+v.name);
+					console.log(key+'->'+'links->'+k+'->name:'+v.path);
+					console.log(key+'->'+'links->'+k+'->name:'+v.location);
+					console.log(key+'->'+'links->'+k+'->name:'+v.win);
+					console.log("____________________________________");
+
+					list_items += "<li path='"+v.path+"' location='"+v.location+"' win='"+v.win+"'>"+v.name+"</li>";
+					
+					//alert(k+', '+v.name);
+				});
+				$('#links').append("<div class='link link_button shadow' alt='"+key+"'><div class='link_title'><a>"+val.title+"</a></div><ul><li><ul class='link_drop'>"+list_items+"</ul></li></ul></div>");
 			});
 
 
@@ -26,7 +39,7 @@ $(document).on('click', '.nav_element', function(){
 			/*
 				var links = Object.keys(json.paths)[i];
 				for(var t = 0; t < Object.keys(paths.links).length; t++){
-					var obj = Object.keys(paths.links)[i];	
+					var obj = Object.keys(paths.links)[i];
 					alert(obj);
 				*/
 //				}
@@ -34,7 +47,7 @@ $(document).on('click', '.nav_element', function(){
 			for(var i = 0; i < Object.keys(json.paths).length; i++){
 				var selection = Object.keys(json.paths)[i];
 				$.each(json.paths[selection],function(key, val){
-					//alert('div.links_'+selection+'>ul>li>ul.link_drop ::> '+"<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+//					alert('div.links_'+selection+'>ul>li>ul.link_drop ::> '+"<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
 					$('div.links_'+selection+'>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
 				});
 			}
@@ -86,18 +99,23 @@ $(document).on('click', '.nav_element', function(){
 		var fields = null;
 		var drop_height = null;
 		$.ajax({
-			dataType: 'json',
-			url:'json/paths.json',
-			async: false,
-			success: function(json){
-				fields = Object.keys(json.paths[dropdown]).length;
+			dataType:'json',
+			url:'JSON/tiles.json',
+			async:false,
+			success:function(json){
+				alert(Object.keys(json.paths)[$(this).attr('alt')]["links"].length);
+				/*
+				fields = Object.keys(json.paths[dropdown].links).length;
 				drop_height = (fields*29)+'px';
+				*/
 			}
 		});
+		/*
 		$(this).find('.link_drop').css({'height':drop_height});
 		//$(this).children('ul').children('li').children('ul').css({'height':drop_height}); // I'm leaving this here in case find() doesn't work in IE
 	}).mouseleave(function(){
 		$(this).children('ul').children('li').children('ul').css({'height':'0px'});
+	*/
 	});
 	$('.load_link').click(function(){
 		var id = $(this).attr('id');
