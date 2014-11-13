@@ -186,17 +186,16 @@ function get_nav(){
 
 function load_link(id, title){
 	$.ajax({
-		url: 'json/paths.json',
+		url: 'json/tiles.json',
 		dataType: 'json',
 		async: false,
 		success: function(json){
-			//alert(title+' '+id);
-			//alert(json.paths.customer.demos.name);
-			alert(JSON.stringify(json.paths[title].links[id]));
-			var name = String(json.paths[title][id].name);
-			var path = String(json.paths[title][id].path);
-			var location = String(json.paths[title][id].location);
-			var win = String(json.paths[title][id].win);
+			
+			var name = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].name');
+			var path = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].path');
+			var location = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].location');
+			var win = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].win');
+
 			$.ajax({
 				type:"post",
 				url:path,
