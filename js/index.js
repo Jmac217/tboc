@@ -9,10 +9,17 @@ $(document).on('click', '.nav_element', function(){
 		data:'json',
 		async:false,
 		success:function(json){
-
+		/*
 			$.each(Object.keys(json.paths), function(i){
 				for (i in Object.keys(json.paths)){alert(Object.keys(json.paths)[i]);}
 			});
+			*/
+
+			$.each(json.paths, function(key, val){
+				//alert(key+', '+val.title);
+				$('#links').append("<div class='link link_button shadow' alt='"+key+"'><div class='link_title'><a>"+val.title+"</a></div><ul><li><ul class='link_drop'>"+val.links+"</ul></li></ul></div>");
+			});
+
 
 //			for(var i = 0; i < Object.keys(json.paths).length; Object.keys(json.paths.i++)){
 				//alert(JSON.stringify(Object.keys(json.paths)[i].title));
@@ -23,13 +30,15 @@ $(document).on('click', '.nav_element', function(){
 					alert(obj);
 				*/
 //				}
-				/*
-				$.each(json.paths.links[selection],function(key, val){
-					alert(selection+key+val.name);
+
+			for(var i = 0; i < Object.keys(json.paths).length; i++){
+				var selection = Object.keys(json.paths)[i];
+				$.each(json.paths[selection],function(key, val){
+					//alert('div.links_'+selection+'>ul>li>ul.link_drop ::> '+"<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
 					$('div.links_'+selection+'>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
 				});
 			}
-			*/
+			//}
 		}
 	});
 	$('#user_nav_home').click(function(){
