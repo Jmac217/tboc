@@ -83,7 +83,6 @@ $(document).on('click', '.nav_element', function(){
 			*/
 			
 			var list_items;
-
 			$.each(json.paths, function(key, val){
 				list_items = '';
 				$.each(val.links, function(k, v){
@@ -101,27 +100,25 @@ $(document).on('click', '.nav_element', function(){
 				}
 			});
 
-
-//			for(var i = 0; i < Object.keys(json.paths).length; Object.keys(json.paths.i++)){
-				//alert(JSON.stringify(Object.keys(json.paths)[i].title));
 			/*
+			for(var i = 0; i < Object.keys(json.paths).length; Object.keys(json.paths.i++)){
+				alert(JSON.stringify(Object.keys(json.paths)[i].title));
 				var links = Object.keys(json.paths)[i];
 				for(var t = 0; t < Object.keys(paths.links).length; t++){
 					var obj = Object.keys(paths.links)[i];
 					alert(obj);
+				}
 				*/
-//				}
-
-			/*
-			for(var i = 0; i < Object.keys(json.paths).length; i++){
-				var selection = Object.keys(json.paths)[i];
-				$.each(json.paths[selection],function(key, val){
-//					alert('div.links_'+selection+'>ul>li>ul.link_drop ::> '+"<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
-					$('div.links_'+selection+'>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
-				});
+				/*
+				for(var i = 0; i < Object.keys(json.paths).length; i++){
+					var selection = Object.keys(json.paths)[i];
+					$.each(json.paths[selection],function(key, val){
+					//alert('div.links_'+selection+'>ul>li>ul.link_drop ::> '+"<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+						$('div.links_'+selection+'>ul>li>ul.link_drop').append("<li class='load_link load_link_li' id='"+key+"'>"+val.name+"</li>");
+					});
+				}
 			}
 			*/
-			//}
 		}
 	});
 
@@ -136,7 +133,7 @@ $(document).on('click', '.nav_element', function(){
 			async: false,
 			success: function(json){
 				fields = jsonPath.eval(json, '$.paths['+dropdown+'].*.*').length;
-				drop_height = (fields*29)+'px';
+				drop_height = (fields*26)+'px';
 			}
 		});
 		$(this).find('.link_drop').css({'height':drop_height});

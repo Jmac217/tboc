@@ -19,6 +19,13 @@ Something will have to be done about _.load_link_ being called twice from  *nav_
 
 ---
 
+##### `#user_nav` should be renamed to `#nav`
+- add to `json/tiles.json`
+- `json/tiles.json` will eventually be renamed to fit into a global scope.
+- this will ultimately allow for the deletion of `json/nav.json`.
+
+---
+
 _/res_ needs organized again
 
 If _/lib/_ is here to stay, set jQuery inside it as well; that being kept in /js just weird.
@@ -32,3 +39,5 @@ The navigation links are now populated by _nav.json_, but neither _indexOf()_ no
 _#notices_ still needs converted into JSON with a URL to a specific markdown folder, similar to the hierarchy in _Landing Zone_; this markdown folder could probably be hosted on the client-side if we decide to create the control panel offline--which is mostly necessary.
 
 jQuery wasn't handling the dropdowns all that well, so I moved to pure CSS3 transitions and only needed to set the height from javascript, this made things much nicer all in all, but there's still a sticky bit to figure out with the initial dropdown hover.
+
+I really should figure out the best way to automate the entirety of the width, inherited from #doc.

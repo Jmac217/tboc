@@ -1,4 +1,21 @@
 {
+	"nav":[{
+		"name":"Current Rates",
+		"id":"cod",
+		"title":"personal"
+	},{
+		"name":"Hours & Locations",
+		"id":"hours_locations",
+		"title":"about"
+	},{
+		"name":"ATM Locations",
+		"id":"atm",
+		"title":"about"
+	},{
+		"name":"Contact Us",
+		"id":"contact",
+		"title":"about"
+	}],
 	"tiles":[{
 		"banner":[{
 			"href":"#",
