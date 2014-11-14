@@ -25,19 +25,28 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +14 css/index.streamline.css
-badd +1 index.streamline.html
-badd +1 js/globals.js
-badd +1 js/functions.js
-badd +1 js/index.js
-badd +1 JSON/paths.json
-badd +1 JSON/tiles.json
-badd +0 /srv/http/tboc
+badd +8 README.md
 badd +0 TODO.md
-badd +0 README.md
+badd +0 index.html
+badd +0 css/index.css
+badd +0 css/navigation.css
+badd +0 js/functions.js
+badd +0 js/globals.js
+badd +0 js/index.js
+badd +0 json/nav.json
+badd +0 json/tiles.json
 argglobal
 silent! argdel *
-argadd /srv/http/tboc
+argadd README.md
+argadd TODO.md
+argadd index.html
+argadd css/index.css
+argadd css/navigation.css
+argadd js/functions.js
+argadd js/globals.js
+argadd js/index.js
+argadd json/nav.json
+argadd json/tiles.json
 edit TODO.md
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -53,6 +62,10 @@ wincmd _ | wincmd |
 split
 1wincmd k
 wincmd w
+wincmd w
+wincmd _ | wincmd |
+split
+1wincmd k
 wincmd w
 wincmd w
 wincmd w
@@ -72,23 +85,27 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 23 + 24) / 49)
+exe '1resize ' . ((&lines * 38 + 21) / 42)
 exe 'vert 1resize ' . ((&columns * 1 + 97) / 194)
-exe '2resize ' . ((&lines * 23 + 24) / 49)
+exe '2resize ' . ((&lines * 1 + 21) / 42)
 exe 'vert 2resize ' . ((&columns * 1 + 97) / 194)
-exe 'vert 3resize ' . ((&columns * 75 + 97) / 194)
-exe 'vert 4resize ' . ((&columns * 38 + 97) / 194)
-exe '5resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 5resize ' . ((&columns * 38 + 97) / 194)
-exe '6resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 6resize ' . ((&columns * 38 + 97) / 194)
-exe '7resize ' . ((&lines * 43 + 24) / 49)
-exe 'vert 7resize ' . ((&columns * 38 + 97) / 194)
-exe '8resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 8resize ' . ((&columns * 38 + 97) / 194)
-exe '9resize ' . ((&lines * 45 + 24) / 49)
-exe 'vert 9resize ' . ((&columns * 38 + 97) / 194)
+exe '3resize ' . ((&lines * 1 + 21) / 42)
+exe 'vert 3resize ' . ((&columns * 40 + 97) / 194)
+exe '4resize ' . ((&lines * 38 + 21) / 42)
+exe 'vert 4resize ' . ((&columns * 40 + 97) / 194)
+exe 'vert 5resize ' . ((&columns * 73 + 97) / 194)
+exe '6resize ' . ((&lines * 1 + 21) / 42)
+exe 'vert 6resize ' . ((&columns * 75 + 97) / 194)
+exe '7resize ' . ((&lines * 1 + 21) / 42)
+exe 'vert 7resize ' . ((&columns * 75 + 97) / 194)
+exe '8resize ' . ((&lines * 36 + 21) / 42)
+exe 'vert 8resize ' . ((&columns * 75 + 97) / 194)
+exe '9resize ' . ((&lines * 1 + 21) / 42)
+exe 'vert 9resize ' . ((&columns * 1 + 97) / 194)
+exe '10resize ' . ((&lines * 38 + 21) / 42)
+exe 'vert 10resize ' . ((&columns * 1 + 97) / 194)
 argglobal
+edit TODO.md
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -195,16 +212,15 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 11) / 23)
+let s:l = 1 - ((0 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
-normal! 08|
-lcd /srv/http/tboc
+normal! 0
 wincmd w
 argglobal
-edit /srv/http/tboc/README.md
+edit README.md
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -311,16 +327,15 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 11) / 23)
+let s:l = 1 - ((0 * winheight(0) + 0) / 1)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd /srv/http/tboc
 wincmd w
 argglobal
-edit /srv/http/tboc/css/index.streamline.css
+edit css/navigation.css
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -427,16 +442,130 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 17 - ((16 * winheight(0) + 23) / 47)
+let s:l = 1 - ((0 * winheight(0) + 0) / 1)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
+1
 normal! 0
-lcd /srv/http/tboc
 wincmd w
 argglobal
-edit /srv/http/tboc/index.streamline.html
+edit css/index.css
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=s1:/*,mb:*,ex:*/
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'css'
+setlocal filetype=css
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=croql
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=0
+setlocal include=^\\s*@import\\s\\+\\%(url(\\)\\=
+setlocal includeexpr=
+setlocal indentexpr=GetCSSIndent()
+setlocal indentkeys=0{,0},!^F,o,O
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal nomodeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=csscomplete#CompleteCSS
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'css'
+setlocal syntax=css
+endif
+setlocal tabstop=2
+setlocal tags=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal nowinfixheight
+setlocal nowinfixwidth
+set nowrap
+setlocal nowrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 19) / 38)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+wincmd w
+argglobal
+edit index.html
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -543,16 +672,15 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 23) / 47)
+let s:l = 33 - ((32 * winheight(0) + 20) / 40)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
-lcd /srv/http/tboc
+33
+normal! 038|
 wincmd w
 argglobal
-edit /srv/http/tboc/js/globals.js
+edit js/globals.js
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -665,10 +793,9 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd /srv/http/tboc
 wincmd w
 argglobal
-edit /srv/http/tboc/js/functions.js
+edit js/functions.js
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -781,10 +908,9 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd /srv/http/tboc
 wincmd w
 argglobal
-edit /srv/http/tboc/js/index.js
+edit js/index.js
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -891,16 +1017,15 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 22 - ((21 * winheight(0) + 21) / 43)
+let s:l = 1 - ((0 * winheight(0) + 18) / 36)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-22
+1
 normal! 0
-lcd /srv/http/tboc
 wincmd w
 argglobal
-edit /srv/http/tboc/JSON/paths.json
+edit json/nav.json
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -1013,10 +1138,9 @@ exe s:l
 normal! zt
 1
 normal! 0
-lcd /srv/http/tboc
 wincmd w
 argglobal
-edit /srv/http/tboc/JSON/tiles.json
+edit json/tiles.json
 setlocal keymap=
 setlocal noarabic
 setlocal autoindent
@@ -1123,31 +1247,33 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 22) / 45)
+let s:l = 1 - ((0 * winheight(0) + 19) / 38)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
 normal! 0
-lcd /srv/http/tboc
 wincmd w
-3wincmd w
-exe '1resize ' . ((&lines * 23 + 24) / 49)
+5wincmd w
+exe '1resize ' . ((&lines * 38 + 21) / 42)
 exe 'vert 1resize ' . ((&columns * 1 + 97) / 194)
-exe '2resize ' . ((&lines * 23 + 24) / 49)
+exe '2resize ' . ((&lines * 1 + 21) / 42)
 exe 'vert 2resize ' . ((&columns * 1 + 97) / 194)
-exe 'vert 3resize ' . ((&columns * 75 + 97) / 194)
-exe 'vert 4resize ' . ((&columns * 38 + 97) / 194)
-exe '5resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 5resize ' . ((&columns * 38 + 97) / 194)
-exe '6resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 6resize ' . ((&columns * 38 + 97) / 194)
-exe '7resize ' . ((&lines * 43 + 24) / 49)
-exe 'vert 7resize ' . ((&columns * 38 + 97) / 194)
-exe '8resize ' . ((&lines * 1 + 24) / 49)
-exe 'vert 8resize ' . ((&columns * 38 + 97) / 194)
-exe '9resize ' . ((&lines * 45 + 24) / 49)
-exe 'vert 9resize ' . ((&columns * 38 + 97) / 194)
+exe '3resize ' . ((&lines * 1 + 21) / 42)
+exe 'vert 3resize ' . ((&columns * 40 + 97) / 194)
+exe '4resize ' . ((&lines * 38 + 21) / 42)
+exe 'vert 4resize ' . ((&columns * 40 + 97) / 194)
+exe 'vert 5resize ' . ((&columns * 73 + 97) / 194)
+exe '6resize ' . ((&lines * 1 + 21) / 42)
+exe 'vert 6resize ' . ((&columns * 75 + 97) / 194)
+exe '7resize ' . ((&lines * 1 + 21) / 42)
+exe 'vert 7resize ' . ((&columns * 75 + 97) / 194)
+exe '8resize ' . ((&lines * 36 + 21) / 42)
+exe 'vert 8resize ' . ((&columns * 75 + 97) / 194)
+exe '9resize ' . ((&lines * 1 + 21) / 42)
+exe 'vert 9resize ' . ((&columns * 1 + 97) / 194)
+exe '10resize ' . ((&lines * 38 + 21) / 42)
+exe 'vert 10resize ' . ((&columns * 1 + 97) / 194)
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
