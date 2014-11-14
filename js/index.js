@@ -132,7 +132,7 @@ $(document).on('click', '.nav_element', function(){
 		var drop_height = null;
 		$.ajax({
 			dataType: 'json',
-			url: 'JSON/tiles.json',
+			url: 'json/tiles.json',
 			async: false,
 			success: function(json){
 				fields = jsonPath.eval(json, '$.paths['+dropdown+'].*.*').length;
