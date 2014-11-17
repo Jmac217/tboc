@@ -26,6 +26,12 @@ Something will have to be done about _.load_link_ being called twice from  *nav_
 
 ---
 
+##### Bugs
+
+1) Scaling is off in the dropdown list item height | index.js
+
+---
+
 _/res_ needs organized again
 
 If _/lib/_ is here to stay, set jQuery inside it as well; that being kept in /js just weird.
@@ -41,3 +47,13 @@ _#notices_ still needs converted into JSON with a URL to a specific markdown fol
 jQuery wasn't handling the dropdowns all that well, so I moved to pure CSS3 transitions and only needed to set the height from javascript, this made things much nicer all in all, but there's still a sticky bit to figure out with the initial dropdown hover.
 
 I really should figure out the best way to automate the entirety of the width, inherited from #doc.
+
+---
+
+##### Search Terms
+
+- **@bugs:**_[number]_ -- matches with *Bugs* list number
+- **@debug** -- debugging code
+- **@implementation** -- commented code to be implemented
+-  **@out-take** -- commented code that may be used or referenced
+- **@unnecessary** -- my wacko quips that should be removed

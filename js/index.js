@@ -15,19 +15,9 @@ $(document).on('click', '.nav_element', function(){
 		$(this).select();
 	});
 	
-	// Debug
-	/** manual notice switch for debugging/demonstration **/
-	// notice('false', 'json/notice.xml', 'warning');
-	$('#noticesOn').click(function(){
-		notice('true', 'json/test.xml', 'warning');
-	});
-	$('#noticesOff').click(function(){
-		notice('false', 'json/test.xml', 'warning');
-	});
-	
 	/***********************************************/
 	$('#banner').click(function(){
-		/** gets link attributes and runs the load_link function **/
+		/** gets link attributes and runs the load_link function **/ // @documentation
 	}).slidesjs({
 		width: 750,
 		height: 279,
@@ -40,6 +30,7 @@ $(document).on('click', '.nav_element', function(){
 			pauseOnHover: true,
 			restartDelay: 2500
 		}
+		// @implementation
 		/*
 		pagination:{
 			active: true,
@@ -56,6 +47,7 @@ $(document).on('click', '.nav_element', function(){
 		data:'json',
 		async:false,
 		success:function(json){
+		// @out-take
 		/*
 			$.each(Object.keys(json.paths), function(i){
 				for (i in Object.keys(json.paths)){alert(Object.keys(json.paths)[i]);}
@@ -87,7 +79,7 @@ $(document).on('click', '.nav_element', function(){
 				list_items = '';
 				$.each(val.links, function(k, v){
 				
-					console.log(key+'->'+'links->'+k+'->name:'+v.name);
+					console.log(key+'->'+'links->'+k+'->name:'+v.name); // @debug
 					console.log(key+'->'+'links->'+k+'->name:'+v.path);
 					console.log(key+'->'+'links->'+k+'->name:'+v.location);
 					console.log(key+'->'+'links->'+k+'->name:'+v.win);
@@ -99,7 +91,8 @@ $(document).on('click', '.nav_element', function(){
 					$('#links').append("<div class='link link_button shadow' alt='"+key+"'><div class='link_title'><a>"+val.title+"</a></div><ul><li><ul class='link_drop'>"+list_items+"</ul></li></ul></div>");
 				}
 			});
-
+			
+			// @out-take
 			/*
 			for(var i = 0; i < Object.keys(json.paths).length; Object.keys(json.paths.i++)){
 				alert(JSON.stringify(Object.keys(json.paths)[i].title));
@@ -133,22 +126,22 @@ $(document).on('click', '.nav_element', function(){
 			async: false,
 			success: function(json){
 				fields = jsonPath.eval(json, '$.paths['+dropdown+'].*.*').length;
-				drop_height = (fields*26)+'px';
+				drop_height = (fields*26)+'px';  // @bugs:1
 			}
 		});
 		$(this).find('.link_drop').css({'height':drop_height});
-		//$(this).children('ul').children('li').children('ul').css({'height':drop_height}); // I'm leaving this here in case find() doesn't work in IE
+		//$(this).children('ul').children('li').children('ul').css({'height':drop_height}); // I'm leaving this here in case find() doesn't work in IE // @out-take
 	}).mouseleave(function(){
 		$(this).children('ul').children('li').children('ul').css({'height':'0px'});
 	});
 	$('.load_link').click(function(){
 		var id = $(this).attr('id');
 		if($(this).hasClass('load_link_li')){
-			var title = $(this).parent().parent().parent().parent().attr('alt'); // up up and away
+			var title = $(this).parent().parent().parent().parent().attr('alt'); // up up and away // @unnecessary
 		}else{
 			var title = $(this).attr('title');
 		}
-		//alert(id+', '+title);
+		//alert(id+', '+title); // @debug
 		load_link(id, title);
 	});	
 });

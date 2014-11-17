@@ -261,7 +261,7 @@
 					"win":"current"
 				},
 				"mission":{
-					"name":"Mission",
+					"name":"Mission Statement",
 					"path":"pages/about/mission.php",
 					"location":"internal",
 					"win":"current"
