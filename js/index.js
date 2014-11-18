@@ -18,7 +18,16 @@ $(document).on('click', '.nav_element', function(){
 	/***********************************************/
 	$('#banner').click(function(){
 		/** gets link attributes and runs the load_link function **/ // @documentation
-	}).slidesjs({
+	}).slick({
+	  dots: true,
+	  infinite: true,
+	  autoplay: true,
+	  autoplaySpeed:7000,
+	  speed: 500,
+	  fade: true,
+	  slide: 'div',
+	  cssEase: 'linear'
+	});/*.slidesjs({
 		width: 750,
 		height: 279,
 		play:{
@@ -30,6 +39,7 @@ $(document).on('click', '.nav_element', function(){
 			pauseOnHover: true,
 			restartDelay: 2500
 		}
+		*/
 		// @implementation
 		/*
 		pagination:{
@@ -37,8 +47,9 @@ $(document).on('click', '.nav_element', function(){
 			effect: 'slide'
 		}
 		*/
+		/*
 	});
-
+*/
 	//get_nav();
 	// populate dropdowns
 	$.ajax({
