@@ -1,5 +1,8 @@
 ### TODO
 
+#### Recent changes to `/res` have broken most of the images! The folder looks nice now, but it still should be fixed right away.
+#### Left off creating banner content in `/res/banner/content/`.
+
 ##### Change Demos to "Holiday Hours | More Information" With the speech bubble icon
 
 ---
@@ -47,6 +50,10 @@ _#notices_ still needs converted into JSON with a URL to a specific markdown fol
 jQuery wasn't handling the dropdowns all that well, so I moved to pure CSS3 transitions and only needed to set the height from javascript, this made things much nicer all in all, but there's still a sticky bit to figure out with the initial dropdown hover.
 
 I really should figure out the best way to automate the entirety of the width, inherited from #doc.
+
+#####Card Services -- Add Gift Card number
+
+##### Refactor and Merge 10.0.0.246 & Localhost: Personal Services and Business Services
 
 ---
 

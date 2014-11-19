@@ -1,1 +1,1 @@
-gvim -S C:\xampp\htdocs\TBOC\website\rework\tboc.vim
+gvim -S %~dp0/tboc.vim

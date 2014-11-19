@@ -23,6 +23,33 @@ The folder structure has been jumbled slightly to remove abstracted folders, but
 
 ---
 
+#### Tile Sets
+
+There are currently **3** seperate tile types in the mix. Within these types, there are **9** sub-sets of terms to be defined, and **7** type-specific terms within, at least, the form arrays.
+They are as follows:
+- form
+	- type
+	- header (title?)
+	- inputs[]
+		- type
+		- name
+		- [placeholder]
+	- anchors[]
+		- value
+		- href
+	- buttons[]
+		- value
+		- classes
+- links
+	- title
+	- image
+	- body
+	- button
+- page
+	- *not implemented yet*
+
+---
+
 ##### load_link() attributes overview
 
 All internal files are loaded into `#pages` with _load_link()_, while all external pages go through a _speed bump_ jQuery UI element called `#outgoing`.

@@ -19,10 +19,12 @@
 	"tiles":[{
 		"banner":[{
 			"href":"#",
-			"src":"res/online.png"
+			"src":"res/online.png",
+			"content":"res/banners/content/online.html"
 		},{
 			"href":"#",
-			"src":"res/cropped-banner.png"
+			"src":"res/cropped-banner.png",
+			"content":"res/banners/content/mortgage.html"
 		}],
 		"column":[{
 			"form":{
@@ -110,12 +112,6 @@
 				"ebanking_enroll":{
 					"name":"Enroll in eBanking",
 					"path":"pages/customer/ebanking.php",
-					"location":"internal",
-					"win":"current"
-				},
-				"activate_estatements":{
-					"name":"Activate eStatements",
-					"path":"pages/customer/activate_estatements.php",
 					"location":"internal",
 					"win":"current"
 				},

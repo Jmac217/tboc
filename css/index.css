@@ -6,6 +6,7 @@ a:hover{color:#3e79ef;outline:0;text-decoration:underline;}
 th{background-color:#BBB;border-bottom:solid 1px #AAA;border-right:solid 1px #AAA;}
 td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 input{background-color:#FEFEFE;}input:focus{background-color:#EFEFEF;}
+img{border-radius:inherit;}
 sup{font-size:14px;font-weight:bold;}
 ul{list-style-type:none;}
 	li>a{text-decoration:none;}
@@ -31,22 +32,27 @@ ul{list-style-type:none;}
 .tile{display:inline-block;position:relative;text-align:center;margin:0px 10px 10px 0px;}
 	/* box, radius */ .tile_border{margin:auto;/*height:100%;*/width:100%;border:solid 1px #CCC;background-color:#EEE;cursor:pointer;}
 	.tile_border:hover{}
-	.tile_image{position:relative;display:inline-block;float:left;clear:left;top:0px;}
-	.tile_header{position:relative;display:inline-block;float:top;left:20px;font-size:16px;color:#75263d;width:118px;}
+	.tile_image{position:relative;display:inline-block;float:left;}
+	.tile_header{position:relative;display:inline-block;left:0px;font-size:16px;color:#75263d;width:118px;}
 	.tile_text{position:relative;display:inline-block;top:5px;font-size:11px;}
 	/* box? */.tile_button{display:block;bottom:0px;left:0px;cursor:pointer;position:absolute;bottom:0px;right:0px;font-weight:bold;font-family:arial;border-style:none;height:25px;line-height:25px;color:#EEE;border-radius:inherit;}
 	.tile_button:hover{}
 
 	.vertical_tile{display:block;width:100%;height:71px;}
-	.horizontal_tile{display:inline-block;height:100%;width:32%;margin-right:10px;float:left;}
+	.horizontal_tile{left:5px;display:inline-block;height:100%;width:32%;margin-right:10px;float:left;padding:15px 20px;}
+		.horizontal_tile > .tile_header{top:10px;}
+		.horizontal_tile > .tile_text{top:10px;}
 	.banner_tile{display:inline-block;height:279px;width:750px;}
+	.banner_image{border-radius:5px;3px 3px 3px #a2a2a2;}
 	.banner_content{position:absolute;display:block;padding:20px;background-color:black;color:white;border-radius:5px;overflow:hidden;opacity:.5}
-	.left{top:10%;left:50px;height:80%;width:300px;}
-	.right{top:10%;right:50px;height:80%;width:300px;}
-	.top-left{top:10%;left:50px;height:40%;width:300px;}
-	.bottom-left{bottom:10%;left:50px;height:40%;width:300px;}
-	.top-right{top:10%;right:50px;height:40%;width:300px;}
-	.bottom-right{bottom:10%;right:50px;height:40%;width:300px;}
+		/* banner content positions */
+		/* not sure I really like this, but it works for now */
+		.left{top:10%;left:50px;height:80%;width:300px;}
+		.right{top:10%;right:50px;height:80%;width:300px;}
+		.top-left{top:10%;left:50px;height:40%;width:300px;}
+		.bottom-left{bottom:10%;left:50px;height:40%;width:300px;}
+		.top-right{top:10%;right:50px;height:40%;width:300px;}
+		.bottom-right{bottom:10%;right:50px;height:40%;width:300px;}
 	.page_tile{}
 	.image_tile{}
 	
