@@ -1,1 +1,1 @@
-gvim -S %~dp0/tboc.vim
+gvim -S %~dp0/tboc.win.vim

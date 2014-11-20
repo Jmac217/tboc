@@ -267,10 +267,18 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 		async: 'false',
 		success: function(json){
 			jsonPath.eval(json.tiles, '$..'+tile+'.*').forEach(function(k, i){
-				//alert(Object.keys('k: '+k+', i: '+i));
-				$.each(Object.keys(k), function(l, t){
-					alert(Object.keys(k[t]));	
-				});
+				alert(Object.getOwnPropertyNames([k]));
+				switch (Object.keys(k)) {
+				 case "form":
+				 	alert("form");
+				 break;
+				 case "links":
+				 	alert("links");
+				 break;
+				 default:
+				 	alert("case default");
+				 break;
+				}
 			});
 		}
 	});

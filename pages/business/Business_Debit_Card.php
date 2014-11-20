@@ -1,12 +1,8 @@
-<?php
-/*
-	$OpenPanel = '3';
-	$PageTitle = 'Business Debit Card';
-*/
-?>
-<!--<p><img src="res/Business_Debit_Cards.png" alt="Business Debit Card" width="681" height="62"></p>-->
+
+<!-- outside.php is still referenced here -->
+
 <div class='page_header'>Business Debit Card</div>
-<img src="res/debit_card.jpg" class="page_photo text_shadow">
+<img src="res/pages/business/debit_card.jpg" class="page_photo text_shadow">
 <div class='page_body textblock text_shadow calculated_width box'>
 <h2>MasterCard & Business Debit Card</h2>
 <ul>
