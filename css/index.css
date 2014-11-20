@@ -1,4 +1,6 @@
 @font-face{font-family:dou;src:url('../res/fonts/DoulosSILR.ttf');src:url('../res/fonts/DoulosSILR.eot');}
+@font-face{font-family:optimus;src:url('../res/fonts/OptimusPrinceps.ttf');src:url('../res/fonts/OptimusPrinceps.eot');}
+@font-face{font-family:optimus-semi;src:url('../res/fonts/OptimusPrincepsSemiBold.ttf');src:url('../res/fonts/OptimusPrincepsSemiBold.eot');}
 /* some of this body comes from screen.css */
 body{background-image:url(../res/background.png);background-size:100% 100%;background-attachment:fixed;background-repeat:no-repeat;font-size:75%;color:#222;background:#fff;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
 a{color:#004a4a;cursor:pointer;outline:0;text-decoration:none;}
@@ -12,7 +14,7 @@ ul{list-style-type:none;}
 	li>a{text-decoration:none;}
 	li>a:visited{color:white;outline:0;}
 	li>a:active{color:white;outline:0;}
-
+	
 /** to be combined **/
 .noselect{select:none;-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
 .shadow{box-shadow:3px 3px 3px #a2a2a2;}
@@ -33,8 +35,9 @@ ul{list-style-type:none;}
 	/* box, radius */ .tile_border{margin:auto;/*height:100%;*/width:100%;border:solid 1px #CCC;background-color:#EEE;cursor:pointer;}
 	.tile_border:hover{}
 	.tile_image{position:relative;display:inline-block;float:left;}
-	.tile_header{position:relative;display:inline-block;left:0px;font-size:16px;color:#75263d;width:118px;}
-	.tile_text{position:relative;display:inline-block;top:5px;font-size:11px;}
+	.tile_header{position:relative;display:inline-block;left:0px;font-size:16px;color:#75263d;width:128px;}
+	.tile_header:hover{color:#3e79ef;text-decoration:underline;}
+	.tile_text{position:relative;display:inline-block;top:5px;font-size:11px;text-align:left;}
 	/* box? */.tile_button{display:block;bottom:0px;left:0px;cursor:pointer;position:absolute;bottom:0px;right:0px;font-weight:bold;font-family:arial;border-style:none;height:25px;line-height:25px;color:#EEE;border-radius:inherit;}
 	.tile_button:hover{}
 

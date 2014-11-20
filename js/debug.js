@@ -6,3 +6,8 @@ $('#noticesOn').click(function(){
 $('#noticesOff').click(function(){
 	notice('false', 'json/test.xml', 'warning');
 });
+
+//$('#banner_mortgage').load('res/banner/content/morgtage.html');
+//$('#banner_mortgage').load("res/banner/content/mortgage.html");
+$('#banner_mortgage').load('res/banner/content/mortgage.html');
+$('#banner_online').load('res/banner/content/online.html');

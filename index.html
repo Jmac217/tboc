@@ -50,21 +50,12 @@
 				<div id='banner' class=''>
 					<!-- to be generated from banner.json -->
 					<div>
-						<span class='banner_content box left'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt cursus risus a fringilla. Duis dictum ex venenatis nibh laoreet venenatis. Proin semper ac quam in tincidunt. Aliquam erat volutpat. Quisque non sagittis dui. Integer pellentesque faucibus dignissim. Nulla et nisl a nisl cursus tincidunt sed sed leo. Nunc vehicula, augue id eleifend placerat, purus purus blandit arcu, id ultrices tortor leo eget nisi. Donec aliquam eu nibh at accumsan. Morbi blandit neque est, cursus mattis quam gravida quis.
-						</span>
-						<a href='#'><img class='banner_image' src='res/banner/online.png'/></a>
-					</div>
-					<div>
-						<span class='banner_content box right'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt cursus risus a fringilla. Duis dictum ex venenatis nibh laoreet venenatis. Proin semper ac quam in tincidunt. Aliquam erat volutpat. Quisque non sagittis dui. Integer pellentesque faucibus dignissim. Nulla et nisl a nisl cursus tincidunt sed sed leo. Nunc vehicula, augue id eleifend placerat, purus purus blandit arcu, id ultrices tortor leo eget nisi. Donec aliquam eu nibh at accumsan. Morbi blandit neque est, cursus mattis quam gravida quis.
-						</span>
+						<!-- content uses id for now for js, I think this can be done with the banner_content class eventually -->
+						<span id='banner_mortgage'></span>
 						<a href='#'><img src='res/banner/mortgage.png'/></a>
 					</div>
 					<div>
-						<span class='banner_content box top-left'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt cursus risus a fringilla. Duis dictum ex venenatis nibh laoreet venenatis. Proin semper ac quam in tincidunt. Aliquam erat volutpat. Quisque non sagittis dui.
-						</span>
+						<span id='banner_online'></span>
 						<a href='#'><img src='res/banner/online.png'/></a>
 					</div>
 					<div>
@@ -84,7 +75,13 @@
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt cursus risus a fringilla. Duis dictum ex venenatis nibh laoreet venenatis. Proin semper ac quam in tincidunt. Aliquam erat volutpat. Quisque non sagittis dui.
 						</span>
 						<a href='#'><img src='res/banner/mortgage.png'/></a>
-					</div>					
+					</div>
+					<div>
+						<span class='banner_content box right'>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tincidunt cursus risus a fringilla. Duis dictum ex venenatis nibh laoreet venenatis. Proin semper ac quam in tincidunt. Aliquam erat volutpat. Quisque non sagittis dui. Integer pellentesque faucibus dignissim. Nulla et nisl a nisl cursus tincidunt sed sed leo. Nunc vehicula, augue id eleifend placerat, purus purus blandit arcu, id ultrices tortor leo eget nisi. Donec aliquam eu nibh at accumsan. Morbi blandit neque est, cursus mattis quam gravida quis.
+						</span>						
+						<a href='#'><img class='banner_image' src='res/banner/online.png'/></a>
+					</div>
 				</div>
 				<div id='column'>
 					<div class='tile form_tile tile_border shadow'>
@@ -106,10 +103,9 @@
 						<span class='tile_text'>Sign Up Now!</span>
 					</div>
 					<div class='tile vertical_tile tile_border padded box load_link linear_gradient shadow' id='demos' title='customer'>
-						<span class='tile_image'><img src='res/icons/tech/computer.png'/></span>
-						<span class='tile_header'>Demos</span>
-						<span class='tile_text'>Online Banking Demo</span>
-						<span class='tile_text'>Online Billpay Demo</span>
+						<span class='tile_image'><img src='res/icons/home/text-bubble.png'/></span>
+						<span class='tile_header'>Holiday Hours</span>
+						<span class='tile_text'>More Information</span>
 					</div>
 					<div class='tile vertical_tile tile_border load_link padded box linear_gradient shadow' id='loan_app' title='customer'>
 						<span class='tile_image'><img src='res/icons/vehicles/car1.png'/></span>
@@ -163,7 +159,6 @@
 <script type='text/javascript' src='js/globals.js'></script>
 <script type='text/javascript' src='js/functions.js'></script>
 <script type='text/javascript' src='js/index.js'></script>
-
 <script type='text/javascript' src='js/debug.js'></script>
 
 </body>

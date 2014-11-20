@@ -136,7 +136,7 @@ $(document).on('click', '.nav_element', function(){
 			url: 'json/tiles.json',
 			async: false,
 			success: function(json){
-				fields = jsonPath.eval(json, '$.paths['+dropdown+'].*.*').length;
+				fields = jsonPath.eval(json, '$.paths['+dropdown+'].*.*').length+1;
 				drop_height = (fields*26)+'px';  // @bugs:1
 			}
 		});
