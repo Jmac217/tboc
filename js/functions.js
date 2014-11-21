@@ -266,20 +266,49 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 		data: 'json',
 		async: 'false',
 		success: function(json){
+
+		/*
+			function findNode(id, json){
+				var i, currentChild, result;	
+				if (id==json.form||id==json.links){
+					return currentNode;	
+				}else{
+					for (i=0; i < json.children.length; i+=1){
+						currentChild = json.children[i];	
+						result = findNode(id, currentChild);
+						if(result !== false){
+							return result;	
+						}
+					}	
+					return false;
+				}
+			}
+			var f = findNode(id,json);
+			alert(f);
+		*/
 			jsonPath.eval(json.tiles, '$..'+tile+'.*').forEach(function(k, i){
-				//alert(Object.getOwnPropertyNames([k]));
-				switch (Object.keys(k)) {
-				 case "form":
-				 	//alert("form");
-				 break;
-				 case "links":
-				 	//alert("links");
-				 break;
-				 default:
-				 	//alert("case default");
-				 break;
+				alert(i);
+				if(_.has(k, "form")==true){
+					// do form	
+					jsonPath.eval(k, '$..form.*').forEach(function(l, o){
+						alert (l);	
+					});
+				}else if(_.has(k, "links")==true){
+					// do links	
+
+				}else if(_.has(k, "page")==true){
+					// do page	
+
 				}
 			});
+
+
+
+/* for current tile-set
+ * i = 1
+ * if !object, get property: switch between i++ tier types; otherwise pass object into recursive function and try again;
+ */
+
 		}
 	});
 }

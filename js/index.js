@@ -27,30 +27,10 @@ $(document).on('click', '.nav_element', function(){
 	  fade: true,
 	  slide: 'div',
 	  cssEase: 'linear'
-	});/*.slidesjs({
-		width: 750,
-		height: 279,
-		play:{
-			active: true,
-			effect: 'fade',
-			interval: 7000,
-			auto: true,
-			swap: true,
-			pauseOnHover: true,
-			restartDelay: 2500
-		}
-		*/
-		// @implementation
-		/*
-		pagination:{
-			active: true,
-			effect: 'slide'
-		}
-		*/
-		/*
 	});
-*/
-	//get_nav();
+	
+	// get_nav();
+	
 	// populate dropdowns
 	$.ajax({
 		dataType:'json',
