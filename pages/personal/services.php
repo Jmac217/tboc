@@ -16,7 +16,7 @@
 <body>
 <div class='page_header'>Banking Services</div>
 <span class='p_header textblock text_shadow'>We offer a variety of additional services to make your banking relationship with us more convenient.</span>
-<img src="res/Services.jpg" class="p_image text_shadow box">
+<img src="res/pages/personal/services.jpg" class="p_image text_shadow box">
 
 <div class='p_body textblock text_shadow calculated_width box'>
 	<div class='p_drop_container'>

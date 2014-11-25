@@ -164,7 +164,7 @@
 				},
 				"ira":{
 					"name":"Individual Retirement (IRA)",
-					"path":"pages/personal/personal_ira.php",
+					"path":"pages/personal/ira.php",
 					"location":"internal",
 					"win":"current"
 				},
@@ -182,7 +182,7 @@
 				},
 				"loans":{
 					"name":"Loans",
-					"path":"pages/customer/personal_loans.php",
+					"path":"pages/personal/personal_loans.php",
 					"location":"internal",
 					"win":"current"
 				},

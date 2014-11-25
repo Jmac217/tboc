@@ -1,18 +1,21 @@
+/*
 if(Ext.isIE7 && document.documentMode == 8) {
 Ext.isIE7 = false;
 Ext.isIE8 = true;
 Ext.getBody().replaceClass('ext-ie7', 'ext-ie8');
 }
+*/
 
 
 /*** User Nav ***/
-var nav_cap = 3; // starting with 0; ex: 3 = 3 + 1 = 4
+var nav_cap = 3; // starting with 0; ex: 3 = 3 + 1 = 4 | will be json.length at somepoint
 var nav_obj = null; // initialize scope
 $.ajax({
 	dataType:'json',
 	url: 'json/nav.json',
 	async: false,
 	success: function(json){
-		nav_obj = json; // pass to global
+		nav_obj = json.nav; // pass to global
+		//alert(JSON.stringify(nav_obj[0]));
 	}
 });

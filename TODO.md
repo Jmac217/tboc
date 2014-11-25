@@ -1,9 +1,10 @@
 ### TODO
 
-#### Recent changes to `/res` have broken most of the images! The folder looks nice now, but it still should be fixed right away.
-#### Left off creating banner content in `/res/banner/content/`.
+#### Global scope doesn't get passed into get_nav()
 
-##### Change Demos to "Holiday Hours | More Information" With the speech bubble icon
+#### Paths, when edited, seemed to have been broken.
+
+#### Left off creating banner content in `/res/banner/content/`.
 
 ---
 

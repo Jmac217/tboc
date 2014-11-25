@@ -1,11 +1,5 @@
-<?php
-/*
-	$OpenPanel = '2';
-	$PageTitle = 'GO Club';
-*/
-?>
-<div class='page_header'><img src="res/go_club.png"> GO Club</div>
-<img src="res/GoClub3.jpg" class="page_photo text_shadow" />
+<div class='page_header'><img src="res/icons/go-club.png"> GO Club</div>
+<img src="res/pages/personal/go-club.jpg" class="page_photo text_shadow" />
 <div class='page_body textblock text_shadow calculated_width box'>
 	<center><h2>At the Bank of Carbondale,<br/> seniority has its rewards!</h2></center>
 	<div class='job_opening'>

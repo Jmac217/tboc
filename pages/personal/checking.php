@@ -1,11 +1,5 @@
-<?php
-/*
-	$OpenPanel = '2';
-	$PageTitle = 'Personal Checking';
-*/
-?>
 <div class='page_header'>Personal Checking</div>
-<img src="res/PersonalBanker1.jpg" alt="Personal Checking" class="page_photo text_shadow">
+<img src="res/pages/personal/personal_checking.jpg" alt="Personal Checking" class="page_photo text_shadow">
 <div class='page_body textblock text_shadow calculated_width box'>
 <p>The Bank of Carbondale has  checking accounts to suit your individual style and make  managing your money easy.  Each account offers a slightly different set of features,  interest earnings, service charges, and minimum balance.</p>
 <p>Every Bank of Carbondale checking account is eligible for eBanking with online, mobile, and text access on your schedule, 24 hours a day.</p>

@@ -1,11 +1,5 @@
-<?php
-/*
-	$OpenPanel = '2';
-	$PageTitle = 'Money Market Accounts';
-*/
-?>
 <div class='page_header'>Individual Retirement</div>
-<img src="res/Financial2.jpg" class="page_photo text_shadow">
+<img src="res/pages/personal/ira.jpg" class="page_photo text_shadow">
 <div class='page_body textblock text_shadow calculated_width box'>
 <p>Thinking about retirement?  Whether you want to start a new IRA, or need to roll over an existing retirement plan to an IRA, The Bank of Carbondale will make it an easy process.  We're here to help!</p>
 <p>To meet your needs, The Bank of Carbondale offers Traditional IRAs, Roth IRAs, and Simplified Employee Pension (SEP) IRAs, with no administrative fees from our bank.    </p>

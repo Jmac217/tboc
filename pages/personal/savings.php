@@ -1,12 +1,5 @@
-<?php
-/*
-	$OpenPanel = '2';
-	$PageTitle = 'Personal Savings';
-*/
-?>
-
 <div class='page_header'>Personal Savings</div>
-<img src='res/PersonalSavings.jpg' class='page_photo text_shadow'>
+<img src='res/pages/personal/savings.jpg' class='page_photo text_shadow'>
 <div class='page_body textblock text_shadow calculated_width box'>
 <p>We understand the importance of saving for the future  and unexpected emergencies.  Whether you are just starting out or saving  for something special, we have a savings account to help you reach  your financial goals.</p>
 <p>Every Bank of Carbondale Passbook savings account is eligible for eBanking with online and mobile access on your schedule, 24 hours a day.</p>

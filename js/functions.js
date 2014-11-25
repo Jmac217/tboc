@@ -287,11 +287,11 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 			alert(f);
 		*/
 			jsonPath.eval(json.tiles, '$..'+tile+'.*').forEach(function(k, i){
-				alert(i);
+				//alert(i);
 				if(_.has(k, "form")==true){
 					// do form	
 					jsonPath.eval(k, '$..form.*').forEach(function(l, o){
-						alert (l);	
+						//alert (l);	
 					});
 				}else if(_.has(k, "links")==true){
 					// do links	
@@ -302,8 +302,6 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 				}
 			});
 
-
-
 /* for current tile-set
  * i = 1
  * if !object, get property: switch between i++ tier types; otherwise pass object into recursive function and try again;
@@ -312,13 +310,16 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 		}
 	});
 }
-
+alert('yo globals '+nav_cap+nav_obj);
 generate_tiles('#column', 'column');
 
 function get_nav(){
+	alert('yo globals again! '+nav_cap+nav_obj);
+	//alert(nav_cap);
 	var nav_string = '';
-	for (var i=0; i<=nav_cap; i++){
-		nav_string += '<u class="nav_element load_link" title="'+nav_obj.nav[i].title+'" id="'+nav_obj.nav[i].id+'">'+nav_obj.nav[i].name+'</u>';
+	for (var i=0; i<=3; i++){
+		nav_string += '<u class="nav_element load_link" title="'+nav_obj[i].title+'" id="'+nav_obj[i].id+'">'+nav_obj[i].name+'</u>';
+		alert(nav_string);
 		if(i<nav_cap){
 			nav_string+=' &nbsp; &#149; &nbsp; ';
 		}

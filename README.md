@@ -21,11 +21,13 @@ The folder structure has been jumbled slightly to remove abstracted folders, but
 - `/admin`    => for respective administrators (ie Margaret, Elizabeth, Rhonda, etc...)
 - `/apps`     => other things that don't fit or provide standalone functionality
 
+
+
 ---
 
 #### Tile Sets
 
-There are currently **3** seperate tile types in the mix. Within these types, there are **9** sub-sets of terms to be defined, and **7** type-specific terms within, at least, the form arrays.
+There are currently **3** separate tile types in the mix. Within these types, there are **9** sub-sets of terms to be defined, and **7** type-specific terms within, at least, the form arrays.
 They are as follows:
 - form
 	- type
@@ -88,3 +90,8 @@ I think the best way to deal with the administration aspect is by validating a c
 - It will be important to separate the files accessible on the web from the files they include.
 - `admin_cookie.php` could be used for this, or just avoid the entire mess and negate the preceding bullet points by hosting the panel offline...
   - If it's the case that the admin panel will only be accessible from the intranet, as it should be, then the cookie setting won't be necessary for login keys; just a database query and a password should suffice for admin logins.
+    
+	
+### Documentary Scoping
+  
+The documentation will provide instructions on how to properly *use* the CMS back-end, but should also provide sufficient and simple information for manually adding and removing components, and specify all systems of a group and their actions/locations.
