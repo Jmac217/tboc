@@ -23,7 +23,7 @@ Something will have to be done about _.load_link_ being called twice from  *nav_
 
 ---
 
-##### `#user_nav` should be renamed to `#nav`
+##### `#user_nav` should be renamed to ~~`#nav`~~ `<nav>` to take advantage of HTML5
 - add to `json/tiles.json`
 - `json/tiles.json` will eventually be renamed to fit into a global scope.
 - this will ultimately allow for the deletion of `json/nav.json`.
@@ -33,6 +33,12 @@ Something will have to be done about _.load_link_ being called twice from  *nav_
 ##### Bugs
 
 1) Scaling is off in the dropdown list item height | index.js
+
+##### Issues
+
+ - Page sizes don't revert once loaded and moved from.
+
+ - Pages that load SQL databases will have to be synchronous, though there isn't any plans for these types of databases on TBOC, there may be in future sites.
 
 ---
 
@@ -64,4 +70,4 @@ I really should figure out the best way to automate the entirety of the width, i
 - **@debug** -- debugging code
 - **@implementation** -- commented code to be implemented
 -  **@out-take** -- commented code that may be used or referenced
-- **@unnecessary** -- my wacko quips that should be removed
+- **@unnecessary** -- my wacko quips that should be removed for production

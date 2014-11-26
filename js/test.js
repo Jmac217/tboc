@@ -3,12 +3,12 @@
 		dataType: 'json',
 		async: false,
 		success: function(json){
-			/*
 			var name = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].name');
 			var path = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].path');
 			var location = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].location');
 			var win = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].win');
-			*/
+			alert(name+', '+path+', '+location+', '+win);
+			/*
 			$.ajax({
 				type:"post",
 				url:path,
@@ -18,6 +18,7 @@
 					_.each(data,function(key,value,field){
 						console.log(key + ':' + value);
 					});
+				*/
 				/*
 					$('#body_container').css({'visibility':'hidden'});
 					$('#pages').html(data).css({'visibility':'visible'});
@@ -47,10 +48,12 @@
 
 				}
 				*/
-			});
+				/*
+			}});
 			
 			_.each(json,function(key,value,field){
 				console.log(key + ':' + value);
 			});
+		*/
 		}
 	});

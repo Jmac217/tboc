@@ -3,6 +3,7 @@
 @font-face{font-family:optimus-semi;src:url('../res/fonts/OptimusPrincepsSemiBold.ttf');src:url('../res/fonts/OptimusPrincepsSemiBold.eot');}
 /* some of this body comes from screen.css */
 body{background-image:url(../res/background.png);background-size:100% 100%;background-attachment:fixed;background-repeat:no-repeat;font-size:75%;color:#222;background:#fff;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
+table{font-size:15px;}
 a{color:#004a4a;cursor:pointer;outline:0;text-decoration:none;}
 a:hover{color:#3e79ef;outline:0;text-decoration:underline;}
 th{background-color:#BBB;border-bottom:solid 1px #AAA;border-right:solid 1px #AAA;}

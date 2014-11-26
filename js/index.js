@@ -29,7 +29,7 @@ $(document).on('click', '.nav_element', function(){
 	  cssEase: 'linear'
 	});
 	
-	// get_nav();
+	get_nav();
 	
 	// populate dropdowns
 	$.ajax({

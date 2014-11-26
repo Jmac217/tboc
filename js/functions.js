@@ -310,16 +310,13 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 		}
 	});
 }
-alert('yo globals '+nav_cap+nav_obj);
 generate_tiles('#column', 'column');
 
 function get_nav(){
-	alert('yo globals again! '+nav_cap+nav_obj);
 	//alert(nav_cap);
 	var nav_string = '';
 	for (var i=0; i<=3; i++){
 		nav_string += '<u class="nav_element load_link" title="'+nav_obj[i].title+'" id="'+nav_obj[i].id+'">'+nav_obj[i].name+'</u>';
-		alert(nav_string);
 		if(i<nav_cap){
 			nav_string+=' &nbsp; &#149; &nbsp; ';
 		}
@@ -364,10 +361,10 @@ function load_link(id, title){
 					
 					
 					var nav_has_value = false;
-					for(var i = 0; i < nav_obj.nav.length; i++){
+					for(var i = 0; i < nav_obj.length; i++){
 						//alert('name: '+name+' | nav_obj.name: '+nav_obj.nav[i].name);
 						//alert(name==nav_obj.nav[i].name);
-						if(name == nav_obj.nav[i].name){
+						if(name == nav_obj[i].name){
 							nav_has_value = true;
 							//alert(nav_has_value);
 						}
@@ -376,6 +373,7 @@ function load_link(id, title){
 					//alert(nav_has_value);
 					if (nav_has_value===false){
 						push_nav(name, id, title);
+						alert ('am I getting nav?');
 						get_nav();
 					}
 					
