@@ -255,8 +255,8 @@ function set_footer(page_height){
 }
 
 function push_nav(name, id, title){
-	nav_obj.nav.splice(0,1);
-	nav_obj.nav.push({"name":name,"id":id,"title":title});
+	nav_obj.splice(0,1);
+	nav_obj.push({"name":name,"id":id,"title":title});
 }
 
 function generate_tiles(panel, tile){ // `panel` is the id of the tile-location, and `tile` is tiles.*
@@ -267,53 +267,63 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 		async: 'false',
 		success: function(json){
 
-		/*
-			function findNode(id, json){
-				var i, currentChild, result;	
-				if (id==json.form||id==json.links){
-					return currentNode;	
-				}else{
-					for (i=0; i < json.children.length; i+=1){
-						currentChild = json.children[i];	
-						result = findNode(id, currentChild);
-						if(result !== false){
-							return result;	
-						}
-					}	
-					return false;
-				}
-			}
-			var f = findNode(id,json);
-			alert(f);
-		*/
+			alert(localforage.iterate(json, function(err, value){
+				alert(value);	
+			}));
+
+			/*
 			jsonPath.eval(json.tiles, '$..'+tile+'.*').forEach(function(k, i){
-				//alert(i);
+				alert(JSON.stringify(i));
 				if(_.has(k, "form")==true){
 					// do form	
+					alert(json_array_elements(json));
 					jsonPath.eval(k, '$..form.*').forEach(function(l, o){
+						alert(JSON.stringify(_.object(l)));
 						//alert (l);	
 					});
 				}else if(_.has(k, "links")==true){
 					// do links	
-
 				}else if(_.has(k, "page")==true){
 					// do page	
-
 				}
 			});
+			*/
+
 
 /* for current tile-set
  * i = 1
  * if !object, get property: switch between i++ tier types; otherwise pass object into recursive function and try again;
  */
 
+
+/*
+ * 
+ *
+ * starting in tiles
+ *
+ * accepts a tile as a string, javscript returns each tile as an array index
+ *
+ * for each index in array a nested function skims each layer of hierarchy returning 
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ */ 
+
+
+
 		}
 	});
 }
+
+// @debug
 generate_tiles('#column', 'column');
 
 function get_nav(){
-	//alert(nav_cap);
 	var nav_string = '';
 	for (var i=0; i<=3; i++){
 		nav_string += '<u class="nav_element load_link" title="'+nav_obj[i].title+'" id="'+nav_obj[i].id+'">'+nav_obj[i].name+'</u>';
@@ -331,6 +341,7 @@ function load_link(id, title){
 		async: false,
 		success: function(json){
 			
+			// @todo -- it may become necessary to change the name variable name `location` to something else; seeing as it is a keyword in some instances.
 			var name = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].name');
 			var path = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].path');
 			var location = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].location');
@@ -348,41 +359,17 @@ function load_link(id, title){
 					$('#pages').css({'height':height});
 					set_footer(height);
 					
-					/*
-					for (var i=0;i<nav_obj.nav.length;i++){
-						if(nav_obj.nav[i].name == name){
-							break;
-						}else{
-							push_nav(name, id, title);
-							get_nav();
-						}
-					}
-					*/
-					
-					
 					var nav_has_value = false;
 					for(var i = 0; i < nav_obj.length; i++){
-						//alert('name: '+name+' | nav_obj.name: '+nav_obj.nav[i].name);
-						//alert(name==nav_obj.nav[i].name);
 						if(name == nav_obj[i].name){
 							nav_has_value = true;
-							//alert(nav_has_value);
 						}
 					}
 					
-					//alert(nav_has_value);
 					if (nav_has_value===false){
 						push_nav(name, id, title);
-						alert ('am I getting nav?');
 						get_nav();
 					}
-					
-					/*
-					if(name !== (nav_obj.nav[nav_obj.nav.length-1].name)){
-						push_nav(name, id, title);
-						get_nav();
-					}
-					*/
 				}
 			});
 		}

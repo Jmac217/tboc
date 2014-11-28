@@ -68,6 +68,7 @@ I really should figure out the best way to automate the entirety of the width, i
 
 - **@bugs:**_[number]_ -- matches with *Bugs* list number
 - **@debug** -- debugging code
+- **@todo** -- a broken or unimplemented section.
 - **@implementation** -- commented code to be implemented
 -  **@out-take** -- commented code that may be used or referenced
 - **@unnecessary** -- my wacko quips that should be removed for production

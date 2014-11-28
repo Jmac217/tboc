@@ -3,6 +3,7 @@
 		dataType: 'json',
 		async: false,
 		success: function(json){
+
 			var name = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].name');
 			var path = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].path');
 			var location = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].location');
