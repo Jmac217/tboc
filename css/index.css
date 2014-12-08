@@ -1,6 +1,7 @@
 @font-face{font-family:dou;src:url('../res/fonts/DoulosSILR.ttf');src:url('../res/fonts/DoulosSILR.eot');}
 @font-face{font-family:optimus;src:url('../res/fonts/OptimusPrinceps.ttf');src:url('../res/fonts/OptimusPrinceps.eot');}
 @font-face{font-family:optimus-semi;src:url('../res/fonts/OptimusPrincepsSemiBold.ttf');src:url('../res/fonts/OptimusPrincepsSemiBold.eot');}
+@font-face{font-family:timeless;src:url('../res/fonts/Timeless.ttf');src:url('../res/fonts/Timeless.eot');}
 /* some of this body comes from screen.css */
 body{background-image:url(../res/background.png);background-size:100% 100%;background-attachment:fixed;background-repeat:no-repeat;font-size:75%;color:#222;background:#fff;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;}
 table{font-size:15px;}
@@ -23,6 +24,10 @@ ul{list-style-type:none;}
 .e{color:#07a603;}
 
 /* renames */
+
+
+.statement{font-size:18px;text-align:justify;}
+.tboc{color:#75263d;}
 
 /* login_tiles */
 #column{position:absolute;top:0px;left:0px;height:443px;width:210px;}
@@ -187,7 +192,7 @@ ul{list-style-type:none;}
 				.page_header{position:relative;top:0px;left:10px;font-size:60px;color:#05588d;font-family:dou;}
 				.textblock{background-color:#EEE;font-size:14px;border:solid 1px #DDD;padding:20px;z-index:20;}
 				.text_shadow{box-shadow:5px 5px 10px #777;}
-				.job_opening{position:relative;background-color:#DDD;font-size:14px;border:solid 1px #EEE;padding:20px;z-index:20;}
+				.job_opening{position:relative;background-color:#DDD;border:solid 1px #EEE;margin:20px;padding:20px;z-index:20;}
 				.page_photo{position:absolute;top:100px;width:350;height:350px;-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius:2px;behavior:url(lib/PIE.htc);}
 				.page_body{position:absolute;top:100px;right:15px;}
 				.page_panel{position:relative;top:100px;}

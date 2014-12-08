@@ -267,10 +267,6 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 		async: 'false',
 		success: function(json){
 
-			alert(localforage.iterate(json, function(err, value){
-				alert(value);	
-			}));
-
 			/*
 			jsonPath.eval(json.tiles, '$..'+tile+'.*').forEach(function(k, i){
 				alert(JSON.stringify(i));
