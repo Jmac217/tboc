@@ -27,27 +27,39 @@
 			"content":"res/banners/content/mortgage.html"
 		}],
 		"column":{
+			"form":{
+				"type":"login",
+				"header":"Online Banking Login",
+				"inputs":[{
+					"type":"text",
+					"placeholder":"User ID",
+					"name":"user_id"
+				},{
+					"type":"password",
+					"placeholder":"Password",
+					"name":"password"
+				}],
+				"links":[{
+					"value":"Forgot Password?",
+					"href":"#"
+				}],
+				"buttons":[{
+					"value":"Login",
+					"classes":""
+				}]
+			},
 			"links":[{
-				"type":"customer",
-				"id":"loan_app",
 				"title":"Online Banking",
 				"image":"res/icons/home/checkbox.png",
-				"body":"Sign Up Now!",
-				"button":"none"
+				"body":"Sign Up Now!"
 			},{
-				"type":"customer",
-				"id":"ebanking_enroll",
 				"title":"Interactive Demos",
 				"image":"res/icons/tech/computer.png",
-				"body":"Try Our Online Banking and Billpay demos",
-				"button":"none"
+				"body":"Try Our Online Banking and Billpay demos"
 			},{
-				"type":"customer",
-				"id":"calc",
 				"title":"Online Consumer Loan Application",
 				"image":"res/icons/vehicles/car1.png",
-				"body":"",
-				"button":"none"
+				"body":""
 			}]
 		},
 		"row":{

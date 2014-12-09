@@ -6,6 +6,11 @@
 
 #### Left off creating banner content in `/res/banner/content/`.
 
+#### `container`s need to be removed: `#body_container` is what made me realize this.
+- This will require `#pages` to pull away from `#body`.
+
+`title` to be renamed, `id` and *title* to be placed by tiles.json.
+
 ---
 
 ##### Revisit the _load_link()_ function, and prepare all pages to load correctly with it, whether it be in the **#pages** div or in another tab. The new window thing doesn't exactly matter.

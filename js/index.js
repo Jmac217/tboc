@@ -2,6 +2,7 @@ $(document).on('click', '.nav_element', function(){
 	load_link($(this).attr('id'), $(this).attr('title')); // ajax calls return as text, so this is a fix for the navigation links
 }).ready(function(){
 
+	// @todo line 9
 	$('#user_nav_home').click(function(){
 		$('#body_container').css({'visibility':'visible'});
 		$('#pages').css({'visibility':'hidden'});

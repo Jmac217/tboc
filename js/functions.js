@@ -125,7 +125,6 @@ if (!window.JSON) {
   };
 }
 
-
 function notice(visible, path, type){ // this needs to be refactored into JSON so painfully bad
 	if (visible == 'true'){
 		$.ajax({
@@ -266,10 +265,39 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 		data: 'json',
 		async: 'false',
 		success: function(json){
+			//var a = $.each(json.tiles[tile].links[Number()], function(){return(this);})
+		  var debug;
+		  for (var i = 0; i <= json.tiles[tile].links.length-1; i++){
+		  	//debug += _.zip(_.keys(json.tiles[tile].links[i]), _.values(json.tiles[tile].links[i]));
 
-			/*
+				var _type = json.tiles[tile].links[i].type;
+				var _id = json.tiles[tile].links[i].id;
+		  	var _orientation = "vertical_tile"; // special class
+		  	var _classes = "tile tile_border padded box load_link linear_gradient shadow";
+		  	var _image = "<span class='tile_image'><img src='"+json.tiles[tile].links[i].image+"'/></span>";
+		  	var _header = "<span class='tile_header'>"+json.tiles[tile].links[i].title+"</span>";
+		  	var _text = "<span class='tile_text'>"+json.tiles[tile].links[i].body+"</span>";
+		  	var _div = "<div id='"+_id+"' title='"+_type+"' class='"+_orientation+" "+_classes+"'>"+_image+_header+_text+"</div>";
+
+		  	// @todo
+		  	// in _div, _type is still being called title
+
+		  	$(panel).append(_div);
+		  }
+
+		  //alert(debug);
+
+			//$.each(json.tiles.banner, function(){alert(this.href);});
+
+			//alert(_.keys(json.tiles[tile].form));
 			jsonPath.eval(json.tiles, '$..'+tile+'.*').forEach(function(k, i){
-				alert(JSON.stringify(i));
+				//alert(_.keys(k));
+				/*
+				alert(JSON.stringify(k+', '+i));
+				alert(_.keys(k, "form"));
+				alert(_.has(k, "type"));
+				*/
+				/*
 				if(_.has(k, "form")==true){
 					// do form	
 					alert(json_array_elements(json));
@@ -282,8 +310,8 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 				}else if(_.has(k, "page")==true){
 					// do page	
 				}
+				*/
 			});
-			*/
 
 
 /* for current tile-set
