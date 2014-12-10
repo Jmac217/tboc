@@ -1,11 +1,5 @@
 ### TODO
 
-#### Global scope doesn't get passed into get_nav()
-
-#### Paths, when edited, seemed to have been broken.
-
-#### Left off creating banner content in `/res/banner/content/`.
-
 #### `container`s need to be removed: `#body_container` is what made me realize this.
 - This will require `#pages` to pull away from `#body`.
 
@@ -39,11 +33,15 @@ Something will have to be done about _.load_link_ being called twice from  *nav_
 
 1) Scaling is off in the dropdown list item height | index.js
 
+2) 50px is added to view on every click | functions.js
+
 ##### Issues
 
  - Page sizes don't revert once loaded and moved from.
 
  - Pages that load SQL databases will have to be synchronous, though there isn't any plans for these types of databases on TBOC, there may be in future sites.
+
+ - Button text will overflow if extended beyond its width.
 
 ---
 

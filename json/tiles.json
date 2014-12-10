@@ -33,35 +33,41 @@
 				"title":"Online Banking",
 				"image":"res/icons/home/checkbox.png",
 				"body":"Sign Up Now!",
-				"button":"none"
+				"button":""
 			},{
 				"type":"customer",
 				"id":"ebanking_enroll",
 				"title":"Interactive Demos",
 				"image":"res/icons/tech/computer.png",
 				"body":"Try Our Online Banking and Billpay demos",
-				"button":"none"
+				"button":""
 			},{
 				"type":"customer",
 				"id":"calc",
 				"title":"Online Consumer Loan Application",
 				"image":"res/icons/vehicles/car1.png",
 				"body":"",
-				"button":"none"
+				"button":""
 			}]
 		},
 		"row":{
 			"links":[{
+				"type":"personal",
+				"id":"card_services",
 				"title":"Card Services",
 				"image":"res/icons/card/white-simple-small.png",
 				"body":"Report a lost/stolen Debit Card or acivate/change the pin on a Debit Card.",
 				"button":"More Information"
 			},{
+				"type":"customer",
+				"id":"mortgage",
 				"title":"Mortgage Center",
 				"image":"res/icons/home/house-small.png",
 				"body":"Visit our Online Mortage Center to check current rates and apply online.",
 				"button":"Learn More"
 			},{
+				"type":"personal",
+				"id":"ebanking",
 				"title":"Mobile Banking",
 				"image":"res/icons/tech/mobile-small.png",
 				"body":"Get on-the-go access to eBanking with our FREE Mobile Banking APP.",

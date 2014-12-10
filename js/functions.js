@@ -258,7 +258,7 @@ function push_nav(name, id, title){
 	nav_obj.push({"name":name,"id":id,"title":title});
 }
 
-function generate_tiles(panel, tile){ // `panel` is the id of the tile-location, and `tile` is tiles.*
+function generate_tiles(panel, tile, orientation){ // `panel` is the id of the tile-location, and `tile` is tiles.*
 	$.ajax({
 		dataType: 'json',
 		url: 'json/tiles.json',
@@ -272,11 +272,16 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 
 				var _type = json.tiles[tile].links[i].type;
 				var _id = json.tiles[tile].links[i].id;
-		  	var _orientation = "vertical_tile"; // special class
+		  	var _orientation = orientation+'_tile'; // special class
 		  	var _classes = "tile tile_border padded box load_link linear_gradient shadow";
 		  	var _image = "<span class='tile_image'><img src='"+json.tiles[tile].links[i].image+"'/></span>";
 		  	var _header = "<span class='tile_header'>"+json.tiles[tile].links[i].title+"</span>";
 		  	var _text = "<span class='tile_text'>"+json.tiles[tile].links[i].body+"</span>";
+		  	var _button;
+		  	if (json.tiles[tile].links[i].button !== ''){
+		  		_button = "<span class='tile_button button'>"+json.tiles[tile].links[i].button+"</span>";	
+		  		_text += _button;
+		  	}
 		  	var _div = "<div id='"+_id+"' title='"+_type+"' class='"+_orientation+" "+_classes+"'>"+_image+_header+_text+"</div>";
 
 		  	// @todo
@@ -345,7 +350,8 @@ function generate_tiles(panel, tile){ // `panel` is the id of the tile-location,
 }
 
 // @debug
-generate_tiles('#column', 'column');
+generate_tiles('#column', 'column', 'vertical');
+generate_tiles('#bottom', 'row', 'horizontal');
 
 function get_nav(){
 	var nav_string = '';
@@ -366,10 +372,17 @@ function load_link(id, title){
 		success: function(json){
 			
 			// @todo -- it may become necessary to change the name variable name `location` to something else; seeing as it is a keyword in some instances.
+			var name = json.paths[title].links[id].name;
+			var path = json.paths[title].links[id].path;
+			var location = json.paths[title].links[id].location;
+			var win = json.paths[title].links[id].win;
+
+			/*
 			var name = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].name');
 			var path = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].path');
 			var location = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].location');
 			var win = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].win');
+			*/
 
 			$.ajax({
 				type:"post",
@@ -379,7 +392,7 @@ function load_link(id, title){
 					$('#body_container').css({'visibility':'hidden'});
 					$('#pages').html(data).css({'visibility':'visible'});
 					var height = $('#pages')[0].scrollHeight;
-					height+=50; // #pages height is weird
+					height+=50; // #pages height is weird @bug:2
 					$('#pages').css({'height':height});
 					set_footer(height);
 					

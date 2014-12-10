@@ -21,7 +21,13 @@ The folder structure has been jumbled slightly to remove abstracted folders, but
 - `/admin`    => for respective administrators (ie Margaret, Elizabeth, Rhonda, etc...)
 - `/apps`     => other things that don't fit or provide standalone functionality
 
+---
 
+#### Banner Content
+
+Banner content is stored in `/res/banner/content/` as self-contained HTML files.
+- These files have their own styles associated with them.
+- There is also a *_blank_template.html* file, aside from the content pages, to be used as a reference.
 
 ---
 
