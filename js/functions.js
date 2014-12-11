@@ -295,7 +295,8 @@ function generate_tiles(panel, tile, orientation){ // `panel` is the id of the t
 			//$.each(json.tiles.banner, function(){alert(this.href);});
 
 			//alert(_.keys(json.tiles[tile].form));
-			jsonPath.eval(json.tiles, '$..'+tile+'.*').forEach(function(k, i){
+
+			//jsonPath.eval(json.tiles, '$..'+tile+'.*').forEach(function(k, i){
 				//alert(_.keys(k));
 				/*
 				alert(JSON.stringify(k+', '+i));
@@ -316,7 +317,7 @@ function generate_tiles(panel, tile, orientation){ // `panel` is the id of the t
 					// do page	
 				}
 				*/
-			});
+			//});
 
 
 /* for current tile-set
@@ -378,31 +379,60 @@ function load_link(id, title){
 			var win = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].win');
 			*/
 
-			$.ajax({
-				type:"post",
-				url:path,
-				async:false,
-				success:function(data){
-					$('#body_container').css({'visibility':'hidden'});
-					$('#pages').html(data).css({'visibility':'visible'});
-					var height = $('#pages')[0].scrollHeight;
-					height+=50; // #pages height is weird @bug:2
-					$('#pages').css({'height':height});
-					set_footer(height);
-					
-					var nav_has_value = false;
-					for(var i = 0; i < nav_obj.length; i++){
-						if(name == nav_obj[i].name){
-							nav_has_value = true;
+
+
+
+			if (location=='external'){
+				var pretty_path = path.replace(/.*?:\/\//g, "");
+				var message = "You are about to leave TBOC.com to visit:<br/><a href='"+path+"'>"+pretty_path+"</a>";
+				$('#outgoing').css({'visibility':'visible'}).html(message).dialog({
+					title:"Confirmation",
+					dialogClass:"dialog-shadow",
+					width:400,
+					reziable:false,
+					modal:true,
+					buttons:[
+						{
+							text:"Cancel",
+							click:function(){
+								$(this).dialog("close");
+							}
+						},
+						{
+							text:"Continue",
+							click:function(){
+								window.location.href = path;
+							}
+						}
+					]	
+				});
+			}else{
+				$.ajax({
+					type:"post",
+					url:path,
+					async:false,
+					success:function(data){
+						$('#body_container').css({'visibility':'hidden'});
+						$('#pages').html(data).css({'visibility':'visible'});
+						var height = $('#pages')[0].scrollHeight;
+						height+=50; // #pages height is weird @bug:2
+						$('#pages').css({'height':height});
+						set_footer(height);
+						
+						var nav_has_value = false;
+						for(var i = 0; i < nav_obj.length; i++){
+							if(name == nav_obj[i].name){
+								nav_has_value = true;
+							}
+						}
+						
+						if (nav_has_value===false){
+							push_nav(name, id, title);
+							get_nav();
 						}
 					}
-					
-					if (nav_has_value===false){
-						push_nav(name, id, title);
-						get_nav();
-					}
-				}
-			});
+				});
+			}
 		}
 	});
 }

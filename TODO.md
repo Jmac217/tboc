@@ -1,9 +1,22 @@
 ### TODO
 
-#### *_container* s need to be removed: `#body_container` is what made me realize this.
+#### _`_container s`_ need to be removed: `#body_container` is what made me realize this.
 - This will require `#pages` to pull away from `#body`.
 
 `title` to be renamed, `id` and *title* to be placed by tiles.json.
+
+---
+
+##### tiles.json
+
+_`paths.*.links.*.path`_ must be hidden, therefore abstracted from the link
+- This forces `load_link()` to make lookups for the **asterisk** placeholders of this headline.
+	- `type='customer', id='mortgage'` would look for _`paths.customer.links.mortgage.path`_ on the back-end.
+
+_`paths.*.links.*.location`_ can be set to one of the following:
+- _internal_  : load page into #pages
+- _external_  : load external site through #outgoing
+- _affiliate_ : load external site without speedbump
 
 ---
 
@@ -28,6 +41,28 @@ Something will have to be done about _.load_link_ being called twice from  *nav_
 - this will ultimately allow for the deletion of `json/nav.json`.
 
 ---
+
+##### Website Meeting 12-11-14
+
+`pages` line heights must be set to 1.5 spaced.
+The demo page needs extended
+- This page encouraged the decision to create a new type of tile, one that would only cover the right 3/4ths of the pages area, named **"slice"** for now.
+
+Corrections in the JSON for Customer Service will be simple, eBanking and Demos are already taken care of.
+
+Resize photos throughout the pages.
+
+Make bullet points in IRA and stylize the disclaimer.
+
+In "Card Services": phone numbers need to stand out, and dropdowns need animations.
+
+All instances of "eBanking" need to be changed to "Online Banking."
+
+Pages business and Online Banking, header "Anytime Access" should be changed to "Online Banking." Header "Text Banking" will be added, and "Bill Pay" is moving to slot 2. List must be bullet points.
+
+GoClub is exclusively for customers 55 years of age, add deposit to account balance.
+
+In "Business Services": links need to be burgundy and "eSatatements" should take link to eStatment page.
 
 ##### Bugs
 

@@ -29,7 +29,7 @@
 		"column":{
 			"links":[{
 				"type":"customer",
-				"id":"loan_app",
+				"id":"_loan_app",
 				"title":"Online Banking",
 				"image":"res/icons/home/checkbox.png",
 				"body":"Sign Up Now!",
@@ -81,7 +81,7 @@
 			"links":{
 				"mortgage":{
 					"name":"Online Mortgage Center",
-					"path":"https://tboc.mortgagewebcenter.com/",
+					"path":"https://tboc.mortgagewebcenter.com",
 					"location":"external",
 					"win":"current"
 				},
@@ -91,20 +91,14 @@
 					"location":"internal",
 					"win":"current"
 				},
-				"ebanking_demo":{
-					"name":"eBanking Demo",
-					"path":"https://secure9.onlineaccess1.com/CarbondaleAutoEnrollment/auto_enrollment.html",
-					"location":"external",
-					"win":"current"
-				},
-				"billpay_demo":{
-					"name":"eBanking Bill Pay Demo",
-					"path":"https://secure9.onlineaccess1.com/CarbondaleOnline_30/demo/demo.htm",
+				"demos":{
+					"name":"Online Demos",
+					"path":"pages/customer/demos.php",
 					"location":"internal",
 					"win":"current"
 				},
 				"ebanking_enroll":{
-					"name":"Enroll in eBanking",
+					"name":"Enroll in Online Banking",
 					"path":"pages/customer/ebanking.php",
 					"location":"internal",
 					"win":"current"
@@ -118,12 +112,6 @@
 				"security":{
 					"name":"Security Center",
 					"path":"pages/customer/security.php",
-					"location":"internal",
-					"win":"current"
-				},
-				"demos":{
-					"name":"Online Demos",
-					"path":"pages/customer/demos.php",
 					"location":"internal",
 					"win":"current"
 				}
