@@ -56,6 +56,18 @@
 			<p>24-hours per day, you have access to your account balance from any phone. Just dial 618-549-0939.</p>
 		</div>
 	</div>
+	<div class='p_drop_container'>
+		<h2 class='p_drop_header'>eStatements</h2>
+		<div class='p_drop_content'>
+			<p>E-mail delivery of your statement with full 128-bit encryption. <a href="/estatements">Learn More.</a></p>
+		</div>
+	</div>
+	<div class='p_drop_container'>
+		<h2 class='p_drop_header'>eStatements on CD-ROM</h2>
+		<div class='p_drop_content'>
+			<p>Keep your files clean and organized with a full year's worth of statements and images on one, convenient CD-ROM.</p>
+		</div>
+	</div>
 </div>
 <script type='text/javascript'>$(document).ready(function(){
 	$('.p_drop_header').click(function(){
