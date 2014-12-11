@@ -335,12 +335,6 @@ function generate_tiles(panel, tile, orientation){ // `panel` is the id of the t
  * for each index in array a nested function skims each layer of hierarchy returning 
  *
  *
- *
- *
- *
- *
- *
- *
  */ 
 
 
