@@ -105,6 +105,16 @@ I really should figure out the best way to automate the entirety of the width, i
 
 ---
 
+##### Wording for outgoing
+
+You Are Leaving TBOC.com
+
+You have selected a page outside of The Bank of Carbondale's web site. Click continue below to proceed.
+
+The information contained in this site is not endorsed or guaranteed by The Bank of Carbondale. Also, please be aware that the security and privacy policies on this site may be different from our policy.
+
+---
+
 ##### Search Terms
 
 - **@bugs:**_[number]_ -- matches with *Bugs* list number
