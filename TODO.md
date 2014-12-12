@@ -20,6 +20,9 @@ _`paths.*.links.*.location`_ can be set to one of the following:
 
 ---
 
+##### Drop in replacement tile for the form, and hard-coded fall-backs for JSON features.
+- Will resemble, closely, the current website.
+
 ##### Revisit the _load_link()_ function, and prepare all pages to load correctly with it, whether it be in the **#pages** div or in another tab. The new window thing doesn't exactly matter.
 - this means the _load()_ function will need to be finished, probably first.
 - for now **all pages except for external links** will load into the front page

@@ -270,8 +270,8 @@ function generate_tiles(panel, tile, orientation){ // `panel` is the id of the t
 		  for (var i = 0; i <= json.tiles[tile].links.length-1; i++){
 		  	//debug += _.zip(_.keys(json.tiles[tile].links[i]), _.values(json.tiles[tile].links[i]));
 
-				var _type = json.tiles[tile].links[i].type;
-				var _id = json.tiles[tile].links[i].id;
+			var _type = json.tiles[tile].links[i].type;
+			var _id = json.tiles[tile].links[i].id;
 		  	var _orientation = orientation+'_tile'; // special class
 		  	var _classes = "tile tile_border padded box load_link linear_gradient shadow";
 		  	var _image = "<span class='tile_image'><img src='"+json.tiles[tile].links[i].image+"'/></span>";
@@ -344,9 +344,22 @@ function generate_tiles(panel, tile, orientation){ // `panel` is the id of the t
 	});
 }
 
-// @debug
+// page drop_tiles
+// @todo - height is hard-coded, should be based on div.height
+$('.drop_tile_header').click(function(){
+	$(this).siblings('.drop_tile_body').css({'visibility':'visible'}).animate({'height':'50px','padding':'10px'}, function(){
+		$(this).parent().mouseleave(function(){
+			$(this).children('.drop_tile_body').animate({'height':'0px','padding':'0px'}, function(){
+				$(this).css({'visibility':'hidden'});
+			});
+		});
+	});
+});
+
+// @debug | These will go into index.js
 generate_tiles('#column', 'column', 'vertical');
 generate_tiles('#bottom', 'row', 'horizontal');
+// ---
 
 function get_nav(){
 	var nav_string = '';
