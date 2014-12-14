@@ -1,6 +1,6 @@
 <div class='page_header'>Business Services</div>
-<img src="res/pages/business/business_services.jpg" class="page_photo text_shadow">
-<div class='page_body textblock text_shadow calculated_width box'>
+<img src="res/pages/business/business_services.jpg" class="page_left_column page_photo text_shadow">
+<div class='page_right_column_extended textblock text_shadow box'>
 	<div class='drop_tile'>
 		<h2 class='drop_tile_header'>Wire Transfers</h2>
 		<div class='drop_tile_body'>TEST TEXT TEST TEXT TEST TEXT TEST TEXT </div>
@@ -32,3 +32,5 @@
 		<div class='drop_tile_body'>You can offer your employees the convenience of direct deposit. See a Personal Banker for more details.</div>
 	</div>
 </div>
+<script type='text/javascript' src='/tboc/lib/jquery1.js'></script>
+<script type='text/javascript' src='/tboc/js/page_drop.js'></script>

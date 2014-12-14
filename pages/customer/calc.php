@@ -1,18 +1,5 @@
-<?php
-// File: tboc.com/calc.php - Calculators template page. Pulls from /calc based on $c
-
-// Still trying to decide what to do about this PHP global type junk
-
-/*
-	$OpenPanel = '1';
-	$PageTitle = 'About Us';
-	$SloganFile = 'slogan.php';
-	$PicBar = FALSE;
-*/ 
-?>
-
 <div class='page_header'>Calculators</div>
-<div class='textblock text_shadow'>
+<div class='page_row textblock text_shadow box'>
 <h4>Select A Calculator </h4>
 
 <span style='position:relative;left:45px;'>
@@ -28,19 +15,19 @@
 		<li><a js_href='pages/customer/calc/savings.html'>Monthly Savings Accumulation</a></li>
 		<li><a js_href='pages/customer/calc/college.html'>College Fund</a></li>
 		<li><a js_href='pages/customer/calc/creditcard.html'>Credit Card</a></li>
-		<li><a js_href='pages/customer/calc/mortgage.html'>Mortgage Loan</a><br /></li>
+		<li><a href='https://tboc.mortgagewebcenter.com/'>Mortgage Loan</a><br /></li>
 	</ul>
 </div>
 <!-- this script, and all other standalones, should probably go into their own js pages to be called on by the index -->
 
-<script type='text/javascript' src='js/jquery1.js'></script>
+<script type='text/javascript' src='lib/jquery1.js'></script>
 <script type='text/javascript'>
 	$('a').click(function(){
 		var href = $(this).attr('js_href');
-		$('#calc_area').load(href); // those pages will eventually be exchanged via a visability function instead of being loaded in as seperate files
+		$('#calc_area').load(href).css({'visibility':'visible'}); // those pages will eventually be exchanged via a visability function instead of being loaded in as seperate files
 	});
 </script>
-<div id='calc_area' style='height:1300px'>
+<div id='calc_area' class='sub_div' style='height:auto;visibility:hidden;'>
 	<!-- Javascript loads pages into this div -->
 </div>
 </div>

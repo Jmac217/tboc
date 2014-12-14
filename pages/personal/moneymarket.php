@@ -1,20 +1,20 @@
 <div class='page_header'>Money Market</div>
-<img src='res/pages/personal/money_market.jpg' class='page_photo text_shadow'/>
-<div class='page_body textblock text_shadow calculated_width box'>
+<img src='res/pages/personal/money_market.jpg' class='page_left_column page_photo text_shadow'/>
+<div class='page_right_column page_body textblock text_shadow box'>
 <p>After you're accustomed to saving money and have accumulated a larger  balance, you may want to step up to this account and earn a higher  interest rate. This account offers limited check writing ability along  with tiered interest rates.</p>
 <p>Every Bank of Carbondale Money Market account is eligible for eBanking with online, mobile, and text access on your schedule, 24 hours a day.</p>
 <p>All accounts are also eligible for free eStatements, with online delivery for your convenience and security.</p>
 </div>
 <br />
-<div class='textblock text_shadow' style='position:absolute;top:480px;width:93%;'>
-<table width='99%' border='2' cellspacing='3' cellpadding='0' class='Comparison'>
+<div >
+<table width='99%' border='2' cellspacing='3' cellpadding='0' class='page_row textblock text_shadow td-border'>
 	<tr>
 		<td scope='col' style='min-height:0; border: none;'>&nbsp;</td>
 		<th width='30%' align='center' scope='col'><div align='center'>Money Market</div></th>
 		<th width='30%' align='center' scope='col'><div align='center'>Elite Money Market</div></th>
 	</tr>
 	<tr>
-		<th scope='row'><div align='right'>Earns Interest</div></th>
+		<th scope='row'>Earns Interest</th>
 		<td><div align='center'>Yes</div></td>
 		<td><div align='center'>Yes</div></td>
 	</tr>
@@ -49,7 +49,7 @@
 		<td><div align='center'>Available</div></td>
 	</tr>
 	<tr>
-		<th scope='row'><div align='right'>eBanking</div></th>
+		<th scope='row'><div align='right'>Online Banking</div></th>
 		<td><div align='center'>Available</div></td>
 		<td><div align='center'>Available</div></td>
 	</tr>

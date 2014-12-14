@@ -77,7 +77,7 @@ $(document).on('click', '.nav_element', function(){
 					console.log(key+'->'+'links->'+k+'->name:'+v.win);
 					console.log("____________________________________");
 
-					list_items += "<li id='"+k+"' class='load_link load_link_li' path='"+v.path+"' location='"+v.location+"' win='"+v.win+"'>"+v.name+"</li>";
+					list_items += "<li id='"+k+"' class='load_link load_link_li' location='"+v.location+"' win='"+v.win+"'>"+v.name+"</li>";
 				});
 				if (list_items !==''){
 					$('#links').append("<div class='link link_button shadow' alt='"+key+"'><div class='link_title'><a>"+val.title+"</a></div><ul><li><ul class='link_drop'>"+list_items+"</ul></li></ul></div>");

@@ -29,21 +29,21 @@
 		"column":{
 			"links":[{
 				"type":"customer",
-				"id":"_loan_app",
+				"id":"ebanking_enroll",
 				"title":"Online Banking",
 				"image":"res/icons/home/checkbox.png",
 				"body":"Sign Up Now!",
 				"button":""
 			},{
 				"type":"customer",
-				"id":"ebanking_enroll",
+				"id":"demos",
 				"title":"Interactive Demos",
 				"image":"res/icons/tech/computer.png",
 				"body":"Try Our Online Banking and Billpay demos",
 				"button":""
 			},{
 				"type":"customer",
-				"id":"calc",
+				"id":"loan_app",
 				"title":"Online Consumer Loan Application",
 				"image":"res/icons/vehicles/car1.png",
 				"body":"",
@@ -81,13 +81,13 @@
 			"links":{
 				"mortgage":{
 					"name":"Online Mortgage Center",
-					"path":"https://tboc.mortgagewebcenter.com",
-					"location":"external",
+					"path":"https://tboc.mortgagewebcenter.com/",
+					"location":"affiliate",
 					"win":"current"
 				},
 				"loan_app":{
 					"name":"Consumer Loan Application",
-					"path":"pages/customer/personal_loans.php",
+					"path":"pages/personal/loans.php",
 					"location":"internal",
 					"win":"current"
 				},
@@ -98,14 +98,14 @@
 					"win":"current"
 				},
 				"ebanking_enroll":{
-					"name":"Enroll in Online Banking",
-					"path":"pages/customer/ebanking.php",
-					"location":"internal",
+					"name":"Enroll in eBanking",
+					"path":"https://secure9.onlineaccess1.com/CarbondaleAutoEnrollment/auto_enrollment.html",
+					"location":"affiliate",
 					"win":"current"
 				},
 				"calc":{
 					"name":"Financial Calculators",
-					"path":"pages/personal/calc.php",
+					"path":"pages/customer/calc.php",
 					"location":"internal",
 					"win":"current"
 				},
@@ -157,21 +157,27 @@
 					"win":"current"
 				},
 				"ebanking":{
-					"name":"eBanking",
+					"name":"Online Banking",
 					"path":"pages/personal/ebanking.php",
+					"location":"internal",
+					"win":"current"
+				},
+				"estatements":{
+					"name":"eStatements",
+					"path":"pages/personal/estatements.php",
 					"location":"internal",
 					"win":"current"
 				},
 				"loans":{
 					"name":"Loans",
-					"path":"pages/personal/personal_loans.php",
+					"path":"pages/personal/loans.php",
 					"location":"internal",
 					"win":"current"
 				},
 				"mortgage":{
 					"name":"Mortgage",
 					"path":"http://tboc.mortgagewebcenter.com/Default.asp?bhcp=1",
-					"location":"external",
+					"location":"affiliate",
 					"win":"current"
 				},
 				"go_club":{
@@ -193,37 +199,37 @@
 			"links":{
 				"checking":{
 					"name":"Checking",
-					"path":"pages/business/Business_Checking.php",
+					"path":"pages/business/checking.php",
 					"location":"internal",
 					"win":"current"
 				},
 				"ebanking":{
-					"name":"eBanking",
-					"path":"pages/business/Business_eBanking.php",
+					"name":"Online Banking",
+					"path":"pages/business/online_banking.php",
 					"location":"internal",
 					"win":"current"
 				},
 				"remote_deposit":{
 					"name":"Remote Deposit",
-					"path":"pages/business/Remote-Deposit.php",
+					"path":"pages/business/remote-deposit.php",
 					"location":"internal",
 					"win":"current"
 				},
 				"business_debit_card":{
 					"name":"Business Debit Card",
-					"path":"pages/business/Business_Debit_Card.php",
+					"path":"pages/business/debit_card.php",
 					"location":"internal",
 					"win":"current"
 				},
 				"loans":{
 					"name":"Loans",
-					"path":"pages/business/Business_Loans.php",
+					"path":"pages/business/loans.php",
 					"location":"internal",
 					"win":"current"
 				},
 				"banking_services":{
-					"name":"Banking Services",
-					"path":"pages/business/Banking_Services.php",
+					"name":"Other Services",
+					"path":"pages/business/other_services.php",
 					"location":"internal",
 					"win":"current"
 				}

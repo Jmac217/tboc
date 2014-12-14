@@ -344,8 +344,10 @@ function generate_tiles(panel, tile, orientation){ // `panel` is the id of the t
 	});
 }
 
+// moved to page_drop.js
 // page drop_tiles
 // @todo - height is hard-coded, should be based on div.height
+/*
 $('.drop_tile_header').click(function(){
 	$(this).siblings('.drop_tile_body').css({'visibility':'visible'}).animate({'height':'50px','padding':'10px'}, function(){
 		$(this).parent().mouseleave(function(){
@@ -355,6 +357,7 @@ $('.drop_tile_header').click(function(){
 		});
 	});
 });
+*/
 
 // @debug | These will go into index.js
 generate_tiles('#column', 'column', 'vertical');
@@ -372,18 +375,29 @@ function get_nav(){
 	$('#user_nav_array').html(nav_string);
 }
 
-function load_link(id, title){
+function load_link(id, title, path, location){
 	$.ajax({
 		url: 'json/tiles.json',
 		dataType: 'json',
 		async: false,
 		success: function(json){
+
+
+			alert('1: '+path+location);
 			
 			// @todo -- it may become necessary to change the name variable name `location` to something else; seeing as it is a keyword in some instances.
 			var name = json.paths[title].links[id].name;
-			var path = json.paths[title].links[id].path;
-			var location = json.paths[title].links[id].location;
+			if (path == null){
+				var path = json.paths[title].links[id].path;
+			}
+			if (location == null){
+				var location = json.paths[title].links[id].location;
+			}
 			var win = json.paths[title].links[id].win;
+
+
+			alert('2: '+path+location);
+
 
 			/*
 			var name = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].name');
@@ -419,7 +433,9 @@ function load_link(id, title){
 						}
 					]	
 				});
-			}else{
+			}else if(location=='affiliate'){
+				window.location.href = path;
+			}else if(location=='internal'){
 				$.ajax({
 					type:"post",
 					url:path,
