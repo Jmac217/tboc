@@ -375,15 +375,17 @@ function get_nav(){
 	$('#user_nav_array').html(nav_string);
 }
 
-function load_link(id, title, path, location){
+// function load_link(id, title, path, location){ // for external path and location
+function load_link(id, title){
 	$.ajax({
 		url: 'json/tiles.json',
 		dataType: 'json',
 		async: false,
 		success: function(json){
 
+			// for external onclick events path and location must be supplied some how
 
-			alert('1: '+path+location);
+			//alert('1: '+path+location);
 			
 			// @todo -- it may become necessary to change the name variable name `location` to something else; seeing as it is a keyword in some instances.
 			var name = json.paths[title].links[id].name;
@@ -396,7 +398,7 @@ function load_link(id, title, path, location){
 			var win = json.paths[title].links[id].win;
 
 
-			alert('2: '+path+location);
+			//alert('2: '+path+location);
 
 
 			/*
