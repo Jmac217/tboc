@@ -125,6 +125,22 @@ if (!window.JSON) {
   };
 }
 
+// @todo
+// send_url_parameters() needs more consideration, and research into hashes, rather than question mark / php style parameters.
+// Hashes can be changed without reloading the page, question marks cannot be.
+function send_url_parameters(){
+	var url = document.URL;
+	var params = {}
+	//alert(location.search.substr(0));
+	location.search.substr(0).split("&").forEach(function(param){params[param.split("=")[0]] = param.split("=")[1]});
+	var id = params.id;
+	var title = params.title;
+	if (id != null && title != null){
+		load_link(id, title);
+	}
+}
+send_url_parameters();
+
 function notice(visible, path, type){ // this needs to be refactored into JSON so painfully bad
 	if (visible == 'true'){
 		$.ajax({
@@ -344,20 +360,17 @@ function generate_tiles(panel, tile, orientation){ // `panel` is the id of the t
 	});
 }
 
-// moved to page_drop.js
 // page drop_tiles
 // @todo - height is hard-coded, should be based on div.height
-/*
-$('.drop_tile_header').click(function(){
-	$(this).siblings('.drop_tile_body').css({'visibility':'visible'}).animate({'height':'50px','padding':'10px'}, function(){
+function page_drop(onclick){
+	$(onclick).children('.drop_tile_body').css({'visibility':'visible','padding':'10px'}).animate({'height':'100%'}, function(){
 		$(this).parent().mouseleave(function(){
 			$(this).children('.drop_tile_body').animate({'height':'0px','padding':'0px'}, function(){
 				$(this).css({'visibility':'hidden'});
 			});
 		});
 	});
-});
-*/
+}
 
 // @debug | These will go into index.js
 generate_tiles('#column', 'column', 'vertical');
@@ -463,6 +476,18 @@ function load_link(id, title){
 						}
 					}
 				});
+				var w = window.location.origin+window.location.pathname+'?id='+id+'&title='+title;
+				//window.location='';
+				
+				
+				/*
+				var routeData= route.substring(0, route.indexOf('?'));
+				alert(routeData);
+				*/
+				/*
+				var d= document.URL+'?id='+id+'&title='+title;
+				alert(d.route.split(("?")[0]));
+				*/
 			}
 		}
 	});

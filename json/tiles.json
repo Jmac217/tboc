@@ -92,13 +92,13 @@
 					"win":"current"
 				},
 				"demos":{
-					"name":"Online Demos",
+					"name":"Online Banking Demos",
 					"path":"pages/customer/demos.php",
 					"location":"internal",
 					"win":"current"
 				},
 				"ebanking_enroll":{
-					"name":"Enroll in eBanking",
+					"name":"Enroll in Online Banking",
 					"path":"https://secure9.onlineaccess1.com/CarbondaleAutoEnrollment/auto_enrollment.html",
 					"location":"affiliate",
 					"win":"current"
@@ -157,7 +157,7 @@
 					"win":"current"
 				},
 				"ebanking":{
-					"name":"Online Banking",
+					"name":"Online And Mobile Banking",
 					"path":"pages/personal/ebanking.php",
 					"location":"internal",
 					"win":"current"
@@ -169,7 +169,7 @@
 					"win":"current"
 				},
 				"loans":{
-					"name":"Loans",
+					"name":"Consumer Loans",
 					"path":"pages/personal/loans.php",
 					"location":"internal",
 					"win":"current"
@@ -204,7 +204,7 @@
 					"win":"current"
 				},
 				"ebanking":{
-					"name":"Online Banking",
+					"name":"Online And Mobile Banking",
 					"path":"pages/business/online_banking.php",
 					"location":"internal",
 					"win":"current"
@@ -216,13 +216,13 @@
 					"win":"current"
 				},
 				"business_debit_card":{
-					"name":"Business Debit Card",
+					"name":"Business Card Services",
 					"path":"pages/business/debit_card.php",
 					"location":"internal",
 					"win":"current"
 				},
 				"loans":{
-					"name":"Loans",
+					"name":"Commercial Loans",
 					"path":"pages/business/loans.php",
 					"location":"internal",
 					"win":"current"
@@ -251,7 +251,7 @@
 					"win":"current"
 				},
 				"news":{
-					"name":"News",
+					"name":"Press Releases",
 					"path":"pages/about/news.php",
 					"location":"internal",
 					"win":"current"

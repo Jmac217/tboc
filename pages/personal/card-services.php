@@ -1,6 +1,6 @@
 <div class='page_header'>Card Services</div>
-<!--<img src="res/pages/personal/atm.jpg" class='page_left_column page_photo text_shadow' />-->
-<div class='page_row textblock text_shadow box'>
+<img src="res/pages/personal/atm.jpg" class='page_left_column text_shadow' />
+<div class='page_right_column_extended textblock text_shadow box'>
 <h2>MasterCard&reg; Debit Card</h2>
 <div class='sub_div'>
 <ul>

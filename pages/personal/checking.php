@@ -1,9 +1,9 @@
 <div class='page_header'>Personal Checking</div>
 <img src="res/pages/personal/personal_checking.jpg" alt="Personal Checking" class="page_photo page_left_column text_shadow">
 <div class='page_right_column page_body textblock text_shadow box'>
-<p>The Bank of Carbondale has  checking accounts to suit your individual style and make  managing your money easy.  Each account offers a slightly different set of features,  interest earnings, service charges, and minimum balance.</p>
-<p>Every Bank of Carbondale checking account is eligible for online banking with online, mobile, and text access on your schedule, 24 hours a day.</p>
-<p>All accounts are also eligible for free eStatements, with online delivery for your convenience and security.</p>
+	<p>The Bank of Carbondale has  checking accounts to suit your individual style and make  managing your money easy.  Each account offers a slightly different set of features,  interest earnings, service charges, and minimum balance.</p>
+	<p>Every Bank of Carbondale checking account is eligible for online banking with online, mobile, and text access on your schedule, 24 hours a day.</p>
+	<p>All accounts are also eligible for free eStatements, with online delivery for your convenience and security.</p>
 </div>
 <table class='page_row textblock text_shadow td-border'>
 <!--<table width="99%" cellspacing="3" cellpadding="0" class="Comparison">-->
@@ -56,7 +56,7 @@
     <td><div align="center">None</div></td>
   </tr>
   <tr>
-    <th scope="row"><div align="right" style='font-size:12px'>Minimum Balance to Avoid the Monthy Service Fee</div></th>
+    <th scope="row"><div align="right">Minimum Balance to Avoid the<br/> Monthly Service Charge</div></th>
     <td><div align="center">Maintain a minimum balance of $100.00 for every day of a statement cycle.</div></td>
     <td><div align="center">N/A</div></td>
     <td><div align="center">N/A</div></td>
@@ -154,14 +154,14 @@
 </table>
 <div class='page_row textblock text_shadow box'>
 	<div class='sub_div'>
-		<small style='text-align:right'>
+		<small style='text-align:left'>
 				<p>
-					Available on this account type: <img src="res/icons/check.png" width="25" height="28"><br/>
-					Required for this account type: <img src="res/icons/require.png" width="25" height="28">
+					<img src="res/icons/check.png" width="25" height="28"> Available on this account type <br/>
+					<img src="res/icons/require.png" width="25" height="28"> Required for this account type 
 				</p>
-				<p>Online banking access subject to approval and limits: &nbsp; <sup>&dagger;</sup> &nbsp; </p>
-				<p>Mobile Banking requires enrollment in online banking. Text messaging and data rates from your mobile service provider may apply: &nbsp; <sup>&Dagger;</sup> &nbsp; </p>
-				<p>Not to exceed five (5) per month. In the case of travelers cheques, not to exceed five (5) orders per month: &nbsp; <sup>*</sup> &nbsp; </p>
+				<p>&nbsp; <sup>&dagger;</sup> &nbsp; Online banking access subject to approval and limits </p>
+				<p>&nbsp; <sup>&Dagger;</sup> &nbsp; Mobile Banking requires enrollment in online banking. Text messaging and data rates from your mobile service provider may apply</p>
+				<p>&nbsp; <sup>*</sup> &nbsp;  Not to exceed five (5) per month. In the case of travelers cheques, not to exceed five (5) orders per month</p>
 		</small>
 	</div>
 </div>

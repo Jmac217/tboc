@@ -1,6 +1,6 @@
 <!-- outgoing.php is still in use on this page! -->
 
-<div class='page_header'>Business Debit Card</div>
+<div class='page_header'>Business Card Services</div>
 <img src="res/pages/business/debit_card.jpg" class="page_left_column page_photo text_shadow">
 <div class='page_right_column_extended textblock text_shadow box'>
 	<h2>MasterCard & Business Debit Card</h2>

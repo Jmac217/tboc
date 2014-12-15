@@ -1,11 +1,11 @@
 <div class='page_header'>Business Checking</div>
-<div class='page_row textblock text_shadow box'>
-	<p>The Bank of Carbondale understands the needs of local business, because we are a local business too!  The Bank of Carbondale offers business checking with low monthly service fees, the most extensive banking hours in the area, and outstanding customer service from a locally owned and operated bank.  To better serve our business customers, we have five banking centers located in Carbondale, Carterville, Murphysboro and Vergennes. </p>
-</div>
 <img src="res/pages/business/business_checking.jpg" class="page_left_column page_photo text_shadow" />
-<div class='page_right_column_extended textblock text_shadow box'>
+<div class='page_right_column page_body textblock text_shadow box'>
+	<p>The Bank of Carbondale understands the needs of local business, because we are a local business too!  The Bank of Carbondale offers business checking with low monthly service fees, the most extensive banking hours in the area, and outstanding customer service from a locally owned and operated bank.  To better serve our business customers, we have five banking centers located in Carbondale, Carterville, Murphysboro and Vergennes. </p>
 	<p>We offer our business customers a variety of additional services, which are designed to make banking with us more convenient. Our business customers can also enjoy the convenience of Online Banking, Bill Payment, Cash Management, and Remote Deposit.</p>
 	<p>For more information about our business services, please stop by any of our banking centers or give us a call today.</p>
+</div>
+<div class='page_row textblock text_shadow box'>
 	<table style='width:100%' class='td-border'>
 	  <tr>
 		<td scope="col" style="min-height:0; border: none;">&nbsp;</td>
