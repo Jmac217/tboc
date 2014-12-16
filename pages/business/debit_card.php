@@ -15,7 +15,7 @@
 		</ul>
 		<p><small>Business Debit MasterCard&reg; subject to approval and daily  purchase limits.   For more information, please contact a bank  representative. </small></p>
 		<p><a href="pages/downloads/buisness_debit_card_application.pdf">Printable Application Form</a></p>
-		<p><a onclick="load_link('0', '0', 'https://secure4.arcot.com/vpas/cnsmc_081216389/i18n/en_US/index.html', 'external')">MasterCard&reg; Secure Code</a></p>
+		<p><a onclick="load_link('external', 'https://secure4.arcot.com/vpas/cnsmc_081216389/i18n/en_US/index.html')">MasterCard&reg; Secure Code</a></p>
 	</div>
 	<h2>To Activate/Change Pin on Debit Card</h2>
 	<div class='sub_div'>

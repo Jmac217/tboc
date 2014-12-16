@@ -254,7 +254,7 @@ function notice(visible, path, type){ // this needs to be refactored into JSON s
 				setTimeout(function(){
 					$('#notices').css({'visibility':'hidden'});
 					$('#notices_area').css({'visibility':'hidden'});
-					$('#warning').css({'visibility':'hidden',});
+					$('#warning').css({'visibility':'hidden'});
 					$('#alert').css({'visibility':'hidden'});
 				},350);
 		// set visibility false and animate closed
@@ -298,7 +298,9 @@ function generate_tiles(panel, tile, orientation){ // `panel` is the id of the t
 		  		_button = "<span class='tile_button button'>"+json.tiles[tile].links[i].button+"</span>";	
 		  		_text += _button;
 		  	}
-		  	var _div = "<div id='"+_id+"' title='"+_type+"' class='"+_orientation+" "+_classes+"'>"+_image+_header+_text+"</div>";
+			// following possible in all but IE, of course
+		  	//var _div = "<div id='"+_id+"' title='"+_type+"' class='"+_orientation+" "+_classes+"'>"+_image+_header+_text+"</div>";
+			var _div = "<div onclick='load_link(\""+_id+"\", \""+_type+"\")' class='"+_orientation+" "+_classes+"'>"+_image+_header+_text+"</div>";
 
 		  	// @todo
 		  	// in _div, _type is still being called title
@@ -377,17 +379,6 @@ generate_tiles('#column', 'column', 'vertical');
 generate_tiles('#bottom', 'row', 'horizontal');
 // ---
 
-function get_nav(){
-	var nav_string = '';
-	for (var i=0; i<=3; i++){
-		nav_string += '<u class="nav_element load_link" title="'+nav_obj[i].title+'" id="'+nav_obj[i].id+'">'+nav_obj[i].name+'</u>';
-		if(i<nav_cap){
-			nav_string+=' &nbsp; &#149; &nbsp; ';
-		}
-	}
-	$('#user_nav_array').html(nav_string);
-}
-
 // function load_link(id, title, path, location){ // for external path and location
 function load_link(id, title){
 	$.ajax({
@@ -395,6 +386,11 @@ function load_link(id, title){
 		dataType: 'json',
 		async: false,
 		success: function(json){
+			
+			if (id == 'external'){
+				var location = 'external';
+				var path = title;
+			}else{
 
 			// for external onclick events path and location must be supplied some how
 
@@ -409,7 +405,7 @@ function load_link(id, title){
 				var location = json.paths[title].links[id].location;
 			}
 			var win = json.paths[title].links[id].win;
-
+			}
 
 			//alert('2: '+path+location);
 
@@ -424,7 +420,7 @@ function load_link(id, title){
 
 
 
-			if (location=='external'){
+			if (location=='external'||id=='external'){
 				var pretty_path = path.replace(/.*?:\/\//g, "");
 				var message = "<p style='position:relative;text-align:justify;'>You have selected a page outside of The Bank of Carbondale's web site. Click 'Continue' below to proceed to:</p><p><a style='font-weight:bold;text-align:center;' href='"+path+"'>"+pretty_path+"</a>.<p style='position:relative;font-size:10px;text-align:justify;margin-top:20px;'>The information contained in this site is not endorsed or guaranteed by The Bank of Carbondale. Also, please be aware that the security and privacy policies on this site may be different from our policy.</p>";
 //				var message = "You are about to leave TBOC.com to visit:<br/><a href='"+path+"'>"+pretty_path+"</a>";

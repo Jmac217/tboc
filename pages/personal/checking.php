@@ -72,7 +72,7 @@
     <td><div align="center">$100.00</div></td>
   </tr>
   <tr>
-    <th scope="row"><div align="right"><a href="/personal/card-services">Debit Card Available</a></div></th>
+    <th scope="row"><div align="right"><a onclick='load_link("card_services","personal")'>Debit Card Available</a></div></th>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
@@ -88,7 +88,7 @@
     <td><div align="center">None</div></td>
   </tr>
   <tr>
-    <th scope="row"><div align="right"><a href="/estatements">eStatements</a></div></th>
+    <th scope="row"><div align="right"><a onclick='load_link("estatements", "personal")'>eStatements</a></div></th>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
@@ -96,7 +96,7 @@
     <td><div align="center"><img src="res/icons/require.png" width="25" height="28"></div></td>
   </tr>
   <tr>
-    <th scope="row"><div align="right"><a href="/ebanking">Online Banking</a><sup>&dagger;</sup></div></th>
+    <th scope="row"><div align="right"><a onclick='load_link("ebanking", "personal")'>Online Banking</a><sup>&dagger;</sup></div></th>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
@@ -104,7 +104,7 @@
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
   </tr>
   <tr>
-    <th scope="row"><div align="right"><a href="/ebanking">Mobile Banking</a><sup>&Dagger;</sup></div></th>
+    <th scope="row"><div align="right"><a onclick='load_link("ebanking", "personal")'>Mobile Banking</a><sup>&Dagger;</sup></div></th>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>

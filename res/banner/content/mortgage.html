@@ -1,4 +1,3 @@
-<html>
 <head>
 <style>
 #banner_mortgage .container{
@@ -14,6 +13,7 @@
 	border:solid 1px rgba(0, 0, 0, .3);
 	/*box-shadow:3px 3px 5px #6a6a6a;*/
 }
+
 #banner_mortgage .transparency{
 	position:absolute;
 	display:block;
@@ -25,6 +25,7 @@
 	border-radius:inherit;
 	behavior:url(lib/PIE.htc);
 }
+
 #banner_mortgage .overlay{
 	position:relative;
 	height:inherit;
@@ -38,10 +39,22 @@
 	margin:auto;
 	text-align:center;
 }
+
 .h1{font-family:optimus;font-size:18px;font-weight:bold;}
 .h2{font-family:optimus-semi;font-size:15px;}
 .s{font-size:font-size:15px;font-weight:normal;}
-.overlay > input[type=button] {position:relative;left:0;right:0;margin:auto;}
+
+.overlay > input[type=button]{
+	position:relative;
+	padding:15px 30px;
+	line-height:0px;
+	font-size:15px;
+}
+#banner_mortgage  .overlay > input[type=button] {
+	top:30px;
+	left:10%;
+	width:80%;
+}
 </style>
 </head>
 <body>
@@ -52,8 +65,7 @@
 			<br/><br/>
 			<div class='h2'>VISIT OUR</div>
 			<div class='h1'>ONLINE MORTGAGE CENTER</div>
-			<input class='button tile_button load_link radius' title='customer' id='loan_app' win='current' location='internal' style='padding:15px 30px;line-height:0px;font-size:15px;' type='button' value='Learn More'/>
+			<input class='button tile_button load_link radius' type='button' onclick='load_link("loan_app","customer")' value='Learn More'/>
 		</div>
 	</div>
 </body>
-</html>

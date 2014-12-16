@@ -236,6 +236,7 @@ p{line-height:18px;}
 					.drop_tile_image{}
 					.drop_tile_button{}
 					.drop_tile_link{}
+					.drop_tile_nobullet{list-style-type:none;}
 				
 				
 			/* security */

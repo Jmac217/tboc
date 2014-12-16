@@ -7,7 +7,7 @@
 	top:30px;
 	bottom:30px;
 	left:30px;
-	height:90px;
+	height:120px;
 	width:auto;
 	border-radius:5px;
 	overflow:hidden;
@@ -41,7 +41,11 @@
 .h1{font-family:optimus;font-size:18px;font-weight:bold;}
 .h2{font-family:optimus-semi;font-size:15px;}
 .s{font-size:font-size:15px;font-weight:normal;}
-.overlay > input[type=button] {position:relative;top:30px;left:55px;}
+#banner_online .overlay > input[type=button] {
+	top:30px;
+	left:10%;
+	width:80%;
+}
 </style>
 </head>
 <body>
@@ -49,7 +53,7 @@
 		<div class='transparency'></div>
 		<div class='overlay'>
 			<span class='h1'>CHECK OUT OUR ONLINE BANKING OFFERINGS!</span>
-			<input class='button tile_button load_link' title='personal' id='ebanking' win='current' location='internal' style='position:absolute;top:50px;left:200px;padding:15px 30px;line-height:0px;font-size:15px;' type='button' value='Learn More'/>
+			<input class='button tile_button load_link' title='personal' onclick='load_link("ebanking", "personal")' type='button' value='Learn More'/>
 		</div>
 	</div>
 </body>

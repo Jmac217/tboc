@@ -16,7 +16,9 @@ $('[placeholder]').focus(function() {
   }
 }).blur();
 
-
+	// hardcoded banner loads
+	$('#banner_mortgage').load('res/banner/content/mortgage.html');
+	$('#banner_online').load('res/banner/content/online.html');
 
 	// @todo line 9
 	$('#user_nav_home').click(function(){
@@ -45,8 +47,6 @@ $('[placeholder]').focus(function() {
 	  slide: 'div',
 	  cssEase: 'linear'
 	});
-	
-	get_nav();
 	
 	// populate dropdowns
 	$.ajax({
