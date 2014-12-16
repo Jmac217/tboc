@@ -426,10 +426,12 @@ function load_link(id, title){
 
 			if (location=='external'){
 				var pretty_path = path.replace(/.*?:\/\//g, "");
-				var message = "You are about to leave TBOC.com to visit:<br/><a href='"+path+"'>"+pretty_path+"</a>";
+				var message = "<p style='position:relative;text-align:justify;'>You have selected a page outside of The Bank of Carbondale's web site. Click 'Continue' below to proceed to:</p><p><a style='font-weight:bold;text-align:center;' href='"+path+"'>"+pretty_path+"</a>.<p style='position:relative;font-size:10px;text-align:justify;margin-top:20px;'>The information contained in this site is not endorsed or guaranteed by The Bank of Carbondale. Also, please be aware that the security and privacy policies on this site may be different from our policy.</p>";
+//				var message = "You are about to leave TBOC.com to visit:<br/><a href='"+path+"'>"+pretty_path+"</a>";
 				$('#outgoing').css({'visibility':'visible'}).html(message).dialog({
-					title:"Confirmation",
+					title:"Confirmation: You Are Leaving TBOC.com",
 					dialogClass:"dialog-shadow",
+					height:"auto",
 					width:400,
 					reziable:false,
 					modal:true,

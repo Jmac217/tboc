@@ -55,25 +55,25 @@ Go back through and make sure all pages have alt-text.
 
 ! Personal Banking -> COD rates is off due to database dependency, this needs attention!
 
-##### ! Break out page dropdowns.
+~~##### ! Break out page dropdowns.~~
 
-load_link() needs to break out, along with dropdown, to enable safe function calls.
+~~load_link() needs to break out, along with dropdown, to enable safe function calls.~~
 - load_link() can be called directly from attr->onclick=load_link(id, title)
 - In "Business Services": links need to be burgundy and "eSatatements" should take link to eStatment page.
 
 ! Page heights is busted
 
-! Page links are still messed up
-- breakout needs to happen
+~~! Page links are still messed up~~
+~~- breakout needs to happen~~
 
 Ask Elizabeth for:
 
 - Card Services -- Add Gift Card number
 
-Personal -> Other Services is still adhering to the old standard.
+~~Personal -> Other Services is still adhering to the old standard.~~
 
-`vanity` : remove borders for remaining images
-- all of Personal still have borders, for example.
+~~`vanity` : remove borders for remaining images~~
+~~- all of Personal still have borders, for example.~~
 
 ~~All instances of "eBanking" need to be changed to "Online Banking."~~
 
@@ -108,6 +108,8 @@ Personal -> Other Services is still adhering to the old standard.
  - Pages that load SQL databases will have to be synchronous, though there isn't any plans for these types of databases on TBOC, there may be in future sites.
 
  - Button text will overflow if extended beyond its width.
+ 
+ - History.js will be necessary after adding direct page links
 
 ---
 

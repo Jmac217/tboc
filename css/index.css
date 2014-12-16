@@ -64,7 +64,7 @@ p{line-height:18px;}
 		.horizontal_tile > .tile_text{top:10px;display:inline-block;text-align:left;}
 	.banner_tile{display:inline-block;height:279px;width:750px;}
 	.banner_image{border-radius:5px;3px 3px 3px #a2a2a2;}
-	.banner_content{position:absolute;display:block;padding:20px;background-color:black;color:white;border-radius:5px;overflow:hidden;opacity:.5}
+	.banner_content{position:absolute;display:block;padding:20px;background-color:black;color:white;border-radius:5px;overflow:hidden;opacity:.5;}
 		/* banner content positions */
 		/* not sure I really like this, but it works for now */
 		.left{top:10%;left:50px;height:80%;width:300px;}
@@ -165,7 +165,7 @@ p{line-height:18px;}
 			/**/
 		/**/
 		#body_container{position:absolute;top:0px;left:0px;height:100%;width:100%;}
-			#banner{position:relative;top:0px;left:220px;height:279px;width:750px;/*-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;z-index:900;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:2px 2px 2px 2px;behavior:url(lib/PIE.htc);*/}
+			#banner{position:relative;top:0px;left:220px;height:279px;width:750px;z-index:0;/*-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;overflow:hidden;z-index:900;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:2px 2px 2px 2px;behavior:url(lib/PIE.htc);*/}
 			#tile_column{position:absolute;top:0px;left:0px;height:auto;width:210px;}
 				#login{position:relative;width:100%;overflow:hidden;top:0px;height:200px;width:100%;border:solid 1px #777;background-color:#EEE;border-radius:10px 10px 0px 0px;;/*-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;-webkit-border-radius: 10px;-moz-border-radius: 10px;border-radius:5px;behavior:url(lib/PIE.htc);*/}}
 					#login_header{position:absolute;top:0px;left:0px;height:30px;width:100%;font-size:15px;text-align:center;display:block;color:#444;border-bottom:solid 1px #aaa;background-color:#ddd;padding:5px;font-style:italic;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;behavior:url(lib/PIE.htc);}

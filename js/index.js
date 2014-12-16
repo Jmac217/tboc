@@ -2,6 +2,22 @@ $(document).on('click', '.nav_element', function(){
 	load_link($(this).attr('id'), $(this).attr('title')); // ajax calls return as text, so this is a fix for the navigation links
 }).ready(function(){
 
+$('[placeholder]').focus(function() {
+  var input = $(this);
+  if (input.val() == input.attr('placeholder')) {
+    input.val('');
+    input.removeClass('placeholder');
+  }
+}).blur(function() {
+  var input = $(this);
+  if (input.val() == '' || input.val() == input.attr('placeholder')) {
+    input.addClass('placeholder');
+    input.val(input.attr('placeholder'));
+  }
+}).blur();
+
+
+
 	// @todo line 9
 	$('#user_nav_home').click(function(){
 		$('#body_container').css({'visibility':'visible'});
@@ -71,11 +87,13 @@ $(document).on('click', '.nav_element', function(){
 				list_items = '';
 				$.each(val.links, function(k, v){
 				
+					/*
 					console.log(key+'->'+'links->'+k+'->name:'+v.name); // @debug
 					console.log(key+'->'+'links->'+k+'->name:'+v.path);
 					console.log(key+'->'+'links->'+k+'->name:'+v.location);
 					console.log(key+'->'+'links->'+k+'->name:'+v.win);
 					console.log("____________________________________");
+					*/
 
 					list_items += "<li id='"+k+"' class='load_link load_link_li' location='"+v.location+"' win='"+v.win+"'>"+v.name+"</li>";
 				});
@@ -117,7 +135,11 @@ $(document).on('click', '.nav_element', function(){
 			url: 'json/tiles.json',
 			async: false,
 			success: function(json){
-				fields = jsonPath.eval(json, '$.paths['+dropdown+'].*.*').length+1;
+				//alert(json);
+				//alert(dropdown);
+				//fields = jsonPath.eval(json, '$.paths['+dropdown+'].*.*').length+1;
+				//fields = json.paths[dropdown].links.length+1;
+				fields = _.size(json.paths[dropdown].links)+1;
 				drop_height = (fields*26)+'px';  // @bugs:1
 			}
 		});
@@ -127,6 +149,7 @@ $(document).on('click', '.nav_element', function(){
 		$(this).children('ul').children('li').children('ul').css({'height':'0px'});
 	});
 	$('.load_link').click(function(){
+		//alert('load_link');
 		var id = $(this).attr('id');
 		if($(this).hasClass('load_link_li')){
 			var title = $(this).parent().parent().parent().parent().attr('alt'); // up up and away // @unnecessary
