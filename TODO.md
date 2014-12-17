@@ -7,6 +7,16 @@
 
 ---
 
+### 12-17-14
+
+#### Chrome, when resizing, likes to force the last button in `#links` to return to a new line.
+
+Also, make sure that things from *Secuity Center* do not overflow into the footer, that was strange.
+
+`.cite` will be added to all citations, `business->loans.php` is a perfect example.
+
+---
+
 ##### tiles.json
 
 _`paths.*.links.*.path`_ must be hidden, therefore abstracted from the link

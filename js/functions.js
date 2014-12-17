@@ -262,12 +262,17 @@ function notice(visible, path, type){ // this needs to be refactored into JSON s
 	}
 }
 
-function set_footer(page_height){
-	var notice_height = parseInt($('#notices').css('height'));
-	var footer_height = 470;
-	var footer_top = page_height+notice_height+footer_height+'px';
-	$('#footer').css({'top':footer_top});
+// disabled!
+/*
+function set_footer(){
+	var page_height = parseInt($('#pages').css('height'));
+	//var notice_height = parseInt($('#notices').css('height'));
+	var footer_height = 210;
+	var footer_top = page_height+footer_height+'px';
+	//$('#footer').css({'top':footer_top});
+	//$('#footer').css({'top':'auto'});
 }
+*/
 
 function push_nav(name, id, title){
 	nav_obj.splice(0,1);
@@ -422,8 +427,8 @@ function load_link(id, title){
 
 			if (location=='external'||id=='external'){
 				var pretty_path = path.replace(/.*?:\/\//g, "");
-				var message = "<p style='position:relative;text-align:justify;'>You have selected a page outside of The Bank of Carbondale's web site. Click 'Continue' below to proceed to:</p><p><a style='font-weight:bold;text-align:center;' href='"+path+"'>"+pretty_path+"</a>.<p style='position:relative;font-size:10px;text-align:justify;margin-top:20px;'>The information contained in this site is not endorsed or guaranteed by The Bank of Carbondale. Also, please be aware that the security and privacy policies on this site may be different from our policy.</p>";
-//				var message = "You are about to leave TBOC.com to visit:<br/><a href='"+path+"'>"+pretty_path+"</a>";
+				var message = "<p style='position:relative;text-align:left;'>You have selected a page outside of The Bank of Carbondale's web site. Click 'Continue' below to proceed to:</p><p><a style='font-weight:bold;text-align:center;' href='"+path+"'>"+pretty_path+"</a>.<p style='position:relative;font-size:10px;text-align:left;margin-top:20px;'>The information contained in this site is not endorsed or guaranteed by The Bank of Carbondale. Also, please be aware that the security and privacy policies on this site may be different from our policy.</p>";
+				// var message = "You are about to leave TBOC.com to visit:<br/><a href='"+path+"'>"+pretty_path+"</a>";
 				$('#outgoing').css({'visibility':'visible'}).html(message).dialog({
 					title:"Confirmation: You Are Leaving TBOC.com",
 					dialogClass:"dialog-shadow",
@@ -454,12 +459,13 @@ function load_link(id, title){
 					url:path,
 					async:false,
 					success:function(data){
-						$('#body_container').css({'visibility':'hidden'});
-						$('#pages').html(data).css({'visibility':'visible'});
-						var height = $('#pages')[0].scrollHeight;
+						$('#pages').css({'height':'0px'});
+						$('#body_container').css({'visibility':'hidden','display':'none'});
+						$('#pages').html(data).css({'visibility':'visible','display':'block','height':'auto'});
+						//var height = $('#pages')[0].scrollHeight;
 						height+=50; // #pages height is weird @bug:2
-						$('#pages').css({'height':height});
-						set_footer(height);
+						//$('#pages').css({'height':height});
+
 						
 						var nav_has_value = false;
 						for(var i = 0; i < nav_obj.length; i++){

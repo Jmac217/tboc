@@ -3,7 +3,10 @@
 <div class='page_right_column_extended textblock text_shadow box'>
 	<div class='drop_tile' onclick='page_drop(this, 200)'>
 		<h2 class='drop_tile_header'>Wire Transfers</h2>
-		<div class='drop_tile_body'>TEST TEXT TEST TEXT TEST TEXT TEST TEXT </div>
+		<div class='drop_tile_body'>
+			<p>Both domestic and international wire services are available five days a week. Visit any of our locations to learn more.</p>
+			<p><a href="pages/downloads/wiring_instructions.pdf">Wiring Instructions</a></p>
+		</div>
 	</div>
 	<div class='drop_tile' onclick='page_drop(this, 200)'>
 		<h2 class='drop_tile_header'>Safe Deposit Boxes</h2>
@@ -17,7 +20,7 @@
 	</div>
 	<div class='drop_tile' onclick='page_drop(this, 200)'>
 		<h2 class='drop_tile_header'>eStatements</h2>
-		<div class='drop_tile_body'>E-mail delivery of your statement with full 128-bit encryption. <a href="/estatements">Learn More.</a></div>
+		<div class='drop_tile_body'>E-mail delivery of your statement with full 128-bit encryption. <a onclick='load_link("estatements", "personal")'>Learn More.</a></div>
 	</div>
 	<div class='drop_tile' onclick='page_drop(this, 200)'>
 		<h2 class='drop_tile_header'>eStatements on CD-ROM</h2>
@@ -30,6 +33,12 @@
 	<div class='drop_tile' onclick='page_drop(this, 200)'>
 		<h2 class='drop_tile_header'>Electronic Payroll</h2>
 		<div class='drop_tile_body'>You can offer your employees the convenience of direct deposit. See a Personal Banker for more details.</div>
+	</div>
+	<div class='drop_tile' onclick='page_drop(this)'>
+		<h2 class='drop_tile_header'>Cash Management</h2>
+		<div class='drop_tile_body'>
+			<p>With Online Banking for Business you can add Cash Management features for processing employee payroll, bill your customers electronically, and more right from Online Banking for Business. Online Banking for Business Cash Management also includes full mobile functionality, giving you access to your information from anywhere, anytime.</p>
+		</div>
 	</div>
 </div>
 <!--

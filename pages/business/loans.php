@@ -1,6 +1,7 @@
 <div class='page_header'>Commercial Loans</div>
 <div class='page_row textblock text_shadow box'>
 	<p>The Bank of Carbondale offers a variety of commercial loans to meet most business needs.  From commercial real estate loans to lines of credit, we will work with you to find the best fit for your business.  SBA financing is also available.  </p>
+	<p><a href="pages/downloads/payoff.pdf">Loan Payoff Request Form</a></p>
 </div>
 <div class='page_left_column'>
 	<img src="res/pages/business/loans.jpg" class="page_photo text_shadow">
@@ -17,8 +18,7 @@
 		</span>
 		</p>
 	</div>
-	<p><a href="pages/downloads/payoff.pdf">Loan Payoff Request Form </a>  </p>
-	<div class="span-19 last">
-		<small><p>Commercial loans are subject to credit approval.</p></small>
+	<div style='text-align:left;font-style:italic;font-size:10px;color:#555;'>
+		Commercial loans are subject to credit approval.
 	</div>
 </div>

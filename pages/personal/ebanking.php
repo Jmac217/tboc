@@ -1,7 +1,8 @@
 <div class='page_header'>Online Banking</div>
 <div class='page_row textblock text_shadow box'>
 	<p>Welcome to online banking from The Bank of Carbondale. With online banking you get access to your accounts anywhere, anytime, and your information is always up-to-date.</p>
-	<p><a class='load_link' id='demos' title='customer' win='current' location='internal' onclick='load_link("demos", "customer")'>Check out our online demos!</a></p>
+	<p><a onclick='load_link("demos", "customer")'>Check out our online demos!</a></p>
+	<p><a onclick='load_link("ebanking_enroll", "customer")'>Enroll in Online Banking!</a></p>
 	<!--	
 	<p><a href="https://secure9.onlineaccess1.com/CarbondaleOnline_30/demo/demo.htm">Online Banking Demo</a></p>
 	<p><a href="https://www.billpaysite.com/V2/Demo.aspx?instID=80048">Online Bill Pay Demo</a></p>

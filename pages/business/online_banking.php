@@ -1,7 +1,8 @@
 <div class='page_header'>Online Banking for Business</div>
 <div class='page_row textblock text_shadow box'>
 <p>Welcome to online banking for business from The Bank of Carbondale. With online banking you get access to your accounts anywhere, anytime, and information is always up-to-date.</p>
-<p><a class='load_link' id='demos' title='customer' win='current' location='internal' onclick='load_link("demos", "customer")'>Check out our online demos!</a></p>
+<p><a onclick='load_link("demos", "customer")'>Check out our online demos!</a></p>
+<p><a onclick='load_link("ebanking_enroll", "customer")'>Enroll in Online Banking!</a></p>
 </div>
 <img src="res/pages/business/online_banking.jpg" alt="Online Banking for Business" class="page_left_column page_photo text_shadow">
 <div class='page_right_column_extended textblock text_shadow box'>

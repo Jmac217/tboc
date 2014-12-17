@@ -22,8 +22,9 @@ $('[placeholder]').focus(function() {
 
 	// @todo line 9
 	$('#user_nav_home').click(function(){
-		$('#body_container').css({'visibility':'visible'});
-		$('#pages').css({'visibility':'hidden'});
+		$('#body_container').css({'visibility':'visible','display':'block'});
+		$('#pages').css({'visibility':'hidden','display':'none'});
+		$('#footer').css({'top':'20px'});
 	});
 	
 	$('#logo').click(function(){

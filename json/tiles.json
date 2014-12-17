@@ -111,7 +111,7 @@
 				},
 				"security":{
 					"name":"Security Center",
-					"path":"pages/customer/security.php",
+					"path":"pages/customer/security.html",
 					"location":"internal",
 					"win":"current"
 				}
@@ -277,6 +277,12 @@
 				"contact":{
 					"name":"Contact Us",
 					"path":"pages/about/contact.php",
+					"location":"internal",
+					"win":"current"
+				},
+				"privacy":{
+					"name":"Privacy Policy",
+					"path":"pages/about/privacy.php",
 					"location":"internal",
 					"win":"current"
 				}

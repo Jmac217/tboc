@@ -11,17 +11,13 @@
 	</div>
 	<h2>Online Banking + eStatements</h2>
 	<div class='sub_div'>
-		<p>Are you an online banking customer? Then your eStatments are integrated directly into online banking. Enjoy the convenience of a single login and view your statements as well as pay bills and more.</p>
-	</div>
-	<h2>Always Free</h2>
-	<div class='sub_div'>
-		<p>eStatements is a free service for all customers.</p>
+		<p>Are you an online banking customer? Then your eStatments are integrated directly into online banking. Enjoy the convenience of a single login and view your statements as well as pay bills and more. eStatements is a free service for all customers.</p>
 	</div>
 	<h2>Sign-Up Today</h2>
 	<div class='sub_div'>
 		<p>Interested in eStatements? Give us a call at 618-549-2181 or send us a message from your online banking to get enrolled in eStatements today!</p>
 	</div>
-	<div class='sub_div' style='text-align:center'>
+	<div style='text-align:left;font-style:italic;'>
 		<small>
 			Online banking access subject to approval and limits.
 		</small>

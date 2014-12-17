@@ -93,7 +93,7 @@
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
-    <td><div align="center"><img src="res/icons/require.png" width="25" height="28"></div></td>
+    <td><div align="center"><!--<img src="res/icons/require.png" width="25" height="28">--><b style='color:#494;'>Required</b></div></td>
   </tr>
   <tr>
     <th scope="row"><div align="right"><a onclick='load_link("ebanking", "personal")'>Online Banking</a><sup>&dagger;</sup></div></th>
@@ -157,7 +157,7 @@
 		<small style='text-align:left'>
 				<p>
 					<img src="res/icons/check.png" width="25" height="28"> Available on this account type <br/>
-					<img src="res/icons/require.png" width="25" height="28"> Required for this account type 
+					<!--<img src="res/icons/require.png" width="25" height="28"> Required for this account type -->
 				</p>
 				<p>&nbsp; <sup>&dagger;</sup> &nbsp; Online banking access subject to approval and limits </p>
 				<p>&nbsp; <sup>&Dagger;</sup> &nbsp; Mobile Banking requires enrollment in online banking. Text messaging and data rates from your mobile service provider may apply</p>

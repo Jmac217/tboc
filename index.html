@@ -6,7 +6,8 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang='en'><!--<![endif]-->
 <!--<html>-->
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" />-->
 	<!--<meta http-equiv='X-UA-Compatible' content='IE=EmulateIE7' />-->
 	<!--<link rel='stylesheet' type='text/css' href='css/reset.css' />-->
 	<link rel='stylesheet' type='text/css' href='css/index.css' />
@@ -142,14 +143,18 @@
 			<div id='pages'></div>
 		</div>
 		<div id='footer'>
-			<div id='footer_copy'>
-				<p>&copy; 2014 The Bank of Carbondale. All Rights Reserved. &nbsp;&nbsp;
-				<a href='pages/main/privacy.php'>Privacy Policy</a>
-			</div>
-			<div id='footer_FDIC'>
-				Member FDIC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-				<img src='res/ehl-light-small.png'/>&nbsp;&nbsp;
-				Equal Housing Lender				
+			<!--<div id='footer_copy'>-->
+				<span style='float:left'>&copy; 2014 The Bank of Carbondale. All Rights Reserved. &nbsp;&nbsp; <a onclick='load_link("privacy" ,"about")'>Privacy Policy</a></span>
+				<!--<p>&copy; 2014 The Bank of Carbondale. All Rights Reserved. &nbsp;&nbsp;
+				<a href='pages/main/privacy.php'>Privacy Policy</a>-->
+			<!--</div>-->
+			<!--<div id='footer_FDIC'>-->
+				<span style='float:right'>
+					Member FDIC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<img src='res/icons/ehl.png' height='19' width='25'/>&nbsp;&nbsp;
+					Equal Housing Lender
+				</span>
+			<!--</div>-->
 		</div>
 	</div>
 	<div id='outgoing'></div>
