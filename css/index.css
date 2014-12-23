@@ -13,6 +13,8 @@ th[scope='row']{text-align:right;padding-right:10px;}
 .th-border th{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 td{border-style:none;border:none;line-height:20px;padding:5px;}
 .td-border td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
+.td-this-border td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
+.th-this-border{border-bottom:dotted 1px #BBB;}
 input{background-color:#FEFEFE;}input:focus{background-color:#EFEFEF;}
 input[type='submit']{border-style:none;border:none;}
 img{border-radius:inherit;}
