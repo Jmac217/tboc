@@ -86,7 +86,7 @@ p{line-height:18px;}
 	/* radius */.form_submit{position:relative;margin-bottom:15px;top:5px;float:left;left:5%;height:30px;width:90%;border-style:none;font-size:15px;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;color:#EEE;behavior:url(lib/PIE.htc);}
 	.form_submit:hover{cursor:pointer;color:#FFF;}
 	.form a{position:relative;float:right;right:5%;clear:left;}
-	.form input[type='text'], .form input[type='password']{position:relative;display:block;height:30px;margin:10px 5%;width:90%;font-size:15px;border:solid 1px #666;border-radius:3px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;behavior:url(lib/PIE.htc);}
+	.form input[type='text'], .form input[type='password']{position:relative;display:block;height:30px;margin:10px 5%;width:90%;font-size:15px;border:solid 1px #666;border-radius:3px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;behavior:url(lib/PIE.htc);*behavior:url(/lib/boxsizing.htc);}
 	.form form{}
 	.form_spanner{display:inline-block;position:relative;height:20px;width:100%;font-size:12px;color:#EEE;background-color:#3d792a;text-align:center;padding-top:3px;border-bottom-left-radius:inherit;border-bottom-right-radius:inherit;border:solid 1px #3d792a;}
 	.form_spanner:hover{background-color:#4d9a35;color:#EEE;text-decoration:none;}
@@ -97,7 +97,7 @@ p{line-height:18px;}
 	.button:hover{cursor:pointer;background-color:#804a5a;background:-webkit-gradient(linear, 0 0, 0 bottom, from(#75263d), to(#804a5a));background:-webkit-linear-gradient(#75263d, #804a5a);background:-moz-linear-gradient(#75263d, #804a5a);background:-ms-linear-gradient(#75263d, #501a2a);background:-o-linear-gradient(#75263d, #804a5a);background:linear-gradient(#75263d, #804a5a);-pie-background:linear-gradient(#75263d, #804a5a);}
 
 
-.box{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;}
+.box{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;*behavior:url(/lib/boxsizing.htc);}
 .radius{-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;behavior:url(lib/PIE.htc);}
 .padded{padding:5px 10px;}
 
