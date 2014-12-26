@@ -1,0 +1,28 @@
+
+body{background-color:#CCC;color:#333;background:url('lodyas.png');}
+
+#doc{height:87%;width:100%;border-radius:3px;}
+
+div,span{display:block;padding:10px;box-sizing:border-box;border-radius:inherit;}
+li {list-style:none;}
+
+#header{background-color:#666;border-bottom:solid 2px #333;font-size:16px;height:auto;padding-bottom:0;}
+	#tabs{padding-bottom:0;display:inline-block;}
+		.tab{display:inline-block;background-color:#DDD;padding:10px;min-width:150px;border-radius:10px 10px 0 0;text-align:center;}
+		.tab:hover{background-color:#AAA;font-style:italic;cursor:pointer;}
+	#user{float:right;display:inline-block;background-color:#7ec0ee;cursor:pointer;}
+		#username{padding:0;padding:0 20px;width:100%;color:white;text-shadow:1px 1px 5px #FFF;-moz-user-select:none;}
+		#user_options{position:absolute;top:90px;right:28px;background-color:#7ec0ee;padding:0;margin:0;width:0;text-align:center;overflow:hidden;}
+		#user_options span{min-width:250px;}
+		#user_options span:hover{background-color:#4fa7be;color:#FFF;}
+#body{background-color:#DDD;padding:10px;}
+	#pages{height:100%;width:100%;border:solid 1px #CCC;border-radius:5px;box-shadow:5px 5px 10px #AAA;}
+#footer{background-color:#666;}
+
+
+#alert{}
+	#message{width:100%;background-color:#EEE;border:solid 1px #CCC;}
+		#message_title{font-weight:bold;}
+		#message_body{border-left:solid 4px #CCC;border-radius:0;}
+		#message_date{color:#BBB;text-align:right;padding:0;}
+	#form{width:100%;background-color:#EEE;border:solid 1px #CCC;}
