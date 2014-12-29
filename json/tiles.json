@@ -1,4 +1,27 @@
 {
+	"rates":[{
+		"src":"php/"
+	}],
+	"security":[{
+		"title":"Alert",
+		"body":"Google",
+		"date":"today"
+	}],
+	"employment":[{
+		"title":"Job",
+		"body":"Description",
+		"date":"today"
+	}],
+	"news":[{
+		"title":"Headline",
+		"body":"Article",
+		"date":"today"
+	}],
+	"alerts":[{
+		"title":"wow",
+		"body":"such alert",
+		"date":"today"
+	}],
 	"nav":[{
 		"name":"Current Rates",
 		"id":"cod",
