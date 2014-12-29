@@ -10,43 +10,43 @@
 			<!--<p><a href="pages/downloads/wiring_instructions_international.pdf">International Wiring Instructions</a></p>-->
 		</div>
 	</div>
-	<div class='drop_tile' onclick='page_drop(this, 60)'>
+	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>Safe Deposit Boxes</h2>
 		<div class='drop_tile_body'>
 			<p>The Bank of Carbondale offers three sizes of Safe Deposit Boxes to our customers; offering you confidence, security, and peace of mind. Store your valuables, documents, and records in our vault with a Safe Deposit Box.</p>
 		</div>
 	</div>
-	<div class='drop_tile' onclick='page_drop(this, 60)'>
+	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>Notary Service</h2>
 		<div class='drop_tile_body'>
 			<p>All our customers have access to our Notary Service at any of our four full-service banking centers. For information, contact the Bank at 618-549-2181.</p>
 		</div>
 	</div>
-	<div class='drop_tile' onclick='page_drop(this, 60)'>
+	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>License Plate Renewal </h2>
 		<div class='drop_tile_body'>
 			<p>Our Carbondale, Carterville, and Murphysboro facilities offer license renewal services six days a week for all Illinois registered vehicles.</p>
 		</div>
 	</div>
-	<div class='drop_tile' onclick='page_drop(this, 100)'>
+	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>Foreign Currency</h2>
 		<div class='drop_tile_body'>
 			<p>Traveling out of the country? No problem. We can order foreign currency for established customers before your trip. Save time and hassle at the airport, and be ready before you pack your bags! Currency orders take two to five business days to complete. Call the bank at 618-549-2181 for complete details.</p>
 		</div>
 	</div>
-	<div class='drop_tile' onclick='page_drop(this, 50)'>
+	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>In-Line Telephone Banking</h2>
 		<div class='drop_tile_body'>
 			<p>24-hours per day, you have access to your account balance from any phone. Just dial 618-549-0939.</p>
 		</div>
 	</div>
-	<div class='drop_tile' onclick='page_drop(this, 50)'>
+	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>eStatements</h2>
 		<div class='drop_tile_body'>
 			<p>E-mail delivery of your statement with full 128-bit encryption. <a onclick='load_link("estatements","personal")'>Learn More.</a></p>
 		</div>
 	</div>
-	<div class='drop_tile' onclick='page_drop(this, 50)'>
+	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>eStatements on CD-ROM</h2>
 		<div class='drop_tile_body'>
 			<p>Keep your files clean and organized with a full year's worth of statements and images on one, convenient CD-ROM.</p>

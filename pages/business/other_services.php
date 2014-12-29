@@ -10,29 +10,45 @@
 	</div>
 	<div class='drop_tile' onclick='page_drop(this, 200)'>
 		<h2 class='drop_tile_header'>Safe Deposit Boxes</h2>
+		<div class='drop_tile_body'>
+			<p>The Bank of Carbondale offers three sizes of Safe Deposit Boxes to our customers; offering you confidence, security, and peace of mind. Store your valuables, documents, and records in our vault with a Safe Deposit Box.</p>
+		</div>
 	</div>
 	<div class='drop_tile' onclick='page_drop(this, 200)'>
 		<h2 class='drop_tile_header'>Notary Service</h2>
-		<div class='drop_tile_body'>For your convenience, this service is available at our full-service banking locations.</div>
+		<div class='drop_tile_body'>
+			<p>For your convenience, this service is available at our full-service banking locations.</p>
+		</div>
 	</div>
-	<div class='drop_tile'>
-		<h2>In-Line Telephone Banking</h2>
+	<div class='drop_tile' onclick='page_drop(this)'>
+		<h2 class='drop_tile_header'>In-Line Telephone Banking</h2>
+		<div class='drop_tile_body'>
+			<p>24-hours per day, you have access to your account balance from any phone. Just dial 618-549-0939.</p>
+		</div>
 	</div>
-	<div class='drop_tile' onclick='page_drop(this, 200)'>
+	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>eStatements</h2>
-		<div class='drop_tile_body'>E-mail delivery of your statement with full 128-bit encryption. <a onclick='load_link("estatements", "personal")'>Learn More.</a></div>
+		<div class='drop_tile_body'>
+			<p>E-mail delivery of your statement with full 128-bit encryption. <a onclick='load_link("estatements", "personal")'>Learn More.</a></p>
+		</div>
 	</div>
-	<div class='drop_tile' onclick='page_drop(this, 200)'>
+	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>eStatements on CD-ROM</h2>
-		<div class='drop_tile_body'>Keep your files clean and organized with a full year's worth of statements and images on one, convenient CD-ROM.</div>
+		<div class='drop_tile_body'>
+			<p>Keep your files clean and organized with a full year's worth of statements and images on one, convenient CD-ROM.</p>
+		</div>
 	</div>
-	<div class='drop_tile' onclick='page_drop(this, 200)'>
+	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>Night Deposit</h2>
-		<div class='drop_tile_body'>Each branch offers a safe and secure deposit box for your convenience.</div>
+		<div class='drop_tile_body'>
+			<p>Each branch offers a safe and secure deposit box for your convenience.</p>
+		</div>
 	</div>
-	<div class='drop_tile' onclick='page_drop(this, 200)'>
+	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>Electronic Payroll</h2>
-		<div class='drop_tile_body'>You can offer your employees the convenience of direct deposit. See a Personal Banker for more details.</div>
+		<div class='drop_tile_body'>
+			<p>You can offer your employees the convenience of direct deposit. See a Personal Banker for more details.</p>
+		</div>
 	</div>
 	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>Cash Management</h2>
@@ -41,7 +57,3 @@
 		</div>
 	</div>
 </div>
-<!--
-<script type='text/javascript' src='/tboc/lib/jquery1.js'></script>
-<script type='text/javascript' src='/tboc/js/page_drop.js'></script>
--->

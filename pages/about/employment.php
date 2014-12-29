@@ -4,8 +4,12 @@
 </style>
 <div class='page_header'>Employment</div>
 <div class='page_row textblock text_shadow box'>
-	<p>The Bank of Carbondale continually seeks people that are highly motivated, concerned with customer satisfaction, and those who strive to offer the best in banking services to the community.  We are an Equal Opportunity Employer.  The Bank of Carbondale offers competitive salaries, benefits, and a great working atmosphere. </p>
+	<p>The Bank of Carbondale continually seeks people that are highly motivated, concerned with customer satisfaction, and those who strive to offer the best in banking services to the community. We are an Equal Opportunity Employer. The Bank of Carbondale offers competitive salaries, benefits, and a great working atmosphere. </p>
+	<div class='sub_div'>
+		<p>We do not currently have any available positions, but feel free to download our application!</p>
+	</div>
 	<u><a href="http://tboc.com/downloads/BOC_Application.pdf">Application for Employment</a></u>
+	<!--
 	<div class='sub_div'>
 		<span class='job_title'>Job Title: <span style='font-weight:bold;'>Customer Service Specialist</span></span>
 		<p>
@@ -18,4 +22,5 @@
 			<i style='font-style:italic'>The Bank of Carbondale, P.O. Box 2287, Carbondale, IL 62902-2287, Attention: Rhonda Hartman.</i>
 		</p>
 	</div>
+	-->
 </div>
