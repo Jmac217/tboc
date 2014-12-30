@@ -1,6 +1,8 @@
 $(document).on('click', '.nav_element', function(){
 	load_link($(this).attr('id'), $(this).attr('title')); // ajax calls return as text, so this is a fix for the navigation links
 }).ready(function(){
+generate_tiles('#column', 'column', 'vertical');
+generate_tiles('#bottom', 'row', 'horizontal');
 
 $('[placeholder]').focus(function() {
   var input = $(this);

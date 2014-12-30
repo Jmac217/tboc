@@ -132,11 +132,16 @@ function send_url_parameters(){
 	var url = document.URL;
 	var params = {}
 	//alert(location.search.substr(0));
-	location.search.substr(0).split("&").forEach(function(param){params[param.split("=")[0]] = param.split("=")[1]});
+	//(\?|\&)([^=]+)\=([^&]+)
+	location.search.substr(1).split("&").forEach(function(param){params[param.split("=")[0]] = param.split("=")[1]});
 	var id = params.id;
 	var title = params.title;
+	//alert(url+params+id+title);
+	//alert(id);
 	if (id != null && title != null){
 		load_link(id, title);
+	}else{
+		load_link();
 	}
 }
 send_url_parameters();
@@ -303,15 +308,15 @@ function generate_tiles(panel, tile, orientation){ // `panel` is the id of the t
 		  		_button = "<span class='tile_button button'>"+json.tiles[tile].links[i].button+"</span>";	
 		  		_text += _button;
 		  	}
+			
 			// following possible in all but IE, of course
 		  	//var _div = "<div id='"+_id+"' title='"+_type+"' class='"+_orientation+" "+_classes+"'>"+_image+_header+_text+"</div>";
 			var _div = "<div onclick='load_link(\""+_id+"\", \""+_type+"\")' class='"+_orientation+" "+_classes+"'>"+_image+_header+_text+"</div>";
 
 		  	// @todo
 		  	// in _div, _type is still being called title
-
 		  	$(panel).append(_div);
-		  }
+		 }
 
 		  //alert(debug);
 
@@ -386,34 +391,39 @@ generate_tiles('#bottom', 'row', 'horizontal');
 
 // function load_link(id, title, path, location){ // for external path and location
 function load_link(id, title){
+	//alert(id+': '+title);
+	if(id==null&&title==null){
+		// go home Javascript, you're drunk.
+		$('#body_container').css({'visibility':'visible','display':'block'});
+		$('#pages').css({'visibility':'hidden','display':'none'});
+		$('#footer').css({'top':'20px'});
+	}
 	$.ajax({
 		url: 'json/tiles.json',
 		dataType: 'json',
 		async: false,
 		success: function(json){
-			
 			if (id == 'external'){
 				var location = 'external';
 				var path = title;
 			}else{
-
-			// for external onclick events path and location must be supplied some how
-
-			//alert('1: '+path+location);
-			
-			// @todo -- it may become necessary to change the name variable name `location` to something else; seeing as it is a keyword in some instances.
-			var name = json.paths[title].links[id].name;
-			if (path == null){
-				var path = json.paths[title].links[id].path;
-			}
-			if (location == null){
-				var location = json.paths[title].links[id].location;
-			}
-			var win = json.paths[title].links[id].win;
+				
+				// for external onclick events path and location must be supplied some how
+				
+				//alert('1: '+path+location);
+				
+				// @todo -- it may become necessary to change the name variable name `location` to something else; seeing as it is a keyword in some instances.
+				var name = json.paths[title].links[id].name;
+				if (path == null){
+					var path = json.paths[title].links[id].path;
+				}
+				if (location == null){
+					var location = json.paths[title].links[id].location;
+				}
+				var win = json.paths[title].links[id].win;
 			}
 
 			//alert('2: '+path+location);
-
 
 			/*
 			var name = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].name');
@@ -422,13 +432,9 @@ function load_link(id, title){
 			var win = jsonPath.eval(json, '$.paths['+title+'].links.['+id+'].win');
 			*/
 
-
-
-
 			if (location=='external'||id=='external'){
 				var pretty_path = path.replace(/.*?:\/\//g, "");
 				var message = "<p style='position:relative;text-align:left;'>You have selected a page outside of The Bank of Carbondale's web site. Click 'Continue' below to proceed to:</p><p><a style='font-weight:bold;text-align:center;' href='"+path+"'>"+pretty_path+"</a>.<p style='position:relative;font-size:10px;text-align:left;margin-top:20px;'>The information contained in this site is not endorsed or guaranteed by The Bank of Carbondale. Also, please be aware that the security and privacy policies on this site may be different from our policy.</p>";
-				// var message = "You are about to leave TBOC.com to visit:<br/><a href='"+path+"'>"+pretty_path+"</a>";
 				$('#outgoing').css({'visibility':'visible'}).html(message).dialog({
 					title:"Confirmation: You Are Leaving TBOC.com",
 					dialogClass:"dialog-shadow",
@@ -463,7 +469,7 @@ function load_link(id, title){
 						$('#body_container').css({'visibility':'hidden','display':'none'});
 						$('#pages').html(data).css({'visibility':'visible','display':'block','height':'auto'});
 						//var height = $('#pages')[0].scrollHeight;
-						height+=50; // #pages height is weird @bug:2
+						//height+=50; // #pages height is weird @bug:2
 						//$('#pages').css({'height':height});
 
 						
@@ -473,16 +479,14 @@ function load_link(id, title){
 								nav_has_value = true;
 							}
 						}
-						
 						if (nav_has_value===false){
+							var url = window.location.origin+window.location.pathname+'?id='+id+'&title='+title;
+							window.history.pushState('', '', url);
 							push_nav(name, id, title);
 							get_nav();
 						}
 					}
 				});
-				var w = window.location.origin+window.location.pathname+'?id='+id+'&title='+title;
-				//window.location='';
-				
 				
 				/*
 				var routeData= route.substring(0, route.indexOf('?'));

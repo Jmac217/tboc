@@ -7,8 +7,21 @@ Ext.getBody().replaceClass('ext-ie7', 'ext-ie8');
 */
 
 
+//var history_obj = {};
+//history.pushState('','',window.location.origin+window.location.pathname);
+window.onpopstate = function(){
+	send_url_parameters();
+}
+/*
+alert(JSON.stringify(history.state));
+var url = window.location.origin+window.location.pathname+'?id=loans&title=asdf';
+alert(url);
+history.pushState(history_obj,'a',url);
+alert(JSON.stringify(history.state));
+*/
+
 /*** User Nav ***/
-var nav_cap = 3; // starting with 0; ex: 3 = 3 + 1 = 4 | will be json.length at somepoint
+var nav_cap = 3; // starting with 0; ex: 3 = 3 + 1 = 4 | will be json.length at some point
 var nav_obj = {}; // initialize scope
 $.ajax({
 	dataType:'json',
