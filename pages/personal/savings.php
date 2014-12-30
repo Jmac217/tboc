@@ -43,7 +43,7 @@
 		<td><div align='center'>N/A</div></td>
 	</tr>
 	<tr>
-		<th scope='row'>Min. to Open</th>
+		<th scope='row'>Minimum to Open</th>
 		<td><div align='center'>$100.00</div></td>
 		<td><div align='center'>$50.00</div></td>
 		<td><div align='center'>$3.00</div></td>
@@ -61,13 +61,13 @@
 		<td><div align='center'>No</div></td>
 	</tr>
 	<tr>
-		<th scope='row'>eStatements</th>
+		<th scope='row'><a onclick='load_link("estatements", "personal")'>eStatements</a></th>
 		<td><div align='center'>Available</div></td>
 		<td><div align='center'>Available</div></td>
 		<td><div align='center'>Not Available</div></td>
 	</tr>
 	<tr>
-		<th scope='row'>Online Banking</th>
+		<th scope='row'><a onclick='load_link("ebanking", "personal")'>Online Banking</a></th>
 		<td><div align='center'>Available</div></td>
 		<td><div align='center'>Available</div></td>
 		<td><div align='center'>Not Available</div></td>

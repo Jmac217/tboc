@@ -48,7 +48,7 @@
     <td><div align="center"></div></td>
   </tr>
   <tr>
-    <th scope="row"><div align="right">Monthly Service Fee</div></th>
+    <th scope="row"><div align="right">Monthly Service Charge</div></th>
     <td><div align="center">$7.00</div></td>
     <td><div align="center">$5.00</div></td>
     <td><div align="center">None</div></td>
@@ -80,7 +80,7 @@
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
   </tr>
   <tr>
-    <th scope="row"><div align="right">Debit Card Monthy Fee</div></th>
+    <th scope="row"><div align="right">Debit Card Monthy Charge</div></th>
     <td><div align="center">None</div></td>
     <td><div align="center">None</div></td>
     <td><div align="center">None</div></td>
@@ -112,7 +112,7 @@
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
   </tr>
   <tr>
-    <th scope="row" style='width:38%;'><div align="right">No Service Fee Notary Service<sup>*</sup></div></th>
+    <th scope="row" style='width:38%;'><div align="right">No Service Charge Notary Service<sup>*</sup></div></th>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
@@ -120,7 +120,7 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <th scope="row"><div align="right">No Service Fee Vehicle License Stickers</div></th>
+    <th scope="row"><div align="right">No Service Charge Vehicle License Stickers</div></th>
     <td><div align="center"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td>
@@ -128,7 +128,7 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <th scope="row"><div align="right">No Service Fee Travelers Cheques<sup>*</sup></div></th>
+    <th scope="row"><div align="right">No Service Charge Travelers Cheques<sup>*</sup></div></th>
     <td><div align="center"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td><br>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td><br>
@@ -136,7 +136,7 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <th scope="row"><div align="right">No Service Fee Cashiers Checks<sup>*</sup></div></th>
+    <th scope="row"><div align="right">No Service Charge Cashiers Checks<sup>*</sup></div></th>
     <td><div align="center"></div></td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td><br>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td><br>
@@ -144,7 +144,7 @@
     <td>&nbsp;</td>
   </tr>
   <tr>
-    <th scope="row"><div align="right">No Service Fee Money Orders<sup>*</sup></div></th>
+    <th scope="row"><div align="right">No Service Charge Money Orders<sup>*</sup></div></th>
     <td>&nbsp;</td>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td><br>
     <td><div align="center"><img src="res/icons/check.png" width="25" height="28"></div></td><br>

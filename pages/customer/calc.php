@@ -4,7 +4,7 @@
 
 <span style='position:relative;left:45px;'>
 	These calculators are intended for illustrative purposes <u>only</u>.<br />
-	<i style='font-size:10px;'>Please consult a financial professional prior to replying on your results.</i>
+	<i style='font-size:10px;'>Please consult a financial professional prior to relying on your results.</i>
 	<br />
 </span>
 <br />

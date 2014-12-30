@@ -2,7 +2,7 @@
 <img src='res/pages/personal/money_market.jpg' class='page_left_column page_photo text_shadow'/>
 <div class='page_right_column page_body textblock text_shadow box'>
 <p>After you're accustomed to saving money and have accumulated a larger  balance, you may want to step up to this account and earn a higher  interest rate. This account offers limited check writing ability along  with tiered interest rates.</p>
-<p>Every Bank of Carbondale Money Market account is eligible for eBanking with online, mobile, and text access on your schedule, 24 hours a day.</p>
+<p>Every Bank of Carbondale Money Market account is eligible for online, mobile, and text banking access on your schedule, 24 hours a day.</p>
 <p>All accounts are also eligible for free eStatements, with online delivery for your convenience and security.</p>
 </div>
 <br />
@@ -39,17 +39,17 @@
 		<td><div align='center'>Maintain a minimum balance of $5,000.00 for every day of a statement cycle.</div></td>
 	</tr>
 	<tr>
-		<th scope='row'><div align='right'>Min. to Open</div></th>
+		<th scope='row'><div align='right'>Minimum to Open</div></th>
 		<td><div align='center'>$2,500.00</div></td>
 		<td><div align='center'>$5,000.00</div></td>
 	</tr>
 	<tr>
-		<th scope='row'><div align='right'>eStatements</div></th>
+		<th scope='row'><div align='right'><a onclick='load_link("estatements", "personal")'>eStatements</a></div></th>
 		<td><div align='center'>Available</div></td>
 		<td><div align='center'>Available</div></td>
 	</tr>
 	<tr>
-		<th scope='row'><div align='right'>Online Banking</div></th>
+		<th scope='row'><div align='right'><a onclick='load_link("ebanking", "personal")'>Online Banking</a></div></th>
 		<td><div align='center'>Available</div></td>
 		<td><div align='center'>Available</div></td>
 	</tr>
