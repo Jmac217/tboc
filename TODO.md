@@ -17,7 +17,15 @@ Also, make sure that things from *Secuity Center* do not overflow into the foote
 
 ---
 
+##### API Change if necessary
+
+Change id, type to page, header 
+
+---
+
 ##### tiles.json
+
+*For some reason I'm making calls to `tiles.json` 3 times per load_link()*
 
 _`paths.*.links.*.path`_ must be hidden, therefore abstracted from the link
 - This forces `load_link()` to make lookups for the **asterisk** placeholders of this headline.

@@ -18,7 +18,7 @@
 	</div>
 	
 	<div class='drop_tile' onclick='page_drop(this)'>
-		<h2 class='drop_tile_header'>MasterCard&reg; Debit Card <sub>&#8853;</sub></h2>
+		<h2 class='drop_tile_header'>MasterCard&reg; Debit Card <span class='down_arrow'>&#9660;</span></h2>
 		<div class='drop_tile_body'>
 			<div class='sub_div'>
 				<ul>
@@ -38,7 +38,7 @@
 	</div>
 	
 	<div class='drop_tile' onclick='page_drop(this)'>
-		<h2 class='drop_tile_header'>MasterCard&reg; Gift Cards <sub>&#43;</sub></h2>
+		<h2 class='drop_tile_header'>MasterCard&reg; Gift Cards <span class='down_arrow'>&#9660;</span></h2>
 		<div class='drop_tile_body'>
 			<div class='sub_div'>
 				<p>Looking for the perfect gift? Our MasterCard&reg; Prepaid Gift Cards are a great choice for birthdays, weddings, graduations, or any special occasion in your life. Gift cards are available in any amount from $10 to $1,000.</p>
@@ -48,7 +48,7 @@
 	</div>
 
 	<div class='drop_tile' onclick='page_drop(this)'>
-		<h2 class='drop_tile_header'>Visa Platinum Credit Card <sub>&#9660;</sub></h2>
+		<h2 class='drop_tile_header'>Visa Platinum Credit Card <span class='down_arrow'>&#9660;</span></h2>
 		<div class='drop_tile_body'>
 			<div class='sub_div'>
 				<p>There are lots of reasons to do business with your local community bank. People you know and trust, local decision making, and personal service to name a few. </p>

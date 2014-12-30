@@ -19,6 +19,7 @@ input{background-color:#FEFEFE;}input:focus{background-color:#EFEFEF;}
 input[type='submit']{border-style:none;border:none;}
 img{border-radius:inherit;}
 sup{/*font-size:14px;*//*font-weight:bold;*/font-size:10px;}
+.down_arrow{font-size:8px;}
 ul{list-style-type:none;}
 	/*
 	li>a{text-decoration:none;}

@@ -8,7 +8,7 @@
 	<br />
 </span>
 <br />
-<div id='calc_selection'>
+<div class='calc_selection'>
 	<ul>
 		<li><a js_href='pages/customer/calc/autoloan.html'>Auto Loan</a></li>
 		<li><a js_href='pages/customer/calc/retirement.html'>Retirement Goal</a></li>
@@ -22,12 +22,12 @@
 
 <script type='text/javascript' src='lib/jquery1.js'></script>
 <script type='text/javascript'>
-	$('a').click(function(){
+	$('.calc_selection a').click(function(){
 		var href = $(this).attr('js_href');
-		$('#calc_area').load(href).css({'visibility':'visible'}); // those pages will eventually be exchanged via a visability function instead of being loaded in as seperate files
+		$('.calc_area').load(href).css({'visibility':'visible'}); // those pages will eventually be exchanged via a visibility function instead of being loaded in as separate files
 	});
 </script>
-<div id='calc_area' class='sub_div' style='height:auto;visibility:hidden;'>
+<div class='calc_area sub_div' style='height:auto;visibility:hidden;'>
 	<!-- Javascript loads pages into this div -->
 </div>
 </div>
