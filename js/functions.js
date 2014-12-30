@@ -239,7 +239,7 @@ function notice(visible, path, type){ // this needs to be refactored into JSON s
 				if (type == 'warning'){
 					//$('#notices').css({'background-color':'#FF8'});
 					$('#warning').html(rows).css({'visibility':'visible'}).prepend("<img src='res/attention.svg' height='25' width='25'/>").click(function(){
-						notice('false', 'json/test.xml', 'warning');
+						notice('false', 'json/notice.xml', 'warning');
 					});
 					$('#alert').css({'visibility':'hidden'});
 				}else if (type == 'alert'){
@@ -266,6 +266,7 @@ function notice(visible, path, type){ // this needs to be refactored into JSON s
 		$('#notices').animate({'height':'0px'});
 	}
 }
+notice('true', 'json/notice.xml', 'warning');
 
 // disabled!
 /*

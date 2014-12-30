@@ -4,6 +4,27 @@ $(document).on('click', '.nav_element', function(){
 generate_tiles('#column', 'column', 'vertical');
 generate_tiles('#bottom', 'row', 'horizontal');
 
+/*** debug ***/
+
+$('#debug_button').click(function(){$('#debug_options').animate({width:'150px'}).on('mouseleave',function(){$(this).animate({width:'0px'});});});
+
+$('#debug_options>span').click(function(){
+	//alert($(this).attr('attr'));
+	switch ($(this).attr('attr')){
+		case "alert":
+			// toggle sample alerts
+		break;
+		case "admin":
+			// href = admin
+		break;
+		case "bug":
+			// pop bug
+		break;
+	}
+});
+
+/************/
+
 $('[placeholder]').focus(function() {
   var input = $(this);
   if (input.val() == input.attr('placeholder')) {

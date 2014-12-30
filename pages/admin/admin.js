@@ -30,6 +30,5 @@ $('document').ready(function(){
 		});
 	});
 
-	$('#user').click(function(){$('#user_options').animate({width:'250px'}).on('mouseleave',function(){$(this).animate({width:'0px'});});});
 	$('#user_options').css('height',$('#pages').css('height'));
 });

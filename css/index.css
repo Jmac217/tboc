@@ -118,10 +118,6 @@ p{line-height:18px;}
 			.apply:hover{color:white;background-color:#75263d;background:-moz-linear-gradient(#75263d,#804a5a);background:-webikit-linear-gradient(#75263d,#804a5a);background:-o-linear-gradient(#75263d,#804a5a);background:-ms-linear-gradient(#75263d,#804a5a);-pie-background:-linear-gradient(#75263d,#804a5a);behavior:url(lib/PIE.htc);}
 			.apply:visited{color:white;}
 
-#debug{position:absolute;top:0px;left:0px;padding:10px;background-color:#ddd;border:solid 1px #aaa;}
-#noticesOn{cursor:pointer;}
-#noticesOff{cursor:pointer;}
-
 #outgoing{visibility:hidden;text-align:center;}
 	#outgoing > a {font-size:16px;font-size:1vw;color:#75263d;}
 	.outgoing_message{font-size:18px;}
@@ -150,7 +146,7 @@ p{line-height:18px;}
 			#user_nav_home:hover{cursor:pointer;color:#3e79ef;outline:0;text-decoration:underline;}
 			.nav_element{text-decoration:none;color:#004a4a;cursor:pointer;}
 			.nav_element:hover{color:#3e79ef;text-decoration:underline;}
-		#notices{position:relative;top:195px;height:0px;width:970px;visibility:hidden;/*border:solid 1px #777;*/}
+		#notices{position:relative;height:20px;width:100%;background-color:#FDC;padding:5px 10px;visibility:hidden;/*border:solid 1px #777;*/}
 		/* the following could be replaced by padding */
 		#notices_area{position:absolute;top:5px;left:10px;width:98%;height:95%;}
 			#alert{position:absolute;top:0px;left:0px;height:100%;width:100%;}
@@ -243,7 +239,6 @@ p{line-height:18px;}
 					.drop_tile_link{}
 					.drop_tile_nobullet{list-style-type:none;}
 				
-				
 			/* security */
 				.home{font-size:10px;}
 				.bold{color:#75263d;font-size:14px;}
@@ -264,6 +259,11 @@ p{line-height:18px;}
 		#footer_copy{position:relative;float:left;height:15px;}
 		#footer_FDIC{position:relative;top:0;float:right;width:340px;color:#444;}
 
-/* hacks and shit */
-.span-19{width:700px;}
-.loan_box{position:relative;top:0px;right:0px;height:450px;width:750px;}
+	.debug_button{background-color:#3e96be;width:90%;margin-top:5px;padding:5px 0;color:#FFF;border-radius:7px;border:solid 1px #2d85be;cursor:pointer;}
+	#debug{position:fixed;top:0;left:0;width:150px;}
+		#debug_button{display:inline-block;background-color:#7ec0ee;cursor:pointer;width:100%;padding:10px 0;font-size:16px;text-align:center;color:white;text-shadow:1px 1px 5px #FFF;-moz-user-select:none;}
+		#debug_options{float:left;background-color:#7ec0ee;padding:0;margin:0;width:0;text-align:center;overflow:hidden;color:#FFF;font-size:14px;}
+			#debug_options span{display:block;width:150px;padding:10px 0;}
+			#debug_options span:first-child{border-top:solid 1px #3e96be;}
+			#debug_options span:last-child:hover .debug_button{background-color:#7ec0ee;}
+			#debug_options span:hover{background-color:#4fa7be;color:#FFF;cursor:pointer;}

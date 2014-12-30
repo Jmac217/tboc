@@ -23,6 +23,9 @@ Change id, type to page, header
 
 ---
 
+##### Generally, relativity is really messing things up.
+- The notices in-particular.
+
 ##### tiles.json
 
 *For some reason I'm making calls to `tiles.json` 3 times per load_link()*
