@@ -30,7 +30,7 @@ $('[placeholder]').focus(function() {
 	});
 	
 	$('#logo').click(function(){
-		location.reload(true);
+		location.href = window.location.origin+window.location.pathname;
 	});
 	
 	$('input').click(function(){
