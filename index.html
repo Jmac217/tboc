@@ -22,16 +22,6 @@
 			<div id='photo'><img src='res/tboc.jpg' height='155' width='685'/></div>
 			<div id='user_nav'>
 				<!-- Rename to `nav`, add to tiles.json, and possibly rename tiles to something more global; remove nav.json. -->
-				<!--
-					{
-						nav{
-							phone:'',
-							array:{
-								- , - , - , -;	
-							}
-						}	
-					}
-				-->
 				<span id='user_nav_contact'>Phone: <span id='user_nav_contact_phone'>(618) 549-2181</span>&nbsp;&nbsp;&nbsp;</span>
 				<span id='user_nav_home'>Home</span> &nbsp; &#449; &nbsp;
 				<span id='user_nav_array'></span>
@@ -135,7 +125,7 @@
 		</div>
 		<div id='footer'>
 			<!--<div id='footer_copy'>-->
-				<span style='float:left'>&copy; 2014 The Bank of Carbondale. All Rights Reserved. &nbsp;&nbsp; <a onclick='load_link("privacy" ,"about")'>Privacy Policy</a></span>
+				<span style='float:left'>&copy; 2015 The Bank of Carbondale. All Rights Reserved. &nbsp;&nbsp; <a onclick='load_link("privacy" ,"about")'>Privacy Policy</a></span>
 				<!--<p>&copy; 2014 The Bank of Carbondale. All Rights Reserved. &nbsp;&nbsp;
 				<a href='pages/main/privacy.php'>Privacy Policy</a>-->
 			<!--</div>-->
@@ -157,10 +147,11 @@
 			<span attr='bug'>
 				<div class='debug_bug_header'>Submit Bug</div>
 				<div class='debug_bug_drop'>
-					<form action='php/bug.php' method='post'>
-						<textarea placeholder='Description' style='width:90%;resize:none;border-style:none;border-radius:3px;margin-top:5px;' ></textarea>
-						<input type='submit' class='debug_button' value='send'/>
-					</form>
+					<!--<form action='php/bug.php' method='post'>-->
+						<textarea id='bug_message' placeholder='Description' style='width:90%;resize:none;border-style:none;border-radius:3px;margin-top:5px;' ></textarea>
+						<input type='button' class='debug_button' value='send'/>
+						<div id='bug_feedback'></div>
+					<!--</form>-->
 				</div>
 			</span>
 		</div>

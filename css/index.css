@@ -267,3 +267,4 @@ p{line-height:18px;}
 			#debug_options span:first-child{border-top:solid 1px #3e96be;}
 			#debug_options span:last-child:hover .debug_button{background-color:#7ec0ee;}
 			#debug_options span:hover{background-color:#4fa7be;color:#FFF;cursor:pointer;}
+			#bug_feedback{padding-top:5px;}

@@ -266,7 +266,7 @@ function notice(visible, path, type){ // this needs to be refactored into JSON s
 		$('#notices').animate({'height':'0px'});
 	}
 }
-notice('true', 'json/notice.xml', 'warning');
+//notice('true', 'json/notice.xml', 'warning');
 
 // disabled!
 /*
@@ -488,15 +488,6 @@ function load_link(id, title){
 						}
 					}
 				});
-				
-				/*
-				var routeData= route.substring(0, route.indexOf('?'));
-				alert(routeData);
-				*/
-				/*
-				var d= document.URL+'?id='+id+'&title='+title;
-				alert(d.route.split(("?")[0]));
-				*/
 			}
 		}
 	});

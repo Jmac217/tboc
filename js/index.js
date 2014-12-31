@@ -13,14 +13,23 @@ $('#debug_options>span').click(function(){
 	switch ($(this).attr('attr')){
 		case "alert":
 			// toggle sample alerts
+			notice('true', 'json/notice.xml', 'warning');
 		break;
 		case "admin":
 			// href = admin
-		break;
-		case "bug":
-			// pop bug
+			location.href='pages/admin/admin.html';
 		break;
 	}
+});
+$('.debug_button').click(function(){
+	// pop bug
+	var message = $('#bug_message').val();
+	$.post('php/bug.php', {message:message}, function(data){
+		$('#bug_feedback').css({display:'inline-block'}).html('Bug Report Sent!').fadeOut(3000, function(){
+			$(this).animation({display:'none'});
+		});
+		$('#bug_message').val('');
+	});
 });
 
 /************/

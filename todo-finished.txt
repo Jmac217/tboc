@@ -1,0 +1,36 @@
+Website Changes
+Customer Service/Security center: Expanding boxes do not want to open after they have been opened several times, have to refresh screen
+Personal /Checking:
+When I click link for online banking, it takes me down page to bill pay 
+Personal/COD – move “Certificates of Deposit” from center to left side & remove shaded header or add legend under header eg: min balance, to open, etc.
+Personal banking/card services – use just one symbol to indicate that there is an expandable box after debit card, gift card, and visa credit card
+Personal banking/online banking: Under Bill pay, change sentence to read…Basic Bill pay includes 15 monthly bill payments, with a .35 fee for each bill payment exceeding 15.  
+Personal banking/online banking: under text banking, remove duplicate text command for BAL 
+Personal banking/online banking – in the disclaimer, remove bold from iphone and android
+eStatements  - in the top box, remove the “s” from gives, and the “s” from features
+Consumer Loans – when I click to apply now, the old navigation bar is on the screen  
+Personal banking/GO Club – capitalize “The”  in The Bank of Carbondale.  Add “deposit” to Combined “deposit” account balance.  Change  $5,000 to $10,000.
+Personal banking/ Banking Services: add “V” after headings to indicate there is more info.  Safe deposit box verbage extends beyond gray shaded box, as well as notary, foreign currency.   Inline - move second sentence to next line so number is not split.  Remove cash management from this list.
+Business checking: make links for online bill pay, remote deposit cash management.  On the disclaimer at the bottom, remove the colons  in front of the three disclaimer items.  Replace “foreign” with transit.  Replace monthly service fee with monthly service charge at the top and in the second disclaimer at the bottom
+Business/online: On text banking remove duplicate command for BAL. .  On cash management, finish sentence with “and more” . On bill pay, add to the sentence...for just $7 per month, which includes 20 bill payments.  There is an additional .35 fee for each bill payment exceeding 20.  Remove bold type from Iphone and Android at the bottom of the disclaimer.
+Business Card services: remove “&” from heading MasterCard & Businee Debit Card  
+Commercial Loans – Microsoft outlook wizaed is launched when I click on Rob's email
+Business Services: safe deposit box text goes outside of margins on gray box.  In line: move second sentence down so phone number is not split.  On cash management, finish sentence with “and more”.  
+History: left justify the text so it does not have spaces throughout the paragraph.
+Hours and location – alphabetize location – put Carterville after Carbondale East 
+
+---
+
+Make positioning relative across the index, links and alert are messed up
+
+redirect current structure to the necessary pages
+
+try and cut back on json calls, there's currently 3 per page I believe.
+
+go through and refine where possible.
+
+see about web.com and nodejs--mongo may be important
+
+make admin look decent, and try to connect it to mongo.
+
+finish company website and add to bottom of page
