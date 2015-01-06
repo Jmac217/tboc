@@ -13,7 +13,7 @@ $('#debug_options>span').click(function(){
 	switch ($(this).attr('attr')){
 		case "alert":
 			// toggle sample alerts
-			notice('true', 'json/notice.xml', 'warning');
+			notice('true', 'notice', 'markdown');
 		break;
 		case "admin":
 			// href = admin

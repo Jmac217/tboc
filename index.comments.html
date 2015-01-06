@@ -3,6 +3,9 @@
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!--<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8" />-->
+	<!--<meta http-equiv='X-UA-Compatible' content='IE=EmulateIE7' />-->
+	<!--<link rel='stylesheet' type='text/css' href='css/reset.css' />-->
 	<link rel='stylesheet' type='text/css' href='css/index.css' />
 	<link rel='stylesheet' type='text/css' href='css/navigation.css' />
 	<link rel='stylesheet' type='text/css' href='lib/jquery-ui.min.css' />
@@ -22,13 +25,15 @@
 			<div id='logo'><img src='res/logo.png' height='125' width='260'/></div>
 			<div id='photo'><img src='res/tboc.jpg' height='155' width='685'/></div>
 			<span id='motto'>Your Hometown Friend!</span>
-			<div id='notices' class='box' contenteditable='true'>ABC...</div>
-			<div id='links' class='box'></div>
+			<div id='notices' class='box'>aa</div>
+			<div id='links'></div>
 		</div>
 		<div id='body'>
 			<div id='body_container'>
 				<div id='banner' class=''>
+					<!-- to be generated from banner.json -->
 					<div>
+						<!-- content uses id for now for js, I think this can be done with the banner_content class eventually -->
 						<span id='banner_mortgage'></span>
 						<img src='res/banner/mortgage.png'/>
 					</div>
@@ -38,6 +43,22 @@
 					</div>
 				</div>
 				<div id='column'>
+					<!-- New Login -->
+					<!--
+					<div class='tile form_tile tile_border shadow'>
+						<div class='form_header box'>Online Banking Login</div>
+						<div class='form'>
+							<form id='Q2OnlineLogin' name='Q2OnlineLogin' action='https://secure9.onlineaccess1.com/CarbondaleOnline_30/Authentication/Login.aspx' method='post'>
+								<input type='text' name='user_id' placeholder='User ID'/>
+								<input type='password' name='password' placeholder='Password'/>
+								<a>Forgot Password?</a>
+								<input class='form_submit button' type='submit' name='submit' value='Login'/>
+							</form>
+						</div>
+						<a class='form_spanner box'>First Time Login To Online Banking?</a>
+					</div>
+					-->
+					<!-- Current Login System -->
 					<div class='tile form_tile tile_border shadow'>
 						<div class='form_header box'>Online Banking Login</div>
 						<div class='form'>
@@ -55,19 +76,64 @@
 								<input class='form_submit button' type='submit' name='submit' value='Login'/>
 							</form>
 						</div>
+						<!--<a class='form_spanner box'>First Time Login To Online Banking?</a>-->
 					</div>
+					<!--<div class='tile vertical_tile tile_border padded box load_link linear_gradient shadow' id='OTHER' title='customer'>-->
+						<!-- `title` to be renamed, `id` and `*title*` to be placed by tiles.json -->
+						<!--
+						<span class='tile_image'><img src='res/icons/home/checkbox.png'/></span>
+						<span class='tile_header'>Online Banking</span>
+						<span class='tile_text'>Sign Up Now!</span>
+					</div>
+					<div class='tile vertical_tile tile_border padded box load_link linear_gradient shadow' id='demos' title='customer'>
+						<span class='tile_image'><img src='res/icons/home/text-bubble.png'/></span>
+						<span class='tile_header'>Holiday Hours</span>
+						<span class='tile_text'>More Information</span>
+					</div>
+					<div class='tile vertical_tile tile_border load_link padded box linear_gradient shadow' id='loan_app' title='customer'>
+						<span class='tile_image'><img src='res/icons/vehicles/car1.png'/></span>
+						<span class='tile_header'>Online Consumer Loan Application</span>
+					</div>
+					-->
 				</div>
-				<div id='bottom'></div>
+				<div id='bottom'>
+					<!--
+					<span class='tile horizontal_tile tile_border load_link box linear_gradient shadow' id='card_services' title='personal'>
+						<span class='tile_header'>Card Services</span>
+						<img class='tile_image' src='res/icons/card/white-simple-small.png'/>
+						<span class='tile_text'>Report a lost/stolen Debit Card or acivate/change the pin on a Debit Card.</span>
+						<span class='tile_button button'>More Information</span>
+					</span>
+					<span class='tile horizontal_tile tile_border load_link box linear_gradient shadow' id='mortgage' title='personal'>
+						<span class='tile_header'>Mortgage Center</span>
+						<img class='tile_image' src='res/icons/home/house-small.png'/>
+						<span class='tile_text'>Visit our Online Mortage Center to check current rates and apply online.</span>
+						<span class='tile_button button'>Learn More</span>
+					</span>
+					<span class='tile horizontal_tile tile_border load_link box linear_gradient shadow' id='ebanking' title='personal'>
+						<span class='tile_header'>Mobile Banking</span>
+						<img class='tile_image' src='res/icons/tech/mobile-small.png'/>
+						<span class='tile_text'>Get on-the-go access to eBanking with our FREE Mobile Banking APP.</span>
+						<span class='tile_button button'>Get the App!</span>
+					</span>
+					-->
+				</div>
 			</div>
 			<div id='pages'></div>
 		</div>
 		<div id='footer'>
+			<!--<div id='footer_copy'>-->
 				<span style='float:left'>&copy; 2015 The Bank of Carbondale. All Rights Reserved. &nbsp;&nbsp; <a onclick='load_link("privacy" ,"about")'>Privacy Policy</a></span>
+				<!--<p>&copy; 2014 The Bank of Carbondale. All Rights Reserved. &nbsp;&nbsp;
+				<a href='pages/main/privacy.php'>Privacy Policy</a>-->
+			<!--</div>-->
+			<!--<div id='footer_FDIC'>-->
 				<span style='float:right'>
 					Member FDIC &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<img src='res/icons/ehl.png' height='19' width='25'/>&nbsp;&nbsp;
 					Equal Housing Lender
 				</span>
+			<!--</div>-->
 		</div>
 	</div>
 	<div id='outgoing'></div>
@@ -79,9 +145,11 @@
 			<span attr='bug'>
 				<div class='debug_bug_header'>Submit Bug</div>
 				<div class='debug_bug_drop'>
+					<!--<form action='php/bug.php' method='post'>-->
 						<textarea id='bug_message' placeholder='Description' style='width:90%;resize:none;border-style:none;border-radius:3px;margin-top:5px;' ></textarea>
 						<input type='button' class='debug_button' value='send'/>
 						<div id='bug_feedback'></div>
+					<!--</form>-->
 				</div>
 			</span>
 		</div>
@@ -97,5 +165,7 @@
 <script type='text/javascript' src='js/globals.js'></script>
 <script type='text/javascript' src='js/functions.js'></script>
 <script type='text/javascript' src='js/index.js'></script>
+<!--<script type='text/javascript' src='js/debug.js'></script>-->
+<!--<script type='text/javascript' src='js/test.js'></script>-->
 </body>
 </html>

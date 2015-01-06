@@ -147,6 +147,20 @@ function send_url_parameters(){
 send_url_parameters();
 
 function notice(visible, path, type){ // this needs to be refactored into JSON so painfully bad
+	if(path !== null){
+		if(visible){
+			switch(type){
+				case "markdown":
+					$('#notices').css({display: 'block'}).html('php/md.php');
+				break;
+				case "xml":
+					// This will come if necessary
+					//$('#notices').css({display: 'block'}).load('php/xml.php?path='+path);
+			}
+		}
+	}
+	// load php/md.php?url=*url to md file*
+	/*
 	if (visible == 'true'){
 		$.ajax({
 			type: "GET",
@@ -265,6 +279,7 @@ function notice(visible, path, type){ // this needs to be refactored into JSON s
 		// set visibility false and animate closed
 		$('#notices').animate({'height':'0px'});
 	}
+*/
 }
 //notice('true', 'json/notice.xml', 'warning');
 
