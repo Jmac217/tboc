@@ -1,11 +1,9 @@
 
 body{background-color:#CCC;color:#333;background:url('lodyas.png');}
-
-#doc{height:87%;width:100%;border-radius:3px;}
-
 div,span{display:block;padding:10px;box-sizing:border-box;border-radius:inherit;}
 li {list-style:none;}
 
+#doc{height:87%;width:100%;border-radius:3px;}
 #header{background-color:#666;font-size:16px;height:auto;display:inline-block;padding-bottom:0;width:100%;}
 	#tabs{padding-bottom:0;display:inline-block;}
 		.tab{display:inline-block;background-color:#DDD;padding:10px;min-width:130px;border-radius:10px 10px 0 0;text-align:center;border-right:solid 1px #CCC;}
@@ -18,13 +16,21 @@ li {list-style:none;}
 		#user_options span:hover{background-color:#4fa7be;color:#FFF;}
 #body{background-color:#DDD;padding:10px;display:inline-block;width:100%;}
 	#pages{height:93%;width:100%;border:solid 1px #CCC;border-radius:5px;box-shadow:5px 5px 10px #AAA;}
+	.page{display:block;top:0;left:0;display:none;}
 #footer{background-color:#666;display:inline-block;width:100%;}
 	#update{background-color:#7ec0ee;width:100px;text-align:center;color:#FFF;cursor:pointer;text-shadow:1px 1px 5px #FFF;-moz-user-select:none;float:right;}
 
-
-#alert{}
-	#message{width:100%;background-color:#EEE;border:solid 1px #CCC;}
-		#message_title{font-weight:bold;}
-		#message_body{border-left:solid 4px #CCC;border-radius:0;}
-		#message_date{color:#BBB;text-align:right;padding:0;}
-	#form{width:100%;background-color:#EEE;border:solid 1px #CCC;}
+.list{width:100%;background-color:#EEE;border:solid 1px #CCC;margin-bottom:5px;}
+.list input, .list select{border-style:none;font-style:italic;color:#AAA;background:transparent;text-align:right;width:100px;margin-left:5px;}
+.list select{text-align:left;float:left;}
+	.list_new_preset{} .list_select_preset{}
+	.list_title{font-weight:bold;}
+	.list_body{border-left:solid 4px #CCC;border-radius:0;}
+	.list_date{width:inherit;text-align:right;font-style:italic;}
+	.list_pop{display:block;height:16px;width:16px;border-radius:100%;border:solid 1px #AAA;color:#777;background-color:#CCC;line-height:13px;text-align:center;float:right;padding:0;cursor:pointer;-moz-user-select:none;}
+	.list_color{display:none;width:inherit;border-radius:0;border-top:dashed 1px #BBB;text-align:right;}
+		.color_box{display:inline-block;position:relative;top:3px;height:16px;width:16px;border-radius:2px;border:solid 1px rgba(0,0,0,.4);margin-left:10px;cursor:pointer;}
+		.list_border_choice{background-color:#CCC;}
+		.list_background_choice{background-color:#BBB;}
+		.list_font_choice{background-color:#000;}
+		

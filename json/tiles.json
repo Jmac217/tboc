@@ -3,9 +3,13 @@
 		"src":"php/"
 	}],
 	"security":[{
-		"title":"Alert",
-		"body":"Google",
-		"date":"today"
+		"title":"A wild poodle is on the loose, ravaging through your electronic bullshit!",
+		"body":"Who'd have thunk it'd just been another old Java exploit?",
+		"date":"20-26-14"
+	},{
+		"title":"Shellshocked to the maximum",
+		"body":"And you wouldn't believe it was just your average turtle!",
+		"date":"20-27-14"
 	}],
 	"employment":[{
 		"title":"Job",

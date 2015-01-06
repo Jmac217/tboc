@@ -89,7 +89,7 @@ td{border-style:none;border:none;line-height:20px;padding:5px;}
 
 #doc{position:relative;margin:auto;top:0;bottom:0;left:0;right:0;height:auto;width:970px;}
 	#header{position:relative;height:auto;width:100%;}
-		#user_nav{position:relative;left:290px;height:auto;width:900px;z-index:1;overflow:hidden;margin-bottom:5px;}
+		#user_nav{position:relative;left:290px;height:auto;width:825px;z-index:1;margin-bottom:5px;}
 		#logo{display:inline-block;position:relative;float:left;cursor:pointer;}
 		#photo{display:inline-block;position:relative;margin-left:25px;background-repeat:no-repeat;background-size:685px 155px;}
 		#motto{position:absolute;top:155px;left:0;width:270px;color:#333;visibility:visible;z-index:1;font-size:17px;text-align:center;color:#000;opacity:.7;}
@@ -118,7 +118,7 @@ td{border-style:none;border:none;line-height:20px;padding:5px;}
 					.link_drop>li>a:hover{text-decoration:none;color:#1e59cf;}
 	#body{position:relative;top:0;left:0;height:auto;width:100%;}
 		#body_container{position:relative;top:5px;left:0;height:100%;width:100%;}
-			#banner{position:relative;top:0;float:right;height:279px;width:750px;margin-bottom:12px;}
+			#banner{position:relative;top:0;float:right;height:279px;width:750px;margin-bottom:12px;z-index:0;}
 			#tile_column{position:absolute;top:0;left:0;height:auto;width:210px;}
 				#login{position:relative;width:100%;overflow:hidden;top:0;height:200px;width:100%;border:solid 1px #777;background-color:#EEE;border-radius:10px 10px 0 0;}
 					#login_header{position:absolute;top:0;left:0;height:30px;width:100%;font-size:15px;text-align:center;display:block;color:#444;border-bottom:solid 1px #aaa;background-color:#ddd;padding:5px;font-style:italic;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;behavior:url(lib/PIE.htc);}
