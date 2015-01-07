@@ -1,7 +1,7 @@
 <div class='page_header'><span class='e'>e</span>Statements</div>
 <div class='page_row textblock text_shadow box'>
-	<p>eStatements from The Bank of Carbondale gives you instant access to your statements with online delivery and check images. Each time a statement is made available, an email alert is sent with instructions for viewing your statement online.</p>
-	<p>eStatements features full 128-bit SSL encryption for secure, reliable access to your statment from any PC, 24 hours a day.</p>
+	<p>eStatements from The Bank of Carbondale give you instant access to your statements with online delivery and check images. Each time a statement is made available, an email alert is sent with instructions for viewing your statement online.</p>
+	<p>eStatements feature full 128-bit SSL encryption for secure, reliable access to your statment from any PC, 24 hours a day.</p>
 </div>
 <img src="res/pages/personal/estatements.jpg" alt="eStatements" class="page_left_column page_photo text_shadow">
 <div class='page_right_column_extended textblock text_shadow box'>

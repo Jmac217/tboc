@@ -18,7 +18,7 @@
 </div>
 <h2>Bill Pay</h2>
 <div class='sub_div'>
-	<p>Customers can add Basic Bill Pay to online banking, and get web access to pay bills online. Basic Bill Pay includes 15 monthly transactions, with a .35 charge for each additional transaction. Bill pay customers can pay any bill from any checking account inside online banking, and with guaranteed delivery, you can be assured that your bills are paid on time.</p>
+	<p>Customers can add Basic Bill Pay to online banking, and get web access to pay bills online. Basic Bill Pay includes 15 monthly bill payments, with a .35 fee for each bill payment exceeding 15. Bill pay customers can pay any bill from any checking account inside online banking, and with guaranteed delivery, you can be assured that your bills are paid on time.</p>
 </div>
 <h2>Mobile Banking</h2>
 <div class='sub_div'>
@@ -31,7 +31,7 @@
 <h2>Text Banking</h2>
 <div class='sub_div'>
 	<p>Text banking gives you instant account information from your phone with a variety of commands.</p>
-	<i>Sign up is fast and easy – and there's no monthy fee!</i><sup>3</sup>
+	<i>Sign up is fast and easy and there's no monthy fee!</i><sup>3</sup>
 	<h4>The Bank of Carbondale Text Banking  -  226563</h4>
 	<h5>Available Text Commands are:<h5>
 	<table class='dash_bottom'>
@@ -43,9 +43,6 @@
 		</tr>
 		<tr>
 			<td>XFER &#12296;from account nickname&#12297; &#12296;to account nickname&#12297; &#12296;amount&#12297;</td><td>Transfer funds between accounts</td>
-		</tr>
-		<tr>
-			<td>BAL or BAL &#12296;account nickname&#12297;</td><td>Request account balance</td>
 		</tr>
 		<tr>
 			<td>LIST</td><td>Receive a list of keywords</td>
@@ -65,8 +62,8 @@
 		<p><b><sup>1</sup></b> Online banking access subject to approval and limits.</p>
 		<p><b><sup>2</sup></b> Mobile Banking requires enrollment in online banking. The Bank of Carbondale does not charge a monthly service fee for Mobile Banking. A fee for external transfers may apply. Text messaging and data rates from your mobile service provider may apply.</p>
 		<p><b><sup>3</sup></b> Text banking requires enrolment in online banking. The Bank of Carbondale does not charge a monthly service fee for text banking. A fee for external transfers may apply. Text messaging and data rates from your mobile service provider may apply.</p>
-		<p><b>iPhone</b> is a registered trademark of Apple, Inc. App Store is a trademark of Apple, Inc.</p>
-		<p><b>Android</b> and Google Play are trademarks of Google Inc.</p>
+		<p>iPhone is a registered trademark of Apple, Inc. App Store is a trademark of Apple, Inc.</p>
+		<p>Android and Google Play are trademarks of Google Inc.</p>
 	</small>
 </div>
 </div>
