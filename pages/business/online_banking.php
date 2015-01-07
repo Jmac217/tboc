@@ -14,7 +14,7 @@
 </div>
 <h2>Bill Pay</h2>
 <div class='sub_div'>
-<p>Customers can add Bill Pay to Online Banking for Business for just $7 per month. With Bill Pay, you get web  access to pay bills online. Bill Pay customers can pay any bill, from any checking account inside Online Banking, and with guaranteed delivery, you can rest assured your bills are paid on time.</p>
+<p>Customers can add Bill Pay to Online Banking for Business for just $7 per month, which includes 20 bill payments. There is an additional .35 fee for each bill payment exceeding 20. With Bill Pay, you get web  access to pay bills online. Bill Pay customers can pay any bill, from any checking account inside Online Banking, and with guaranteed delivery, you can rest assured your bills are paid on time.</p>
 <p>You can even set rights and permissions for your employees and approve payments before they are sent.</p>
 </div>
 <h2>Mobile Banking</h2>
@@ -42,9 +42,6 @@
 			<td>XFER &#12296;from account nickname&#12297; &#12296;to account nickname&#12297; &#12296;amount&#12297;</td><td>Transfer funds between accounts</td>
 		</tr>
 		<tr>
-			<td>BAL or BAL &#12296;account nickname&#12297;</td><td>Request account balance</td>
-		</tr>
-		<tr>
 			<td>LIST</td><td>Receive a list of keywords</td>
 		</tr>
 		<tr>
@@ -54,22 +51,24 @@
 			<td>STOP</td><td>Stop all text messages to the mobile device</td>
 		</tr>
 	</table>
-	<h4>How to sign up for Text Banking</h4>
-	<p>Login to online banking, select preferences &#12297; mobile &#12297; text, and follow the instructions.</p>
-
+	<p style='line-height:12px;font-size:12px;'>
+		<b>How to sign up for Text Banking:</b>
+		<br/>
+		Login to online banking, select preferences &#12297; mobile &#12297; text, and follow the instructions.
+	</p>
 </div>
 <h2>Cash Management</h2>
 <div class='sub_div'>
-<p>With Online Banking for Business you can add Cash Management features for processing employee payroll, bill your customers electronically, and more right from Online Banking for Business. Online Banking for Business Cash Management also includes full mobile functionality, giving you access to your information from anywhere, anytime.</p>
+<p>With Online Banking for Business you can add Cash Management features for processing employee payroll, bill your customers electronically, and more. Online Banking for Business Cash Management also includes full mobile functionality, giving you access to your information from anywhere, anytime, and more.</p>
 </div>
 <br/>
 <div class='sub_div'>
 	<small>
-		<p><b><sup>1</sup></b> Online Banking access subject to approval and limits.</p>
-		<p><b><sup>2</sup></b> Mobile Banking requires enrollment in Online Banking. The Bank of Carbondale does not charge a monthly service fee for Mobile Banking. A fee for external transfers may apply. Text messaging and data rates from your mobile service provider may apply.</p>
-		<p><b><sup>3</sup></b>Text banking requires enrolment in online banking. The Bank of Carbondale does not charge a monthly service fee for text banking. A fee for external transfers may apply. Text messaging and data rates from your mobile service provider may apply.</p>
-		<p><b>iPhone</b> is a registered trademark of Apple, Inc. App Store is a trademark of Apple, Inc.</p>
-		<p><b>Android</b> and Google Play are trademarks of Google Inc.</p>
+		<p><sup>1</sup> Online Banking access subject to approval and limits.</p>
+		<p><sup>2</sup> Mobile Banking requires enrollment in Online Banking. The Bank of Carbondale does not charge a monthly service fee for Mobile Banking. A fee for external transfers may apply. Text messaging and data rates from your mobile service provider may apply.</p>
+		<p><sup>3</sup> Text banking requires enrolment in online banking. The Bank of Carbondale does not charge a monthly service fee for text banking. A fee for external transfers may apply. Text messaging and data rates from your mobile service provider may apply.</p>
+		<p>iPhone is a registered trademark of Apple, Inc. App Store is a trademark of Apple, Inc.</p>
+		<p>Android and Google Play are trademarks of Google Inc.</p>
 		</p>
 	</small>
 </div>

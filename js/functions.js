@@ -145,7 +145,6 @@ function send_url_parameters(){
 	}
 }
 send_url_parameters();
-
 function notice(visible, path, type){ // this needs to be refactored into JSON so painfully bad
 	if(path !== null){
 		if(visible){
@@ -316,8 +315,17 @@ function generate_tiles(panel, tile, orientation){ // `panel` is the id of the t
 			var _id = json.tiles[tile].links[i].id;
 		  	var _orientation = orientation+'_tile'; // special class
 		  	var _classes = "tile tile_border padded box load_link linear_gradient shadow";
-		  	var _image = "<span class='tile_image'><img src='"+json.tiles[tile].links[i].image+"'/></span>";
-		  	var _header = "<span class='tile_header'>"+json.tiles[tile].links[i].title+"</span>";
+			var _image = json.tiles[tile].links[i].image;
+			if (_image !== ""){
+				_image = "<span class='tile_image'><img src='"+json.tiles[tile].links[i].image+"'/></span>";
+			}
+		  	var _header = json.tiles[tile].links[i].title;
+			if(_header.indexOf("img:")>-1){
+				_header = _header.substring(4);
+				_header = "<img class='tile_header' src='"+_header+"' />";
+			}else{
+				_header = "<span class='tile_header'>"+json.tiles[tile].links[i].title+"</span>";
+			}
 		  	var _text = "<span class='tile_text'>"+json.tiles[tile].links[i].body+"</span>";
 		  	var _button;
 		  	if (json.tiles[tile].links[i].button !== ''){
@@ -401,14 +409,18 @@ function page_drop(onclick){
 }
 
 // @debug | These will go into index.js
-generate_tiles('#column', 'column', 'vertical');
-generate_tiles('#bottom', 'row', 'horizontal');
+//generate_tiles('#column', 'column', 'vertical');
+//generate_tiles('#bottom', 'row', 'horizontal');
 // ---
 
 // function load_link(id, title, path, location){ // for external path and location
 function load_link(id, title){
 	//alert(id+': '+title);
-	if(id==null&&title==null){
+	if(id=='404'){
+		$('#pages').css({height:'0px'});
+		$('#body_container').css({visibility:'hidden',display:'none'});
+		$('#pages').load('pages/404.php').css({visibility:'visible',display:'block',height:'auto'});
+	}else if(id==null&&title==null){
 		// go home Javascript, you're drunk.
 		$('#body_container').css({'visibility':'visible','display':'block'});
 		$('#pages').css({'visibility':'hidden','display':'none'});

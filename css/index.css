@@ -24,7 +24,6 @@ td{border-style:none;border:none;line-height:20px;padding:5px;}
 	.td-border td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 	.td-this-border td{border-bottom:dotted 1px #BBB;border-right:dotted 1px #BBB;}
 	.dash_bottom td{border-bottom:dashed 1px #999;font-weight:0;font-size:12px;}
-
 /* Global Classes */
 .box{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;*behavior:url(/lib/boxsizing.htc);}
 .radius{-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;behavior:url(lib/PIE.htc);}
@@ -40,6 +39,11 @@ td{border-style:none;border:none;line-height:20px;padding:5px;}
 .login_checkbox{display:block;width:100%;text-align:left;margin:0;margin-left:15px;padding:0;}
 .statement{font-size:18px;text-align:justify;}
 .tboc{color:#75263d;}
+
+/* slick lib */
+.slick-prev{display:none;}
+.slick-next{display:none;}
+.slick-dots{z-index:1000;} /* Yes, I'm fairly certain that somewhere in this library Z-Indexes are used nonchalantly. Fix for IE 8 only. */
 
 /* Tiles */
 #column{position:relative;float:left;top:0;left:0;height:443px;width:210px;}
@@ -65,7 +69,7 @@ td{border-style:none;border:none;line-height:20px;padding:5px;}
 		.tile_header:hover{color:#3e79ef;text-decoration:underline;}
 	.tile_text{position:relative;display:block;top:5px;font-size:11px;}
 	.tile_button{display:block;bottom:0;left:0;cursor:pointer;position:absolute;bottom:0;right:0;font-weight:bold;font-family:arial;border-style:none;height:25px;line-height:25px;color:#EEE;border-radius:inherit;} /* @box? */
-	.vertical_tile{display:block;width:100%;height:71px;}
+	.vertical_tile{display:block;width:100%;/*height:71px;*/height:68.5px;}
 	.horizontal_tile{left:5px;display:inline-block;height:100%;width:32%;margin-right:10px;float:left;padding:15px 20px;}
 		.horizontal_tile > .tile_header{top:10px;}
 		.horizontal_tile > .tile_text{top:10px;display:inline-block;text-align:left;}
@@ -79,7 +83,7 @@ td{border-style:none;border:none;line-height:20px;padding:5px;}
 	.form_submit{position:relative;margin-bottom:15px;top:5px;float:left;left:5%;height:30px;width:90%;border-style:none;font-size:15px;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px;color:#EEE;behavior:url(lib/PIE.htc);}/* @radius */
 		.form_submit:hover{cursor:pointer;color:#FFF;}
 	.form a{position:relative;float:right;right:5%;clear:left;}
-	.form input[type='text'], .form input[type='password']{position:relative;display:block;height:30px;margin:10px 5%;width:90%;font-size:15px;border:solid 1px #666;border-radius:3px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;behavior:url(lib/PIE.htc);*behavior:url(/lib/boxsizing.htc);}
+	.form input[type='text'], .form input[type='password']{position:relative;display:block;height:28px;margin:0px 5% 5px 5%;width:90%;font-size:15px;border:solid 1px #666;border-radius:3px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;behavior:url(lib/PIE.htc);*behavior:url(/lib/boxsizing.htc);}
 	.form form{}
 	.form_spanner{display:inline-block;position:relative;height:20px;width:100%;font-size:12px;color:#EEE;background-color:#3d792a;text-align:center;padding-top:3px;border-bottom-left-radius:inherit;border-bottom-right-radius:inherit;border:solid 1px #3d792a;}
 		.form_spanner:hover{background-color:#4d9a35;color:#EEE;text-decoration:none;}

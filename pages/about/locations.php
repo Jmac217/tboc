@@ -106,54 +106,6 @@
 	</table>
 </div>
 <div class='page_row textblock text_shadow box'>
-	<h2>Murphysboro Banking Center</h2>
-	<table width="100%">
-		<tr>
-			<td>900 Walnut St.</td>
-		</tr>
-		<tr>
-			<td>Murphysboro, IL 62966</td>
-		</tr>
-		<tr>
-			<td>(618) 687-4100</td>
-		</tr>
-		<tr>
-			<td colspan="2" class='th-this-border'>
-				<h3>Lobby Hours</h3>
-			</td>
-		</tr>
-		<tr class='td-this-border'>
-			<td>Monday - Thursday</td>
-			<td>8:30am - 4pm</td>
-		</tr>
-		<tr class='td-this-border'>
-			<td>Friday</td>
-			<td>8:30am - 6pm</td>
-		</tr>
-		<tr class='td-this-border'>
-			<td>Saturday</td>
-			<td>8:30am - Noon</td>
-		</tr>
-		<tr>
-			<td colspan="2" class='th-this-border'>
-				<h3>Drive-Thru</h3>
-			</td>
-		</tr>
-		<tr class='td-this-border'>
-			<td>Monday - Thursday</td>
-			<td>7:30am - 5pm</td>
-		</tr>
-		<tr class='td-this-border'>
-			<td>Friday</td>
-			<td>7:30am - 6pm</td>
-		</tr>
-		<tr class='td-this-border'>
-			<td>Saturday</td>
-			<td>7:30am - Noon</td>
-		</tr>
-	</table>
-</div>
-<div class='page_row textblock text_shadow box'>
 	<h2>Carterville Banking Center</h2>
 	<table width="100%">
 		<tr>
@@ -198,6 +150,54 @@
 		<tr class='td-this-border'>
 			<td>Saturday</td>
 			<td>7:30am - Noon </td>
+		</tr>
+	</table>
+</div>
+<div class='page_row textblock text_shadow box'>
+	<h2>Murphysboro Banking Center</h2>
+	<table width="100%">
+		<tr>
+			<td>900 Walnut St.</td>
+		</tr>
+		<tr>
+			<td>Murphysboro, IL 62966</td>
+		</tr>
+		<tr>
+			<td>(618) 687-4100</td>
+		</tr>
+		<tr>
+			<td colspan="2" class='th-this-border'>
+				<h3>Lobby Hours</h3>
+			</td>
+		</tr>
+		<tr class='td-this-border'>
+			<td>Monday - Thursday</td>
+			<td>8:30am - 4pm</td>
+		</tr>
+		<tr class='td-this-border'>
+			<td>Friday</td>
+			<td>8:30am - 6pm</td>
+		</tr>
+		<tr class='td-this-border'>
+			<td>Saturday</td>
+			<td>8:30am - Noon</td>
+		</tr>
+		<tr>
+			<td colspan="2" class='th-this-border'>
+				<h3>Drive-Thru</h3>
+			</td>
+		</tr>
+		<tr class='td-this-border'>
+			<td>Monday - Thursday</td>
+			<td>7:30am - 5pm</td>
+		</tr>
+		<tr class='td-this-border'>
+			<td>Friday</td>
+			<td>7:30am - 6pm</td>
+		</tr>
+		<tr class='td-this-border'>
+			<td>Saturday</td>
+			<td>7:30am - Noon</td>
 		</tr>
 	</table>
 </div>

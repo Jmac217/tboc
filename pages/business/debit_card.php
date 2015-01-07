@@ -17,7 +17,7 @@
 		<p>Call The Bank of Carbondale during regular business hours: <span class='phone_number'>618-549-2181</span></p>
 		<p>After hours call: <span class='phone_number'>800-262-2024</span></p>
 	</div>
-	<h2>MasterCard & Business Debit Card</h2>
+	<h2>MasterCard Business Debit Card</h2>
 	<div class='sub_div'>
 		<ul>
 			<li>Simplify your money management</li>

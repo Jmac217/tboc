@@ -4,6 +4,7 @@ $(document).on('click', '.nav_element', function(){
 generate_tiles('#column', 'column', 'vertical');
 generate_tiles('#bottom', 'row', 'horizontal');
 
+
 /*** debug ***/
 
 $('#debug_button').click(function(){$('#debug_options').animate({width:'150px'}).on('mouseleave',function(){$(this).animate({width:'0px'});});});
@@ -33,7 +34,7 @@ $('.debug_button').click(function(){
 });
 
 /************/
-
+/*
 $('[placeholder]').focus(function() {
   var input = $(this);
   if (input.val() == input.attr('placeholder')) {
@@ -47,6 +48,7 @@ $('[placeholder]').focus(function() {
     input.val(input.attr('placeholder'));
   }
 }).blur();
+*/
 
 	// hardcoded banner loads
 	$('#banner_mortgage').load('res/banner/content/mortgage.html');
@@ -159,7 +161,7 @@ $('[placeholder]').focus(function() {
 	});
 
 	// dynamic list sizing when clicked
-	$('.link').click(function(){
+	$('.link').mouseover(function(){
 		var dropdown = $(this).attr('alt');	
 		var fields = null;
 		var drop_height = null;

@@ -54,8 +54,11 @@
 			<td>STOP</td><td>Stop all text messages to the mobile device</td>
 		</tr>
 	</table>
-	<h4>How to sign up for Text Banking</h4>
-	<p>Login to online banking, select preferences &#12297; mobile &#12297; text, and follow the instructions.</p>
+	<p style='line-height:12px;font-size:12px;'>
+		<b>How to sign up for Text Banking:</b>
+		<br/>
+		Login to online banking, select preferences &#12297; mobile &#12297; text, and follow the instructions.
+	</p>
 </div>
 <div class='sub_div'>
 	<small>

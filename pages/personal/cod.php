@@ -79,8 +79,15 @@
 	</tr>
 	<tr>
 		<th colspan='5'>
-			<h2>Certificates of Deposit</h2>
+			<h2></h2>
 		</th>
+	</tr>
+	<tr>
+		<td><h3>Certificates of Deposit</h3></td>
+		<td><h3>Min. Balance to Open</h3></td>
+		<td><h3>Minimum Balance to Earn APY</h3></td>
+		<td><h3>Interest Rate</h3></td>
+		<td><h3>Annual Percentage Yield (APY)</h3></td>
 	</tr>
 	<tr>
 		<td>6 Month CD</td>
@@ -138,13 +145,19 @@
 		<td>.90%</td>
 		<td>.90%</td>
 	</tr>
-	</tr>
 	<tr>
 		<td>48 Month CD</td>
 		<td>$1,000</td>
 		<td>$1,000</td>
 		<td>1.00%</td>
 		<td>1.00%</td>
+	</tr>
+	<tr>
+		<td>60 Month CD</td>
+		<td>$1,000</td>
+		<td>$1,000</td>
+		<td>1.30%</td>
+		<td>1.31%</td>
 	</tr>
 	<tr>
 		<th colspan='5'>

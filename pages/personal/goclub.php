@@ -15,7 +15,7 @@
 	<div class='sub_div'>
 		<ul>
 			<li><strong>Exclusively for folks 55 years of age or better</strong></li>
-			<li><strong>Combined account balance of $10,000 or more</strong></li>
+			<li><strong>Combined deposit account balance of $10,000 or more</strong></li>
 		</ul>
 	</div>
 </div>

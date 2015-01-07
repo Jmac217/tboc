@@ -23,7 +23,7 @@
 	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>In-Line Telephone Banking <span class='down_arrow'>&#9660;</span></h2>
 		<div class='drop_tile_body'>
-			<p>24-hours per day, you have access to your account balance from any phone. Just dial 618-549-0939.</p>
+			<p>24-hours per day, you have access to your account balance from any phone.<br/>Just dial 618-549-0939.</p>
 		</div>
 	</div>
 	<div class='drop_tile' onclick='page_drop(this)'>
@@ -53,7 +53,7 @@
 	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>Cash Management <span class='down_arrow'>&#9660;</span></h2>
 		<div class='drop_tile_body'>
-			<p>With Online Banking for Business you can add Cash Management features for processing employee payroll, bill your customers electronically, and more right from Online Banking for Business. Online Banking for Business Cash Management also includes full mobile functionality, giving you access to your information from anywhere, anytime.</p>
+			<p>With Online Banking for Business you can add Cash Management features for processing employee payroll, bill your customers electronically, and more. Online Banking for Business Cash Management also includes full mobile functionality, giving you access to your information from anywhere, anytime, and more.</p>
 		</div>
 	</div>
 </div>

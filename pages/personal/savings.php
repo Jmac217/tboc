@@ -2,7 +2,7 @@
 <img src='res/pages/personal/savings.jpg' class='page_left_column page_photo text_shadow'>
 <div class='page_right_column page_body textblock text_shadow box'>
 	<p>We understand the importance of saving for the future  and unexpected emergencies.  Whether you are just starting out or saving  for something special, we have a savings account to help you reach  your financial goals.</p>
-	<p>Every Bank of Carbondale Passbook savings account is eligible for online banking and mobile access on your schedule, 24 hours a day.</p>
+	<p>Every Bank of Carbondale Passbook savings account is eligible for online banking with online, mobile, and text access on your schedule, 24 hours a day.</p>
 	<p>Passbook savings accounts are also eligible for free eStatements, with online delivery for your convenience and security.</p>
 </div>
 <table class='page_row textblock text_shadow td-border'>
