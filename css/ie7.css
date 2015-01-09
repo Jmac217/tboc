@@ -1,0 +1,14 @@
+#photo>img{margin-left:23px;}
+.padded{padding:0;}
+.tile{margin-right:5px;}
+.tile_button{height:auto;}
+.vertical_tile{height:60px;}
+.form_header_box{padding:0;}
+.horizontal_tile{margin-top:5px;}
+.tile_text{line-height:16px;}
+.horizontal_tile>.tile_text{margin-top:10px;padding:0 10px;}
+.horizontal_tile>.tile_image{padding:10px;}
+.overlay {height:100%;}
+.page_right_column_extended{width:650px;}
+.page_body{width:650px;}
+.page_row{clear:left;}

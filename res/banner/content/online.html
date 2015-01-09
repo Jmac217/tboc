@@ -41,12 +41,47 @@
 .h1{/*font-family:optimus;*/font-size:18px;font-weight:bold;}
 .h2{/*font-family:optimus-semi;*/font-size:15px;}
 .s{font-size:font-size:15px;font-weight:normal;}
-#banner_online .overlay > input[type=button] {
+
+.overlay > input[type=button]{
+	position:relative;
+	padding:15px 30px;
+	line-height:0px;
+	font-size:15px;
+}
+
+#banner_online  .overlay > input[type=button] {
 	top:30px;
 	left:10%;
 	width:80%;
 }
+
 </style>
+<!--[if IE 7]>
+	<style>
+	#banner_online .overlay > input[type=button]{
+		top:20px;
+		left:0;
+	}
+	</style>
+<![endif]-->
+<!--[if gte IE 8]>
+	<style>
+	#banner_online  .overlay > input[type=button] {
+		top:30px;
+		left:10%;
+		width:80%;
+	}
+	</style>
+<![endif]-->
+<!--[if !IE]><!-->
+	<style>
+	#banner_online  .overlay > input[type=button] {
+		top:30px;
+		left:10%;
+		width:80%;
+	}
+	</style>
+<!--<![endif]-->
 </head>
 <body>
 	<div class='container'>

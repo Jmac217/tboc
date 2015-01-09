@@ -1,35 +1,25 @@
-/*
-if(Ext.isIE7 && document.documentMode == 8) {
-Ext.isIE7 = false;
-Ext.isIE8 = true;
-Ext.getBody().replaceClass('ext-ie7', 'ext-ie8');
-}
-*/
-
-
-//var history_obj = {};
-//history.pushState('','',window.location.origin+window.location.pathname);
 window.onpopstate = function(){
 	send_url_parameters();
 }
-/*
-alert(JSON.stringify(history.state));
-var url = window.location.origin+window.location.pathname+'?id=loans&title=asdf';
-alert(url);
-history.pushState(history_obj,'a',url);
-alert(JSON.stringify(history.state));
-*/
 
-/*** User Nav ***/
-var nav_cap = 3; // starting with 0; ex: 3 = 3 + 1 = 4 | will be json.length at some point
-var nav_obj = {}; // initialize scope
+var nav_cap = 3;
+var nav_obj = null;
+var json = null;
 $.ajax({
 	dataType:'json',
 	url: 'json/nav.json',
 	async: false,
-	success: function(json){
-		nav_obj = json.nav; // pass to global
-		//alert(JSON.stringify(nav_obj[0]));
+	success: function(j){
+		nav_obj = j.nav;
+	}
+});
+
+$.ajax({
+	dataType:'json',
+	url: 'json/tiles.json',
+	async: false,
+	success: function(t){
+		json = t;
 	}
 });
 

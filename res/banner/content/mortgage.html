@@ -50,18 +50,39 @@
 	line-height:0px;
 	font-size:15px;
 }
-#banner_mortgage  .overlay > input[type=button] {
-	top:30px;
-	left:10%;
-	width:80%;
-}
 </style>
+<!--[if IE 7]>
+	<style>
+	#banner_mortgage .overlay > input[type=button]{
+		top:20px;
+		left:0;
+	}
+	</style>
+<![endif]-->
+<!--[if gte IE 8]>
+	<style>
+	#banner_mortgage  .overlay > input[type=button] {
+		top:30px;
+		left:10%;
+		width:80%;
+	}
+	</style>
+<![endif]-->
+<!--[if !IE]><!-->
+	<style>
+	#banner_mortgage  .overlay > input[type=button] {
+		top:30px;
+		left:10%;
+		width:80%;
+	}
+	</style>
+<!--<![endif]-->
 </head>
 <body>
 	<div class='container'>
 		<div class='transparency'></div>
 		<div class='overlay box'>
-			<div class='h1'>BUYING <span class='s'>A</span> HOME <span class='s'><br/>&nbsp;&nbsp;&nbsp;&nbsp;OR</span> REFINANCING?</div>
+			<div class='h1'>BUYING A HOME <br/>&nbsp;&nbsp;&nbsp;&nbsp;OR REFINANCING?</div>
 			<br/><br/>
 			<div class='h2'>VISIT OUR</div>
 			<div class='h1'>ONLINE MORTGAGE CENTER</div>

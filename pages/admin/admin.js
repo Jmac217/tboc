@@ -1,9 +1,6 @@
 jQuery.ajaxSetup({ cache: false });
 
 $('document').ready(function(){
-	$('.tab').mouseover(function(){
-		$(this).css({cursor:'pointer',background:'-moz-linear-gradient(#7ec0ee, #DDD)'});
-	});
 	var json;
 	$.ajax({
 		dataType:'json',
@@ -24,6 +21,8 @@ $('document').ready(function(){
 			$('.'+_tabText).html(JSON.stringify(json[_tabText])).css({display: 'block'}).siblings('.page').css({display: 'none'});
 			
 			switch(_tabText){
+				case "rates":
+				break;
 				case "security":
 					//alert(JSON.stringify(json[_tabText]));
 					var html = "";
@@ -62,6 +61,19 @@ $('document').ready(function(){
 						});
 					});
 				break;
+				case "employment":
+				break;
+				case "news":
+				break;
+				case "alerts":
+				break;
+				case "nav":
+				break;
+				case "tiles":
+				break;
+				case "paths":
+				break;
+
 			}
 			$('.page span').attr('contenteditable', 'true');
 			

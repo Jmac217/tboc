@@ -138,7 +138,7 @@
 				},
 				"calc":{
 					"name":"Financial Calculators",
-					"path":"pages/customer/calc.php",
+					"path":"pages/customer/calculator.php",
 					"location":"internal",
 					"win":"current"
 				},

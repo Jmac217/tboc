@@ -1,13 +1,15 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-
 <html>
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<link rel='stylesheet' type='text/css' href='css/index.css' />
-	<link rel='stylesheet' type='text/css' href='css/navigation.css' />
+	<link rel='stylesheet' type='text/css' href='css/index.css?random=@Environment.TickCount' />
+	<link rel='stylesheet' type='text/css' href='css/navigation.css?random=@Environment.TickCount' />
 	<link rel='stylesheet' type='text/css' href='lib/jquery-ui.min.css' />
 	<link rel='stylesheet' type='text/css' href='lib/jquery-ui.theme.min.css'/>
 	<link rel='stylesheet' type='text/css' href='lib/slick/slick.css'/>
+	<!--[if IE 7]>
+	  <link rel='stylesheet' type='text/css' href='css/ie7.css'/>
+	<![endif]-->
 	<link rel='shortcut icon' href='res/icons/favicon.png' />
 	<title>The Bank of Carbondale</title>
 </head>
@@ -25,7 +27,7 @@
 			<div id='notices' class='box' contenteditable='true'>ABC...</div>
 			<div id='links' class='box'></div>
 		</div>
-		<div id='body'>
+		<div id='body' class='box'>
 			<div id='body_container'>
 				<div id='banner' class=''>
 					<div>
@@ -90,12 +92,13 @@
 	</div>
 <script type='text/javascript' src='lib/json2.js'></script>
 <script type='text/javascript' src='lib/json3.js'></script>
-<script type='text/javascript' src='lib/history.js'></script>
+<!--<script type='text/javascript' src='lib/history.js'></script>-->
 <script type='text/javascript' src='lib/jquery1.js'></script>
 <script type='text/javascript' src='lib/underscore.js'></script>
 <script type='text/javascript' src='lib/slick/slick.min.js'></script>
 <script type='text/javascript' src='lib/jquery-ui.min.js'></script>
 <script type='text/javascript' src='lib/PIE.js'></script>
+<script type='text/javascript' src='js/polyfills.js'></script>
 <script type='text/javascript' src='js/globals.js'></script>
 <script type='text/javascript' src='js/functions.js'></script>
 <script type='text/javascript' src='js/index.js'></script>
