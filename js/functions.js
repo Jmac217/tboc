@@ -82,18 +82,42 @@ function generate_tiles(panel, tile, orientation){ // `panel` is the id of the t
 }
 
 function page_drop(onclick){
-	$(onclick).children('.drop_tile_body').css({'visibility':'visible','padding':'10px'}).animate({'height':'100%'}, function(){
-		$(this).parent().mouseleave(function(){
-			$(this).children('.drop_tile_body').animate({'height':'0px','padding':'0px'}, function(){
-				$(this).css({'visibility':'hidden'});
+	$(onclick).children('.drop_tile_body').css({'visibility':'visible','padding':'10px','display':'block'}).animate({'height':'100%'}, function(){
+		$(this).find('.page_drop_escape').click(function(){
+			$(this).parent().parent().animate({'height':'0px','padding':'0px'}, function(){
+				$(this).css({'visibility':'hidden','display':'none'});
 			});
 		});
 	});
 }
 
+function isset(field){
+	if(field!==''){return "true";}
+}
+
 function contact_submit(onclick){
-	var name = $(onclick).parent().parent().parent().find('#name').val();
-	alert(name);
+	var name = $('#name').val();
+	var sender = $('#sender').val();
+	var subject = $('#subject').val();
+	var message = $('#message').val();
+	if(isset(name)&&isset(sender)&&isset(message)){
+		$.post('php/mail.php', {name:name,sender:sender,subject:subject,message:message}, function(data){
+			alert(data);
+			if (data == 'err'){
+				$('#mail_feedback').css({'visibility':'visible', 'color':'red'}).html("An error has occurred.").fadeOut(6000, function(){
+					$(this).css({'visibility':'hidden', 'color':'black'});
+				});
+			}else{
+				$('#mail_feedback').css({'visibility':'visible', 'color':'green'}).html("Your message has been sent!").fadeOut(6000, function(){
+					$(this).css({'visibility':'hidden', 'color':'black'});
+					$('#name').empty();
+					$('#sender').empty();
+					$('#subject').empty();
+					$('#message').empty();
+				});
+			}
+		});
+	}
 }
 
 function load_link(id, title){

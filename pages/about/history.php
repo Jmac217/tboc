@@ -1,4 +1,4 @@
-<style>p{line-height:20px;text-align:justify;font-family:timeless;}</style>
+<style>p{line-height:20px;text-align:justify;font-family:dou;}</style>
 <div class='page_header'>History</div>
 <img src="res/pages/about/history.jpg" alt="Bank of Vergennes"class="page_left_column photo text_shadow page_photo"/>
 <div class='page_right_column_extended textblock text_shadow box'>

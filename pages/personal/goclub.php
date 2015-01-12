@@ -9,7 +9,7 @@
 			<li><strong>Educational Seminars</strong></li>
 			<li><strong>Discounted Local Outings</strong></li>
 		</ul>
-		<p>If you would like to be on the GO Club mailing list, please call Elizabeth at: <br><span class='phone_number'>618-549-2181 x:219</span></p>
+		<p>If you would like to be on the GO Club mailing list, please call Elizabeth at: <br><span class='phone_number'>618-549-2181</span></p>
 	</div>
 	<h2>Membership Requirements</h2>
 	<div class='sub_div'>

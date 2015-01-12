@@ -1,12 +1,18 @@
+<script type='text/javascript' src='lib/jquery.rss.js'></script>
 <script>
 $(document).ready(function(){
 	$('#pages').css({'overflow':'hidden'});
+	$("#feed p").rss("http://threatpost.com/feed", {
+		limit: 4,
+		layoutTemplate: '<span id="entries">{entries}</span>',
+		entryTemplate: '<a onclick="load_link(\'external\', \'{url}\')">{title}</a><br/>|'
+	}).show();
 });
 </script>
 <div class='page_header'>Security Center</div>
 <img src="res/pages/customer/security.jpg" alt="Personal Checking" class="page_left_column text_shadow" />
-<div class='page_right_column_extended textblock text_shadow box'>
-	<h2>Up-To-Date Security Alerts</h2>
+<div id='feed' class='page_right_column_extended textblock text_shadow box' style='height:250px'>
+	<h2>Up-To-Date Security Information</h2>
 	<div class='sub_div'>
 	<p>
 		<i>Nothing to report!</i>
@@ -18,6 +24,7 @@ $(document).ready(function(){
 		<h2 class='drop_tile_header'>What Is Identity Theft?</h2>
 		<div class='drop_tile_body'>
 			<div class='sub_div'>
+				<div class='page_drop_escape'>x</div>
 				<p>
 					Identity Theft occurs when someone uses your name, date of birth, Social Security number, or some other personal, financial, or medical information without your permission to commit fraud or some other crime, generally for economic gain.  Identity theft is also used to fraudulently obtain government documents such as driver licenses and birth certificates.  
 					Victims of identity theft can spend many long hours trying to repair the damage that criminals have done to their credit record.
@@ -28,6 +35,7 @@ $(document).ready(function(){
 	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>How Do Thieves Get Your Information?</h2>
 		<div class='drop_tile_body'>
+			<div class='page_drop_escape'></div>
 			<div class='sub_div'>
 				<p>Thieves get your personal information in a variety of ways so they can steal your identity and your money. These include in-person, phone, and online methods.</p>
 				<p>Examples of some of the methods used include:</p>
@@ -64,7 +72,6 @@ $(document).ready(function(){
 						</li>
 					</li>
 				</ul>
-			</div>
 			<span class='small'>
 				<b>Additional Information from the Federal Trade Commission:</b>
 				<ul>
@@ -72,6 +79,7 @@ $(document).ready(function(){
 					<li><a onclick='load_link("external", "http://www.consumer.ftc.gov/articles/0076-telemarketing-scams")'>Telemarketing Scams</a></li>
 				</b>
 			</span>
+			</div>
 		</div>
 	</div>
 	<div class='drop_tile' onclick='page_drop(this)'>
@@ -92,19 +100,19 @@ $(document).ready(function(){
 					<li>
 						<h3>If you have any of the above warning signs, you need to take immediate action.</h3>
 						<li>
-							Download the publication Taking charge: What to do if your identity is stolen  from the  Federal Trade Commission's website for information on the steps you need to take if your identity is stolen.
+							Download the publication Taking Charge: What To Do If Your Identity Is Stolen from the  Federal Trade Commission's website for information on the steps you need to take if your identity is stolen.
 						</li>
 						<li>
-							<a onclick='load_link("external", "http://www.consumer.ftc.gov/articles/pdf-0009-taking-charge.pdf")'>Taking Charge</a>!
+							<a onclick='load_link("external", "http://www.consumer.ftc.gov/articles/pdf-0009-taking-charge.pdf")'>Taking Charge: What To Do If Your Identity Is Stolen</a>
 						</li>
 					</li>
 				</ul>
-			</div>
 			<b>Additional information from the Federal Trade Commission:</b>
 			<ul>
 				<li><a onclick='load_link("external", "http://www.consumer.ftc.gov/articles/0271-signs-identity-theft")'>Signs of identity theft</a></li>
 				<li><a onclick='load_link("external", "http://www.consumer.ftc.gov/sites/default/files/articles/pdf/pdf-0014-identity-theft.pdf")'>Identity Theft</a></li>
 			</ul>
+		</div>
 		</div>
 	</div>
 	<div class='drop_tile' onclick='page_drop(this)'>
@@ -122,7 +130,7 @@ $(document).ready(function(){
 			</ul>
 			<p>Additional information from the Federal Trade Commission:</p>
 			<ul>
-				<li><a onclick='load_link("external", "http://www.consumer.ftc.gov/articles/0272-how-keep-your-personal-information-secure")'>How to keep <i>your</i> personal information secure</a></li>
+				<li><a onclick='load_link("external", "http://www.consumer.ftc.gov/articles/0272-how-keep-your-personal-information-secure")'>How to keep your personal information secure</a></li>
 				<li><a onclick='load_link("external", "http://www.consumer.ftc.gov/articles/0060-10-ways-avoid-fraud")'>10 ways to avoid fraud</a></li>
 			</ul>
 			</div>
@@ -135,9 +143,8 @@ $(document).ready(function(){
 			<p>If you receive an email, phone call, or text message from The Bank of Carbondale asking you for any personal information (e.g. account number or social security) please notify us immediately.  <b>The Bank of Carbondale will never call you or email you and ask for your personal information.</b></p>
 			<p>Report online scams and identity theft to the Federal Trade Commission: <a onclick='load_link("external", "http://www.ftc.gov")'>www.ftc.gov</a></p>
 			<p>
-				<b>Get a copy of  Taking charge: What to do if your identity is stolen  from the Federal Trade Commission's website for information on the steps you need to take if your identity is stolen.<br/>
-						<a onclick='load_link("external", "http://www.consumer.ftc.gov/articles/pdf-0009-taking-charge.pdf")'>Taking Charge</a>
-				</b>
+				Get a copy of  Taking Charge: What To Do If Your Identity Is Stolen from the Federal Trade Commission's website for information on the steps you need to take if your identity is stolen.<br/>
+				<a onclick='load_link("external", "http://www.consumer.ftc.gov/articles/pdf-0009-taking-charge.pdf")'>Taking Charge: What To Do If Your Identity Is Stolen</a>
 			</p>
 			</div>
 		</div>

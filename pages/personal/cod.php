@@ -4,7 +4,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class='td-border'>
 	<tr>
 		<th colspan='5'>
-			<h2>Interest Rates effective 12-17-2014</h2>
+			<h2>Interest Rates effective 01-12-2015</h2>
 		</th>
 	</tr>
 	<tr>

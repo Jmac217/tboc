@@ -1,3 +1,6 @@
+// AJAX cache
+$.ajaxSetup({cache:false});
+
 window.onpopstate = function(){
 	send_url_parameters();
 }

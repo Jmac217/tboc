@@ -77,7 +77,7 @@
 				<br />
 				Fax: (618) 549-4112<br />
 				<br />
-				E-mail: <a href="http://www.tboc.com/email.php?u=elizabeth@tboc.com">elizabeth@tboc.com</a>
+				E-mail: <a href="mailto:elizabeth@tboc.com">elizabeth@tboc.com</a>
 			</li>
 		</ol>
 		<p>

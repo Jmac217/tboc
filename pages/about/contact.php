@@ -11,7 +11,7 @@
 		</tr>
 		<tr>
 			<td align="right"><div align="right">Your email or phone: </div></td>
-			<td><input type="text" id="contact" /></td>
+			<td><input type="text" id="sender" /></td>
 		</tr>
 		<tr>
 			<td align="right"><div align="right">Subject:</div></td>
@@ -31,5 +31,6 @@
 			</td>
 		</tr>
 	</table>
+	<div id='mail_feedback'></div>
 <!--</form>-->
 </div>

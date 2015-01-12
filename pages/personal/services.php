@@ -5,7 +5,7 @@
 	<div class='drop_tile' onclick='page_drop(this, 120)'>
 		<h2 class='drop_tile_header'>Wire Transfers <span class='down_arrow'>&#9660;</span></h2>
 		<div class='drop_tile_body'>
-			<p>Both domestic and international wire services are available five days a week. Visit any of our locations to learn more.</p>
+			<p>Both domestic and international wire services are available Monday through Friday. Visit any of our locations to learn more.</p>
 			<p><a href="pages/downloads/wiring_instructions.pdf">Wiring Instructions</a></p>
 			<!--<p><a href="pages/downloads/wiring_instructions_international.pdf">International Wiring Instructions</a></p>-->
 		</div>
@@ -25,7 +25,7 @@
 	<div class='drop_tile' onclick='page_drop(this)'>
 		<h2 class='drop_tile_header'>License Plate Renewal <span class='down_arrow'>&#9660;</span></h2>
 		<div class='drop_tile_body'>
-			<p>Our Carbondale, Carterville, and Murphysboro facilities offer license renewal services six days a week for all Illinois registered vehicles.</p>
+			<p>Our Carbondale, Carterville, and Murphysboro facilities offer license renewal services Monday through Saturday for all Illinois registered vehicles.</p>
 		</div>
 	</div>
 	<div class='drop_tile' onclick='page_drop(this)'>

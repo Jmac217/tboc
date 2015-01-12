@@ -4,7 +4,7 @@
 	<div class='drop_tile' onclick='page_drop(this, 200)'>
 		<h2 class='drop_tile_header'>Wire Transfers <span class='down_arrow'>&#9660;</span></h2>
 		<div class='drop_tile_body'>
-			<p>Both domestic and international wire services are available five days a week. Visit any of our locations to learn more.</p>
+			<p>Both domestic and international wire services are available Monday through Friday. Visit any of our locations to learn more.</p>
 			<p><a href="pages/downloads/wiring_instructions.pdf">Wiring Instructions</a></p>
 		</div>
 	</div>

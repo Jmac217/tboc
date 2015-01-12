@@ -1,7 +1,8 @@
 @font-face{font-family:dou;src:url('../res/fonts/DoulosSILR.ttf');src:url('../res/fonts/DoulosSILR.eot');}
 @font-face{font-family:optimus;src:url('../res/fonts/OptimusPrinceps.ttf');src:url('../res/fonts/OptimusPrinceps.eot');}
 @font-face{font-family:optimus-semi;src:url('../res/fonts/OptimusPrincepsSemiBold.ttf');src:url('../res/fonts/OptimusPrincepsSemiBold.eot');}
-@font-face{font-family:timeless;src:url('../res/fonts/Timeless.ttf');src:url('../res/fonts/Timeless.eot');}
+/*@font-face{font-family:timeless;src:url('../res/fonts/Timeless.ttf');src:url('../res/fonts/Timeless.eot');}*/
+@font-face{font-family:timeless;src:url('../res/fonts/OLDSH___.TTF.ttf');src:url('../res/fonts/OLDSH___.TTF.eot');}
 
 /* Global Elements */
 /* set body overflow to hidden? */
@@ -29,6 +30,8 @@ td{border-style:none;border:none;line-height:20px;padding:5px;}
 .box{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;*behavior:url(/lib/boxsizing.htc);}
 .radius{-webkit-border-radius:7px;-moz-border-radius:7px;border-radius:7px;behavior:url(lib/PIE.htc);}
 .padded{padding:5px 10px;}
+
+.page_drop_escape{position:absolute;margin:10px;line-height:13px;text-align:center;top:0;right:0;content:"x";height:16px;width:16px;border-radius:2px;border:solid 1px rgba(0,0,0,0.7);background-color:rgba(0,0,0,0.2);color:rgba(0,0,0,0.9);cursor:pointer;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;*behavior:url(/lib/boxsizing.htc);}
 
 /* Situational Classes */
 .noselect{select:none;-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
@@ -195,3 +198,5 @@ td{border-style:none;border:none;line-height:20px;padding:5px;}
 			#debug_options span:first-child{border-top:solid 1px #3e96be;}
 			#debug_options span:last-child:hover .debug_button{background-color:#7ec0ee;}
 			#bug_feedback{padding-top:5px;}
+			
+	#mail_feedback{text-align:center;padding:10px;font-size:20px;border:solid 1px #CCC;background-color:#DDD;width:400px;left:0;right:0;margin:auto;position:relative;visibility:hidden;}
