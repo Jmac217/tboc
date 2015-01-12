@@ -83,7 +83,7 @@
 				"id":"card_services",
 				"title":"Card Services",
 				"image":"res/icons/card/white-simple-small.png",
-				"body":"Report a lost/stolen Debit Card or acivate/change the pin on a Debit Card.",
+				"body":"Report a lost/stolen Debit Card or activate/change the pin on a Debit Card.",
 				"button":"More Information"
 			},{
 				"type":"customer",
