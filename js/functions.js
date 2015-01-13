@@ -95,28 +95,21 @@ function isset(field){
 	if(field!==''){return "true";}
 }
 
-function contact_submit(onclick){
+function contact_submit(){
 	var name = $('#name').val();
 	var sender = $('#sender').val();
 	var subject = $('#subject').val();
 	var message = $('#message').val();
 	if(isset(name)&&isset(sender)&&isset(message)){
-		$.post('php/mail.php', {name:name,sender:sender,subject:subject,message:message}, function(data){
-			alert(data);
+		$.get('php/mail.php', {name:name, sender:sender, subject:subject, message:message}, function(data){
 			if (data == 'err'){
-				$('#mail_feedback').css({'visibility':'visible', 'color':'red'}).html("An error has occurred.").fadeOut(6000, function(){
-					$(this).css({'visibility':'hidden', 'color':'black'});
-				});
+				$('#mail_feedback').css({'visibility':'visible', 'color':'red','opacity':'1'}).html("An error has occurred.").fadeOut(10000);
 			}else{
-				$('#mail_feedback').css({'visibility':'visible', 'color':'green'}).html("Your message has been sent!").fadeOut(6000, function(){
-					$(this).css({'visibility':'hidden', 'color':'black'});
-					$('#name').empty();
-					$('#sender').empty();
-					$('#subject').empty();
-					$('#message').empty();
-				});
+				$('#mail_feedback').css({'visibility':'visible', 'color':'green','opacity':'1'}).html("Your message has been sent successfully!").fadeOut(10000);
 			}
 		});
+	}else{
+		$('#mail_feedback').css({'visibility':'visible', 'color':'black','opacity':'1'}).html("Your message has been sent successfully!").fadeOut(10000);
 	}
 }
 

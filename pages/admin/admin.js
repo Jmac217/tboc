@@ -60,6 +60,9 @@ $('document').ready(function(){
 							}
 						});
 					});
+					$('.list_pop').click(function(){
+						$('.page').append("<div class='list'><span class='list_title'>"+"Title"+"</span><span class='list_body'>"+"Body"+"</span><span class='list_date'>"+"data"+"</span><div class='list_color box'><select class='color_select_preset'><option>none...</option></select><div class='color_box list_border_choice' title='List Border'></div><div class='color_box list_background_choice' title='List Background'></div><div class='color_box list_font_choice' title='List Font'></div><input class='list_new_preset' placeholder='New Preset...' type='text'/></div></div>");
+					});
 				break;
 				case "employment":
 				break;
