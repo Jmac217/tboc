@@ -26,7 +26,7 @@
 					<textarea id="message" style="width:100%;height:200px;border-style:none;border:solid 1px #CCC;min-height:100%;max-height:100%;min-width:100%;max-width:100%;resize:none;"></textarea>
 				</p>
 				<p align="center">
-					<input name="submit" type="submit" id="submit" value="Send Email" onclick="contact_submit(this)" class='button tile_button radius' style='position:relative;border-radius:3px;'/>
+					<input name="submit" type="submit" id="submit" value="Send Email" onclick="contact_submit()" class='button tile_button radius' style='position:relative;border-radius:3px;'/>
 				</p>
 			</td>
 		</tr>

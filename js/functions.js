@@ -101,15 +101,15 @@ function contact_submit(){
 	var subject = $('#subject').val();
 	var message = $('#message').val();
 	if(isset(name)&&isset(sender)&&isset(message)){
-		$.get('php/mail.php', {name:name, sender:sender, subject:subject, message:message}, function(data){
+		$.post('php/mail', {name:name, sender:sender, subject:subject, message:message}, function(data){
 			if (data == 'err'){
-				$('#mail_feedback').css({'visibility':'visible', 'color':'red','opacity':'1'}).html("An error has occurred.").fadeOut(10000);
+				$('#mail_feedback').css({'display':'block','visibility':'visible', 'color':'red','opacity':'1'}).html("An error has occurred.").fadeOut(10000);
 			}else{
-				$('#mail_feedback').css({'visibility':'visible', 'color':'green','opacity':'1'}).html("Your message has been sent successfully!").fadeOut(10000);
+				$('#mail_feedback').css({'display':'block','visibility':'visible', 'color':'green','opacity':'1'}).html("Your message has been sent successfully!").fadeOut(10000);
 			}
 		});
 	}else{
-		$('#mail_feedback').css({'visibility':'visible', 'color':'black','opacity':'1'}).html("Your message has been sent successfully!").fadeOut(10000);
+		$('#mail_feedback').css({'display':'block','visibility':'visible', 'color':'black','opacity':'1','width':'500px'}).html("Emails must contain a Name, Contact, and a Message.").fadeOut(10000);
 	}
 }
 

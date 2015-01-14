@@ -33,13 +33,13 @@
 	<h5>Available Text Commands are:<h5>
 	<table class='dash_bottom'>
 		<tr>
-			<td>BAL or BAL &#12296;account nickname&#12297;</td><td>Request account balance</td>
+			<td>BAL or BAL &lt;account nickname&gt;</td><td>Request account balance</td>
 		</tr>
 		<tr>
-			<td>HIST &#12296;account nickname&#12297;</td><td>Request account history</td>
+			<td>HIST &lt;account nickname&gt;</td><td>Request account history</td>
 		</tr>
 		<tr>
-			<td>XFER &#12296;from account nickname&#12297; &#12296;to account nickname&#12297; &#12296;amount&#12297;</td><td>Transfer funds between accounts</td>
+			<td>XFER &lt;from account nickname&gt; &lt;to account nickname&gt; &lt;amount&gt;</td><td>Transfer funds between accounts</td>
 		</tr>
 		<tr>
 			<td>LIST</td><td>Receive a list of keywords</td>
@@ -54,7 +54,7 @@
 	<p style='line-height:12px;font-size:12px;'>
 		<b>How to sign up for Text Banking:</b>
 		<br/>
-		Login to online banking, select preferences &#12297; mobile &#12297; text, and follow the instructions.
+		Login to online banking, select preferences &gt; mobile &gt; text, and follow the instructions.
 	</p>
 </div>
 <h2>Cash Management</h2>
