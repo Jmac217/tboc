@@ -2,6 +2,7 @@ jQuery.ajaxSetup({ cache: false });
 
 $('document').ready(function(){
 	var json;
+	
 	$.ajax({
 		dataType:'json',
 		url:'../../json/tiles.json',
@@ -24,6 +25,16 @@ $('document').ready(function(){
 				case "rates":
 				break;
 				case "security":
+					function enterIsPressed(event){
+						$(event).keypress(function(e) {
+							console.log(event);
+							if(e.which==13){
+								return true;
+							}else{
+								return false;
+							}
+						});	
+					}
 					//alert(JSON.stringify(json[_tabText]));
 					var html = "";
 					for(var i = 0; i < json[_tabText].length; i++){
@@ -49,11 +60,12 @@ $('document').ready(function(){
 								"<div class='color_box list_font_choice' title='List Font'></div>"+
 									// here's where Chosen goes
 									//"<input class='list_new_preset' placeholder='New Preset...' type='text'/>"+
-									'<select data-placeholder="Choose a country..." style="width:230px;" class="chosen-select box">'+
-										"<option>1</option>"+
-										"<option>2</option>"+
-										"<option>3</option>"+
-										"<option>4</option>"+
+									'<select data-placeholder="Select or Create a Preset..." style="position:relative;width:230px;" class="chosen-select box">'+
+										"<option value=''></option>"+
+										"<option value='1'>1</option>"+
+										"<option value='2'>2</option>"+
+										"<option value='3'>3</option>"+
+										"<option value='4'>4</option>"+
 									"</select>"+
 							"</div>"+
 						"</div>";
@@ -88,7 +100,13 @@ $('document').ready(function(){
 								$('.list:nth-child('+_nth+') .list_body').css("border-left", "solid 3px "+$('.list:nth-child('+_nth+') .list_border_choice').css('backgroundColor'));
 							}
 						});
-						$(this).find('.chosen-select').chosen({width:230,no_results_text:"Press enter to create new preset."});
+						$(this).find('.chosen-select').chosen({
+							create_option: true,
+							width:230,
+							no_results_text:function(){
+								alert('none');
+							}
+						});
 					});
 					$('.list_pop').click(function(){
 						$('.page').append("<div class='list'><span class='list_title'>"+"Title"+"</span><span class='list_body'>"+"Body"+"</span><span class='list_date'>"+"data"+"</span><div class='list_color box'><select class='color_select_preset'><option>none...</option></select><div class='color_box list_border_choice' title='List Border'></div><div class='color_box list_background_choice' title='List Background'></div><div class='color_box list_font_choice' title='List Font'></div><input class='list_new_preset' placeholder='New Preset...' type='text'/></div></div>");
