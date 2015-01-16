@@ -39,10 +39,19 @@ function notice(visible, path, type){
 				break;
 				case "xml":
 					// This is available if it becomes necessary
+				break;
+				case "json":
+					$.getJSON('json/tiles.json', function(json){
+						var _this = json.alerts[path];
+						alert(JSON.stringify(_this));
+						$('#notices').css({display: 'block', border: 'solid 1px '+_this.colors.border, background: _this.colors.background, color: _this.colors.font}).html(_this.title)
+					});
+				break;
 			}
 		}
 	}
 }
+notice(true, 0, 'json');
 //if(isIE(8, 'lte')){alert('<IE8');}
 
 function push_nav(name, id, title){

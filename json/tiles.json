@@ -21,11 +21,18 @@
 		"body":"Article",
 		"date":"today"
 	}],
-	"alerts":[{
-		"title":"wow",
-		"body":"such alert",
-		"date":"today"
-	}],
+	"alerts":[
+		{
+			"title":"The Carterville location's hours will be changing. Carterville will no longer be open on Saturdays starting xx-xx-xx.",
+			"body":"Extra?",
+			"date":"today",
+			"colors":{
+				"border":"#468ec2",
+				"background":"#7ebfee",
+				"font":"#ffffff"
+			}
+		}
+	],
 	"nav":[{
 		"name":"Current Rates",
 		"id":"cod",

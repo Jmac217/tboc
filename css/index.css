@@ -107,7 +107,7 @@ td{border-style:none;border:none;line-height:20px;padding:5px;}
 				#user_nav_home:hover{cursor:pointer;color:#3e79ef;outline:0;text-decoration:underline;}
 			.nav_element{text-decoration:none;color:#004a4a;cursor:pointer;}
 				.nav_element:hover{color:#3e79ef;text-decoration:underline;}
-		#notices{position:relative;clear:both;width:100%;background-color:#FDC;padding:5px 10px;margin-top:3px;display:none;}
+		#notices{position:relative;clear:both;width:100%;background-color:#FDC;padding:5px 10px;margin-top:3px;display:none;border-radius:3px;}
 			#notices_hide{display:block;height:16px;width:16px;}
 			#alert{position:absolute;top:0;left:0;height:100%;width:100%;}
 			#warning{position:absolute;top:0;left:0;height:100%;width:100%;cursor:pointer;}
